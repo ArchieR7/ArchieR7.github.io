@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='直接從 code 來看兩者之間和 map 的差異
+CompactMap let scores = [&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;four&amp;#34;, &amp;#34;5&amp;#34;] let mapped: [Int?] = scores.map { str in Int(str) } // [1, 2, 3, nil, 5]  let compactMapped: [Int] = scores.compactMap { str in Int(str) } // [1, 2, 3, 5] flatMap let users = [User(name: &amp;#34;Archie&amp;#34;, scores: [1, 2, 4]), User(name: &amp;#34;ArchieChang&amp;#34;, scores: [3,2,5])] let mapped = users.map { $0.scores } // [[1, 2, 4], [3, 2, 5]] let flatMapped = users.'><title>CompactMap vs flatMap</title>
+
+<link rel='canonical' href='https://example.com/p/compactmap-vs-flatmap/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='CompactMap vs flatMap'>
+<meta property='og:description' content='直接從 code 來看兩者之間和 map 的差異
+CompactMap let scores = [&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;four&amp;#34;, &amp;#34;5&amp;#34;] let mapped: [Int?] = scores.map { str in Int(str) } // [1, 2, 3, nil, 5]  let compactMapped: [Int] = scores.compactMap { str in Int(str) } // [1, 2, 3, 5] flatMap let users = [User(name: &amp;#34;Archie&amp;#34;, scores: [1, 2, 4]), User(name: &amp;#34;ArchieChang&amp;#34;, scores: [3,2,5])] let mapped = users.map { $0.scores } // [[1, 2, 4], [3, 2, 5]] let flatMapped = users.'>
+<meta property='og:url' content='https://example.com/p/compactmap-vs-flatmap/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2018-09-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-09-10T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="CompactMap vs flatMap">
+<meta name="twitter:description" content="直接從 code 來看兩者之間和 map 的差異
+CompactMap let scores = [&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;four&amp;#34;, &amp;#34;5&amp;#34;] let mapped: [Int?] = scores.map { str in Int(str) } // [1, 2, 3, nil, 5]  let compactMapped: [Int] = scores.compactMap { str in Int(str) } // [1, 2, 3, 5] flatMap let users = [User(name: &amp;#34;Archie&amp;#34;, scores: [1, 2, 4]), User(name: &amp;#34;ArchieChang&amp;#34;, scores: [3,2,5])] let mapped = users.map { $0.scores } // [[1, 2, 4], [3, 2, 5]] let flatMapped = users.">
+    </head>
+    <body class="
+    article-page 
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        on-phone--column extended
+    
+">
+    
+        <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            
+            <figure class="site-avatar">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/Archie_hu1fc091553094f1283eaa3eeeb8ec0c46_37374_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+
+                
+                    <span class="emoji">🤔</span>
+                
+            </figure>
+            
+        
+        <h1 class="site-name"><a href="https://example.com">Archie</a></h1>
+        <h2 class="site-description">獨立開發者的心路歷程</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='/' target="_blank">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>首頁</span>
+            </a>
+        </li>
+        
+
+        
+            <li id="dark-mode-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                <span>Dark Mode</span>
+            </li>
+        
+    </ol>
+</aside>
+
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" >
+                📒 程式筆記
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/compactmap-vs-flatmap/">CompactMap vs flatMap</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 10, 2018</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>直接從 code 來看兩者之間和 map 的差異</p>
+<h1 id="compactmap">CompactMap</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">scores</span> <span class="p">=</span> <span class="p">[</span><span class="s">&#34;1&#34;</span><span class="p">,</span> <span class="s">&#34;2&#34;</span><span class="p">,</span> <span class="s">&#34;3&#34;</span><span class="p">,</span> <span class="s">&#34;four&#34;</span><span class="p">,</span> <span class="s">&#34;5&#34;</span><span class="p">]</span>
+<span class="kd">let</span> <span class="nv">mapped</span><span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">?]</span> <span class="p">=</span> <span class="n">scores</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="n">str</span> <span class="k">in</span> <span class="nb">Int</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">}</span>
+<span class="c1">// [1, 2, 3, nil, 5] </span>
+<span class="kd">let</span> <span class="nv">compactMapped</span><span class="p">:</span> <span class="p">[</span><span class="nb">Int</span><span class="p">]</span> <span class="p">=</span> <span class="n">scores</span><span class="p">.</span><span class="n">compactMap</span> <span class="p">{</span> <span class="n">str</span> <span class="k">in</span> <span class="nb">Int</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">}</span>
+<span class="c1">// [1, 2, 3, 5]</span>
+</code></pre></div><h1 id="flatmap">flatMap</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">let</span> <span class="nv">users</span> <span class="p">=</span> <span class="p">[</span><span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;Archie&#34;</span><span class="p">,</span> <span class="n">scores</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]),</span> <span class="n">User</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&#34;ArchieChang&#34;</span><span class="p">,</span> <span class="n">scores</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">])]</span>
+<span class="kd">let</span> <span class="nv">mapped</span> <span class="p">=</span> <span class="n">users</span><span class="p">.</span><span class="bp">map</span> <span class="p">{</span> <span class="nv">$0</span><span class="p">.</span><span class="n">scores</span> <span class="p">}</span>
+<span class="c1">// [[1, 2, 4], [3, 2, 5]]</span>
+<span class="kd">let</span> <span class="nv">flatMapped</span> <span class="p">=</span> <span class="n">users</span><span class="p">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="nv">$0</span><span class="p">.</span><span class="n">scores</span> <span class="p">}</span>
+<span class="c1">// [1, 2, 4, 3, 2, 5]</span>
+</code></pre></div><p>在使用情境上，CompactMap 可以將 nil 給過濾掉，使得回傳的陣列為 non optional 的型態；</p>
+<p>原先還在使用 map + filter 來處理 nil 的部分，可以直接使用 CompactMap 處理，減少多一次的陣列迴圈。</p>
+<p>而 flatMap 則是在將所有陣列的內容整合進同一個陣列，如我們需要計算全體使用者的總得分時，便可以先將個別使用者的分數集結成一個陣列來處理。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">iOS</a>
+        
+            <a href="/tags/swift/">Swift</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/socket/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Socket</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/markdown-%E5%B5%8C%E5%85%A5-youtube/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown 嵌入 YouTube</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">在 SwiftUI 處理中文輸入法所會遇上的問題</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/change-login-shells-without-chsh/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Change login shells without chsh</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/coredata-with-background-task/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CoreData with background task</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

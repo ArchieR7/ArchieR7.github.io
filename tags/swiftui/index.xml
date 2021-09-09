@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SwiftUI on Archie</title>
+    <link>https://example.com/tags/swiftui/</link>
+    <description>Recent content in SwiftUI on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 30 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 SwiftUI 處理中文輸入法所會遇上的問題</title>
+      <link>https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link>
+      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</guid>
+      <description>最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。
+開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂 還沒有下載更新的朋友，可以快去更新一下！
+使用情境 我要來做一個搜尋的功能，讓使用者可以輸入關鍵字，並自動搜尋完後將結果呈現在下方👏
+於是我們可以用兩個 UI 元件來達成這件事
+ TextField List 並寫一個 @Binding var 或是 @ObservedObject var 來讓 TextField 的 text 有個 binding 的地方，當它的值有更新時，觸發搜尋的動作🚀 而搜尋完的結構再來更新畫面上的 List。  聽起來沒什麼毛病，對吧？
+實際上你會遇上的問題⋯ 當你想和我一樣，用拼音的輸入方式時；不論是你拼音還是注音，當你按下第一個音時，便會跑一次上述的流程了⋯⋯ 而我們所期望的流程應該是使用者選完字後再進行搜尋，這點在目前的 TextField 是做不到的，因為它不會判別目前是否有還沒拼完音的狀況就發動了。
+那該怎麼辦呢？  喵神這麼說 
+你可以查看一下當時的相關推文
+我的作法就是以 UIViewRepresentable 來包裝，詳細的程式碼可以到 GitHub 查看👍
+成果 當輸入了 luo dong 但是還沒選字的話並不會有動作。</description>
+    </item>
+    
+  </channel>
+</rss>

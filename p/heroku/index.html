@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='前言 這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。
+HEROKU 是一個有提供免費伺服器方案的平台，支援的語言算多，而我的爬蟲是以 Python 3.6 作為開發語言的，故選擇它來玩玩。 在免費的方案之中有一些限制，如 24 小時內得休息 6 小時之類的； 不過在這邊，我需要的只是一個可以執行 Cron Job 的地方，所以不需要升級主機的部分。 目前我的 HEROKU 裡頭包含著三個動作：
+ 每天台灣時間 00:00 時，到星座網爬蟲並記錄當日運勢到 Firebase 每天台灣時間 09:00 時，到 PTT CodeJob 以及 Soft_Job 版搜尋 iOS 相關的文章，並 mail 到我的信箱 每天台灣時間 12:00 時，爬 PTT 一些熱門看板的文章並發佈到機器人部落格以及機器人推特之中 我分成三個 .py 檔案，下方會說明我的作法。  簡單的建構步驟 首先，先到 HEROKU 的 dashboard 建立一個新的 App，接著照著它的敘述完成 Git 的建置。 我在資料夾當中，放入了下列的檔案：
+ PTT.py – 12:00 該做的事 iOS.py – 09:00 該做的事 Astro.py – 00:00 該做的事 requirements.'><title>HEROKU</title>
+
+<link rel='canonical' href='https://example.com/p/heroku/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='HEROKU'>
+<meta property='og:description' content='前言 這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。
+HEROKU 是一個有提供免費伺服器方案的平台，支援的語言算多，而我的爬蟲是以 Python 3.6 作為開發語言的，故選擇它來玩玩。 在免費的方案之中有一些限制，如 24 小時內得休息 6 小時之類的； 不過在這邊，我需要的只是一個可以執行 Cron Job 的地方，所以不需要升級主機的部分。 目前我的 HEROKU 裡頭包含著三個動作：
+ 每天台灣時間 00:00 時，到星座網爬蟲並記錄當日運勢到 Firebase 每天台灣時間 09:00 時，到 PTT CodeJob 以及 Soft_Job 版搜尋 iOS 相關的文章，並 mail 到我的信箱 每天台灣時間 12:00 時，爬 PTT 一些熱門看板的文章並發佈到機器人部落格以及機器人推特之中 我分成三個 .py 檔案，下方會說明我的作法。  簡單的建構步驟 首先，先到 HEROKU 的 dashboard 建立一個新的 App，接著照著它的敘述完成 Git 的建置。 我在資料夾當中，放入了下列的檔案：
+ PTT.py – 12:00 該做的事 iOS.py – 09:00 該做的事 Astro.py – 00:00 該做的事 requirements.'>
+<meta property='og:url' content='https://example.com/p/heroku/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Server' /><meta property='article:published_time' content='2018-05-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-05-18T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="HEROKU">
+<meta name="twitter:description" content="前言 這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。
+HEROKU 是一個有提供免費伺服器方案的平台，支援的語言算多，而我的爬蟲是以 Python 3.6 作為開發語言的，故選擇它來玩玩。 在免費的方案之中有一些限制，如 24 小時內得休息 6 小時之類的； 不過在這邊，我需要的只是一個可以執行 Cron Job 的地方，所以不需要升級主機的部分。 目前我的 HEROKU 裡頭包含著三個動作：
+ 每天台灣時間 00:00 時，到星座網爬蟲並記錄當日運勢到 Firebase 每天台灣時間 09:00 時，到 PTT CodeJob 以及 Soft_Job 版搜尋 iOS 相關的文章，並 mail 到我的信箱 每天台灣時間 12:00 時，爬 PTT 一些熱門看板的文章並發佈到機器人部落格以及機器人推特之中 我分成三個 .py 檔案，下方會說明我的作法。  簡單的建構步驟 首先，先到 HEROKU 的 dashboard 建立一個新的 App，接著照著它的敘述完成 Git 的建置。 我在資料夾當中，放入了下列的檔案：
+ PTT.py – 12:00 該做的事 iOS.py – 09:00 該做的事 Astro.py – 00:00 該做的事 requirements.">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://example.com" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/backend/" >
+                💻 Backend
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/heroku/">HEROKU</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 18, 2018</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="前言">前言</h1>
+<p>這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。</p>
+<h1 id="herokuhttpsdashboardherokucom"><a class="link" href="https://dashboard.heroku.com/"  target="_blank" rel="noopener"
+    >HEROKU</a></h1>
+<p>是一個有提供免費伺服器方案的平台，支援的語言算多，而我的爬蟲是以 Python 3.6 作為開發語言的，故選擇它來玩玩。
+在免費的方案之中有一些限制，如 24 小時內得休息 6 小時之類的；
+不過在這邊，我需要的只是一個可以執行 Cron Job 的地方，所以不需要升級主機的部分。
+目前我的 HEROKU 裡頭包含著三個動作：</p>
+<ul>
+<li>每天台灣時間 00:00 時，到星座網爬蟲並記錄當日運勢到 Firebase</li>
+<li>每天台灣時間 09:00 時，到 PTT CodeJob 以及 Soft_Job 版搜尋 iOS 相關的文章，並 mail 到我的信箱</li>
+<li>每天台灣時間 12:00 時，爬 PTT 一些熱門看板的文章並發佈到機器人部落格以及機器人推特之中
+我分成三個 .py 檔案，下方會說明我的作法。</li>
+</ul>
+<h2 id="簡單的建構步驟">簡單的建構步驟</h2>
+<p>首先，先到 HEROKU 的 dashboard 建立一個新的 App，接著照著它的敘述完成 Git 的建置。
+我在資料夾當中，放入了下列的檔案：</p>
+<ul>
+<li>PTT.py – 12:00 該做的事</li>
+<li>iOS.py – 09:00 該做的事</li>
+<li>Astro.py – 00:00 該做的事</li>
+<li>requirements.txt – 提供給 HEROKU 知道要在這台機器上安裝哪些 Python 的套件</li>
+<li>serviceAccountCredentials.json – 存取 Firebase 所需要的 credential 文件</li>
+<li>Procfile – 用來告知 HEROKU 關於這個 App 的一些參數</li>
+<li>clock.py – 利用 apscheduler 來完成 cron job 的撰寫</li>
+</ul>
+<h3 id="clockpy">clock.py</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">apscheduler.schedulers.blocking</span> <span class="kn">import</span> <span class="n">BlockingScheduler</span>
+<span class="n">sched</span> <span class="o">=</span> <span class="n">BlockingScheduler</span><span class="p">()</span>
+<span class="nd">@sched</span><span class="o">.</span><span class="n">scheduled_job</span><span class="p">(</span><span class="s1">&#39;cron&#39;</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">scheduled_job</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This job is run every day at UTC+8 8am.&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;python astro.py&#34;</span><span class="p">)</span>
+<span class="nd">@sched</span><span class="o">.</span><span class="n">scheduled_job</span><span class="p">(</span><span class="s1">&#39;cron&#39;</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">scheduled_job2</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This job is run every day at UTC+8 9am.&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;python ios.py&#34;</span><span class="p">)</span>
+<span class="nd">@sched</span><span class="o">.</span><span class="n">scheduled_job</span><span class="p">(</span><span class="s1">&#39;cron&#39;</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">scheduled_job3</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This job is run every day at UTC+8 12pm.&#39;</span><span class="p">)</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;python ptt.py&#34;</span><span class="p">)</span>
+<span class="n">sched</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</code></pre></div><p>Procfile</p>
+<pre tabindex="0"><code>clock: python clock.py
+</code></pre><p>接著透過下方指令推送到 HEROKU 上頭部署</p>
+<pre tabindex="0"><code>git push heroku master
+</code></pre><p>便可以在 Free Dynos 的頁面看到我們剛剛定義的 clock python clock.py，接著把它打開即可。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/server/">Server</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/aws-ec2-with-wordpress/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AWS EC2 with WordPress</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/vapor/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vapor</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/socket.io/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Socket.IO</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/python-smtp/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Python – SMTP</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/selenium/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Selenium</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#簡單的建構步驟">簡單的建構步驟</a>
+      <ol>
+        <li><a href="#clockpy">clock.py</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

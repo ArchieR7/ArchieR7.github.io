@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fastlane on Archie</title>
+    <link>https://example.com/tags/fastlane/</link>
+    <description>Recent content in Fastlane on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/fastlane/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fastlane pilot issue</title>
+      <link>https://example.com/p/fastlane-pilot-issue/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/fastlane-pilot-issue/</guid>
+      <description>這是和防火牆有關的 issue
+在 fastlane pilot 的 docs 有註記 Firewall Issues
+可以透過
+ENV[&amp;quot;DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS&amp;quot;] = &amp;quot;-t DAV&amp;quot; 來避免上傳的問題！</description>
+    </item>
+    
+    <item>
+      <title>Fastlane - match</title>
+      <link>https://example.com/p/fastlane-match/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/fastlane-match/</guid>
+      <description>Fastlane 是什麼？ 簡單來說，它可以替你解決除了寫程式以外的很多事情； 像是「螢幕截圖」、「打包上傳到 Testflight」、「建立 App Store 的 App 資訊」等等， 尤其是在一個專案（project）擁有多個 target 的時候， 更是只需要一行就可以打包出十幾個 App，並且分別上架到 App Store。 而在這篇文章裡頭，會介紹其中一項功能的部分用法：
+Match Match 主要負責和 Certificate 相關的處理，這邊所要帶給大家的使用情境是， 一個 iOS 專案同時有需要多人同時開發，我們通常會採取的作法有下列幾種：
+在 Apple Developer Team 之中加入專案各個開發人員使用自己的 Apple ID 在 Apple Developer Team 之中加入專案各個開發人員的公司 Apple ID 提供給專案各個開發人員相對應的 Provisioning Profile 第一種和第二種的做法差不多，但其壞處就是管理者無法有效地管理 Certificate， 所以有可能會時常出現一些奇怪的 App IDs 或是 iOS Provisioning Profile， 或是誰又不小心把誰的 certificate revoke ⋯⋯
+所以我們需要權限劃分清楚 建議的做法是註冊一組公用的開發者帳號，不和任何人產生連結性
+e.g dev@apple.com
+只放這組帳號在 Apple Developer Team 裡頭，開發相關的處理皆由這組帳號來負責， 而帳號密碼無需流通到僅負責開發的人員手中； 意思是指，讓單純寫 Code 開發的人員，無須註冊特別的 Apple ID 或是加入哪個 Team， 只需要透過 fastlane match 的方式來獲得 Certificate，可以開發就好！</description>
+    </item>
+    
+  </channel>
+</rss>

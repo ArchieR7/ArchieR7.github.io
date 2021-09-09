@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>斜槓紀錄 on Archie</title>
+    <link>https://example.com/tags/%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84/</link>
+    <description>Recent content in 斜槓紀錄 on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archie 的斜槓紀錄 2019-08</title>
+      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</link>
+      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</guid>
+      <description>這篇是什麼？ 這篇文章的內容並不會圍繞 iOS 或是 Swift 等，而是投資理財的部分，其中並不會有什麼教學或是分析，單純只是我這個月的損益總結而已。
+2019 年 8 月份總結 Adsense 其實我一直沒有在看這方面的收入，不過看來要加把勁在廣告上才是💪 大多數都是從一、兩個我沒有在維護的 App 來的⋯⋯ 九月份會開始掛上網站的廣告和看能不能在 iOS 13 正式版上線的時候， 將一個由 SwiftUI + Combine 所編寫的 side project 弄上架💦
+ 
+Bitfinex 我有在 Bitfinex 搭配 Coinlend 進行放貸，並在 8/9 加碼了 $ 50,000 元進去 八月份的報表大概如下   共獲利了 USD $ 31.68
+台股股利 這個月領了三次股利，共計 $ 1,596 元
+八月份總收入  Adsense USD $ 1.33 Bitfinex USD $ 31.68 台股股利 $ 1,596 元  共計 $ 2,629.87 元</description>
+    </item>
+    
+  </channel>
+</rss>

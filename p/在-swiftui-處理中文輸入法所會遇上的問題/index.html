@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。
+開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂 還沒有下載更新的朋友，可以快去更新一下！
+使用情境 我要來做一個搜尋的功能，讓使用者可以輸入關鍵字，並自動搜尋完後將結果呈現在下方👏
+於是我們可以用兩個 UI 元件來達成這件事
+ TextField List 並寫一個 @Binding var 或是 @ObservedObject var 來讓 TextField 的 text 有個 binding 的地方，當它的值有更新時，觸發搜尋的動作🚀 而搜尋完的結構再來更新畫面上的 List。  聽起來沒什麼毛病，對吧？
+實際上你會遇上的問題⋯ 當你想和我一樣，用拼音的輸入方式時；不論是你拼音還是注音，當你按下第一個音時，便會跑一次上述的流程了⋯⋯ 而我們所期望的流程應該是使用者選完字後再進行搜尋，這點在目前的 TextField 是做不到的，因為它不會判別目前是否有還沒拼完音的狀況就發動了。
+那該怎麼辦呢？  喵神這麼說 
+你可以查看一下當時的相關推文
+我的作法就是以 UIViewRepresentable 來包裝，詳細的程式碼可以到 GitHub 查看👍
+成果 當輸入了 luo dong 但是還沒選字的話並不會有動作。'><title>在 SwiftUI 處理中文輸入法所會遇上的問題</title>
+
+<link rel='canonical' href='https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='在 SwiftUI 處理中文輸入法所會遇上的問題'>
+<meta property='og:description' content='最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。
+開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂 還沒有下載更新的朋友，可以快去更新一下！
+使用情境 我要來做一個搜尋的功能，讓使用者可以輸入關鍵字，並自動搜尋完後將結果呈現在下方👏
+於是我們可以用兩個 UI 元件來達成這件事
+ TextField List 並寫一個 @Binding var 或是 @ObservedObject var 來讓 TextField 的 text 有個 binding 的地方，當它的值有更新時，觸發搜尋的動作🚀 而搜尋完的結構再來更新畫面上的 List。  聽起來沒什麼毛病，對吧？
+實際上你會遇上的問題⋯ 當你想和我一樣，用拼音的輸入方式時；不論是你拼音還是注音，當你按下第一個音時，便會跑一次上述的流程了⋯⋯ 而我們所期望的流程應該是使用者選完字後再進行搜尋，這點在目前的 TextField 是做不到的，因為它不會判別目前是否有還沒拼完音的狀況就發動了。
+那該怎麼辦呢？  喵神這麼說 
+你可以查看一下當時的相關推文
+我的作法就是以 UIViewRepresentable 來包裝，詳細的程式碼可以到 GitHub 查看👍
+成果 當輸入了 luo dong 但是還沒選字的話並不會有動作。'>
+<meta property='og:url' content='https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:tag' content='SwiftUI' /><meta property='article:published_time' content='2019-08-30T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-08-30T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="在 SwiftUI 處理中文輸入法所會遇上的問題">
+<meta name="twitter:description" content="最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。
+開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂 還沒有下載更新的朋友，可以快去更新一下！
+使用情境 我要來做一個搜尋的功能，讓使用者可以輸入關鍵字，並自動搜尋完後將結果呈現在下方👏
+於是我們可以用兩個 UI 元件來達成這件事
+ TextField List 並寫一個 @Binding var 或是 @ObservedObject var 來讓 TextField 的 text 有個 binding 的地方，當它的值有更新時，觸發搜尋的動作🚀 而搜尋完的結構再來更新畫面上的 List。  聽起來沒什麼毛病，對吧？
+實際上你會遇上的問題⋯ 當你想和我一樣，用拼音的輸入方式時；不論是你拼音還是注音，當你按下第一個音時，便會跑一次上述的流程了⋯⋯ 而我們所期望的流程應該是使用者選完字後再進行搜尋，這點在目前的 TextField 是做不到的，因為它不會判別目前是否有還沒拼完音的狀況就發動了。
+那該怎麼辦呢？  喵神這麼說 
+你可以查看一下當時的相關推文
+我的作法就是以 UIViewRepresentable 來包裝，詳細的程式碼可以到 GitHub 查看👍
+成果 當輸入了 luo dong 但是還沒選字的話並不會有動作。">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://example.com" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/" >
+                🍎 開發心得
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/">在 SwiftUI 處理中文輸入法所會遇上的問題</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 30, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。</p>
+<h3 id="開發環境">開發環境</h3>
+<ul>
+<li>Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ）</li>
+<li>macOS Catalina - 19A546d</li>
+<li>iOS 13.1 Beta</li>
+</ul>
+<p>記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂
+還沒有下載更新的朋友，可以快去<a class="link" href="https://developer.apple.com/download/"  target="_blank" rel="noopener"
+    >更新</a>一下！</p>
+<h3 id="使用情境">使用情境</h3>
+<p>我要來做一個搜尋的功能，讓使用者可以輸入關鍵字，並自動搜尋完後將結果呈現在下方👏</p>
+<p>於是我們可以用兩個 UI 元件來達成這件事</p>
+<ul>
+<li>TextField</li>
+<li>List
+並寫一個 <code>@Binding var</code> 或是 <code>@ObservedObject var</code> 來讓 <code>TextField</code> 的 text 有個 binding 的地方，當它的值有更新時，觸發搜尋的動作🚀
+而搜尋完的結構再來更新畫面上的 <code>List</code>。</li>
+</ul>
+<p>聽起來沒什麼毛病，對吧？</p>
+<h3 id="實際上你會遇上的問題">實際上你會遇上的問題⋯</h3>
+<p>當你想和我一樣，用拼音的輸入方式時；不論是你拼音還是注音，當你按下第一個音時，便會跑一次上述的流程了⋯⋯
+而我們所期望的流程應該是使用者選完字後再進行搜尋，這點在目前的 <code>TextField</code> 是做不到的，因為它不會判別目前是否有還沒拼完音的狀況就發動了。</p>
+<h3 id="那該怎麼辦呢">那該怎麼辦呢？</h3>
+<p><figure 
+	>
+	<a href="/../img/Screen-Shot-2019-08-30-at-12.11.32-PM.png" >
+		<img src="/../img/Screen-Shot-2019-08-30-at-12.11.32-PM.png"
+			
+			
+			
+			loading="lazy"
+			alt="喵神這麼說">
+	</a>
+	
+	<figcaption>喵神這麼說</figcaption>
+	
+</figure></p>
+<p>你可以查看一下當時的<a class="link" href="https://twitter.com/ChangArchie/status/1166596036112125952"  target="_blank" rel="noopener"
+    >相關推文</a></p>
+<p>我的作法就是以 <code>UIViewRepresentable</code> 來包裝，詳細的程式碼可以到 <a class="link" href="https://github.com/ArchieR7/Archie.tw/blob/master/MarkedTextField.swift"  target="_blank" rel="noopener"
+    >GitHub</a> 查看👍</p>
+<h3 id="成果">成果</h3>
+<p>當輸入了 <code>luo dong</code> 但是還沒選字的話並不會有動作。</p>
+<p><figure 
+	>
+	<a href="/../img/Screen-Shot-2019-08-30-at-11.57.22-AM.png" >
+		<img src="/../img/Screen-Shot-2019-08-30-at-11.57.22-AM.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure>
+而當選字後便會進行搜尋🔍
+<figure 
+	>
+	<a href="/../img/Screen-Shot-2019-08-30-at-12.00.31-PM.png" >
+		<img src="/../img/Screen-Shot-2019-08-30-at-12.00.31-PM.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<p>如果還有什麼問題的話，歡迎留言討論👏</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">iOS</a>
+        
+            <a href="/tags/swift/">Swift</a>
+        
+            <a href="/tags/swiftui/">SwiftUI</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/coredata-with-background-task/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CoreData with background task</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/swiftlint/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SwiftLint</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/create-cocoapods-by-yourself/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Create CocoaPods by yourself</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/uuid-with-version-3-5-and-name-spaces/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UUID with version 3, 5 and name spaces</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/statusbarstyle/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">StatusBarStyle</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#開發環境">開發環境</a></li>
+        <li><a href="#使用情境">使用情境</a></li>
+        <li><a href="#實際上你會遇上的問題">實際上你會遇上的問題⋯</a></li>
+        <li><a href="#那該怎麼辦呢">那該怎麼辦呢？</a></li>
+        <li><a href="#成果">成果</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

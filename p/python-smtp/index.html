@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='前情提要 痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話， 感覺像是他們自己本身內部的錯誤導致 Time out 之類的。 礙於目前還無法在短時間內處理好一台伺服器建構多個 WordPress， 所以只好先將內容發佈到 Blogger 來解決當前的問題。 而我們只需要使用到發文的功能，所以就可以簡單利用電子郵件來發文；
+ Blogger 設定的「以電子郵件傳送」 使用電子郵件張貼填入電子信箱，並開啟「立即發佈電子郵件」 儲存設定  這樣只要寄信給設定的地址的話，Blogger 便會自動發文。
+SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下列使用 gmail 為例：
+import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定：  登入與安全性   啟用  這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
+from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.'><title>Python – SMTP</title>
+
+<link rel='canonical' href='https://example.com/p/python-smtp/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Python – SMTP'>
+<meta property='og:description' content='前情提要 痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話， 感覺像是他們自己本身內部的錯誤導致 Time out 之類的。 礙於目前還無法在短時間內處理好一台伺服器建構多個 WordPress， 所以只好先將內容發佈到 Blogger 來解決當前的問題。 而我們只需要使用到發文的功能，所以就可以簡單利用電子郵件來發文；
+ Blogger 設定的「以電子郵件傳送」 使用電子郵件張貼填入電子信箱，並開啟「立即發佈電子郵件」 儲存設定  這樣只要寄信給設定的地址的話，Blogger 便會自動發文。
+SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下列使用 gmail 為例：
+import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定：  登入與安全性   啟用  這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
+from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.'>
+<meta property='og:url' content='https://example.com/p/python-smtp/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2018-01-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-01-23T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="Python – SMTP">
+<meta name="twitter:description" content="前情提要 痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話， 感覺像是他們自己本身內部的錯誤導致 Time out 之類的。 礙於目前還無法在短時間內處理好一台伺服器建構多個 WordPress， 所以只好先將內容發佈到 Blogger 來解決當前的問題。 而我們只需要使用到發文的功能，所以就可以簡單利用電子郵件來發文；
+ Blogger 設定的「以電子郵件傳送」 使用電子郵件張貼填入電子信箱，並開啟「立即發佈電子郵件」 儲存設定  這樣只要寄信給設定的地址的話，Blogger 便會自動發文。
+SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下列使用 gmail 為例：
+import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定：  登入與安全性   啟用  這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
+from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://example.com" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/backend/" >
+                💻 Backend
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/python-smtp/">Python – SMTP</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 23, 2018</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h1 id="前情提要">前情提要</h1>
+<p>痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話，
+感覺像是他們自己本身內部的錯誤導致 Time out 之類的。
+礙於目前還無法在短時間內處理好一台伺服器建構多個 WordPress，
+所以只好先將內容發佈到 Blogger 來解決當前的問題。
+而我們只需要使用到發文的功能，所以就可以簡單利用電子郵件來發文；</p>
+<ol>
+<li>Blogger 設定的「以電子郵件傳送」</li>
+<li>使用電子郵件張貼填入電子信箱，並開啟「立即發佈電子郵件」</li>
+<li>儲存設定</li>
+</ol>
+<p>這樣只要寄信給設定的地址的話，Blogger 便會自動發文。</p>
+<h2 id="smtp">SMTP</h2>
+<p>首先在 Python 當中，我們可以使用 smtplib 來發送信件，
+下列使用 gmail 為例：</p>
+<pre tabindex="0"><code class="language-pyhton" data-lang="pyhton">import smtplib
+smtpserver = smtplib.SMTP_SSL(&quot;smtp.gmail.com&quot;,465)
+smtpserver.ehlo()
+smtpserver.login(username, password)
+</code></pre><p>若你直接執行的話，可能會收到登入失敗的訊息；
+由於 Google 在安全性設定上，會阻擋安全性較低的應用程式，
+所以若要使用的話，則需要開啟相關設定：
+<figure 
+	>
+	<a href="https://i0.wp.com/i.imgur.com/Mfh1Iah.png?w=688&amp;ssl=1" >
+		<img src="https://i0.wp.com/i.imgur.com/Mfh1Iah.png?w=688&amp;ssl=1"
+			
+			
+			
+			loading="lazy"
+			alt="登入與安全性">
+	</a>
+	
+	<figcaption>登入與安全性</figcaption>
+	
+</figure>
+<figure 
+	>
+	<a href="https://i0.wp.com/i.imgur.com/zjV8Id6.png?w=688&amp;ssl=1" >
+		<img src="https://i0.wp.com/i.imgur.com/zjV8Id6.png?w=688&amp;ssl=1"
+			
+			
+			
+			loading="lazy"
+			alt="啟用">
+	</a>
+	
+	<figcaption>啟用</figcaption>
+	
+</figure>
+這樣的話，就可以順利地登入 gmail。
+再來準備信件的內容並寄出：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
+<span class="kn">from</span> <span class="nn">email.header</span> <span class="kn">import</span> <span class="n">Header</span>
+<span class="n">from_address</span> <span class="o">=</span> <span class="s1">&#39;Archie.Chang.iOS@gmail.com&#39;</span>
+<span class="n">to_address</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Archie.Chang.iOS@gmail.com&#39;</span><span class="p">]</span>
+<span class="n">message</span> <span class="o">=</span> <span class="n">MIMEText</span><span class="p">(</span><span class="n">html_body</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<span class="n">message</span><span class="p">[</span><span class="s1">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">from_address</span>
+<span class="n">message</span><span class="p">[</span><span class="s1">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_address</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">message</span><span class="p">[</span><span class="s1">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject</span>
+<span class="n">smtpserver</span><span class="o">.</span><span class="n">sendmail</span><span class="p">(</span><span class="n">from_address</span><span class="p">,</span> <span class="n">to_address</span><span class="p">,</span> <span class="n">message</span><span class="o">.</span><span class="n">as_string</span><span class="p">())</span>
+<span class="n">smtpserver</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</code></pre></div><h3 id="小雷">小雷</h3>
+<p>其中，sendmail 的 to_address 為 list 型態；
+之前測試的過程中，我將 sendmail 改為</p>
+<pre tabindex="0"><code>smtpserver.sendmail(from_address, to_address[0], message.asString())
+</code></pre><p>結果導致它不斷地寄同一封信，Blogger 文章就大爆發了。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/aws-ec2-with-wordpress/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AWS EC2 with WordPress</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/socket.io/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Socket.IO</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/heroku/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">HEROKU</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/selenium/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Selenium</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/twitter-follow-all-users-script/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Twitter Follow all users script</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#smtp">SMTP</a>
+      <ol>
+        <li><a href="#小雷">小雷</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

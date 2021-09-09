@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='UI / UX 設計師 在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師， 而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。
+設計師所使用的工具 在 UX 設計師裏頭，有配合過使用 Axure、Adobe Xd、或是用 Sketch 直接和 UI 一起出的。 而在 Sketch 的模式下，它裡頭有個詞叫做「symbol」，其意義和 iOS 裡頭的 UIView 相關物件相同。
+物件的概念 Sketch 提供了 Symbol 的建立，讓使用者在設計時，能夠把一些重複使用到的元件，做成一個 symbol， 而它會自動定義這個 symbol 哪些值是可以被異動的：
+如同上方寫的「中華電信」，便是可被異動的值，但更改這個字串並不會影響整體的外觀。
+以 iOS developer 來說 設計師可以了解到，UINavigationBar 的樣貌大概是長這樣，並明白 UIBarButtonItem 能夠控制的外觀欄位有哪些，像是這邊顯示的 Edit 字串。 而設計師也可以自行建構 symbol，來增加重複使用的便利性；這點也如同我們在開發 App 一樣， 會建立一些較容易重複使用到的 UIView 來呈現畫面。 設計師可以更明確地定義物件哪些欄位是會怎麼變動的，像是一個「客製化的按鈕」， 可以先明白它的背景色可能會在其他頁面做換色、或是字體會更改， 這都可以讓開發人員在一開始設計這個按鈕時，都考慮進去來增加彈性。
+維持一致性 symbol 的概念，可以維持整個專案的外觀一致性； 也就是說當設計師需要調整剛剛所說的「客製化按鈕」， 想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可， 不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel； developer 也一樣，只需要更改其類別即可，省去重複定義的時間。 也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。'><title>開發人員與 UI / UX 設計師之間的合作模式</title>
+
+<link rel='canonical' href='https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='開發人員與 UI / UX 設計師之間的合作模式'>
+<meta property='og:description' content='UI / UX 設計師 在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師， 而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。
+設計師所使用的工具 在 UX 設計師裏頭，有配合過使用 Axure、Adobe Xd、或是用 Sketch 直接和 UI 一起出的。 而在 Sketch 的模式下，它裡頭有個詞叫做「symbol」，其意義和 iOS 裡頭的 UIView 相關物件相同。
+物件的概念 Sketch 提供了 Symbol 的建立，讓使用者在設計時，能夠把一些重複使用到的元件，做成一個 symbol， 而它會自動定義這個 symbol 哪些值是可以被異動的：
+如同上方寫的「中華電信」，便是可被異動的值，但更改這個字串並不會影響整體的外觀。
+以 iOS developer 來說 設計師可以了解到，UINavigationBar 的樣貌大概是長這樣，並明白 UIBarButtonItem 能夠控制的外觀欄位有哪些，像是這邊顯示的 Edit 字串。 而設計師也可以自行建構 symbol，來增加重複使用的便利性；這點也如同我們在開發 App 一樣， 會建立一些較容易重複使用到的 UIView 來呈現畫面。 設計師可以更明確地定義物件哪些欄位是會怎麼變動的，像是一個「客製化的按鈕」， 可以先明白它的背景色可能會在其他頁面做換色、或是字體會更改， 這都可以讓開發人員在一開始設計這個按鈕時，都考慮進去來增加彈性。
+維持一致性 symbol 的概念，可以維持整個專案的外觀一致性； 也就是說當設計師需要調整剛剛所說的「客製化按鈕」， 想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可， 不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel； developer 也一樣，只需要更改其類別即可，省去重複定義的時間。 也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。'>
+<meta property='og:url' content='https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='心得文' /><meta property='article:published_time' content='2017-06-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-06-20T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="開發人員與 UI / UX 設計師之間的合作模式">
+<meta name="twitter:description" content="UI / UX 設計師 在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師， 而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。
+設計師所使用的工具 在 UX 設計師裏頭，有配合過使用 Axure、Adobe Xd、或是用 Sketch 直接和 UI 一起出的。 而在 Sketch 的模式下，它裡頭有個詞叫做「symbol」，其意義和 iOS 裡頭的 UIView 相關物件相同。
+物件的概念 Sketch 提供了 Symbol 的建立，讓使用者在設計時，能夠把一些重複使用到的元件，做成一個 symbol， 而它會自動定義這個 symbol 哪些值是可以被異動的：
+如同上方寫的「中華電信」，便是可被異動的值，但更改這個字串並不會影響整體的外觀。
+以 iOS developer 來說 設計師可以了解到，UINavigationBar 的樣貌大概是長這樣，並明白 UIBarButtonItem 能夠控制的外觀欄位有哪些，像是這邊顯示的 Edit 字串。 而設計師也可以自行建構 symbol，來增加重複使用的便利性；這點也如同我們在開發 App 一樣， 會建立一些較容易重複使用到的 UIView 來呈現畫面。 設計師可以更明確地定義物件哪些欄位是會怎麼變動的，像是一個「客製化的按鈕」， 可以先明白它的背景色可能會在其他頁面做換色、或是字體會更改， 這都可以讓開發人員在一開始設計這個按鈕時，都考慮進去來增加彈性。
+維持一致性 symbol 的概念，可以維持整個專案的外觀一致性； 也就是說當設計師需要調整剛剛所說的「客製化按鈕」， 想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可， 不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel； developer 也一樣，只需要更改其類別即可，省去重複定義的時間。 也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://example.com" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" >
+                📒 程式筆記
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/">開發人員與 UI / UX 設計師之間的合作模式</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 20, 2017</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <h3 id="ui--ux-設計師">UI / UX 設計師</h3>
+<p>在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師，
+而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。</p>
+<h3 id="設計師所使用的工具">設計師所使用的工具</h3>
+<p>在 UX 設計師裏頭，有配合過使用 Axure、Adobe Xd、或是用 Sketch 直接和 UI 一起出的。
+而在 Sketch 的模式下，它裡頭有個詞叫做「symbol」，其意義和 iOS 裡頭的 UIView 相關物件相同。</p>
+<h3 id="物件的概念">物件的概念</h3>
+<p>Sketch 提供了 Symbol 的建立，讓使用者在設計時，能夠把一些重複使用到的元件，做成一個 symbol，
+而它會自動定義這個 symbol 哪些值是可以被異動的：</p>
+<p>如同上方寫的「中華電信」，便是可被異動的值，但更改這個字串並不會影響整體的外觀。</p>
+<h3 id="以-ios-developer-來說">以 iOS developer 來說</h3>
+<p>設計師可以了解到，UINavigationBar 的樣貌大概是長這樣，並明白 UIBarButtonItem 能夠控制的外觀欄位有哪些，像是這邊顯示的 Edit 字串。
+而設計師也可以自行建構 symbol，來增加重複使用的便利性；這點也如同我們在開發 App 一樣，
+會建立一些較容易重複使用到的 UIView 來呈現畫面。
+設計師可以更明確地定義物件哪些欄位是會怎麼變動的，像是一個「客製化的按鈕」，
+可以先明白它的背景色可能會在其他頁面做換色、或是字體會更改，
+這都可以讓開發人員在一開始設計這個按鈕時，都考慮進去來增加彈性。</p>
+<h3 id="維持一致性">維持一致性</h3>
+<p>symbol 的概念，可以維持整個專案的外觀一致性；
+也就是說當設計師需要調整剛剛所說的「客製化按鈕」，
+想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可，
+不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel；
+developer 也一樣，只需要更改其類別即可，省去重複定義的時間。
+也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。</p>
+<h3 id="接下來呢">接下來呢？</h3>
+<p>照著上述的做法，我們已經可以較清楚地和設計師們以一致的用詞溝通元件：
+設計師：「在登入畫面的圓形按鈕，背景色要用藍色」
+：「等等⋯⋯你說的藍，是什麼藍？」
+我們可以理解圓形按鈕是之前所建構的 CircleButton（舉例），但顏色呢？
+「就 157AFB 啊～」
+這絕對不是一個友善的方式啊⋯⋯
+在設計稿中可能會出現的顏色，建議的做法是請設計師都幫它們取個名稱，
+並使用一個 structure 來宣告這些顏色。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">import</span> <span class="nc">UIKit</span>
+
+<span class="kd">struct</span> <span class="nc">UISetting</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">blue</span> <span class="p">=</span> <span class="n">UIColor</span><span class="p">(</span><span class="n">colorLiteralRed</span><span class="p">:</span> <span class="mi">21</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">green</span><span class="p">:</span> <span class="mi">122</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">blue</span><span class="p">:</span> <span class="mi">251</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span> <span class="n">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div><p>這樣我們便可以很輕鬆地讓這句話和程式產生連結
+「在登入畫面的圓形按鈕，背景色要用藍色」</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">setUpView</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">loginButton</span> <span class="p">=</span> <span class="n">CircleButton</span><span class="p">()</span>
+    <span class="n">loginButton</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="p">=</span> <span class="n">UISetting</span><span class="p">.</span><span class="n">blue</span>
+<span class="p">}</span>
+</code></pre></div><p>只需要一開始多花一些心思，定義一下彼此之間的「用詞」，
+出份規格表
+xxx app –
+blue = #157AFB
+white = #FFFFFF
+要溝通或者調整的時候，就可以省下許多時間了！</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E5%BF%83%E5%BE%97%E6%96%87/">心得文</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/markdown-%E5%B5%8C%E5%85%A5-youtube/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown 嵌入 YouTube</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/change-login-shells-without-chsh/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Change login shells without chsh</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/postman-pre-request-script/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">POSTMAN – Pre-request script</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/git-submodule/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git submodule</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/compactmap-vs-flatmap/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">CompactMap vs flatMap</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#ui--ux-設計師">UI / UX 設計師</a></li>
+        <li><a href="#設計師所使用的工具">設計師所使用的工具</a></li>
+        <li><a href="#物件的概念">物件的概念</a></li>
+        <li><a href="#以-ios-developer-來說">以 iOS developer 來說</a></li>
+        <li><a href="#維持一致性">維持一致性</a></li>
+        <li><a href="#接下來呢">接下來呢？</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
