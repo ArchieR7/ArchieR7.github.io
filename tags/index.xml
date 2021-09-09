@@ -17,18 +17,9 @@
     </item>
     
     <item>
-      <title>斜槓紀錄</title>
-      <link>https://example.com/tags/%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84/</link>
-      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/tags/%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>iOS</title>
       <link>https://example.com/tags/ios/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/tags/ios/</guid>
       <description></description>
@@ -37,7 +28,7 @@
     <item>
       <title>Swift</title>
       <link>https://example.com/tags/swift/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/tags/swift/</guid>
       <description></description>
@@ -46,18 +37,81 @@
     <item>
       <title>SwiftUI</title>
       <link>https://example.com/tags/swiftui/</link>
-      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/tags/swiftui/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Fastlane</title>
+      <link>https://example.com/tags/fastlane/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/fastlane/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS. Xcode</title>
+      <link>https://example.com/tags/ios.-xcode/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/ios.-xcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>新創</title>
+      <link>https://example.com/tags/%E6%96%B0%E5%89%B5/</link>
+      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E6%96%B0%E5%89%B5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GO</title>
+      <link>https://example.com/tags/go/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>斜槓紀錄</title>
+      <link>https://example.com/tags/%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Xcode</title>
       <link>https://example.com/tags/xcode/</link>
-      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/tags/xcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
+      <link>https://example.com/tags/aws/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swfit</title>
+      <link>https://example.com/tags/swfit/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/tags/swfit/</guid>
       <description></description>
     </item>
     
@@ -85,15 +139,6 @@
       <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://example.com/tags/server/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Fastlane</title>
-      <link>https://example.com/tags/fastlane/</link>
-      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://example.com/tags/fastlane/</guid>
       <description></description>
     </item>
     

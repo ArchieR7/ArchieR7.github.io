@@ -6,7 +6,82 @@
     <description>Recent content in 💻 Backend on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/backend/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 的環境變數使用</title>
+      <link>https://example.com/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</guid>
+      <description>在 Go 裡頭，使用環境變數的方式為
+import ( &amp;quot;os&amp;quot; ) os.Setenv(&amp;quot;變數名稱&amp;quot;, &amp;quot;變數值&amp;quot;) os.Getenv(&amp;quot;變數名稱&amp;quot;) 而這邊要順帶介紹的是 GoDotEnv
+具體使用的方式為
+import ( &amp;quot;github.com/joho/godotenv&amp;quot; ) err := godotenv.Load() if err != nil { //something wrong } 這樣就可以去讀專案底下的 .env 檔案，也可以將這份檔案加入到 .gitignore 來忽略上傳，讓我們的程式碼可以開源也不會將自己的私鑰上傳上去。
+若不打算處理錯誤的話，可以更改為
+import ( _ &amp;quot;github.com/joho/godotenv/autoload&amp;quot; ) 便會在 package init() 的時候就自動 Load()</description>
+    </item>
+    
+    <item>
+      <title>麥當勞報報 API 分析</title>
+      <link>https://example.com/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</guid>
+      <description>2020.12.25 目前麥當勞的 API 已經從 Restful 轉成 WebSocket 的形式，所以該篇文章的方式目前是無法實作的。
+  麥當勞報報簡單來說就是麥當勞的會員 app，你可以每日在上頭得到一些優惠券，不過是採取簽到的方式領取；也就是說如果今天你忘了登入領取的話，隔天也不會變成有兩種優惠可以領取。
+ 麥當勞報報 API 分析 透過一些工具，我們可以得到麥當勞報報的 API 路徑和內容，其中分成三種 base url
+https://api.mcddaily.com.tw 從列表來看，我目前有使用到的是這五個 API
+ 
+分別是
+/verify_member_access_token 驗證 access token 是否還有效
+/update_attributes 從內容看不太出來是幹嘛用的，不過我想對於我們而言也沒什麼特別的用途
+/get_info 從 Response body 來看的話，算是麥當勞報報登入成功後第一支得呼叫的 API； 裡頭含有 member_info 的資訊為主
+/logout 使用 access_token 就可以登出了，不過這邊有個問題是登出後 access_token 並不會過期⋯ 也就是就算我已經呼叫過了登出這支 API，但仍然可以使用原先的 access_token 來打其他 API⋯ 也就是可以做別的事，不用怕 token 登出就無效了
+/login_by_fb 就是基本的從 Facebook 取得 token 去換麥當勞報報的 access_token 和使用者資料，基本上看起來 response body 和 /get_info 的一模一樣。</description>
+    </item>
+    
+    <item>
+      <title>使用 API 來讀取 GitHub repository</title>
+      <link>https://example.com/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</link>
+      <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</guid>
+      <description>這篇文章將來介紹一下如何使用 API 來讀取 GitHub repository 上的檔案，而為什麼需要這樣做呢？
+因為我專精的是 iOS 啊 以一個 iOS 工程師而言，我們若需要自己維護一個 side project（如 找健身），那我們就得想一些簡單一點的 server 方案；其中一個就是可以將一個 JSON 檔案放到 GitHub 的某個私人 repository 上，並透過 GitHub API 的方式去讀取它，達到 GET 的效果。
+這樣便可以有效率地開發 iOS 的部分，而不必花太多心思在維護後端，至少不必煩惱伺服器的費用和穩定😂
+流程 取得 API Token 首先我們得先到 GitHub 的設定頁之中，去建立一組 API token
+ file 
+選取 Developer settings
+ file 
+選擇 Personal access tokens 並建立一組
+ file 
+再來依據你的需求選擇 scopes，像是 repo 存取全開
+ file 
+接著就會拿到一組 Token！
+API 的使用方式 首先我們得在 Headers 加上兩個 KEY-Value</description>
+    </item>
+    
+    <item>
+      <title>AWS Certificate Manager 申請流程</title>
+      <link>https://example.com/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid>
+      <description>AWS Certificate Manager 申請流程 我的這個網站架設在 AWS 的 EC2 上，搭配 Route 53 和 Load Balancer 以及這篇的主角 AWS Certificate Manager，這邊要迅速的記錄操作流程！
+環境架設的文章寫在這
+流程 申請憑證  
+新增網域名稱  
+這邊要注意的是，像我之前是申請 *.Archie.tw，這會導致一個問題就是 https://Archie.tw 就不會符合申請的格式，而我一直到昨天才修正這件事⋯⋯ 這邊建議是填寫 www.Archie.tw 和 Archie.tw，這樣不管使用者有沒有補上 www 都可以取得信任的大鎖🔒。
+選取驗證方式  
+如果你是和我一樣，使用 Route 53，就選擇 DNS  驗證
+新增標籤  
+這邊看個人，算是一個 tag 提醒自己用而已，我是沒有填寫。
+最後 AWS Certificate Manager 就會要求你
+ 
+就直接按下去就好了👌
+以上便是透過 AWS Certificate Manager 申請憑證的流程，搞清楚的話不用幾分鐘就可以處理好了👍</description>
+    </item>
+    
     <item>
       <title>AWS EC2 with WordPress</title>
       <link>https://example.com/p/aws-ec2-with-wordpress/</link>

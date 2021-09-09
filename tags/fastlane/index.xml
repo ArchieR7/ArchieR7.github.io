@@ -6,7 +6,32 @@
     <description>Recent content in Fastlane on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Aug 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/fastlane/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/fastlane/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fastlane 503 Service Temporarily Unavailable</title>
+      <link>https://example.com/p/fastlane-503-service-temporarily-unavailable/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/fastlane-503-service-temporarily-unavailable/</guid>
+      <description>Fastlane 503 Service Temporarity Unavaiable 當我們利用 Match 來更新 provisioning profiles 時，有時候會因為使用量過大而導致發生 503 Service Temporarity Unavaiable，這時候有幾種方式來處理。
+ 一次不要操作太多 Match action 清除 fastlane spaceship 的 cookie  第二種的使用方式就是直接執行下列指令就可以再次嘗試了
+rm $HOME/.fastlane/spaceship/*/cookie </description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions &#43; Fastlane &#43; Cache = 👍</title>
+      <link>https://example.com/p/github-actions-fastlane-cache/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/github-actions-fastlane-cache/</guid>
+      <description>這篇文章的內容主要是分享過去這兩天，我在專案上啟用 GitHub Actions 的筆記
+GitHub Actions  
+如上面圖示所言，GitHub 現在也提供了 workflows 讓我們可以在上頭做 CI/CD，而最大的優點就是它本身即掌管程式碼的所在地，所以在 trigger 方面自然會比其他單純做 CI/CD 的服務有一些優勢。
+建立方式 首先，你得在你的專案裏頭建立一個 workflows 的資料夾，其路徑得為
+/.github/workflows 並在裡頭新增一個 .yml 檔案，來讓 GitHub 讀取。
+yml 編輯 name: Workflow name on: workflow_dispatch push: branches: [ master ] pull_request: branches: [ master ] jobs: build: runs-on: macos-latest steps: - uses: actions/checkout@v2 - name: Setup SSH key run: | mkdir -p ~/.ssh echo &amp;quot;${{ secrets.CERTIFICATE_SSH_KEY }}&amp;quot; &amp;gt;&amp;gt; ~/.ssh/id_rsa echo &amp;quot;${{ secrets.</description>
+    </item>
+    
     <item>
       <title>Fastlane pilot issue</title>
       <link>https://example.com/p/fastlane-pilot-issue/</link>

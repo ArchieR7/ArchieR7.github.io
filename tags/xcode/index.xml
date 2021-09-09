@@ -6,7 +6,50 @@
     <description>Recent content in Xcode on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xcode 11.4 archive issue</title>
+      <link>https://example.com/p/xcode-11.4-archive-issue/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/xcode-11.4-archive-issue/</guid>
+      <description>今天使用了 Xcode 11.4 來打包找飲料 1.2.1 版本卻遇上了未知的錯誤， 而這邊就紀錄目前所找到的解法
+Xcode 11.4 - Archiving project - Segmentation Fault 11 經實測後無效
+Xcode 11.4, error: Segmentation fault: 11 經實測後可以順利打包上傳到 App Store</description>
+    </item>
+    
+    <item>
+      <title>使用 Xcode 建立一個 Framework</title>
+      <link>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid>
+      <description>之前有介紹過如何建立一個 CocoaPods，而這篇文章則是紀錄一下這次直接在 Xcode 上建立 Framework 會遇上的問題。
+建立 Framework 專案 首先我們先打開 Xcode，並選擇 iOS 類別底下的 Framework &amp;amp; Library 裡頭的 Framework
+ 
+並依照所需要的欄位填寫相關資訊，這邊目前都和直接建立一個專案一致流程。
+ 
+而如果你有打算在裡頭寫測試的話，就將 Include Unit Tests ☑️
+Framework 開發 使用 Xcode 建立起來和 CocoaPods 創建，在開發上並沒有什麼差異；所以就依照著相對應的存取限制來設計你的 framework 即可。
+這篇的重點會落在一些參數設定。
+Mach-O Type 決定方式 在這個 framework 的 target 之中，我們可以從 Build Settings 的 Mach-O Type 來決定它是一個怎樣的 framework
+ 
+而要如何取捨這個 framework 的輸出型態，可以依據一些使用方式來判斷
+Static Library  有使用到其他 static library 使用 Singleton  Dynamic Library  有包含其他檔案，如圖片、JSON 之類的  輸出成 .</description>
+    </item>
+    
+    <item>
+      <title>Active Compilation Conditions</title>
+      <link>https://example.com/p/active-compilation-conditions/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/active-compilation-conditions/</guid>
+      <description>在 Xcode 7 以前的版本，我們若需要設立一些環境變數，需要透過 Other Swift Flags 來處理； 像是 -DDEBUG -DRELEASE 等，且在使用的時候，並不會自動檢查出是否正確。
+而在 Xcode 8 加入了一個 Active Compilation Conditions，現在我們可以在裡頭新增 DEBUG、RELEASE 即可達到原先的效果，並且會在寫程式的時候，自動補全了！
+ file 
+我竟然到 Xcode 11 出來後才發現這點，畢竟原本就都寫好了😂</description>
+    </item>
+    
     <item>
       <title>建立 Xcode 的檔案範本</title>
       <link>https://example.com/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</link>

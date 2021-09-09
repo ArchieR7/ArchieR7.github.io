@@ -20,6 +20,31 @@
     </item>
     
     <item>
+      <title>iOS 開發環境設置</title>
+      <link>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</guid>
+      <description>來算一算這是我第幾次來設置開發環境了⋯
+ 2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）  前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
+brew 首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！
+git 自從上次 git 發生了資安問題後，我都習慣用 brew 所安裝的 git 為主。
+iTerm2 接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這部分。
+刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個</description>
+    </item>
+    
+    <item>
+      <title>Fastlane 503 Service Temporarily Unavailable</title>
+      <link>https://example.com/p/fastlane-503-service-temporarily-unavailable/</link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/fastlane-503-service-temporarily-unavailable/</guid>
+      <description>Fastlane 503 Service Temporarity Unavaiable 當我們利用 Match 來更新 provisioning profiles 時，有時候會因為使用量過大而導致發生 503 Service Temporarity Unavaiable，這時候有幾種方式來處理。
+ 一次不要操作太多 Match action 清除 fastlane spaceship 的 cookie  第二種的使用方式就是直接執行下列指令就可以再次嘗試了
+rm $HOME/.fastlane/spaceship/*/cookie </description>
+    </item>
+    
+    <item>
       <title>Change login shells without chsh</title>
       <link>https://example.com/p/change-login-shells-without-chsh/</link>
       <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>

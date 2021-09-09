@@ -6,7 +6,266 @@
     <description>Recent content in iOS on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>發票收集雞 - 自己的發票自己收</title>
+      <link>https://example.com/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</guid>
+      <description>發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
+紙本發票的減少 在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。
+雲端發票專屬獎 而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！
+基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。
+ 
+為什麼寫這個 App 主要是以自己的需求出發，來練一些技術，在 SwiftUI 推出後一直都還沒有機會拿來作為一個產品的開發架構，於是便起心動念開工！
+使用到了什麼服務和技術  🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷  發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。</description>
+    </item>
+    
+    <item>
+      <title>iOS 開發環境設置</title>
+      <link>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</link>
+      <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</guid>
+      <description>來算一算這是我第幾次來設置開發環境了⋯
+ 2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）  前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
+brew 首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！
+git 自從上次 git 發生了資安問題後，我都習慣用 brew 所安裝的 git 為主。
+iTerm2 接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這部分。
+刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個</description>
+    </item>
+    
+    <item>
+      <title>WWDC21 - Platforms State of the Union</title>
+      <link>https://example.com/p/wwdc21-platforms-state-of-the-union/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/wwdc21-platforms-state-of-the-union/</guid>
+      <description>Xcode Cloud 一般我們的發佈流程為，從寫程式到測試，接著整合後發佈，再來接著收集資訊後再進行下一輪開發。  
+Xcode Cloud 將這一切整合在同一個服務之中，讓我們可以直接寫完程式之後，建立 workflow 並整合 Git 服務（GitHub, GitLab 等），接著串接 App Store Connect 進行 TestFlight 和發佈。  
+我們之後就可以從單一的 Xcode Cloud 介面處理完上述的所有事情，而建立這些 CI/CD 只需要一分鐘的時間。
+相比之前弄 GitHub action，應該可以算是更加容易許多（？
+建構四步驟  選擇 product 確認 workflow 授權相對應的 source code 連接 App Store Connect  在 CI/CD 的測試以及 Code Review 上的體驗都會比原先使用其他服務上好很多，畢竟是原生的體驗，在 DEMO 影片上看起來都蠻有趣的。
+目前可以透過這個連結來註冊 Beta 使用，若有機會的話再來詳細寫一篇這部分的體驗。
+ 
+Swift concurrency async 和 await 的來臨讓我們能夠取代原先的 completion handler
+Completion handler
+func prepareForShow(completion: @escaping (Result&amp;lt;Scene, Error&amp;gt;) -&amp;gt; Void) { danceCompany.</description>
+    </item>
+    
+    <item>
+      <title>Apple Watch App 開發除錯心得</title>
+      <link>https://example.com/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</guid>
+      <description>前陣子在幫水滴發票加入 Apple Watch 的功能，這篇文章會紀錄下開發的一些想法。
+ 資料傳遞方面 因為 Watch app 本身可以為一個獨立的 app，所以 UserDefaults 的部分則會擁有自己的一份，也就是說兩者之間無法像是 Widget 一般透過同一個 Group 的 UserDefault 來同步資料。
+解決方法 利用 WCSession 來做傳遞資料。
+實機測試時，WCSession.isReachable 始終為 false 主要就是手機和手錶之間一直無法透過 WCSession 連接上彼此，會造成幾個問題如
+ Apple Watch App 一直卡在安裝中，無法順利安裝 無法透過 WCSession 從 iOS app 傳遞資料過去給 Watch app  解決方法 我遇到這情況是都選擇重開 iPhone 來處理。
+Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int.</description>
+    </item>
+    
+    <item>
+      <title>RxSwift 6 上線啦！</title>
+      <link>https://example.com/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</guid>
+      <description>2021 的開始，RxSwift 6 悄悄地上線啦！你可以從這個網站來看看有哪些更新，或看看這篇筆記📒
+這次更新的項目為   新的 logo 將 Binder 從 RxCocoa 移植到 RxSwift RxSwift 新增 withUnretained 透過 @dynamicMemberLookup 來自動建立 Binders Infallible Observable&amp;lt;Data&amp;gt; 新增 decode(type:decoder:) Variadic drive() 和 emit() 將 Single 的結果調整成 Result distinctUntilChange(at:) 支援 Key Paths 新增 ReplayRelay 新增 DisposeBag 的 functional builder 重新命名運算子  新的 logo   powered by dev.to 
+將 Binder 從 RxCocoa 移植到 RxSwift  原本 Binder 是屬於 RxCocoa 裡頭的元件，而在社群大家的討論下，便在這一次的更新內容，將其收納進了 RxSwift 之中。
+RxSwift 新增 withUnretained  我們在寫 RxSwift 時，還是得注意 retain cycle 的問題，而多半我們處理的方式如下</description>
+    </item>
+    
+    <item>
+      <title>Xcode 11.4 archive issue</title>
+      <link>https://example.com/p/xcode-11.4-archive-issue/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/xcode-11.4-archive-issue/</guid>
+      <description>今天使用了 Xcode 11.4 來打包找飲料 1.2.1 版本卻遇上了未知的錯誤， 而這邊就紀錄目前所找到的解法
+Xcode 11.4 - Archiving project - Segmentation Fault 11 經實測後無效
+Xcode 11.4, error: Segmentation fault: 11 經實測後可以順利打包上傳到 App Store</description>
+    </item>
+    
+    <item>
+      <title>【iOS 逆向】下載 Instagram 動態照片</title>
+      <link>https://example.com/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</guid>
+      <description>這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
+環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader + iOS 12.4。
+連上越獄裝置 流程如同之前所提及的，先開啟 iproxy 來代理 22 port
+iproxy 2222 22 並透過 ssh 的方式連上越獄裝置
+ssh -p 2222 root@127.0.0.1 密碼預設會是 alpine
+提取 .ipa 我照著 medium 上的教學，使用 frida-ios-dump 作為提取的方式。
+frida-ios-dump 安裝 首先，先在 iOS 裝置上安裝 Frida
+ 
+這邊會取決於你的裝置是哪一種 CPU 而不同。</description>
+    </item>
+    
+    <item>
+      <title>iOS App launch time 心得</title>
+      <link>https://example.com/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</guid>
+      <description>如何減少 iOS App launch time 這篇文章就來紀錄一下今日的研究項目，主要的起因是前一篇使用 Xcode 建立一個 Framework有談到如何選擇要創建的是 static library 還是 dynamic framework，其中一個差異是 dyld ( dynamic loader ) 會在 pre main 的時候去載入 dynanmic frameworks，所以若是有越多的 dynamic frameworks 需要載入時，便會花上越多時間。而Apple也建議我們不要使用超過 6 個非系統的 dynamic frameworks。
+再來搭配服用 weak self - 25: 難道公司發大財了！？App Launch Time 加速面面觀，一併做一個筆記整理。
+App 啟動的三個階段 Pre-main: Loading (MachO + dylib) / Rebase &amp;amp; Binding / ObjC Setup / Initializer 如何查看 pre main time  
+透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。</description>
+    </item>
+    
+    <item>
+      <title>使用 Xcode 建立一個 Framework</title>
+      <link>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid>
+      <description>之前有介紹過如何建立一個 CocoaPods，而這篇文章則是紀錄一下這次直接在 Xcode 上建立 Framework 會遇上的問題。
+建立 Framework 專案 首先我們先打開 Xcode，並選擇 iOS 類別底下的 Framework &amp;amp; Library 裡頭的 Framework
+ 
+並依照所需要的欄位填寫相關資訊，這邊目前都和直接建立一個專案一致流程。
+ 
+而如果你有打算在裡頭寫測試的話，就將 Include Unit Tests ☑️
+Framework 開發 使用 Xcode 建立起來和 CocoaPods 創建，在開發上並沒有什麼差異；所以就依照著相對應的存取限制來設計你的 framework 即可。
+這篇的重點會落在一些參數設定。
+Mach-O Type 決定方式 在這個 framework 的 target 之中，我們可以從 Build Settings 的 Mach-O Type 來決定它是一個怎樣的 framework
+ 
+而要如何取捨這個 framework 的輸出型態，可以依據一些使用方式來判斷
+Static Library  有使用到其他 static library 使用 Singleton  Dynamic Library  有包含其他檔案，如圖片、JSON 之類的  輸出成 .</description>
+    </item>
+    
+    <item>
+      <title>💪找健身💪-免綁約單次收費健身房清單</title>
+      <link>https://example.com/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</guid>
+      <description>近年來健身風氣盛行 許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現 但這些都必須依靠長期的運動習慣來達成
+當你過年回家想健身卻找不到健身房 當你出門旅遊想健身卻找不到健身房 當你被派到外縣市出差一個月卻找不到健身房 這些困擾 我們懂
+所以我們開發了一款 app 能幫助大家迅速找到最近的、收費最合理的單次收費健身房 只要開啟定位 所有困難就能迎刃而解
+另外 app 內也設有使用者回報機制 當你發現有新開的單次收費健身房也歡迎回報 一起完整這個健身網！
+iOS 下載點  
+緣起 在這幾年健身的風氣逐漸熱絡，健身房的類型也越來越多種類；舉凡綁約制、課程型、月費制、單次收費等，健身的產業帶動了相關人才的產出，使得一般大眾接觸健身的門檻降低不少。
+撇除一般知名度較大的連鎖會員制健身房，若我們想要在周遭找到一間不用綁約、單次收費的健身房，那麼則需要花上一些時間做功課。於是便在某天發現了扣取港 Coach Duncan的一篇動態，有為這類需求的人做一份清單。   從 2018年7月27日開始並有持續地在更新維護。
+而 PTT MuscleBeach 版也有相關文章在討論「單次」這個關鍵字：   於是乎便萌生了整合這類資訊的念頭，進而生出了這個 app
+過程紀錄 2020/2/3 萌生這個念頭  
+2020/2/5 送出第一版（28 家健身房） 2020/2/6 04:21 出現在架上🎉  
+2020/2/6 15:47 第一次 Side project 站上排行榜📈 第 52 名  
+2020/2/6 18:22 一度還跑到了前 50 名😂 第 45 名</description>
+    </item>
+    
+    <item>
+      <title>Reveal2Loader &#43; iOS 12.4</title>
+      <link>https://example.com/p/reveal2loader-ios-12.4/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/reveal2loader-ios-12.4/</guid>
+      <description>首先先來介紹 Reveal2Loader，它是一款可以在越獄的裝置上讓 Reveal 讀取任何 app 的插件，至於 Reveal 的使用方式就先不在這邊提了。
+我們可以透過這個方式來查看別人的 app 是怎麼設計 UI 的，以 Twitter 的 iOS app 為例子
+ 
+我們可以看到他們所使用的字型、大小、顏色以及元件名稱等，像是這邊就是他們自己定義的 T1StatusAttributedTextView。
+越獄 我是使用 iOS 12.4 的 iPhone 6 搭配 unc0ver 來進行越獄，你可以很輕易地使用手機來開啟這個網頁來進行操作，這步驟沒什麼難度。
+安裝 Reveal2Loader 透過 Cydia 來安裝 Reveal2Loader，如果安裝的時候出現了找不到來源的錯誤時，可以重新讀取 Sources 試試看。
+安裝 Dropbear 我的 SSH 是使用 Dropbear，你可以透過 http://cydia.ichitaso.com 這個 Source 來安裝。
+安裝 usbmuxd 我是使用 USB 的方式來連接手機裝置的，所以先在 macOS 上安裝 usbmuxd
+brew install usbmuxd 並且透過指令將特定的 port 來代理原本用來連接 ssh 的 port 22。
+iproxy 5678 22 接著我們就可以利用 port 5678 來連上裝置了。</description>
+    </item>
+    
+    <item>
+      <title>Disable dark mode on iOS 13 in your application</title>
+      <link>https://example.com/p/disable-dark-mode-on-ios-13-in-your-application/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/disable-dark-mode-on-ios-13-in-your-application/</guid>
+      <description>在使用 Xcode 11 以後的版本開發時，應用程式會自動在 iOS 13 以後的系統跑 Dark mode； 而在還沒有準備好支援 dark mode 的情況下，會直接是一個悲劇的 UI⋯⋯
+這時候你可以選擇⋯⋯
+ 調整大部分的 UI 來支援 Dark mode 在你的應用程式中設立成一般模式  在你有新功能要上線且還未準備的情況下，建議你選擇後者會比較符合效益👌
+方法就是這篇文章的主軸
+ file  就是在 Info.plist 設立 UIUserInterfaceStyle 為 light 或是 dark
+如果只有特定的 UIWindow、UIViewController、UIView等需要調整時，可以找到它們底下的這個參數 overrideUserInterfaceStyle  來去做調整即可👌</description>
+    </item>
+    
+    <item>
+      <title>如何更改模擬器上的狀態列</title>
+      <link>https://example.com/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</link>
+      <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</guid>
+      <description>這篇就來談談我是如何更改模擬器上的狀態列🎤
+在 Xcode 11 Beta 3 以前，我是使用 SimulatorStatusMagic 而今天要弄截圖的時候發現，原來在 Xcode 11 Beta 4 之後，有內建的使用方法！
+我喜歡讓 App store previews 上的時間顯示我自己的生日🎂算是一個小巧思（但沒人想知道）
+而現在可以透過內建的指令來完成這件事，其中你可以使用下列這些
+xcrun simctl status_bar  指令 
+像是更改目前開著的模擬器時間：
+xcrun simctl status_bar booted override --time &amp;quot;02:01&amp;quot;  成果圖 
+而若是你的 Xcode 版本是 6 - 10 的話，就繼續使用 SimulatorStatusMagic 吧👌</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI &#43; Google AdMob</title>
+      <link>https://example.com/p/swiftui-google-admob/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/swiftui-google-admob/</guid>
+      <description>這篇是一個簡單介紹 UIViewControllerRepresentable 的範例， 由於 Google AdMob 的 GADBannerView 不像上次提及的 UITextField 一樣，可以直接使用 UIViewRepresentable 來包裝；原因是它必須設置一個 rootViewController，也就意味著我們需要使用 UIViewControllerRepresentable 才能完成它。
+Interfacing with UIKit 透過這個 Apple 官方的教學當中，我們可以從 UIPageViewController 的範例來做發想，故我的實作方式會是這樣：
+import GoogleMobileAds import SwiftUI import UIKit struct GADBannerViewController: UIViewControllerRepresentable { func makeUIViewController(context: Context) -&amp;gt; UIViewController { let view = GADBannerView(adSize: kGADAdSizeBanner) let viewController = UIViewController() view.adUnitID = &amp;#34;your ad unit id in there.&amp;#34; view.rootViewController = viewController viewController.view.addSubview(view) viewController.view.frame = CGRect(origin: .zero, size: kGADAdSizeBanner.size) view.load(GADRequest()) return viewController } func updateUIViewController(_ uiViewController: UIViewController, context: Context) {} } 如果需要處理 Delegate 的部分 你可以參閱上次 TextField 的處理方式，建構一個 Coordinator 來進行相關的作業👌</description>
+    </item>
+    
+    <item>
+      <title>對於 SwiftUI onDisappear 的誤解？</title>
+      <link>https://example.com/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</guid>
+      <description>在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
+ onDisappear 到底是不是壞的！
+ 這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
+ Note: In the current SwiftUI beta onDisappear will never be called. by HackingWithSwift
+ 或是你可以看到在 StackOverFlow 上大家是這麼討論的
+ 討論串 
+接著，在這一路以來，你又曾經碰過真的是 Apple 的 bug，所以你就會很理所當然地認為⋯⋯
+ 沒錯，onDisappear 就是壞的！
+ 直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了這篇 並下載下來研究發現
+ onDisappear 是會動的⋯
+ 這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。 來看看官方的這個 View
+struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: .</description>
+    </item>
+    
+    <item>
+      <title>📒 SwiftUI &#43; CoreData 的實戰心得🔥</title>
+      <link>https://example.com/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</guid>
+      <description>SwiftUI + CoreData  
+這篇文章會紀錄我在目前的 side project 上，如何在 SwiftUI 下導入 CoreData； 而如同 在 SwiftUI 處理中文輸入法所會遇上的問題 所提及的，SwiftUI 身為一個還在測試階段的 framework，我們必須將當下的開發環境紀錄下來，以避免造成日後官方修正所造成的誤解。
+開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  使用情境 我要做一個貨幣的列表，並讓使用者可以對相對應的貨幣做隱藏與否，所以規格大概是需要一個 List，而 Row 裡頭呈現貨幣的名稱以及用 Toggle 來做控制隱藏的開關。
+CoreData Model - Currency  
+Row 的部分 在 Xcode 11 Beta 5 之後， NSManagedObject 可以視為一個 @ObservedObject，所以我們可以不必再弄一個 ManageRowModel，而是直接使用 NSManagedObject 來連動。 這邊我需要以英文大寫來顯示貨幣名稱以及一個控制是否顯示在主畫面上的開關。
+struct ManageRow: View { @ObservedObject var currency: Currency var body: some View { HStack { VStack { Text(currency.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI 上的鍵盤處理方式</title>
+      <link>https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</guid>
+      <description>在 iOS 的開發過程之中，難免會碰到一個狀況，那便是 UITextField/ UITextView 被鍵盤所遮住了⌨️ 在 UIKit 之下，多數人會使用套件來做全域的處理，如 IQKeyboardManager 就是一個十分經典的解決方案。
+來說說 SwiftUI 上的鍵盤處理方式 在 SwiftUI 上，我們也可以很優雅地處理這一塊，如在 List 元件中，只需要分別監聽 UIWindow.keyboardWillShowNotification 和 UIWindow.keyboardWillHideNotification，以及加上個 .animation(.default) 來優化使用者體驗。
+var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .padding(EdgeInsets(top: 0, leading: 0, bottom: bottomPadding, trailing: 0)) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillShowNotification), perform: updateFrame) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillHideNotification), perform: updateFrame) .animation(.default) } 完整的 struct 可以在 GitHub 上查看👍
+成果動畫  
+有任何問題歡迎在底下留言👏有寫法上的建議可以直接在 GitHub 上反應👍 有想看看一些廢話的話則是可以在 Twitter 直接找到我喔！😂</description>
+    </item>
+    
     <item>
       <title>在 SwiftUI 處理中文輸入法所會遇上的問題</title>
       <link>https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link>

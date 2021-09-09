@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='近年來健身風氣盛行 許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現 但這些都必須依靠長期的運動習慣來達成
+當你過年回家想健身卻找不到健身房 當你出門旅遊想健身卻找不到健身房 當你被派到外縣市出差一個月卻找不到健身房 這些困擾 我們懂
+所以我們開發了一款 app 能幫助大家迅速找到最近的、收費最合理的單次收費健身房 只要開啟定位 所有困難就能迎刃而解
+另外 app 內也設有使用者回報機制 當你發現有新開的單次收費健身房也歡迎回報 一起完整這個健身網！
+iOS 下載點  
+緣起 在這幾年健身的風氣逐漸熱絡，健身房的類型也越來越多種類；舉凡綁約制、課程型、月費制、單次收費等，健身的產業帶動了相關人才的產出，使得一般大眾接觸健身的門檻降低不少。
+撇除一般知名度較大的連鎖會員制健身房，若我們想要在周遭找到一間不用綁約、單次收費的健身房，那麼則需要花上一些時間做功課。於是便在某天發現了扣取港 Coach Duncan的一篇動態，有為這類需求的人做一份清單。   從 2018年7月27日開始並有持續地在更新維護。
+而 PTT MuscleBeach 版也有相關文章在討論「單次」這個關鍵字：   於是乎便萌生了整合這類資訊的念頭，進而生出了這個 app
+過程紀錄 2020/2/3 萌生這個念頭  
+2020/2/5 送出第一版（28 家健身房） 2020/2/6 04:21 出現在架上🎉  
+2020/2/6 15:47 第一次 Side project 站上排行榜📈 第 52 名  
+2020/2/6 18:22 一度還跑到了前 50 名😂 第 45 名'><title>💪找健身💪-免綁約單次收費健身房清單</title>
+
+<link rel='canonical' href='https://example.com/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='💪找健身💪-免綁約單次收費健身房清單'>
+<meta property='og:description' content='近年來健身風氣盛行 許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現 但這些都必須依靠長期的運動習慣來達成
+當你過年回家想健身卻找不到健身房 當你出門旅遊想健身卻找不到健身房 當你被派到外縣市出差一個月卻找不到健身房 這些困擾 我們懂
+所以我們開發了一款 app 能幫助大家迅速找到最近的、收費最合理的單次收費健身房 只要開啟定位 所有困難就能迎刃而解
+另外 app 內也設有使用者回報機制 當你發現有新開的單次收費健身房也歡迎回報 一起完整這個健身網！
+iOS 下載點  
+緣起 在這幾年健身的風氣逐漸熱絡，健身房的類型也越來越多種類；舉凡綁約制、課程型、月費制、單次收費等，健身的產業帶動了相關人才的產出，使得一般大眾接觸健身的門檻降低不少。
+撇除一般知名度較大的連鎖會員制健身房，若我們想要在周遭找到一間不用綁約、單次收費的健身房，那麼則需要花上一些時間做功課。於是便在某天發現了扣取港 Coach Duncan的一篇動態，有為這類需求的人做一份清單。   從 2018年7月27日開始並有持續地在更新維護。
+而 PTT MuscleBeach 版也有相關文章在討論「單次」這個關鍵字：   於是乎便萌生了整合這類資訊的念頭，進而生出了這個 app
+過程紀錄 2020/2/3 萌生這個念頭  
+2020/2/5 送出第一版（28 家健身房） 2020/2/6 04:21 出現在架上🎉  
+2020/2/6 15:47 第一次 Side project 站上排行榜📈 第 52 名  
+2020/2/6 18:22 一度還跑到了前 50 名😂 第 45 名'>
+<meta property='og:url' content='https://example.com/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2020-02-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-02-06T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="💪找健身💪-免綁約單次收費健身房清單">
+<meta name="twitter:description" content="近年來健身風氣盛行 許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現 但這些都必須依靠長期的運動習慣來達成
+當你過年回家想健身卻找不到健身房 當你出門旅遊想健身卻找不到健身房 當你被派到外縣市出差一個月卻找不到健身房 這些困擾 我們懂
+所以我們開發了一款 app 能幫助大家迅速找到最近的、收費最合理的單次收費健身房 只要開啟定位 所有困難就能迎刃而解
+另外 app 內也設有使用者回報機制 當你發現有新開的單次收費健身房也歡迎回報 一起完整這個健身網！
+iOS 下載點  
+緣起 在這幾年健身的風氣逐漸熱絡，健身房的類型也越來越多種類；舉凡綁約制、課程型、月費制、單次收費等，健身的產業帶動了相關人才的產出，使得一般大眾接觸健身的門檻降低不少。
+撇除一般知名度較大的連鎖會員制健身房，若我們想要在周遭找到一間不用綁約、單次收費的健身房，那麼則需要花上一些時間做功課。於是便在某天發現了扣取港 Coach Duncan的一篇動態，有為這類需求的人做一份清單。   從 2018年7月27日開始並有持續地在更新維護。
+而 PTT MuscleBeach 版也有相關文章在討論「單次」這個關鍵字：   於是乎便萌生了整合這類資訊的念頭，進而生出了這個 app
+過程紀錄 2020/2/3 萌生這個念頭  
+2020/2/5 送出第一版（28 家健身房） 2020/2/6 04:21 出現在架上🎉  
+2020/2/6 15:47 第一次 Side project 站上排行榜📈 第 52 名  
+2020/2/6 18:22 一度還跑到了前 50 名😂 第 45 名">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://example.com" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>Back</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/" >
+                🍎 開發心得
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/">💪找健身💪-免綁約單次收費健身房清單</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 06, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    <p>近年來健身風氣盛行
+許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現
+但這些都必須依靠長期的運動習慣來達成</p>
+<p>當你過年回家想健身卻找不到健身房
+當你出門旅遊想健身卻找不到健身房
+當你被派到外縣市出差一個月卻找不到健身房
+這些困擾 我們懂</p>
+<p>所以我們開發了一款 app
+能幫助大家迅速找到最近的、收費最合理的單次收費健身房
+只要開啟定位
+所有困難就能迎刃而解</p>
+<p>另外 app 內也設有使用者回報機制
+當你發現有新開的單次收費健身房也歡迎回報
+一起完整這個健身網！</p>
+<p><a class="link" href="https://apps.apple.com/app/id1497860482?fbclid=IwAR0v0Rt14D5ud628P8CsIlGbCzHvyk5DtyqezpTgy4v7AhOV4qxZibmszFQ"  target="_blank" rel="noopener"
+    >iOS 下載點</a>
+<figure 
+	>
+	<a href="/../img/image-1581003366354.png" >
+		<img src="/../img/image-1581003366354.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h2 id="緣起">緣起</h2>
+<p>在這幾年健身的風氣逐漸熱絡，健身房的類型也越來越多種類；舉凡綁約制、課程型、月費制、單次收費等，健身的產業帶動了相關人才的產出，使得一般大眾接觸健身的門檻降低不少。</p>
+<p>撇除一般知名度較大的連鎖會員制健身房，若我們想要在周遭找到一間不用綁約、單次收費的健身房，那麼則需要花上一些時間做功課。於是便在某天發現了<a class="link" href="https://www.facebook.com/duncancoach/"  target="_blank" rel="noopener"
+    >扣取港 Coach Duncan</a>的一篇動態，有為這類需求的人做一份清單。
+<figure 
+	>
+	<a href="/../img/image-1581002466625.png" >
+		<img src="/../img/image-1581002466625.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure>
+從 2018年7月27日開始並有持續地在更新維護。</p>
+<p>而 <a class="link" href="https://www.ptt.cc/bbs/MuscleBeach/index.html"  target="_blank" rel="noopener"
+    >PTT MuscleBeach 版</a>也有相關文章在討論「單次」這個關鍵字：
+<figure 
+	>
+	<a href="/../img/image-1581003127787.png" >
+		<img src="/../img/image-1581003127787.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure>
+於是乎便萌生了整合這類資訊的念頭，進而生出了這個 app</p>
+<h2 id="過程紀錄">過程紀錄</h2>
+<h3 id="202023-萌生這個念頭">2020/2/3 萌生這個念頭</h3>
+<p><figure 
+	>
+	<a href="/../img/image-1581003524978.png" >
+		<img src="/../img/image-1581003524978.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="202025-送出第一版28-家健身房">2020/2/5 送出第一版（28 家健身房）</h3>
+<p>2020/2/6 04:21 出現在架上🎉
+<figure 
+	>
+	<a href="/../img/image-1581003638894.png" >
+		<img src="/../img/image-1581003638894.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="202026-1547-第一次-side-project-站上排行榜">2020/2/6 15:47 第一次 Side project 站上排行榜📈</h3>
+<p>第 52 名
+<figure 
+	>
+	<a href="/../img/image-1581003894579.png" >
+		<img src="/../img/image-1581003894579.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="202026-1822-一度還跑到了前-50-名">2020/2/6 18:22 一度還跑到了前 50 名😂</h3>
+<p>第 45 名
+<figure 
+	>
+	<a href="/../img/image-1581004004863.png" >
+		<img src="/../img/image-1581004004863.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="202026-2342-在送出-110-版前的排名">2020/2/6 23:42 在送出 1.1.0 版前的排名</h3>
+<p>第 50 名
+<figure 
+	>
+	<a href="/../img/image-1581003785230.png" >
+		<img src="/../img/image-1581003785230.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="202028-0217-在送出-111-版前的排名">2020/2/8 02:17 在送出 1.1.1 版前的排名</h3>
+<p>第 31 名
+<figure 
+	>
+	<a href="/../img/image-1581099481621.png" >
+		<img src="/../img/image-1581099481621.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h3 id="202029-1228-111-版本到達了目前最高的名次">2020/2/9 12:28 1.1.1 版本到達了目前最高的名次</h3>
+<p>第 25 名
+<figure 
+	>
+	<a href="/../img/image-1581320588230.png" >
+		<img src="/../img/image-1581320588230.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
+</figure></p>
+<h1 id="店家資訊">店家資訊</h1>
+<h2 id="10">1.0</h2>
+<ul>
+<li>練一下</li>
+<li>芳鄰健身 Family Fitness</li>
+<li>芳鄰健身 Family Fitness 景美店</li>
+<li>給力健身房</li>
+<li>阿基里斯</li>
+<li>勁能健身</li>
+<li>桑富士</li>
+<li>KAT Fitness</li>
+<li>體育客輔大店</li>
+<li>體育客和平店</li>
+<li>FitMania健身狂潮</li>
+<li>MYWAY Fitness</li>
+<li>SomebodyFitness 建國店</li>
+<li>台北運動健身中心</li>
+<li>練健康</li>
+<li>河馬力士複合式運動館</li>
+<li>健身魂 大安店</li>
+<li>MOREFIT 師大店</li>
+<li>Our Gym 青年健身院</li>
+<li>怪獸健身中心</li>
+<li>麥克叔叔Uncle Mike Fitness</li>
+<li>原動力PowerForceFitness</li>
+<li>運動特區 Sport Zone</li>
+<li>77健身俱樂部</li>
+<li>Oneway 啟動模式</li>
+<li>新力量健身俱樂部</li>
+<li>Boss健身工作室</li>
+<li>好客 Fitness</li>
+</ul>
+<h2 id="110">1.1.0</h2>
+<ul>
+<li>全民運動健身中心-中和店</li>
+<li>全民運動健身中心 八德小巨蛋店</li>
+<li>全民運動健身房 內湖港墘店</li>
+<li>銳棒肌力與體能訓練</li>
+<li>宜蘭國民運動中心—健身房</li>
+<li>臺南市永華國民運動中心</li>
+<li>臺北市中正運動中心</li>
+<li>心運動體能訓練中心-Mind Fitness</li>
+<li>FitBull Gym 鬥犬健身中心</li>
+<li>植健身 fit plant</li>
+<li>武甲總合武術運動館 古亭館</li>
+<li>武甲總合武術運動館 大直館</li>
+<li>臺北萬華運動中心</li>
+<li>Beyond GYM超悅健身中心</li>
+<li>Sport 77 Fitness Club 健身俱樂部</li>
+<li>人人有功練健身工坊</li>
+<li>北安運動休閒會館</li>
+<li>Mmanang摩瑪浪健身俱樂部</li>
+<li>核心肌地 Underground fitness</li>
+<li>三健客 3musclers-內湖店</li>
+<li>三健客 3musclers -板橋店</li>
+<li>硬骨頭體能空間-羅東</li>
+<li>風鈴體能 Windbell Fitness - 羅東店</li>
+<li>三鶯國民運動中心</li>
+</ul>
+<h2 id="111">1.1.1</h2>
+<ul>
+<li>Hypercore Fitness 超核心健身中心 桃園藝文店</li>
+<li>Hypercore Fitness 超核心健身中心 林口四維店</li>
+<li>自由重量健身俱樂部</li>
+<li>自由重量健身俱樂部北門館</li>
+<li>新北市新莊國民運動中心</li>
+<li>士林運動中心</li>
+<li>健生活</li>
+<li>成吉思汗健身俱樂部 進化綜合格鬥中心（蘆洲館）</li>
+<li>ACTION FITNESS 啟動健身中心</li>
+<li>ACTION FITNESS 啟動健身中心 中科店</li>
+<li>Top Gym運動空間</li>
+<li>Top Gym運動空間-中原店</li>
+<li>Fitbox Gym - 飛比特 大雅館</li>
+<li>FITBOX 新豐健身房</li>
+<li>FITBOX Gym健身房-太原館</li>
+<li>Fitbox Gym 竹科館</li>
+<li>FITBOX 竹北健身房</li>
+<li>板橋國民運動中心</li>
+<li>台北健身院(八德店)</li>
+<li>Muku Gym慕谷健身房</li>
+</ul>
+<h3 id="資訊來源">資訊來源</h3>
+<ul>
+<li><a class="link" href="https://www.facebook.com/duncancoach/"  target="_blank" rel="noopener"
+    >扣取港 Duncan</a></li>
+<li><a class="link" href="https://www.facebook.com/profile.php?id=100001723845268"  target="_blank" rel="noopener"
+    >阿南教練 Wu Nan Yi</a></li>
+<li><a class="link" href="https://www.facebook.com/mingsvolleylife/"  target="_blank" rel="noopener"
+    >Ming’s VolleyLife 銘排生活</a></li>
+<li><a class="link" href="https://www.ptt.cc/bbs/MuscleBeach/index.html"  target="_blank" rel="noopener"
+    >PTT MuscleBeach 版</a></li>
+<li>使用者來信回報</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">iOS</a>
+        
+            <a href="/tags/swift/">Swift</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">發票收集雞 - 自己的發票自己收</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Apple Watch App 開發除錯心得</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RxSwift 6 上線啦！</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【iOS 逆向】下載 Instagram 動態照片</h2>
+        </div>
+    </a>
+</article>
+                
+                    
+<article class="">
+    <a href="/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS App launch time 心得</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">Table of contents</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#緣起">緣起</a></li>
+    <li><a href="#過程紀錄">過程紀錄</a>
+      <ol>
+        <li><a href="#202023-萌生這個念頭">2020/2/3 萌生這個念頭</a></li>
+        <li><a href="#202025-送出第一版28-家健身房">2020/2/5 送出第一版（28 家健身房）</a></li>
+        <li><a href="#202026-1547-第一次-side-project-站上排行榜">2020/2/6 15:47 第一次 Side project 站上排行榜📈</a></li>
+        <li><a href="#202026-1822-一度還跑到了前-50-名">2020/2/6 18:22 一度還跑到了前 50 名😂</a></li>
+        <li><a href="#202026-2342-在送出-110-版前的排名">2020/2/6 23:42 在送出 1.1.0 版前的排名</a></li>
+        <li><a href="#202028-0217-在送出-111-版前的排名">2020/2/8 02:17 在送出 1.1.1 版前的排名</a></li>
+        <li><a href="#202029-1228-111-版本到達了目前最高的名次">2020/2/9 12:28 1.1.1 版本到達了目前最高的名次</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#10">1.0</a></li>
+    <li><a href="#110">1.1.0</a></li>
+    <li><a href="#111">1.1.1</a>
+      <ol>
+        <li><a href="#資訊來源">資訊來源</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
