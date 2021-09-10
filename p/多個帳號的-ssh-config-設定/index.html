@@ -1,175 +1,89 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
+<!doctype html><html lang=en-us>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
 如果公司使用的 git server，是我原本就沒有使用的呢？ 那就沒什麼差了。 就像是我第一份工作，公司所使用的 git server 為 AWS 的 CodeCommit， 而原先我根本就不用使用到那邊的服務，所以建立一組 SSH key 在 AWS 上使用也沒什麼衝突。 且 AWS 上的教學文件，會讓你在 ~/.ssh/config 之中，以 Host 作為區別； 所以它只會在 AWS 上使用你為了 AWS 所建立的 key。
 但⋯最容易發生的情形就是： 公司也使用 Github 作為組織的 git server 通常我們會有一組自己私人的 Github 帳號，若公司不反對你使用私人帳號加入組織的話， 其實你也就沒什麼差了； 但大多數的情形是會給你一組（或是請你申請一組）公司信箱的 Github 帳號， 來維護 private git repository。
-Public key 我們先來看看 ssh 的 public key 裡頭，帶了哪些資訊： 重點便是最後的 xpopchi@gmail.'><title>多個帳號的 SSH Config 設定</title>
-
-<link rel='canonical' href='https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/'>
-
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='多個帳號的 SSH Config 設定'>
-<meta property='og:description' content='一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
-如果公司使用的 git server，是我原本就沒有使用的呢？ 那就沒什麼差了。 就像是我第一份工作，公司所使用的 git server 為 AWS 的 CodeCommit， 而原先我根本就不用使用到那邊的服務，所以建立一組 SSH key 在 AWS 上使用也沒什麼衝突。 且 AWS 上的教學文件，會讓你在 ~/.ssh/config 之中，以 Host 作為區別； 所以它只會在 AWS 上使用你為了 AWS 所建立的 key。
-但⋯最容易發生的情形就是： 公司也使用 Github 作為組織的 git server 通常我們會有一組自己私人的 Github 帳號，若公司不反對你使用私人帳號加入組織的話， 其實你也就沒什麼差了； 但大多數的情形是會給你一組（或是請你申請一組）公司信箱的 Github 帳號， 來維護 private git repository。
-Public key 我們先來看看 ssh 的 public key 裡頭，帶了哪些資訊： 重點便是最後的 xpopchi@gmail.'>
-<meta property='og:url' content='https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/'>
-<meta property='og:site_name' content='Archie'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='SSH' /><meta property='article:published_time' content='2017-07-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-07-14T00:00:00&#43;00:00'/>
-<meta name="twitter:site" content="@ChangArchie">
-    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="多個帳號的 SSH Config 設定">
-<meta name="twitter:description" content="一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
+Public key 我們先來看看 ssh 的 public key 裡頭，帶了哪些資訊： 重點便是最後的 xpopchi@gmail."><title>多個帳號的 SSH Config 設定</title>
+<link rel=canonical href=https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="多個帳號的 SSH Config 設定">
+<meta property="og:description" content="一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
 如果公司使用的 git server，是我原本就沒有使用的呢？ 那就沒什麼差了。 就像是我第一份工作，公司所使用的 git server 為 AWS 的 CodeCommit， 而原先我根本就不用使用到那邊的服務，所以建立一組 SSH key 在 AWS 上使用也沒什麼衝突。 且 AWS 上的教學文件，會讓你在 ~/.ssh/config 之中，以 Host 作為區別； 所以它只會在 AWS 上使用你為了 AWS 所建立的 key。
 但⋯最容易發生的情形就是： 公司也使用 Github 作為組織的 git server 通常我們會有一組自己私人的 Github 帳號，若公司不反對你使用私人帳號加入組織的話， 其實你也就沒什麼差了； 但大多數的情形是會給你一組（或是請你申請一組）公司信箱的 Github 帳號， 來維護 private git repository。
 Public key 我們先來看看 ssh 的 public key 裡頭，帶了哪些資訊： 重點便是最後的 xpopchi@gmail.">
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-149460095-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
-     crossorigin="anonymous"></script>
-
-    </head>
-    <body class="
-    article-page has-toc
-">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://www.archie.tw" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
-</svg>
-
-
-
-                <span></span>
-            </a>
-        </div>
-    
+<meta property="og:url" content="https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/">
+<meta property="og:site_name" content="Archie">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="SSH"><meta property="article:published_time" content="2017-07-14T00:00:00+00:00"><meta property="article:modified_time" content="2017-07-14T00:00:00+00:00">
+<meta name=twitter:site content="@ChangArchie">
+<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="多個帳號的 SSH Config 設定">
+<meta name=twitter:description content="一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
+如果公司使用的 git server，是我原本就沒有使用的呢？ 那就沒什麼差了。 就像是我第一份工作，公司所使用的 git server 為 AWS 的 CodeCommit， 而原先我根本就不用使用到那邊的服務，所以建立一組 SSH key 在 AWS 上使用也沒什麼衝突。 且 AWS 上的教學文件，會讓你在 ~/.ssh/config 之中，以 Host 作為區別； 所以它只會在 AWS 上使用你為了 AWS 所建立的 key。
+但⋯最容易發生的情形就是： 公司也使用 Github 作為組織的 git server 通常我們會有一組自己私人的 Github 帳號，若公司不反對你使用私人帳號加入組織的話， 其實你也就沒什麼差了； 但大多數的情形是會給你一組（或是請你申請一組）公司信箱的 Github 帳號， 來維護 private git repository。
+Public key 我們先來看看 ssh 的 public key 裡頭，帶了哪些資訊： 重點便是最後的 xpopchi@gmail.">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span></span>
+</a>
+</div>
 <main class="main full-width">
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" >
-                📒 程式筆記
-            </a>
-        
-    </header>
-    
-
-    <h2 class="article-title">
-        <a href="/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/">多個帳號的 SSH Config 設定</a>
-    </h2>
-
-    
-
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Jul 14, 2017</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    
-                </time>
-            </div>
-        
-    </footer>
-    
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>
+📒 程式筆記
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/>多個帳號的 SSH Config 設定</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Jul 14, 2017</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+</time>
+</div>
+</footer>
 </div>
 </header>
-
-    <section class="article-content">
-    <p>一般的情形下，我們不會太需要去做 config 檔案的設定，
+<section class=article-content>
+<p>一般的情形下，我們不會太需要去做 config 檔案的設定，
 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩；
 但隨著身份的增加（大多數是因為工作關係），
 我們會需要用到其他組 SSH key 來連接 git server。</p>
-<h3 id="如果公司使用的-git-server是我原本就沒有使用的呢">如果公司使用的 git server，是我原本就沒有使用的呢？</h3>
+<h3 id=如果公司使用的-git-server是我原本就沒有使用的呢>如果公司使用的 git server，是我原本就沒有使用的呢？</h3>
 <p>那就沒什麼差了。
 就像是我第一份工作，公司所使用的 git server 為 AWS 的 CodeCommit，
 而原先我根本就不用使用到那邊的服務，所以建立一組 SSH key 在 AWS 上使用也沒什麼衝突。
 且 AWS 上的教學文件，會讓你在 ~/.ssh/config 之中，以 Host 作為區別；
 所以它只會在 AWS 上使用你為了 AWS 所建立的 key。</p>
-<h3 id="但最容易發生的情形就是">但⋯最容易發生的情形就是：</h3>
+<h3 id=但最容易發生的情形就是>但⋯最容易發生的情形就是：</h3>
 <p>公司也使用 Github 作為組織的 git server
 通常我們會有一組自己私人的 Github 帳號，若公司不反對你使用私人帳號加入組織的話，
 其實你也就沒什麼差了；
 但大多數的情形是會給你一組（或是請你申請一組）公司信箱的 Github 帳號，
 來維護 private git repository。</p>
-<h3 id="public-key">Public key</h3>
+<h3 id=public-key>Public key</h3>
 <p>我們先來看看 ssh 的 public key 裡頭，帶了哪些資訊：
-重點便是最後的 <a class="link" href="mailto:xpopchi@gmail.com" >xpopchi@gmail.com</a>。
+重點便是最後的 <a class=link href=mailto:xpopchi@gmail.com>xpopchi@gmail.com</a>。
 這把 key 會知道是和哪個信箱綁定在一起的，所以在 Github 上，
 公司和私人的帳號便無法共用同一組 SSH key。</p>
-<h3 id="所以我們得替公司的信箱再建立一組-ssh-key">所以我們得替公司的信箱再建立一組 SSH key</h3>
+<h3 id=所以我們得替公司的信箱再建立一組-ssh-key>所以我們得替公司的信箱再建立一組 SSH key</h3>
 <p>建立的流程可以看 Github 上的文件，不過會需要在建立時，替它取不同的名稱：
 e.g Archie_Apple.pub
 個人的習慣是在後面加上公司的名稱來做區別。
 它都會放置在 ~/.ssh/ 裡頭，我們需要透過編輯 ~/.ssh/config 的方式，
 以及 git url 的調整，來做到使用不同的 key 連接同一個 git server。</p>
-<h3 id="sshconfig-的設定方式">~/.ssh/config 的設定方式</h3>
+<h3 id=sshconfig-的設定方式>~/.ssh/config 的設定方式</h3>
 <p>我們透過不同的 Host 命名方式，來定義裡頭要使用的哪一把 key 去做連結：</p>
-<pre tabindex="0"><code>Host github.com-Apple
+<pre tabindex=0><code>Host github.com-Apple
 HostName github.com
 User git
 IdentityFile ~/.ssh/Archie_Apple
@@ -184,310 +98,143 @@ IdentityFile ~/.ssh/github
 而其他的 github 就照舊使用私人帳號的那把。</p>
 <p>最後，使用的方式
 在你原先進行的 url 之中，做一些調整：</p>
-<p><a class="link" href="mailto:git@github.com" >git@github.com</a>:ArchieR7/APNsPusher.git</p>
+<p><a class=link href=mailto:git@github.com>git@github.com</a>:ArchieR7/APNsPusher.git</p>
 <p>這是使用私人帳號的方式，而若要使用 Archie_Apple的話：</p>
-<p><a class="link" href="mailto:git@github.com-Apple" >git@github.com-Apple</a>:ArchieR7/APNsPusher.git</p>
+<p><a class=link href=mailto:git@github.com-Apple>git@github.com-Apple</a>:ArchieR7/APNsPusher.git</p>
 <p>這樣就能夠使用另一把 key 來進行動作了。
 不過最好是在 ~/.ssh/config 之中補上 user.name 和 user.email，
 否則之後再進行 commit 時，都會以預設的名稱和信箱作為 commit 的作者。</p>
-
 </section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/ssh/">SSH</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
-    </footer>
-
-
-    
-</article>
-
-    <aside class="related-contents--wrapper">
-    
-    
-        <h2 class="section-title"></h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/p/markdown-%E5%B5%8C%E5%85%A5-youtube/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Markdown 嵌入 YouTube</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">iOS 開發環境設置</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/fastlane-503-service-temporarily-unavailable/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Fastlane 503 Service Temporarily Unavailable</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/change-login-shells-without-chsh/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Change login shells without chsh</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/postman-pre-request-script/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">POSTMAN – Pre-request script</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
-</aside>
-
-     
-     
-        
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2017 - 
-        
-        2021 Archie
-    </section>
-    
-    <section class="powerby">
-         <br />
-        
-    </section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/ssh/>SSH</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
 </footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
-            >
-
-            </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title"></h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ol>
-    <li>
-      <ol>
-        <li><a href="#如果公司使用的-git-server是我原本就沒有使用的呢">如果公司使用的 git server，是我原本就沒有使用的呢？</a></li>
-        <li><a href="#但最容易發生的情形就是">但⋯最容易發生的情形就是：</a></li>
-        <li><a href="#public-key">Public key</a></li>
-        <li><a href="#所以我們得替公司的信箱再建立一組-ssh-key">所以我們得替公司的信箱再建立一組 SSH key</a></li>
-        <li><a href="#sshconfig-的設定方式">~/.ssh/config 的設定方式</a></li>
-      </ol>
-    </li>
-  </ol>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title></h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/>
+<div class=article-details>
+<h2 class=article-title>Markdown 嵌入 YouTube</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>
+<div class=article-details>
+<h2 class=article-title>iOS 開發環境設置</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/fastlane-503-service-temporarily-unavailable/>
+<div class=article-details>
+<h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/change-login-shells-without-chsh/>
+<div class=article-details>
+<h2 class=article-title>Change login shells without chsh</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/postman-pre-request-script/>
+<div class=article-details>
+<h2 class=article-title>POSTMAN – Pre-request script</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div class=disqus-container>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
+<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2017 -
+2021 Archie
+</section>
+<section class=powerby>
+<br>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title"></h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li>
+<ol>
+<li><a href=#如果公司使用的-git-server是我原本就沒有使用的呢>如果公司使用的 git server，是我原本就沒有使用的呢？</a></li>
+<li><a href=#但最容易發生的情形就是>但⋯最容易發生的情形就是：</a></li>
+<li><a href=#public-key>Public key</a></li>
+<li><a href=#所以我們得替公司的信箱再建立一組-ssh-key>所以我們得替公司的信箱再建立一組 SSH key</a></li>
+<li><a href=#sshconfig-的設定方式>~/.ssh/config 的設定方式</a></li>
+</ol>
+</li>
+</ol>
 </nav>
-                </div>
-            </section>
-        </aside>
-    
-
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
 </html>

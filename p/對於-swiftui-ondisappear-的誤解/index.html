@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
+<!doctype html><html lang=en-us>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
  onDisappear 到底是不是壞的！
  這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
  Note: In the current SwiftUI beta onDisappear will never be called. by HackingWithSwift
@@ -12,29 +11,10 @@
  直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了這篇 並下載下來研究發現
  onDisappear 是會動的⋯
  這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。 來看看官方的這個 View
-struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: .'><title>對於 SwiftUI onDisappear 的誤解？</title>
-
-<link rel='canonical' href='https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/'>
-
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='對於 SwiftUI onDisappear 的誤解？'>
-<meta property='og:description' content='在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
- onDisappear 到底是不是壞的！
- 這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
- Note: In the current SwiftUI beta onDisappear will never be called. by HackingWithSwift
- 或是你可以看到在 StackOverFlow 上大家是這麼討論的
- 討論串 
-接著，在這一路以來，你又曾經碰過真的是 Apple 的 bug，所以你就會很理所當然地認為⋯⋯
- 沒錯，onDisappear 就是壞的！
- 直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了這篇 並下載下來研究發現
- onDisappear 是會動的⋯
- 這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。 來看看官方的這個 View
-struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: .'>
-<meta property='og:url' content='https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/'>
-<meta property='og:site_name' content='Archie'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:tag' content='SwiftUI' /><meta property='article:published_time' content='2019-09-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-09-05T00:00:00&#43;00:00'/>
-<meta name="twitter:site" content="@ChangArchie">
-    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="對於 SwiftUI onDisappear 的誤解？">
-<meta name="twitter:description" content="在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
+struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: ."><title>對於 SwiftUI onDisappear 的誤解？</title>
+<link rel=canonical href=https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="對於 SwiftUI onDisappear 的誤解？">
+<meta property="og:description" content="在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
  onDisappear 到底是不是壞的！
  這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
  Note: In the current SwiftUI beta onDisappear will never be called. by HackingWithSwift
@@ -46,263 +26,139 @@ struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile 
  onDisappear 是會動的⋯
  這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。 來看看官方的這個 View
 struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: .">
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-149460095-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
-     crossorigin="anonymous"></script>
-
-    </head>
-    <body class="
-    article-page 
-">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex 
-    
-        on-phone--column extended
-    
-">
-    
-        <aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header class="site-info">
-        
-            
-            <figure class="site-avatar">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/Archie_hu1fc091553094f1283eaa3eeeb8ec0c46_37374_300x0_resize_q75_box.jpg" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-
-                
-                    <span class="emoji">🤔</span>
-                
-            </figure>
-            
-        
-        <h1 class="site-name"><a href="https://www.archie.tw">Archie</a></h1>
-        <h2 class="site-description">獨立開發者的心路歷程</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
-        
-        
-        
-
-        <li >
-            <a href='/' target="_blank">
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>首頁</span>
-            </a>
-        </li>
-        
-
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                <span></span>
-            </li>
-        
-    </ol>
+<meta property="og:url" content="https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/">
+<meta property="og:site_name" content="Archie">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:tag" content="SwiftUI"><meta property="article:published_time" content="2019-09-05T00:00:00+00:00"><meta property="article:modified_time" content="2019-09-05T00:00:00+00:00">
+<meta name=twitter:site content="@ChangArchie">
+<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="對於 SwiftUI onDisappear 的誤解？">
+<meta name=twitter:description content="在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
+ onDisappear 到底是不是壞的！
+ 這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
+ Note: In the current SwiftUI beta onDisappear will never be called. by HackingWithSwift
+ 或是你可以看到在 StackOverFlow 上大家是這麼討論的
+ 討論串 
+接著，在這一路以來，你又曾經碰過真的是 Apple 的 bug，所以你就會很理所當然地認為⋯⋯
+ 沒錯，onDisappear 就是壞的！
+ 直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了這篇 並下載下來研究發現
+ onDisappear 是會動的⋯
+ 這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。 來看看官方的這個 View
+struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: .">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+on-phone--column extended">
+<aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header class=site-info>
+<figure class=site-avatar>
+<img src=/img/Archie_hu1fc091553094f1283eaa3eeeb8ec0c46_37374_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍎</span>
+</figure>
+<h1 class=site-name><a href=https://www.archie.tw>Archie</a></h1>
+<h2 class=site-description>獨立開發者的心路歷程</h2>
+</header>
+<ol class=menu id=main-menu>
+<li>
+<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>首頁</span>
+</a>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span></span>
+</li>
+</ol>
 </aside>
-
-    
 <main class="main full-width">
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/" >
-                🍎 開發心得
-            </a>
-        
-    </header>
-    
-
-    <h2 class="article-title">
-        <a href="/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/">對於 SwiftUI onDisappear 的誤解？</a>
-    </h2>
-
-    
-
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Sep 05, 2019</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    
-                </time>
-            </div>
-        
-    </footer>
-    
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
+🍎 開發心得
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/>對於 SwiftUI onDisappear 的誤解？</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Sep 05, 2019</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+</time>
+</div>
+</footer>
 </div>
 </header>
-
-    <section class="article-content">
-    <p>在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是</p>
+<section class=article-content>
+<p>在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是</p>
 <blockquote>
 <p>onDisappear 到底是不是壞的！</p>
 </blockquote>
 <p>這件事情很玄，畢竟網路上大部分的資訊都告訴我們 <code>onAppear</code> 類似於 <code>viewDidAppear</code>、<code>onDisappear</code> 類似於 <code>ViewDidDisappear</code>，然後再補上一句</p>
 <blockquote>
 <p>Note: In the current SwiftUI beta onDisappear will never be called.
-by <a class="link" href="https://www.hackingwithswift.com/quick-start/swiftui/how-to-respond-to-view-lifecycle-events-onappear-and-ondisappear"  target="_blank" rel="noopener"
-    >HackingWithSwift</a></p>
+by <a class=link href=https://www.hackingwithswift.com/quick-start/swiftui/how-to-respond-to-view-lifecycle-events-onappear-and-ondisappear target=_blank rel=noopener>HackingWithSwift</a></p>
 </blockquote>
-<p>或是你可以看到在 <a class="link" href="https://stackoverflow.com/questions/56524033/swiftui-tutorial-presentationbutton-bug"  target="_blank" rel="noopener"
-    >StackOverFlow</a> 上大家是這麼討論的</p>
-<p><figure 
-	>
-	<a href="/../img/image-1567592461034.webp" >
-		<img src="/../img/image-1567592461034.webp"
-			
-			
-			
-			loading="lazy"
-			alt="討論串">
-	</a>
-	
-	<figcaption>討論串</figcaption>
-	
+<p>或是你可以看到在 <a class=link href=https://stackoverflow.com/questions/56524033/swiftui-tutorial-presentationbutton-bug target=_blank rel=noopener>StackOverFlow</a> 上大家是這麼討論的</p>
+<p><figure>
+<a href=/../img/image-1567592461034.webp>
+<img src=/../img/image-1567592461034.webp loading=lazy alt=討論串>
+</a>
+<figcaption>討論串</figcaption>
 </figure></p>
-<p>接著，在這一路以來，你又曾經碰過真的是 <a class="link" href="https://www.facebook.com/ArchieR7/posts/1270505116459170?__xts__[0]=68.ARBpWWNCmHh2M-RWOU3iIMHGjHaqUFrYYq20rdW3rZPOKly8XLhKuiKRpdL3a8dZbCy34sa9Y_2WoK3-5xsVC97Dei6DSBnry2jb1sKMR7g1R9bNCVHaGeMpW3dGGd2vEwMGgXBFF7JB_P1xDE1UXKRo8yXV49sIwvPNNP9sgwugghlUd3MwuI1FhkRZSZm5g-wNidZsIQdaMuQe9cg0mXNAVwIcAGsKWk5mN4VCK6Ie44GWwYmZfv47uvGben-Iu0Tj4hXNyHtEh06BLB5Qlw-lqh0TUO2GZLMXpm1Ib47CCGqN3kYvdURfFZ6IuJn11wJF4AKE2PPMKuZDsF8nWg&amp;__tn__=-R"  target="_blank" rel="noopener"
-    >Apple 的 bug</a>，所以你就會很理所當然地認為⋯⋯</p>
+<p>接著，在這一路以來，你又曾經碰過真的是 <a class=link href="https://www.facebook.com/ArchieR7/posts/1270505116459170?__xts__[0]=68.ARBpWWNCmHh2M-RWOU3iIMHGjHaqUFrYYq20rdW3rZPOKly8XLhKuiKRpdL3a8dZbCy34sa9Y_2WoK3-5xsVC97Dei6DSBnry2jb1sKMR7g1R9bNCVHaGeMpW3dGGd2vEwMGgXBFF7JB_P1xDE1UXKRo8yXV49sIwvPNNP9sgwugghlUd3MwuI1FhkRZSZm5g-wNidZsIQdaMuQe9cg0mXNAVwIcAGsKWk5mN4VCK6Ie44GWwYmZfv47uvGben-Iu0Tj4hXNyHtEh06BLB5Qlw-lqh0TUO2GZLMXpm1Ib47CCGqN3kYvdURfFZ6IuJn11wJF4AKE2PPMKuZDsF8nWg&__tn__=-R" target=_blank rel=noopener>Apple 的 bug</a>，所以你就會很理所當然地認為⋯⋯</p>
 <blockquote>
 <p>沒錯，onDisappear 就是壞的！</p>
 </blockquote>
-<p>直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了<a class="link" href="https://developer.apple.com/tutorials/swiftui/working-with-ui-controls"  target="_blank" rel="noopener"
-    >這篇</a> 並下載下來研究發現</p>
+<p>直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了<a class=link href=https://developer.apple.com/tutorials/swiftui/working-with-ui-controls target=_blank rel=noopener>這篇</a> 並下載下來研究發現</p>
 <blockquote>
 <p>onDisappear 是會動的⋯</p>
 </blockquote>
 <p>這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。
 來看看官方的這個 View</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">struct</span> <span class="nc">ProfileHost</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
-    <span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">editMode</span><span class="p">)</span> <span class="kd">var</span> <span class="nv">mode</span>
-    <span class="p">@</span><span class="n">State</span> <span class="kd">var</span> <span class="nv">profile</span> <span class="p">=</span> <span class="n">Profile</span><span class="p">.</span><span class="k">default</span>
-    <span class="p">@</span><span class="n">State</span> <span class="kd">var</span> <span class="nv">draftProfile</span> <span class="p">=</span> <span class="n">Profile</span><span class="p">.</span><span class="k">default</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>struct</span> <span class=nc>ProfileHost</span><span class=p>:</span> <span class=n>View</span> <span class=p>{</span>
+    <span class=p>@</span><span class=n>Environment</span><span class=p>(</span><span class=err>\</span><span class=p>.</span><span class=n>editMode</span><span class=p>)</span> <span class=kd>var</span> <span class=nv>mode</span>
+    <span class=p>@</span><span class=n>State</span> <span class=kd>var</span> <span class=nv>profile</span> <span class=p>=</span> <span class=n>Profile</span><span class=p>.</span><span class=k>default</span>
+    <span class=p>@</span><span class=n>State</span> <span class=kd>var</span> <span class=nv>draftProfile</span> <span class=p>=</span> <span class=n>Profile</span><span class=p>.</span><span class=k>default</span>
     
-    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
-        <span class="n">VStack</span><span class="p">(</span><span class="n">alignment</span><span class="p">:</span> <span class="p">.</span><span class="n">leading</span><span class="p">,</span> <span class="n">spacing</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">HStack</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">mode</span><span class="p">?.</span><span class="n">wrappedValue</span> <span class="p">==</span> <span class="p">.</span><span class="n">active</span> <span class="p">{</span>
-                    <span class="n">Button</span><span class="p">(</span><span class="n">action</span><span class="p">:</span> <span class="p">{</span>
-                        <span class="kc">self</span><span class="p">.</span><span class="n">profile</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">draftProfile</span>
-                        <span class="kc">self</span><span class="p">.</span><span class="n">mode</span><span class="p">?.</span><span class="n">animation</span><span class="p">().</span><span class="n">wrappedValue</span> <span class="p">=</span> <span class="p">.</span><span class="n">inactive</span>
-                    <span class="p">})</span> <span class="p">{</span>
-                        <span class="n">Text</span><span class="p">(</span><span class="s">&#34;Done&#34;</span><span class="p">)</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
+    <span class=kd>var</span> <span class=nv>body</span><span class=p>:</span> <span class=n>some</span> <span class=n>View</span> <span class=p>{</span>
+        <span class=n>VStack</span><span class=p>(</span><span class=n>alignment</span><span class=p>:</span> <span class=p>.</span><span class=n>leading</span><span class=p>,</span> <span class=n>spacing</span><span class=p>:</span> <span class=mi>20</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>HStack</span> <span class=p>{</span>
+                <span class=k>if</span> <span class=kc>self</span><span class=p>.</span><span class=n>mode</span><span class=p>?.</span><span class=n>wrappedValue</span> <span class=p>==</span> <span class=p>.</span><span class=n>active</span> <span class=p>{</span>
+                    <span class=n>Button</span><span class=p>(</span><span class=n>action</span><span class=p>:</span> <span class=p>{</span>
+                        <span class=kc>self</span><span class=p>.</span><span class=n>profile</span> <span class=p>=</span> <span class=kc>self</span><span class=p>.</span><span class=n>draftProfile</span>
+                        <span class=kc>self</span><span class=p>.</span><span class=n>mode</span><span class=p>?.</span><span class=n>animation</span><span class=p>().</span><span class=n>wrappedValue</span> <span class=p>=</span> <span class=p>.</span><span class=n>inactive</span>
+                    <span class=p>})</span> <span class=p>{</span>
+                        <span class=n>Text</span><span class=p>(</span><span class=s>&#34;Done&#34;</span><span class=p>)</span>
+                    <span class=p>}</span>
+                <span class=p>}</span>
 				
-                <span class="n">Spacer</span><span class="p">()</span>
+                <span class=n>Spacer</span><span class=p>()</span>
 				
-                <span class="n">EditButton</span><span class="p">()</span>
-            <span class="p">}</span>
-            <span class="k">if</span> <span class="kc">self</span><span class="p">.</span><span class="n">mode</span><span class="p">?.</span><span class="n">wrappedValue</span> <span class="p">==</span> <span class="p">.</span><span class="n">inactive</span> <span class="p">{</span>
-                <span class="n">ProfileSummary</span><span class="p">(</span><span class="n">profile</span><span class="p">:</span> <span class="n">profile</span><span class="p">)</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">ProfileEditor</span><span class="p">(</span><span class="n">profile</span><span class="p">:</span> <span class="err">$</span><span class="n">draftProfile</span><span class="p">)</span>
-                    <span class="p">.</span><span class="n">onDisappear</span> <span class="p">{</span>
-                        <span class="kc">self</span><span class="p">.</span><span class="n">draftProfile</span> <span class="p">=</span> <span class="kc">self</span><span class="p">.</span><span class="n">profile</span>
-                    <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="p">.</span><span class="n">padding</span><span class="p">()</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+                <span class=n>EditButton</span><span class=p>()</span>
+            <span class=p>}</span>
+            <span class=k>if</span> <span class=kc>self</span><span class=p>.</span><span class=n>mode</span><span class=p>?.</span><span class=n>wrappedValue</span> <span class=p>==</span> <span class=p>.</span><span class=n>inactive</span> <span class=p>{</span>
+                <span class=n>ProfileSummary</span><span class=p>(</span><span class=n>profile</span><span class=p>:</span> <span class=n>profile</span><span class=p>)</span>
+            <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+                <span class=n>ProfileEditor</span><span class=p>(</span><span class=n>profile</span><span class=p>:</span> <span class=err>$</span><span class=n>draftProfile</span><span class=p>)</span>
+                    <span class=p>.</span><span class=n>onDisappear</span> <span class=p>{</span>
+                        <span class=kc>self</span><span class=p>.</span><span class=n>draftProfile</span> <span class=p>=</span> <span class=kc>self</span><span class=p>.</span><span class=n>profile</span>
+                    <span class=p>}</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+        <span class=p>.</span><span class=n>padding</span><span class=p>()</span>
+    <span class=p>}</span>
+<span class=p>}</span>
 </code></pre></div><p>想了一下，若是我的話我會將 <code>onDisappear</code> 寫在哪裡？應該會是在 <code>ProfileEditor</code> 的 <code>body</code> 裡頭吧。而實際上測試了，在 <code>ProfileEditor.body</code> 裡頭實作</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="p">.</span><span class="n">onDisappear</span> <span class="p">{</span> <span class="bp">print</span><span class="p">(</span><span class="s">&#34;disappear&#34;</span><span class="p">)</span> <span class="p">}</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=p>.</span><span class=n>onDisappear</span> <span class=p>{</span> <span class=bp>print</span><span class=p>(</span><span class=s>&#34;disappear&#34;</span><span class=p>)</span> <span class=p>}</span>
 </code></pre></div><p>是沒有效果的，我才得到一個結論</p>
 <blockquote>
 <p>onDisappear 和 viewDidDisappear 不同</p>
@@ -314,274 +170,117 @@ by <a class="link" href="https://www.hackingwithswift.com/quick-start/swiftui/ho
 <p>但並不是像 <code>UIViewController.viewDidDisappear</code> 一樣，是對物件本身消失去做動作。</p>
 <p>因為大多數的文章都習慣將 <code>onAppear</code> 和 <code>viewDidAppear</code> 做對比，也就造成我自己對於使用方式上產生誤解；實際上 <code>onDisappear</code> 的動作應該做在 superView 之中，而非直接寫在那個 struct 裡頭。</p>
 <p>這大概就是一個從 UIKit 轉到 SwiftUI 才會誤解的地方了⋯⋯如果是一開始就從官方文件開始用 SwiftUI 學習寫 iOS 的人，應該不會陷入這種迷思🤷‍♂️</p>
-
 </section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/ios/">iOS</a>
-        
-            <a href="/tags/swift/">Swift</a>
-        
-            <a href="/tags/swiftui/">SwiftUI</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
-    </footer>
-
-
-    
-</article>
-
-    <aside class="related-contents--wrapper">
-    
-    
-        <h2 class="section-title"></h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">發票收集雞 - 自己的發票自己收</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/swiftui-google-admob/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">SwiftUI &#43; Google AdMob</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">📒 SwiftUI &#43; CoreData 的實戰心得🔥</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">在 SwiftUI 處理中文輸入法所會遇上的問題</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Apple Watch App 開發除錯心得</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
-</aside>
-
-     
-     
-        
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2017 - 
-        
-        2021 Archie
-    </section>
-    
-    <section class="powerby">
-         <br />
-        
-    </section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/ios/>iOS</a>
+<a href=/tags/swift/>Swift</a>
+<a href=/tags/swiftui/>SwiftUI</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
 </footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
-            >
-
-            </main>
-    
-
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title></h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
+<div class=article-details>
+<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/swiftui-google-admob/>
+<div class=article-details>
+<h2 class=article-title>SwiftUI + Google AdMob</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/>
+<div class=article-details>
+<h2 class=article-title>📒 SwiftUI + CoreData 的實戰心得🔥</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/>
+<div class=article-details>
+<h2 class=article-title>在 SwiftUI 處理中文輸入法所會遇上的問題</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
+<div class=article-details>
+<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div class=disqus-container>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
+<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2017 -
+2021 Archie
+</section>
+<section class=powerby>
+<br>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
 </html>
