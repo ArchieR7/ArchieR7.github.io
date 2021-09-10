@@ -12,7 +12,19 @@
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='七天學會設計模式' /><meta property='article:published_time' content='2017-05-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-05-09T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
     <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="七天學會設計模式 - Facade">
-<meta name="twitter:description" content="Facade 其實 Facade 的概念簡單來說，就是簡化使用物件方的介面。 舉個例來說，我建立了一個 Calendar 的 UICollectionView，可能裡頭會需要很多的邏輯判斷；像是「計算 Cell 的 Size」、「判斷日期是否為假日」、「判斷月份」⋯⋯等，但使用這個物件的人，基本上不需要（也不應該）去煩惱這些事情。 如同我們吹電風扇，只需要「強、中、弱、關」的使用介面，並不需要知道它內部是調整不同的功率去達到這效果，但對使用者而言並不是那麼的重要。 而在 MVC 的架構底下便是如此，使用者只需要 ViewController 上可以操作的 function 即可，底部的 Model 是如何操作以及邏輯運算如何，就相對的沒那麼重要，丟給系統去做就好！ 所以在 Facade 的設計模式下，每個物件的介面需要被規劃過，哪些需要使用 private、fileprivate、class 等，適時地分配各個變數或常數及方法的使用權限。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+<meta name="twitter:description" content="Facade 其實 Facade 的概念簡單來說，就是簡化使用物件方的介面。 舉個例來說，我建立了一個 Calendar 的 UICollectionView，可能裡頭會需要很多的邏輯判斷；像是「計算 Cell 的 Size」、「判斷日期是否為假日」、「判斷月份」⋯⋯等，但使用這個物件的人，基本上不需要（也不應該）去煩惱這些事情。 如同我們吹電風扇，只需要「強、中、弱、關」的使用介面，並不需要知道它內部是調整不同的功率去達到這效果，但對使用者而言並不是那麼的重要。 而在 MVC 的架構底下便是如此，使用者只需要 ViewController 上可以操作的 function 即可，底部的 Model 是如何操作以及邏輯運算如何，就相對的沒那麼重要，丟給系統去做就好！ 所以在 Facade 的設計模式下，每個物件的介面需要被規劃過，哪些需要使用 private、fileprivate、class 等，適時地分配各個變數或常數及方法的使用權限。">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -56,7 +68,7 @@
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -109,7 +121,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -159,7 +171,7 @@
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -285,8 +297,8 @@
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -385,7 +397,7 @@
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

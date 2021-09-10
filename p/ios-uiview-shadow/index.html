@@ -36,7 +36,19 @@ shadowOffset 預設值為 [0, -3]，來調整陰影的位移。
 shadowRadius 預設值為 3，系統本身會進行發散的動作。
 shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰影，並沒有需要客製化的話， 只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
- layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+ layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -80,7 +92,7 @@ cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話�
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -133,7 +145,7 @@ cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話�
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -214,7 +226,7 @@ cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話�
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -340,8 +352,8 @@ cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話�
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -440,7 +452,7 @@ cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話�
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

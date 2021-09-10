@@ -24,7 +24,19 @@ from email.mime.text import MIMEText from email.header import Header from_addres
  Blogger 設定的「以電子郵件傳送」 使用電子郵件張貼填入電子信箱，並開啟「立即發佈電子郵件」 儲存設定  這樣只要寄信給設定的地址的話，Blogger 便會自動發文。
 SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下列使用 gmail 為例：
 import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定：  登入與安全性   啟用  這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
-from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -68,7 +80,7 @@ from email.mime.text import MIMEText from email.header import Header from_addres
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -121,7 +133,7 @@ from email.mime.text import MIMEText from email.header import Header from_addres
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -226,7 +238,7 @@ smtpserver.login(username, password)
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -352,8 +364,8 @@ smtpserver.login(username, password)
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -452,7 +464,7 @@ smtpserver.login(username, password)
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

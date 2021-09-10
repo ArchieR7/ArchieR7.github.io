@@ -21,7 +21,19 @@
 <meta name="twitter:description" content="Crontab Crontab 在 Ubuntu 裏頭是預載的，其功能是可以根據時間參數來執行工作排程； 它的格式如下：
 * * * * * command to be executed 依序分別是 分鐘[0-59]、小時[0-23]、日期[1-31]、月份[1-12]、星期[0-6]、command 其中 星期 0 = 天的意思。
 符號  「*」：不設限 「,」：分隔時段。例如：30 10,20 * * * command，代表早上十點半和下午八點半執行。 「-」：一段時間範圍。例如：15 9-12 * * * command，代表從九點到十二點的每個 15 分都執行一次。 「/n」：表示每個 n 單位間隔。例如：*/5 * * * * command，代表每隔 5 分鐘執行一次。  * * * * *：每隔一分鐘執行一次。 你也可以使用 @ 來取代五個參數：
- @reboot：僅在開機的時候執行一次。 @yearly：一年執行一次，和0 0 1 1 * command效果一樣。 @annually：（和@yearly一樣） @monthly：一個月執行一次，和0 0 1 * * command效果一樣。 @weekly：一個星期執行一次，和0 0 * * 0 command效果一樣。 @daily：每天執行，和0 0 * * * command效果一樣。 @midnight：（和@daily一樣） @hourly ：每小時執行，和0 * * * * command效果一樣。  輸出 另外，需要設立 command 輸出的地點或方式； 如使用 Postfix 或是直接在 command 後方加上 &amp;raquo; /file_path，"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+ @reboot：僅在開機的時候執行一次。 @yearly：一年執行一次，和0 0 1 1 * command效果一樣。 @annually：（和@yearly一樣） @monthly：一個月執行一次，和0 0 1 * * command效果一樣。 @weekly：一個星期執行一次，和0 0 * * 0 command效果一樣。 @daily：每天執行，和0 0 * * * command效果一樣。 @midnight：（和@daily一樣） @hourly ：每小時執行，和0 * * * * command效果一樣。  輸出 另外，需要設立 command 輸出的地點或方式； 如使用 Postfix 或是直接在 command 後方加上 &amp;raquo; /file_path，">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -65,7 +77,7 @@
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -118,7 +130,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -203,7 +215,7 @@ crontab -r
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -329,8 +341,8 @@ crontab -r
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -429,7 +441,7 @@ crontab -r
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

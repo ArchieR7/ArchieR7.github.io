@@ -24,7 +24,19 @@ Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去
 Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去「訂閱」某個物件，當它做了某些事情或者其值改變時，可以去做相對應的動作。
 應用 舉個比較常會遇到的案例：鍵盤 我們通常會希望在鍵盤升起來時，調整我們的畫面，看是移動 View 的 frame，或是設定 TableView 的 ContentOffset 之類的。 而大多數採取的方式是「監聽」 NotificationCenter 的「鍵盤升起」的事件，所以當「鍵盤升起」時，我們可以做相對應的處理；而當「鍵盤收起」時，我們也可以執行另一段 function。 這，便是 Observe 的設計模式。 我們去「訂閱」或者「監聽」某個事件，像是 Value changed 或是某個 function 被呼叫，來做相對應的處理。
 第三方套件 RxSwift、ReactiveCocoa 便都是圍繞在 Observe 設計模式的框架，來做響應式的開發。
-響應式開發 如名稱所述，意思是指當 Model 或者 ViewModel 的狀態（值）更動時，畫面可以很即時地跟著變動。 對 RxSwift 有興趣的人，可以看看這篇文章 線上讀書會 RxSwift 分享。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+響應式開發 如名稱所述，意思是指當 Model 或者 ViewModel 的狀態（值）更動時，畫面可以很即時地跟著變動。 對 RxSwift 有興趣的人，可以看看這篇文章 線上讀書會 RxSwift 分享。">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -68,7 +80,7 @@ Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -121,7 +133,7 @@ Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -180,7 +192,7 @@ Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -306,8 +318,8 @@ Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -406,7 +418,7 @@ Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

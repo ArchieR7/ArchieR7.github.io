@@ -18,7 +18,19 @@ Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentic
     <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="Firebase Cloud Functions with Database and Messaging">
 <meta name="twitter:description" content="Cloud Functions Firebase 一直以來便是以 serverless 為主要的方向， 而 Functions 則是一個十分有趣的功能； 它可以自動地隨著事件的回應，如資料庫的異動或是收到 HTTP 的 requests 時，執行程式碼。 其中一個重點是，我們也不需要去管理或是 scale 伺服器。
 Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentication Triggers Google Analytics for Firebase Triggers Crashlytics Triggers Cloud Storage Triggers Cloud Pub/Sub Triggers HTTP Triggers  範例 需求 Realtime Database 底下的資料有異動的話，進行推播
-直接上 Code const functions = require(&amp;#39;firebase-functions&amp;#39;); const admin = require(&amp;#39;firebase-admin&amp;#39;); admin.initializeApp(functions.config().firebase); exports.updateTodayNews = functions.database.ref(&amp;#39;/today/{newsCategory}/updatedTime&amp;#39;).onWrite(event =&amp;gt; { const newsCategory = event.params.newsCategory; return admin."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+直接上 Code const functions = require(&amp;#39;firebase-functions&amp;#39;); const admin = require(&amp;#39;firebase-admin&amp;#39;); admin.initializeApp(functions.config().firebase); exports.updateTodayNews = functions.database.ref(&amp;#39;/today/{newsCategory}/updatedTime&amp;#39;).onWrite(event =&amp;gt; { const newsCategory = event.params.newsCategory; return admin.">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -62,7 +74,7 @@ Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentic
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -115,7 +127,7 @@ Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentic
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -223,7 +235,7 @@ Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentic
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -349,8 +361,8 @@ Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentic
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -449,7 +461,7 @@ Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentic
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

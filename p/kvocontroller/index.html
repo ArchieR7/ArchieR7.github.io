@@ -18,7 +18,19 @@
     <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="KVOController">
 <meta name="twitter:description" content="KVOController 有關 Observe 的相關做法，在 Swift 上我會選擇使用 RxSwift，那 Objective-C 呢？ 在這邊簡單介紹一下 KVOController 的 solution 給 Objective-C 的開發者。 在 NSObject 的子類別下，都會繼承到一個 FBKVOController 的物件，名字為 KVOController； 而這邊要使用的 method 是這個：
 (void)observe:(nullable id)object keyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(FBKVONotificationBlock)block; object 是我們要觀察的物件 keyPath 是 object 底下的要觀察的值，它的名稱（key） options 則是填入 NSKeyValueObservingOptions block 再來決定當 object 的 keyPath 那物件有更動時，要做些什麼事
-舉個例子 [self.KVOController observe:self keyPath:NSStringFromSelector(@selector(observeObjectName)) options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id _Nullable observer, id _Nonnull object, NSDictionary&amp;lt;NSString *,id&amp;gt; * _Nonnull change) { //do something }];  observe:self keyPath:NSStringFromSelector(@selector(observeObjectName))  翻成白話文就是 self 去觀察 self."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+舉個例子 [self.KVOController observe:self keyPath:NSStringFromSelector(@selector(observeObjectName)) options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id _Nullable observer, id _Nonnull object, NSDictionary&amp;lt;NSString *,id&amp;gt; * _Nonnull change) { //do something }];  observe:self keyPath:NSStringFromSelector(@selector(observeObjectName))  翻成白話文就是 self 去觀察 self.">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -62,7 +74,7 @@
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -115,7 +127,7 @@
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -193,7 +205,7 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -319,8 +331,8 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -419,7 +431,7 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

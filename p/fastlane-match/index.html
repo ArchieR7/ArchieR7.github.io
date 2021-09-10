@@ -27,7 +27,19 @@ Match Match 主要負責和 Certificate 相關的處理，這邊所要帶給大�
 在 Apple Developer Team 之中加入專案各個開發人員使用自己的 Apple ID 在 Apple Developer Team 之中加入專案各個開發人員的公司 Apple ID 提供給專案各個開發人員相對應的 Provisioning Profile 第一種和第二種的做法差不多，但其壞處就是管理者無法有效地管理 Certificate， 所以有可能會時常出現一些奇怪的 App IDs 或是 iOS Provisioning Profile， 或是誰又不小心把誰的 certificate revoke ⋯⋯
 所以我們需要權限劃分清楚 建議的做法是註冊一組公用的開發者帳號，不和任何人產生連結性
 e.g dev@apple.com
-只放這組帳號在 Apple Developer Team 裡頭，開發相關的處理皆由這組帳號來負責， 而帳號密碼無需流通到僅負責開發的人員手中； 意思是指，讓單純寫 Code 開發的人員，無須註冊特別的 Apple ID 或是加入哪個 Team， 只需要透過 fastlane match 的方式來獲得 Certificate，可以開發就好！"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+只放這組帳號在 Apple Developer Team 裡頭，開發相關的處理皆由這組帳號來負責， 而帳號密碼無需流通到僅負責開發的人員手中； 意思是指，讓單純寫 Code 開發的人員，無須註冊特別的 Apple ID 或是加入哪個 Team， 只需要透過 fastlane match 的方式來獲得 Certificate，可以開發就好！">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -71,7 +83,7 @@ e.g dev@apple.com
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -124,7 +136,7 @@ e.g dev@apple.com
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -209,7 +221,7 @@ p.s 如果專案原先就有 certificate ，執行 fastlane match nuke 就可以
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -335,8 +347,8 @@ p.s 如果專案原先就有 certificate ，執行 fastlane match nuke 就可以
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -435,7 +447,7 @@ p.s 如果專案原先就有 certificate ，執行 fastlane match nuke 就可以
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

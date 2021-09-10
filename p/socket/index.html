@@ -24,7 +24,19 @@ Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須�
  Datagram sockets(connectionless) Stream sockets(connection-oriented)  Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
 Stream sockets(connection-oriented) 而 Stream sockets 則是使用 TCP 封包來傳遞， 其因為會先需要確認 Server 和 Client 兩者連接狀態後再傳遞， 故速度較慢一些，但至少能確認資料的有序性以及完整度。
 簡單的總結 以中華郵政的觀點來看，以結果來區分的話， 我們可以簡略地將 UDP 視為平信、TCP 視為掛號信。 而即時通訊的部分，依照上述的特色來看，就得選擇使用 TCP 的方式來進行溝通。
-Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -68,7 +80,7 @@ Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須�
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -121,7 +133,7 @@ Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須�
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    
                 </time>
             </div>
         
@@ -347,7 +359,7 @@ Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須�
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -473,8 +485,8 @@ Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須�
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -573,7 +585,7 @@ Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須�
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

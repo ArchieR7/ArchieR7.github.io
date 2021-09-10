@@ -24,7 +24,19 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
 選擇的原因分別是當時 FMDB 的速度較其餘兩者快速，而後來看上 Realm 的跨平台特色，不過近期開發的感想是能以原生為主的話，就儘量降低對於第三方套件的依賴性。
 這篇文章會記錄些什麼 其實這篇文章並不會從頭到尾寫下教學，而把重點放在一些我踩到的雷上，像是⋯⋯
 記得要附上 sqlite 的路徑 原先我的 persistentContainer 的產生方式如下
-lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -68,7 +80,7 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -121,7 +133,7 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -217,7 +229,7 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -343,8 +355,8 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -443,7 +455,7 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

@@ -21,7 +21,19 @@ dismiss(animated: true, completion: nil) 不過這麼做的話，執行 present(
 <meta name="twitter:description" content="dismiss(animated:completion:) 這個 method 對於大家而言，應該都不陌生； UIViewController 可以呼叫這個 method 來關閉，而它所關閉的概念如下： UINavigationController
  UIViewController1 UIViewController2 UIViewController3  不論現在 presentingViewController 是 UIViewController 1、2、或者是 3， 在這三者呼叫 dismiss(animated:completion:) 時， 都會把 UINavigationController 的所有 viewControllers 都 dismiss。 然而一個很常的使用方式是，我們會在 UIViewController 的物件之中，自行呼叫 dismiss：
 dismiss(animated: true, completion: nil) 不過這麼做的話，執行 present(, animated: , completion: ) 的 UIViewController， 就不會知道是在哪個流程或是哪個畫面 dismiss 的。 比較好的做法是，會被 present 的 UIViewController 都能透過 delegate 的方式， 告知原本的 UIViewController 「我按下了什麼按鈕」， 再由前面的 UIViewController 來決定是否 dismiss 或是做其他事。
-讓整體的流程能夠得到比較好的控制，也讓 UIViewController 彼此之間的關係有個清楚的釐清。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+讓整體的流程能夠得到比較好的控制，也讓 UIViewController 彼此之間的關係有個清楚的釐清。">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -65,7 +77,7 @@ dismiss(animated: true, completion: nil) 不過這麼做的話，執行 present(
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -118,7 +130,7 @@ dismiss(animated: true, completion: nil) 不過這麼做的話，執行 present(
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -184,7 +196,7 @@ UINavigationController</p>
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -310,8 +322,8 @@ UINavigationController</p>
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -410,7 +422,7 @@ UINavigationController</p>
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

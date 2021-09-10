@@ -21,7 +21,19 @@ from selenium import webdriver from selenium.webdriver.common.by import By from 
 <meta name="twitter:description" content="Selenium 需要在 Python 上操作瀏覽器的話，我會選擇使用 Selenium； 以爬蟲來說，和 requests 不同的地方在於， 像是在讀取網頁時，使用 Selenium 開啟瀏覽器的話可以幫我們處理掉渲染的問題。 這篇主要會以 Selenium 的方式來取得痞客邦的 Access Token。
 先搞懂痞客邦的流程 首先，我們先到痞客邦的開發者網頁  PIXNET  或是可以直接到 API Explorer 的畫面  API Explorer  接下來會需要進行登入的動作  Login  登入成功後，便是授權給 API Explorer 權限來取得 Access token  Granted  最後可以在 API Explorer 的畫面上看到 Access Token。  AccessToken 
 程式方面 我們會使用到 Selenium 的這些元件
-from selenium import webdriver from selenium.webdriver.common.by import By from selenium.webdriver.support.ui import Select from selenium.common.exceptions import NoSuchElementException from selenium."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+from selenium import webdriver from selenium.webdriver.common.by import By from selenium.webdriver.support.ui import Select from selenium.common.exceptions import NoSuchElementException from selenium.">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -65,7 +77,7 @@ from selenium import webdriver from selenium.webdriver.common.by import By from 
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -118,7 +130,7 @@ from selenium import webdriver from selenium.webdriver.common.by import By from 
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    
                 </time>
             </div>
         
@@ -301,7 +313,7 @@ from selenium import webdriver from selenium.webdriver.common.by import By from 
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -427,8 +439,8 @@ from selenium import webdriver from selenium.webdriver.common.by import By from 
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -527,7 +539,7 @@ from selenium import webdriver from selenium.webdriver.common.by import By from 
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

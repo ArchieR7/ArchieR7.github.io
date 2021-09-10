@@ -27,7 +27,19 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
 解決方法 利用 WCSession 來做傳遞資料。
 實機測試時，WCSession.isReachable 始終為 false 主要就是手機和手錶之間一直無法透過 WCSession 連接上彼此，會造成幾個問題如
  Apple Watch App 一直卡在安裝中，無法順利安裝 無法透過 WCSession 從 iOS app 傳遞資料過去給 Watch app  解決方法 我遇到這情況是都選擇重開 iPhone 來處理。
-Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int.">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -71,7 +83,7 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -124,7 +136,7 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -191,7 +203,7 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -317,8 +329,8 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -417,7 +429,7 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

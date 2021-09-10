@@ -21,7 +21,19 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
 <meta name="twitter:description" content="如何減少 iOS App launch time 這篇文章就來紀錄一下今日的研究項目，主要的起因是前一篇使用 Xcode 建立一個 Framework有談到如何選擇要創建的是 static library 還是 dynamic framework，其中一個差異是 dyld ( dynamic loader ) 會在 pre main 的時候去載入 dynanmic frameworks，所以若是有越多的 dynamic frameworks 需要載入時，便會花上越多時間。而Apple也建議我們不要使用超過 6 個非系統的 dynamic frameworks。
 再來搭配服用 weak self - 25: 難道公司發大財了！？App Launch Time 加速面面觀，一併做一個筆記整理。
 App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;amp; Binding / ObjC Setup / Initializer 如何查看 pre main time  
-透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -65,7 +77,7 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -118,7 +130,7 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -223,7 +235,7 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -349,8 +361,8 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -449,7 +461,7 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">

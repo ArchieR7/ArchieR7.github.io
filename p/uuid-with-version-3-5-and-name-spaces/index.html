@@ -18,7 +18,19 @@ extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5Na
     <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="UUID with version 3, 5 and name spaces">
 <meta name="twitter:description" content="在 Swift 裏頭，預設的 UUID 只能從 UUID() 來產生，或者是從另一個 UUID 來產生， 這邊來記錄一下如何從 String 來產生 UUID。 首先，先在 Bridge-Header.h 裡頭加入
 #import &amp;lt;CommonCrypto/CommonCrypto.h&amp;gt; 再來寫個 UUID 的 extension：
-extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace.">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -54,7 +66,7 @@ extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5Na
 ">
     
         <aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="">
         <span class="hamburger-box">
             <span class="hamburger-inner"></span>
         </span>
@@ -125,7 +137,7 @@ extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5Na
 
 
 
-                <span>Dark Mode</span>
+                <span></span>
             </li>
         
     </ol>
@@ -181,7 +193,7 @@ extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5Na
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    
                 </time>
             </div>
         
@@ -279,7 +291,7 @@ extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5Na
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -405,8 +417,8 @@ extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5Na
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 

@@ -24,7 +24,19 @@ extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebo
 需求  Facebook 分享 hash tag 及圖片 其餘分享文字及圖片和網址  實作 我們利用 UIActivityViewController 來呈現分享的選單，並將分享的內容塞入 activityItems: [Any] 之中； 而 applicationActivities 則設為 nil，並沒有要客製 activity。 若沒有需要依照不同類別做出不同的判斷，我們可以將內容放置進去； 像是 URL、String、UIImage等等。 而幾個特點要注意一下：
 Facebook：  String 只支援一個 hash tag（像是：“#Archie”），若超過或其他一般文字則不會顯示 有網址的話，就會顯示連結；意思是圖片和連結無法同時出現，會優先顯示連結  iMessage 若 String 裡頭的時間格式為 dd/MM/yyyy HH:mm 則可以點擊，並加入行事曆 圖片會以另一則訊息傳送 網址會以縮圖顯示（就如一般訊息收到的邏輯）
 依照類別提供不同內容 首先，我們可以先看 UIActivityType：
-extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebook: UIActivityType @available(iOS 6.0, *) public static let postToTwitter: UIActivityType @available(iOS 6."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebook: UIActivityType @available(iOS 6.0, *) public static let postToTwitter: UIActivityType @available(iOS 6.">
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
      crossorigin="anonymous"></script>
 
     </head>
@@ -68,7 +80,7 @@ extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebo
 
 
 
-                <span>Back</span>
+                <span></span>
             </a>
         </div>
     
@@ -121,7 +133,7 @@ extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebo
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    
                 </time>
             </div>
         
@@ -251,7 +263,7 @@ extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebo
     <aside class="related-contents--wrapper">
     
     
-        <h2 class="section-title">Related contents</h2>
+        <h2 class="section-title"></h2>
         <div class="related-contents">
             <div class="flex article-list--tile">
                 
@@ -377,8 +389,8 @@ extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebo
     </section>
     
     <section class="powerby">
-        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
-        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.2.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+         <br />
+        
     </section>
 </footer>
 
@@ -477,7 +489,7 @@ extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebo
 
 
                 </div>
-                <h2 class="widget-title section-title">Table of contents</h2>
+                <h2 class="widget-title section-title"></h2>
                 
                 <div class="widget--toc">
                     <nav id="TableOfContents">
