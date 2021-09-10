@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Xcode on Archie</title>
-    <link>https://example.com/tags/xcode/</link>
+    <link>https://www.archie.tw/tags/xcode/</link>
     <description>Recent content in Xcode on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/xcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xcode 11.4 archive issue</title>
-      <link>https://example.com/p/xcode-11.4-archive-issue/</link>
+      <link>https://www.archie.tw/p/xcode-11.4-archive-issue/</link>
       <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/xcode-11.4-archive-issue/</guid>
+      <guid>https://www.archie.tw/p/xcode-11.4-archive-issue/</guid>
       <description>今天使用了 Xcode 11.4 來打包找飲料 1.2.1 版本卻遇上了未知的錯誤， 而這邊就紀錄目前所找到的解法
 Xcode 11.4 - Archiving project - Segmentation Fault 11 經實測後無效
 Xcode 11.4, error: Segmentation fault: 11 經實測後可以順利打包上傳到 App Store</description>
@@ -20,10 +20,10 @@ Xcode 11.4, error: Segmentation fault: 11 經實測後可以順利打包上傳�
     
     <item>
       <title>使用 Xcode 建立一個 Framework</title>
-      <link>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link>
+      <link>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link>
       <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid>
+      <guid>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid>
       <description>之前有介紹過如何建立一個 CocoaPods，而這篇文章則是紀錄一下這次直接在 Xcode 上建立 Framework 會遇上的問題。
 建立 Framework 專案 首先我們先打開 Xcode，並選擇 iOS 類別底下的 Framework &amp;amp; Library 裡頭的 Framework
  
@@ -40,10 +40,10 @@ Static Library  有使用到其他 static library 使用 Singleton  Dynamic Libr
     
     <item>
       <title>Active Compilation Conditions</title>
-      <link>https://example.com/p/active-compilation-conditions/</link>
+      <link>https://www.archie.tw/p/active-compilation-conditions/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/active-compilation-conditions/</guid>
+      <guid>https://www.archie.tw/p/active-compilation-conditions/</guid>
       <description>在 Xcode 7 以前的版本，我們若需要設立一些環境變數，需要透過 Other Swift Flags 來處理； 像是 -DDEBUG -DRELEASE 等，且在使用的時候，並不會自動檢查出是否正確。
 而在 Xcode 8 加入了一個 Active Compilation Conditions，現在我們可以在裡頭新增 DEBUG、RELEASE 即可達到原先的效果，並且會在寫程式的時候，自動補全了！
  file 
@@ -52,10 +52,10 @@ Static Library  有使用到其他 static library 使用 Singleton  Dynamic Libr
     
     <item>
       <title>建立 Xcode 的檔案範本</title>
-      <link>https://example.com/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</link>
+      <link>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</link>
       <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</guid>
+      <guid>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</guid>
       <description>什麼是範本？ 在新增檔案的時候，會有預設的這幾種類型可以選擇；而當我們有一些自己常用的架構，如 Coordinator、ViewModel 等，可以自建一個範本來使用。 下面舉例幾個預設的 Swift 檔案
 Swift File 位置在 /Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/Swift File.xctemplate
 //___FILEHEADER___ import Foundation SwiftUI View 位置在 /Applications/Xcode-beta.app/Contents/Developer/Library/Xcode/ExtraTemplates/File Templates/User Interface
@@ -65,10 +65,10 @@ Swift File 位置在 /Applications/Xcode.app/Contents/Developer/Library/Xcode/Te
     
     <item>
       <title>Info.plist localized</title>
-      <link>https://example.com/p/info.plist-localized/</link>
+      <link>https://www.archie.tw/p/info.plist-localized/</link>
       <pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/info.plist-localized/</guid>
+      <guid>https://www.archie.tw/p/info.plist-localized/</guid>
       <description>一些需要權限的功能都會需要在 Info.plist 裡頭加上說明，而這個說明要實作多語系則是建立一個 InfoPlist.strings（沒錯，名字就是這樣） 然後對相對應得 Key 填寫翻譯，像是：
 NSLocationWhenInUseUsageDescription = &amp;quot;說明填寫&amp;quot;; 就可以在要使用位置的說明處顯示多語系的結果了。
 至於其他的 Key 可以從 CocoaKey 官方文件以及 CoreFundationKey 找找。</description>
@@ -76,10 +76,10 @@ NSLocationWhenInUseUsageDescription = &amp;quot;說明填寫&amp;quot;; 就可�
     
     <item>
       <title>Xcode beta with CocoaPods</title>
-      <link>https://example.com/p/xcode-beta-with-cocoapods/</link>
+      <link>https://www.archie.tw/p/xcode-beta-with-cocoapods/</link>
       <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/xcode-beta-with-cocoapods/</guid>
+      <guid>https://www.archie.tw/p/xcode-beta-with-cocoapods/</guid>
       <description>Xcode 10 beta 的 Swift 版本為 4.2，而若你目前所使用的 Pods 多數為 Swift 4 的話，該怎麼辦呢？
 你可以在 Podfile 裏頭加上全域的參數來規範所有 Pods 的 Swift version：
 post_install do |installer| installer.pods_project.targets.each do |target| target.build_configurations.each do |config| config.build_settings[&amp;#39;SWIFT_VERSION&amp;#39;] = &amp;#39;4&amp;#39; end end end 如此一番便可以輕鬆地在 Pods 還沒全面支援 Swift 4.2 時就可以使用 Xcode 10 Beta 開發👏</description>

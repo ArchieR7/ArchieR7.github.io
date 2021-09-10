@@ -8,7 +8,7 @@
  Apple Watch App 一直卡在安裝中，無法順利安裝 無法透過 WCSession 從 iOS app 傳遞資料過去給 Watch app  解決方法 我遇到這情況是都選擇重開 iPhone 來處理。
 Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int.'><title>Apple Watch App 開發除錯心得</title>
 
-<link rel='canonical' href='https://example.com/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/'>
+<link rel='canonical' href='https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Apple Watch App 開發除錯心得'>
 <meta property='og:description' content='前陣子在幫水滴發票加入 Apple Watch 的功能，這篇文章會紀錄下開發的一些想法。
@@ -17,7 +17,7 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
 實機測試時，WCSession.isReachable 始終為 false 主要就是手機和手錶之間一直無法透過 WCSession 連接上彼此，會造成幾個問題如
  Apple Watch App 一直卡在安裝中，無法順利安裝 無法透過 WCSession 從 iOS app 傳遞資料過去給 Watch app  解決方法 我遇到這情況是都選擇重開 iPhone 來處理。
 Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int.'>
-<meta property='og:url' content='https://example.com/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/'>
+<meta property='og:url' content='https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2021-06-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-06-01T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -27,7 +27,9 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
 解決方法 利用 WCSession 來做傳遞資料。
 實機測試時，WCSession.isReachable 始終為 false 主要就是手機和手錶之間一直無法透過 WCSession 連接上彼此，會造成幾個問題如
  Apple Watch App 一直卡在安裝中，無法順利安裝 無法透過 WCSession 從 iOS app 傳遞資料過去給 Watch app  解決方法 我遇到這情況是都選擇重開 iPhone 來處理。
-Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int.">
+Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -61,7 +63,7 @@ Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中�
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

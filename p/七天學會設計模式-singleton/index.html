@@ -7,7 +7,7 @@ Swift Swift 宣告 Singleton 的方式很簡單，就是在 class 底下宣告�
 class SingletonDemo { static let shared = SingletonDemo() } Objective-C 而 Objective-C 底下，我們要注意一些事情； 在 Multi-Thread 的情況下，我們得避免同時有多個 thread 執行建立 instance，故在創建時，必須使用 dispatch_once_t 來確保僅會有一個 thread 執行。
 #import &amp;lt;UIKit/UIKit.h&amp;gt; @interface SingletonDemo : NSObject &#43; (instancetype)shared; @end #import &amp;#34;SingletonDemo.h&amp;#34; @implementation SingletonDemo &#43; (instancetype)shared { static SingletonDemo *instance = nil; static dispatch_once_t once_token; dispatch_once(&amp;amp;once_token, ^{ instance = [[SingletonDemo alloc] init]; }); return instance; } @end 學會了如何創建 Singleton 之後，可以想想哪些物件適合以這種方式創建； 如「目前登入的使用者」，正是可以用 Singleton 的方式做設計，畢竟一個 App 同時僅能有一位使用者登入，是大多數軟體的設計，而這恰巧符合 Singleton 的精神。'><title>七天學會設計模式 - Singleton</title>
 
-<link rel='canonical' href='https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/'>
+<link rel='canonical' href='https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='七天學會設計模式 - Singleton'>
 <meta property='og:description' content='前言 最近和同事一起購入七天學會設計模式，不過書中是以 Java 作為示範語言； 而這邊，我會以 Swift 及 Objective-C 來攥寫範例並補充些內容。
@@ -15,7 +15,7 @@ Singleton 如同它的命名一般，在整個 App 運作時，僅會有一個 i
 Swift Swift 宣告 Singleton 的方式很簡單，就是在 class 底下宣告一個 static 的常數（constant）。
 class SingletonDemo { static let shared = SingletonDemo() } Objective-C 而 Objective-C 底下，我們要注意一些事情； 在 Multi-Thread 的情況下，我們得避免同時有多個 thread 執行建立 instance，故在創建時，必須使用 dispatch_once_t 來確保僅會有一個 thread 執行。
 #import &amp;lt;UIKit/UIKit.h&amp;gt; @interface SingletonDemo : NSObject &#43; (instancetype)shared; @end #import &amp;#34;SingletonDemo.h&amp;#34; @implementation SingletonDemo &#43; (instancetype)shared { static SingletonDemo *instance = nil; static dispatch_once_t once_token; dispatch_once(&amp;amp;once_token, ^{ instance = [[SingletonDemo alloc] init]; }); return instance; } @end 學會了如何創建 Singleton 之後，可以想想哪些物件適合以這種方式創建； 如「目前登入的使用者」，正是可以用 Singleton 的方式做設計，畢竟一個 App 同時僅能有一位使用者登入，是大多數軟體的設計，而這恰巧符合 Singleton 的精神。'>
-<meta property='og:url' content='https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/'>
+<meta property='og:url' content='https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='七天學會設計模式' /><meta property='article:published_time' content='2017-01-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-01-01T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -24,7 +24,9 @@ class SingletonDemo { static let shared = SingletonDemo() } Objective-C 而 Obje
 Singleton 如同它的命名一般，在整個 App 運作時，僅會有一個 instance。
 Swift Swift 宣告 Singleton 的方式很簡單，就是在 class 底下宣告一個 static 的常數（constant）。
 class SingletonDemo { static let shared = SingletonDemo() } Objective-C 而 Objective-C 底下，我們要注意一些事情； 在 Multi-Thread 的情況下，我們得避免同時有多個 thread 執行建立 instance，故在創建時，必須使用 dispatch_once_t 來確保僅會有一個 thread 執行。
-#import &amp;lt;UIKit/UIKit.h&amp;gt; @interface SingletonDemo : NSObject &#43; (instancetype)shared; @end #import &amp;#34;SingletonDemo.h&amp;#34; @implementation SingletonDemo &#43; (instancetype)shared { static SingletonDemo *instance = nil; static dispatch_once_t once_token; dispatch_once(&amp;amp;once_token, ^{ instance = [[SingletonDemo alloc] init]; }); return instance; } @end 學會了如何創建 Singleton 之後，可以想想哪些物件適合以這種方式創建； 如「目前登入的使用者」，正是可以用 Singleton 的方式做設計，畢竟一個 App 同時僅能有一位使用者登入，是大多數軟體的設計，而這恰巧符合 Singleton 的精神。">
+#import &amp;lt;UIKit/UIKit.h&amp;gt; @interface SingletonDemo : NSObject &#43; (instancetype)shared; @end #import &amp;#34;SingletonDemo.h&amp;#34; @implementation SingletonDemo &#43; (instancetype)shared { static SingletonDemo *instance = nil; static dispatch_once_t once_token; dispatch_once(&amp;amp;once_token, ^{ instance = [[SingletonDemo alloc] init]; }); return instance; } @end 學會了如何創建 Singleton 之後，可以想想哪些物件適合以這種方式創建； 如「目前登入的使用者」，正是可以用 Singleton 的方式做設計，畢竟一個 App 同時僅能有一位使用者登入，是大多數軟體的設計，而這恰巧符合 Singleton 的精神。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -58,7 +60,7 @@ class SingletonDemo { static let shared = SingletonDemo() } Objective-C 而 Obje
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

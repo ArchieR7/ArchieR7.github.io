@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>🍀 生活相關 on Archie</title>
-    <link>https://example.com/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</link>
+    <link>https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</link>
     <description>Recent content in 🍀 生活相關 on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Magic Keyboard 2 藍牙連接延遲修正</title>
-      <link>https://example.com/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</link>
+      <link>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</link>
       <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</guid>
+      <guid>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</guid>
       <description>前陣子我的 Magic Keyboard 2 若沒有連接著線，則打字會有延遲的情況；一開始還以為是電腦卡頓的問題，但 Magic Trackpad 卻滑動地很順暢⋯ 便接著線工作了一段時間，直到剛剛決定嘗試修復這問題
 以 option + shift 點擊藍牙，我先是「重置藍牙模組」後仍沒有排除延遲的問題，後來選擇了「將所有連接的 Apple 裝置重置為出廠值」， 之後便一切恢復正常了！</description>
     </item>
     
     <item>
       <title>設計學習補助計畫</title>
-      <link>https://example.com/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</link>
+      <link>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</link>
       <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</guid>
+      <guid>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</guid>
       <description>站在公司的角度來看，學習補助計畫是一個對於勞資雙方都有利的福利措施，不論員工的學習補助是投入在工作技能上或是日常生活的其他技能；如運動健身、廚藝或是音樂上，都能夠有機會使團隊成員在工作之餘學習新知，提升各成員的能力。
 而這邊我會以個人的角度，站在公司和員工的立場之間做思考和設計，有興趣的人可以一同分享你目前公司的補助方式或是想法。
 成本問題 我從 Yourator 上做了一些查詢，簡單舉四家新創公司的學習補助計畫
@@ -34,10 +34,10 @@
     
     <item>
       <title>新創神秘故事：造假的學經歷背景</title>
-      <link>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</link>
+      <link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</guid>
+      <guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</guid>
       <description>新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。
  這些話寫在前面 這故事和 老闆的弟弟 是不同家公司，所以兩者之間並沒有關聯，神秘的地方也有所不同，這次的故事主角並非是 Founder / Co-Founder 的，而是某位神秘的員工。
 故事開始 在加入這家公司時，已經有一些成員在裡頭，像是 backend、Android、UI / UX、HR 等，以一個新創團隊來說是相對完整的；不過其中最微妙的就是，在我剛進入的時候，公司有數個負責行銷、市場的實習生，詳細的人數有些忘了，印象中是 5 - 10 個這種數字。
@@ -67,10 +67,10 @@ DD - Due Diligence 在新創圈這個詞應該算是蠻常見的，主要是投�
     
     <item>
       <title>新創神秘故事：老闆的弟弟</title>
-      <link>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</link>
+      <link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</guid>
+      <guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</guid>
       <description>新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。
  故事開始 曾加入過一家新創 / 小公司，公司成員的組成為 CEO、CTO、PM、backend、Android、設計以及我負責 iOS。
 在面試的時候，是由 PM 來交辦面試流程，她會給你一個測驗用的專案，裡頭有 3 個 bugs 需要修，修完之後通知她，接著她就會照規格去驗證；從這個面試流程不難想像合作的時候，工作流程就是如此。
@@ -92,10 +92,10 @@ PM：「技術長有和我說，如果你有需要安裝什麼軟體的話，列
     
     <item>
       <title>為什麼加入新創公司？</title>
-      <link>https://example.com/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</link>
+      <link>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</link>
       <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</guid>
+      <guid>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</guid>
       <description>為什麼加入____公司？ 如果你已經工作一段時間，或者是正打算開始求職的新鮮人，不妨先花個幾分鐘的時間思考一下這問題。
 接著，我來回答這個問題
 為什麼加入新創公司？ 從幾個層面來分析我在求職上的選擇和考量
@@ -128,10 +128,10 @@ PM：「技術長有和我說，如果你有需要安裝什麼軟體的話，列
     
     <item>
       <title>職缺與履歷的互動 - 以水滴信用為例</title>
-      <link>https://example.com/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</link>
+      <link>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</link>
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</guid>
+      <guid>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</guid>
       <description>Credidi Inc. 
 這篇文章是以我個人的角度來看「職缺與履歷的互動」這件事，並以我目前服務的公司 - 水滴信用在 Yourator 上開的職缺為例。
 職缺 在目前所開出的四個職缺當中，我所負責職缺內容為下列兩個
@@ -148,10 +148,10 @@ Junior iOS Engineer</description>
     
     <item>
       <title>Archie 的斜槓紀錄 2020-03</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</link>
       <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</guid>
       <description>這個月 Archie 的斜槓記錄又來啦！ AdSense 這個月並沒有上架新的 App，所以數字並沒有上升的趨勢，處在 $ 162.31
  
 Bitfinex 因應疫情，收益有大幅下降的情況，目前一天大概都是在 USD $ 0.6 左右（$ 18.14）
@@ -165,10 +165,10 @@ Apple Connect 透過找飲料的 IAP，獲利了 $ 182
     
     <item>
       <title>Archie 的斜槓紀錄 2020-02</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</guid>
       <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，這個月寫了兩款 App：
 找健身
 找飲料
@@ -181,10 +181,10 @@ Bitfinex 收益為 US$ 64.31
     
     <item>
       <title>Archie 的斜槓紀錄 2020-01</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</link>
       <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</guid>
       <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，沒什麼新作品加上文章幾乎兩個都沒在更新，所以收益下滑😭
  
 Bitfinex 1 月份的走勢  
@@ -197,10 +197,10 @@ Bitfinex 1 月份的走勢
     
     <item>
       <title>Archie 的斜槓記錄 2019-12</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</link>
       <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</guid>
       <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，12 月的獲利是 106.05 元，加入了 阿芬的菜園 的廣告，所以突破 100 元！  
 Bitfinex 12 月份的走勢  
 月初的時候一波下探，但後來有拉起來，所以整月份的收入為 $35.08  
@@ -210,10 +210,10 @@ Bitfinex 12 月份的走勢
     
     <item>
       <title>Archie 的斜槓記錄 2019-11</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</link>
       <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</guid>
       <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，上個月的獲利是 US$2.33 元，沒特別多做任何事，所以沒有特別的成長。
  
 Bitfinex 十一月份的每日獲利走勢
@@ -226,10 +226,10 @@ Bitfinex 十一月份的每日獲利走勢
     
     <item>
       <title>Archie 的斜槓記錄 2019-10</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</link>
       <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</guid>
       <description>這個月 Archie 的斜槓記錄又來啦！
 AdSense 少少的 US$1.41
  
@@ -247,10 +247,10 @@ Bitfinex 這個月的年利率大約都落在 7 - 10 % 之間，不過最近因�
     
     <item>
       <title>Checklist template</title>
-      <link>https://example.com/p/checklist-template/</link>
+      <link>https://www.archie.tw/p/checklist-template/</link>
       <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/checklist-template/</guid>
+      <guid>https://www.archie.tw/p/checklist-template/</guid>
       <description>這是一個新的分類，不侷限於 iOS 或是程式開發的層面，對於我而言是一個新的領域；這有點像是檢查清單、必做清單或是 SOP 等概念，簡單舉幾個例子
 雙 NP 流程  確認原電信合約 和原電信商解約 攜碼至另一家電信的預付卡 至通訊行辦理攜碼方案 等預付卡開通，使用其卡片 等原電信商開通  Cocoapods binary 流程  
  gem install cocoapods-binary 在 Podfile 最上方加入 plugin &#39;cocoapods-binary&#39; 和 all_binary! pod install  阿齊推薦的宜蘭十個小吃  阿德魯肉飯 ⋯⋯  諸如此類的，這些流程它可以是一個個人的 SOP 或是有點像是小教學，而這當然只是一個我自己的範本，你可以刪刪減減成自己的版本👌
@@ -259,10 +259,10 @@ Bitfinex 這個月的年利率大約都落在 7 - 10 % 之間，不過最近因�
     
     <item>
       <title>【Checklist】雙 NP 流程</title>
-      <link>https://example.com/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</link>
+      <link>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</guid>
       <description>【Checklist】雙 NP 流程  確認原電信合約 和原電信商解約 攜碼至另一家電信的預付卡 至通訊行辦理攜碼方案 等預付卡開通，使用其卡片 等原電信商開通   2019 執行的心得文
 2017 執行的心得文
  </description>
@@ -270,10 +270,10 @@ Bitfinex 這個月的年利率大約都落在 7 - 10 % 之間，不過最近因�
     
     <item>
       <title>Archie 的斜槓記錄 2019-09</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</guid>
       <description>這個月 Archie 的斜槓記錄又來啦！ AdSense 廣告部分，九月份上架了兩個 App； 一個是 iOS 13+ 的匯率計算機、一個是 Flip clock，而流量都還是十分低的狀態，不過金額比上個月多了 US$ 1.2，來到了 US$ 2.53 。
  
 Bitfinex 而九月份的放貸收入為 US$ 30.33，受到了虛擬貨幣價格走低的影響，這部分是比上個月來得少的，少了 US$ 1.35。
@@ -288,10 +288,10 @@ Bitfinex 而九月份的放貸收入為 US$ 30.33，受到了虛擬貨幣價格�
     
     <item>
       <title>雙 NP：中華電信➡️台灣大哥大➡️中華電信 v2</title>
-      <link>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</link>
+      <link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</link>
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</guid>
+      <guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</guid>
       <description>繼上次雙 NP 之後，合約又來到了即將到期的時候，而今日因昨晚發燒請了病假，中午狀況好轉後便順道處理了合約的問題。
 這次打算申辦的是
  購機-699 
@@ -305,10 +305,10 @@ Bitfinex 而九月份的放貸收入為 US$ 30.33，受到了虛擬貨幣價格�
     
     <item>
       <title>Archie 的斜槓紀錄 2019-08</title>
-      <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</link>
+      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</link>
       <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</guid>
+      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</guid>
       <description>這篇是什麼？ 這篇文章的內容並不會圍繞 iOS 或是 Swift 等，而是投資理財的部分，其中並不會有什麼教學或是分析，單純只是我這個月的損益總結而已。
 2019 年 8 月份總結 Adsense 其實我一直沒有在看這方面的收入，不過看來要加把勁在廣告上才是💪 大多數都是從一、兩個我沒有在維護的 App 來的⋯⋯ 九月份會開始掛上網站的廣告和看能不能在 iOS 13 正式版上線的時候， 將一個由 SwiftUI + Combine 所編寫的 side project 弄上架💦
  
@@ -319,10 +319,10 @@ Bitfinex 我有在 Bitfinex 搭配 Coinlend 進行放貸，並在 8/9 加碼了 
     
     <item>
       <title>iOS Taiwan jobs</title>
-      <link>https://example.com/p/ios-taiwan-jobs/</link>
+      <link>https://www.archie.tw/p/ios-taiwan-jobs/</link>
       <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/ios-taiwan-jobs/</guid>
+      <guid>https://www.archie.tw/p/ios-taiwan-jobs/</guid>
       <description>iOS Taiwan jobs 緣起 最近剛把手上的專案都告一個段落，便開始尋找工作上的合作機會。 恰巧看到 f2etw/jobs，透過 GitHub Issues 的方式提供工作資訊， 感覺挺好的，且是個大家都可以共同編輯的地方，於是便有了建立一個 iOS 版本的念頭。
 和 f2etw/jobs 差異性 issue title iOSTaiwan/jobs 僅提供 iOS 的工作機會，且技術較為單純（Objective-C、Swift）， 所以便選擇在 issue title 上僅提供公司名稱而已； 職稱以及使用的語言則使用 label 來作為區分依據，如 Intern、Junior、Senior、Swift 等。
 issue template 我先是參考了 f2etw/jobs 的範本，並加入部分 PTT Soft_Job 版上的徵才格式，如
@@ -332,10 +332,10 @@ issue template 我先是參考了 f2etw/jobs 的範本，並加入部分 PTT Sof
     
     <item>
       <title>失業給付 &#43; 提早就業獎金</title>
-      <link>https://example.com/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</link>
+      <link>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</link>
       <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</guid>
+      <guid>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</guid>
       <description>這些話寫在前面⋯⋯ 由於和上一間公司的工作方式處不來，而對方決定以資遣的方式來處理， 故便在六月中解鎖了「領取資遣證明」的成就。
 知道對方要資遣你時，先確認幾件事  近三年內勞保是否有投保滿一年 對方是否通報勞保局 對方是否會開立資遣證明  至於對方是用什麼條款開立，個人是認為沒什麼差異。
 若上述的答案皆為「是」的話，你可以⋯⋯ 申請「失業給付」，而這篇文章會以我申請的流程為主，並以流水帳的方式呈現。
@@ -353,10 +353,10 @@ issue template 我先是參考了 f2etw/jobs 的範本，並加入部分 PTT Sof
     
     <item>
       <title>雙 NP：中華電信➡️台灣大哥大➡️中華電信</title>
-      <link>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</link>
+      <link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</guid>
+      <guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</guid>
       <description>首先，先附上地標網通的價目表， 我所要選擇的方案是雙 NP 回中華電信的智慧大玩家 999 方案， 而方案內容是 24 個月，每月月租 999 元，4G 吃到飽，網內60分/網外50分/市話20分。 透過雙 NP 的流程，我可以拿到 11,000 元的攜碼折扣，而算一下每月月租費約為 (999 x 24 – 11,000) / 24 = 540.66667 元
 闖關流程 第一步，先確認一下自己的合約狀況： 以我的例子來說， 合約原本內容：
 我們可以看到，大多數的合約到期日為 10-03， 但由於第一項合約，其正是去年申請的老客戶優惠方案； 而它的到期日是在 12-23，所以我還是得到中華電話一趟來申請攜出。 於是我便在 10-03 當天的 17：30 左右， 到中華電信的長春服務中心辦理攜出業務。

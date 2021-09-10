@@ -6,14 +6,14 @@
 符號  「*」：不設限 「,」：分隔時段。例如：30 10,20 * * * command，代表早上十點半和下午八點半執行。 「-」：一段時間範圍。例如：15 9-12 * * * command，代表從九點到十二點的每個 15 分都執行一次。 「/n」：表示每個 n 單位間隔。例如：*/5 * * * * command，代表每隔 5 分鐘執行一次。  * * * * *：每隔一分鐘執行一次。 你也可以使用 @ 來取代五個參數：
  @reboot：僅在開機的時候執行一次。 @yearly：一年執行一次，和0 0 1 1 * command效果一樣。 @annually：（和@yearly一樣） @monthly：一個月執行一次，和0 0 1 * * command效果一樣。 @weekly：一個星期執行一次，和0 0 * * 0 command效果一樣。 @daily：每天執行，和0 0 * * * command效果一樣。 @midnight：（和@daily一樣） @hourly ：每小時執行，和0 * * * * command效果一樣。  輸出 另外，需要設立 command 輸出的地點或方式； 如使用 Postfix 或是直接在 command 後方加上 &amp;raquo; /file_path，'><title>Crontab</title>
 
-<link rel='canonical' href='https://example.com/p/crontab/'>
+<link rel='canonical' href='https://www.archie.tw/p/crontab/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Crontab'>
 <meta property='og:description' content='Crontab Crontab 在 Ubuntu 裏頭是預載的，其功能是可以根據時間參數來執行工作排程； 它的格式如下：
 * * * * * command to be executed 依序分別是 分鐘[0-59]、小時[0-23]、日期[1-31]、月份[1-12]、星期[0-6]、command 其中 星期 0 = 天的意思。
 符號  「*」：不設限 「,」：分隔時段。例如：30 10,20 * * * command，代表早上十點半和下午八點半執行。 「-」：一段時間範圍。例如：15 9-12 * * * command，代表從九點到十二點的每個 15 分都執行一次。 「/n」：表示每個 n 單位間隔。例如：*/5 * * * * command，代表每隔 5 分鐘執行一次。  * * * * *：每隔一分鐘執行一次。 你也可以使用 @ 來取代五個參數：
  @reboot：僅在開機的時候執行一次。 @yearly：一年執行一次，和0 0 1 1 * command效果一樣。 @annually：（和@yearly一樣） @monthly：一個月執行一次，和0 0 1 * * command效果一樣。 @weekly：一個星期執行一次，和0 0 * * 0 command效果一樣。 @daily：每天執行，和0 0 * * * command效果一樣。 @midnight：（和@daily一樣） @hourly ：每小時執行，和0 * * * * command效果一樣。  輸出 另外，需要設立 command 輸出的地點或方式； 如使用 Postfix 或是直接在 command 後方加上 &amp;raquo; /file_path，'>
-<meta property='og:url' content='https://example.com/p/crontab/'>
+<meta property='og:url' content='https://www.archie.tw/p/crontab/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2018-01-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-01-05T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -21,7 +21,9 @@
 <meta name="twitter:description" content="Crontab Crontab 在 Ubuntu 裏頭是預載的，其功能是可以根據時間參數來執行工作排程； 它的格式如下：
 * * * * * command to be executed 依序分別是 分鐘[0-59]、小時[0-23]、日期[1-31]、月份[1-12]、星期[0-6]、command 其中 星期 0 = 天的意思。
 符號  「*」：不設限 「,」：分隔時段。例如：30 10,20 * * * command，代表早上十點半和下午八點半執行。 「-」：一段時間範圍。例如：15 9-12 * * * command，代表從九點到十二點的每個 15 分都執行一次。 「/n」：表示每個 n 單位間隔。例如：*/5 * * * * command，代表每隔 5 分鐘執行一次。  * * * * *：每隔一分鐘執行一次。 你也可以使用 @ 來取代五個參數：
- @reboot：僅在開機的時候執行一次。 @yearly：一年執行一次，和0 0 1 1 * command效果一樣。 @annually：（和@yearly一樣） @monthly：一個月執行一次，和0 0 1 * * command效果一樣。 @weekly：一個星期執行一次，和0 0 * * 0 command效果一樣。 @daily：每天執行，和0 0 * * * command效果一樣。 @midnight：（和@daily一樣） @hourly ：每小時執行，和0 * * * * command效果一樣。  輸出 另外，需要設立 command 輸出的地點或方式； 如使用 Postfix 或是直接在 command 後方加上 &amp;raquo; /file_path，">
+ @reboot：僅在開機的時候執行一次。 @yearly：一年執行一次，和0 0 1 1 * command效果一樣。 @annually：（和@yearly一樣） @monthly：一個月執行一次，和0 0 1 * * command效果一樣。 @weekly：一個星期執行一次，和0 0 * * 0 command效果一樣。 @daily：每天執行，和0 0 * * * command效果一樣。 @midnight：（和@daily一樣） @hourly ：每小時執行，和0 * * * * command效果一樣。  輸出 另外，需要設立 command 輸出的地點或方式； 如使用 Postfix 或是直接在 command 後方加上 &amp;raquo; /file_path，"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -55,7 +57,7 @@
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

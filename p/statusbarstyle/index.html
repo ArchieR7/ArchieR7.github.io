@@ -7,7 +7,7 @@ override var preferredStatusBarStyle: UIStatusBarStyle { return .default } 而�
 Subclass 在 BaseNavigationController 裏頭，利用 childForStatusBarStyle 回傳要呼叫哪個 UIViewController 的 preferredStatusBarStyle
 override var childForStatusBarStyle: UIViewController?'><title>StatusBarStyle</title>
 
-<link rel='canonical' href='https://example.com/p/statusbarstyle/'>
+<link rel='canonical' href='https://www.archie.tw/p/statusbarstyle/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='StatusBarStyle'>
 <meta property='og:description' content='最近改寫了 StatusBarStyle 的控制方式，從 iOS 9 之前是使用
@@ -15,7 +15,7 @@ UIApplication.shared.statusBarStyle = .default 並在 info.plist 的 View contro
 override var preferredStatusBarStyle: UIStatusBarStyle { return .default } 而配合 UINavigationController 的使用，可以以 Subclass 或是 Extension 的方式來實作， 這就得看專案需求了。
 Subclass 在 BaseNavigationController 裏頭，利用 childForStatusBarStyle 回傳要呼叫哪個 UIViewController 的 preferredStatusBarStyle
 override var childForStatusBarStyle: UIViewController?'>
-<meta property='og:url' content='https://example.com/p/statusbarstyle/'>
+<meta property='og:url' content='https://www.archie.tw/p/statusbarstyle/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2018-09-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-09-12T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -24,7 +24,9 @@ override var childForStatusBarStyle: UIViewController?'>
 UIApplication.shared.statusBarStyle = .default 並在 info.plist 的 View controller-based status bar appearance 欄位設為 NO。 而後來則改為覆寫 preferredStatusBarStyle 的方式，就不用在 viewWillAppear / viewWillDisappear 的時候手動控制 StatusBarStyle。 首先先確認 info.plist 之中 View controller-based status bar appearance 是為 YSE， 代表我們是透過 View controller-based 的方式來更改 status bar style。
 override var preferredStatusBarStyle: UIStatusBarStyle { return .default } 而配合 UINavigationController 的使用，可以以 Subclass 或是 Extension 的方式來實作， 這就得看專案需求了。
 Subclass 在 BaseNavigationController 裏頭，利用 childForStatusBarStyle 回傳要呼叫哪個 UIViewController 的 preferredStatusBarStyle
-override var childForStatusBarStyle: UIViewController?">
+override var childForStatusBarStyle: UIViewController?"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -58,7 +60,7 @@ override var childForStatusBarStyle: UIViewController?">
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

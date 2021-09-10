@@ -7,7 +7,7 @@ SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下
 import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定：  登入與安全性   啟用  這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
 from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.'><title>Python – SMTP</title>
 
-<link rel='canonical' href='https://example.com/p/python-smtp/'>
+<link rel='canonical' href='https://www.archie.tw/p/python-smtp/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Python – SMTP'>
 <meta property='og:description' content='前情提要 痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話， 感覺像是他們自己本身內部的錯誤導致 Time out 之類的。 礙於目前還無法在短時間內處理好一台伺服器建構多個 WordPress， 所以只好先將內容發佈到 Blogger 來解決當前的問題。 而我們只需要使用到發文的功能，所以就可以簡單利用電子郵件來發文；
@@ -15,7 +15,7 @@ from email.mime.text import MIMEText from email.header import Header from_addres
 SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下列使用 gmail 為例：
 import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定：  登入與安全性   啟用  這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
 from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.'>
-<meta property='og:url' content='https://example.com/p/python-smtp/'>
+<meta property='og:url' content='https://www.archie.tw/p/python-smtp/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2018-01-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-01-23T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -24,7 +24,9 @@ from email.mime.text import MIMEText from email.header import Header from_addres
  Blogger 設定的「以電子郵件傳送」 使用電子郵件張貼填入電子信箱，並開啟「立即發佈電子郵件」 儲存設定  這樣只要寄信給設定的地址的話，Blogger 便會自動發文。
 SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下列使用 gmail 為例：
 import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定：  登入與安全性   啟用  這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
-from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.">
+from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -58,7 +60,7 @@ from email.mime.text import MIMEText from email.header import Header from_addres
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

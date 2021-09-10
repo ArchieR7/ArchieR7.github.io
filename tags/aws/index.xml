@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AWS on Archie</title>
-    <link>https://example.com/tags/aws/</link>
+    <link>https://www.archie.tw/tags/aws/</link>
     <description>Recent content in AWS on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AWS Certificate Manager 申請流程</title>
-      <link>https://example.com/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link>
+      <link>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link>
       <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid>
+      <guid>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid>
       <description>AWS Certificate Manager 申請流程 我的這個網站架設在 AWS 的 EC2 上，搭配 Route 53 和 Load Balancer 以及這篇的主角 AWS Certificate Manager，這邊要迅速的記錄操作流程！
 環境架設的文章寫在這
 流程 申請憑證  

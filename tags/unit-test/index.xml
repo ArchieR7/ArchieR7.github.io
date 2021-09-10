@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unit test on Archie</title>
-    <link>https://example.com/tags/unit-test/</link>
+    <link>https://www.archie.tw/tags/unit-test/</link>
     <description>Recent content in Unit test on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/unit-test/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/unit-test/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unit test with async functions</title>
-      <link>https://example.com/p/unit-test-with-async-functions/</link>
+      <link>https://www.archie.tw/p/unit-test-with-async-functions/</link>
       <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/unit-test-with-async-functions/</guid>
+      <guid>https://www.archie.tw/p/unit-test-with-async-functions/</guid>
       <description>iOS Unit test 在寫 Unit test 的時候，有時候會遇到要測試的 function 是 async 的， 但在 Unit test 的 function 之中，它本身就是走單一 thread 來決定測試結果； 若沒有多做其他處理，closure 或是其他 thread 做的事情，便不會反應到結果上。 所以我們需要告知 Unit test，要等待一下我們要測的內容。
 func testAsyncFunction() { let exp = expectation(description: &amp;#34;Async Expectation&amp;#34;) NetworkManager.shared.update(data: Data(), completeHandler: { exp.fulfill() }) waitForExpectations(timeout: 30, handler: nil) } 建立一個 expectation，並在 closure 裏頭執行一些測試結果判斷， 判斷完後，補上 exp.fulfill() 來告知 waitForExpectations 可以結束等待。 這樣就可以做 async functions 的 Unit test 了！</description>
     </item>

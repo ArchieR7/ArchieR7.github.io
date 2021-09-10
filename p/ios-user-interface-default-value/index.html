@@ -8,7 +8,7 @@
 若不清空預設值呢？ 我們就可能在部分畫面上會看到，原本打在 xib 的 UITextField 上的值（e.g Hinet CHT Auto）， 甚至是可能有些元件的 isHidden 是由程式判斷出需不需要呈現， 而畫面顯示到判斷完畢的中間，會造成畫面上元件閃現的情況。 於是原先我的做法會：
  清空 xib 上的所有預設值 在 viewDidLoad 的狀態，執行清空的動作  前者的做法，會影響到的就是 xib 失去了給設計師觀看的意義， 因為全空的畫面並不符合使用者的情境； 而後者的做法，當元件一多的時候，有時便會有疏忽。'><title>iOS User Interface Default Value</title>
 
-<link rel='canonical' href='https://example.com/p/ios-user-interface-default-value/'>
+<link rel='canonical' href='https://www.archie.tw/p/ios-user-interface-default-value/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='iOS User Interface Default Value'>
 <meta property='og:description' content='我們在開發 iOS App 的時候，對於 User interface 的開發模式有幾種流派
@@ -17,7 +17,7 @@
 儘管這個 UIViewController 在 viewDidLoad 的時候，會再配置一次多語系的文案以及更換些 icon 或者顏色， 但至少在初步上可以看到大概會長什麼樣子。
 若不清空預設值呢？ 我們就可能在部分畫面上會看到，原本打在 xib 的 UITextField 上的值（e.g Hinet CHT Auto）， 甚至是可能有些元件的 isHidden 是由程式判斷出需不需要呈現， 而畫面顯示到判斷完畢的中間，會造成畫面上元件閃現的情況。 於是原先我的做法會：
  清空 xib 上的所有預設值 在 viewDidLoad 的狀態，執行清空的動作  前者的做法，會影響到的就是 xib 失去了給設計師觀看的意義， 因為全空的畫面並不符合使用者的情境； 而後者的做法，當元件一多的時候，有時便會有疏忽。'>
-<meta property='og:url' content='https://example.com/p/ios-user-interface-default-value/'>
+<meta property='og:url' content='https://www.archie.tw/p/ios-user-interface-default-value/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2017-08-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-08-09T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -27,7 +27,9 @@
 先說說為什麼我使用 User interface（Storyboard, xib） 一方面是因為一開始學習的時候，教學是從拉拉元件，連動按鈕開始， 比起純 Code 的寫法，這樣也讓人比較好上手； 再來便開始弄一些 Auto layout，讓畫面越來越完整。 而其中一點是，方便和設計師做討論， 看著畫面來調整 UI 會比我一直重新 Build 出 App 還快得一些。 但也正是為了讓設計師可以看到畫面，我可能得在一些 UIKit 的元件上先放置好預設的值， 好比說：
 儘管這個 UIViewController 在 viewDidLoad 的時候，會再配置一次多語系的文案以及更換些 icon 或者顏色， 但至少在初步上可以看到大概會長什麼樣子。
 若不清空預設值呢？ 我們就可能在部分畫面上會看到，原本打在 xib 的 UITextField 上的值（e.g Hinet CHT Auto）， 甚至是可能有些元件的 isHidden 是由程式判斷出需不需要呈現， 而畫面顯示到判斷完畢的中間，會造成畫面上元件閃現的情況。 於是原先我的做法會：
- 清空 xib 上的所有預設值 在 viewDidLoad 的狀態，執行清空的動作  前者的做法，會影響到的就是 xib 失去了給設計師觀看的意義， 因為全空的畫面並不符合使用者的情境； 而後者的做法，當元件一多的時候，有時便會有疏忽。">
+ 清空 xib 上的所有預設值 在 viewDidLoad 的狀態，執行清空的動作  前者的做法，會影響到的就是 xib 失去了給設計師觀看的意義， 因為全空的畫面並不符合使用者的情境； 而後者的做法，當元件一多的時候，有時便會有疏忽。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -61,7 +63,7 @@
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

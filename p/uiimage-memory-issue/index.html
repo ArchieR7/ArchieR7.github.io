@@ -8,7 +8,7 @@
 改良的做法 Data 在建構的時候，有一種選項是 .uncached， 也就是說，我們可以先將圖片以 Data 的方式打開，再轉回 UIImage， 則就可以避免掉它自動放置到 cache 而記憶體爆掉的情況。
 if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.png&amp;#34;), let data = try? Data(contentsOf: url, options: Data.ReadingOptions.uncached) { let image = UIImage(data: data) imageView.image = image } 這樣就可以解決 UIImage 的 cache 導致記憶體爆炸的情況。'><title>UIImage memory issue</title>
 
-<link rel='canonical' href='https://example.com/p/uiimage-memory-issue/'>
+<link rel='canonical' href='https://www.archie.tw/p/uiimage-memory-issue/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='UIImage memory issue'>
 <meta property='og:description' content='今天要來分享的內容，是有關於 UIImage 的一個記憶體爆炸情況， 而我先闡述一下發現這問題的情境： 專案內有個功能會需要匯入大型圖片做縮放以及拖拉功能， 使用者可以切換大型圖片，而在點擊過多的圖片時，便會造成記憶體爆炸。
@@ -17,7 +17,7 @@ if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.pn
 為什麼？ 上網查了一下後，發現 UIImage(named: ImageName) 這種生成方式， 會自行將取出來的圖片放置到 cache； 而上述的使用情況就會變成當使用者一切換，便會將另一張大型圖片放置到 cache 而未釋放掉前一張。
 改良的做法 Data 在建構的時候，有一種選項是 .uncached， 也就是說，我們可以先將圖片以 Data 的方式打開，再轉回 UIImage， 則就可以避免掉它自動放置到 cache 而記憶體爆掉的情況。
 if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.png&amp;#34;), let data = try? Data(contentsOf: url, options: Data.ReadingOptions.uncached) { let image = UIImage(data: data) imageView.image = image } 這樣就可以解決 UIImage 的 cache 導致記憶體爆炸的情況。'>
-<meta property='og:url' content='https://example.com/p/uiimage-memory-issue/'>
+<meta property='og:url' content='https://www.archie.tw/p/uiimage-memory-issue/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2017-10-05T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-10-05T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -27,7 +27,9 @@ if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.pn
 但⋯⋯事情並不是這樣發展 在使用者切換幾次後，發現記憶體只有一直往上增長，而未釋放掉； 意思是指雖然我將畫面上的 UIImageView.image 取代掉了， 不過實際上仍然佔據著記憶體空間⋯⋯
 為什麼？ 上網查了一下後，發現 UIImage(named: ImageName) 這種生成方式， 會自行將取出來的圖片放置到 cache； 而上述的使用情況就會變成當使用者一切換，便會將另一張大型圖片放置到 cache 而未釋放掉前一張。
 改良的做法 Data 在建構的時候，有一種選項是 .uncached， 也就是說，我們可以先將圖片以 Data 的方式打開，再轉回 UIImage， 則就可以避免掉它自動放置到 cache 而記憶體爆掉的情況。
-if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.png&amp;#34;), let data = try? Data(contentsOf: url, options: Data.ReadingOptions.uncached) { let image = UIImage(data: data) imageView.image = image } 這樣就可以解決 UIImage 的 cache 導致記憶體爆炸的情況。">
+if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.png&amp;#34;), let data = try? Data(contentsOf: url, options: Data.ReadingOptions.uncached) { let image = UIImage(data: data) imageView.image = image } 這樣就可以解決 UIImage 的 cache 導致記憶體爆炸的情況。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -61,7 +63,7 @@ if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.pn
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

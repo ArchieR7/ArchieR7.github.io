@@ -7,7 +7,7 @@
 記得要附上 sqlite 的路徑 原先我的 persistentContainer 的產生方式如下
 lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯'><title>CoreData with background task</title>
 
-<link rel='canonical' href='https://example.com/p/coredata-with-background-task/'>
+<link rel='canonical' href='https://www.archie.tw/p/coredata-with-background-task/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='CoreData with background task'>
 <meta property='og:description' content='前言 雖然在 iOS 上開發了幾年的時間，但一直到最近才開始使用 CoreData；之前在第一份工作的專案之中是使用 FMDB 來處理資料存取，而後續則是用了 Realm。
@@ -15,7 +15,7 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
 這篇文章會記錄些什麼 其實這篇文章並不會從頭到尾寫下教學，而把重點放在一些我踩到的雷上，像是⋯⋯
 記得要附上 sqlite 的路徑 原先我的 persistentContainer 的產生方式如下
 lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯'>
-<meta property='og:url' content='https://example.com/p/coredata-with-background-task/'>
+<meta property='og:url' content='https://www.archie.tw/p/coredata-with-background-task/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:tag' content='CoreData' /><meta property='article:published_time' content='2019-01-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-01-23T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -24,7 +24,9 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
 選擇的原因分別是當時 FMDB 的速度較其餘兩者快速，而後來看上 Realm 的跨平台特色，不過近期開發的感想是能以原生為主的話，就儘量降低對於第三方套件的依賴性。
 這篇文章會記錄些什麼 其實這篇文章並不會從頭到尾寫下教學，而把重點放在一些我踩到的雷上，像是⋯⋯
 記得要附上 sqlite 的路徑 原先我的 persistentContainer 的產生方式如下
-lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯">
+lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -58,7 +60,7 @@ lazy var persistentContainer: NSPersistentContainer = { let container = NSPersis
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

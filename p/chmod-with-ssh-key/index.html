@@ -6,14 +6,14 @@
  r: read – 4 w: write -2 x: execute – 1 所以，舉個例子： 5 = 可讀可執行（4 &#43; 1） 6 = 可讀可寫（4 &#43; 2） 7 = 可讀可寫可執行（4 &#43; 2 &#43; 1） 那麼，chmod 600 則就代表著 User 可讀可寫，但 Group 和 Other 則無法使用。  chmod ssh key 若我們更改一下 ssh 的 private key，會發生什麼事呢？
 如圖片測試結果所示，ssh 的 private key 僅能開放 User 的權限， Group 和 Other 則都不能開放，否則就會無法使用。'><title>chmod with ssh key</title>
 
-<link rel='canonical' href='https://example.com/p/chmod-with-ssh-key/'>
+<link rel='canonical' href='https://www.archie.tw/p/chmod-with-ssh-key/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='chmod with ssh key'>
 <meta property='og:description' content='chmod 是由 change mode 所組成，其指令功能便是更改檔案或者資料夾底下所有檔案的權限。 而權限位是由 9 個權限位來控制，每 3 位為一組，分別為
  User Group Other  chmod 的八進位語法的數字說明：
  r: read – 4 w: write -2 x: execute – 1 所以，舉個例子： 5 = 可讀可執行（4 &#43; 1） 6 = 可讀可寫（4 &#43; 2） 7 = 可讀可寫可執行（4 &#43; 2 &#43; 1） 那麼，chmod 600 則就代表著 User 可讀可寫，但 Group 和 Other 則無法使用。  chmod ssh key 若我們更改一下 ssh 的 private key，會發生什麼事呢？
 如圖片測試結果所示，ssh 的 private key 僅能開放 User 的權限， Group 和 Other 則都不能開放，否則就會無法使用。'>
-<meta property='og:url' content='https://example.com/p/chmod-with-ssh-key/'>
+<meta property='og:url' content='https://www.archie.tw/p/chmod-with-ssh-key/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2017-08-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-08-07T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -21,7 +21,9 @@
 <meta name="twitter:description" content="chmod 是由 change mode 所組成，其指令功能便是更改檔案或者資料夾底下所有檔案的權限。 而權限位是由 9 個權限位來控制，每 3 位為一組，分別為
  User Group Other  chmod 的八進位語法的數字說明：
  r: read – 4 w: write -2 x: execute – 1 所以，舉個例子： 5 = 可讀可執行（4 &#43; 1） 6 = 可讀可寫（4 &#43; 2） 7 = 可讀可寫可執行（4 &#43; 2 &#43; 1） 那麼，chmod 600 則就代表著 User 可讀可寫，但 Group 和 Other 則無法使用。  chmod ssh key 若我們更改一下 ssh 的 private key，會發生什麼事呢？
-如圖片測試結果所示，ssh 的 private key 僅能開放 User 的權限， Group 和 Other 則都不能開放，否則就會無法使用。">
+如圖片測試結果所示，ssh 的 private key 僅能開放 User 的權限， Group 和 Other 則都不能開放，否則就會無法使用。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -55,7 +57,7 @@
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

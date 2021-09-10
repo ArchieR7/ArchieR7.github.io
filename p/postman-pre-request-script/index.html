@@ -5,20 +5,22 @@
  登入（帳號、密碼）【Token】 取得使用者的消費紀錄列表（Token）【Array】 取得單筆消費紀錄（Receipt ID）【Receipt】  在沒有撰寫 pre-request 之前若要取得 Receipt 的話，我們得要先呼叫 登入，接著手動複製 Token 到 取得使用者的消費紀錄列表 的 request body 裡頭，然後再複製⋯⋯（你們應該懂） 這邊就來教教如何先寫好 script，之後只要按最後你想得到的那支 API 就行了！
 let account = &amp;#39;account&amp;#39; let password = &amp;#39;password&amp;#39; let index = 0 pm.sendRequest({ url: &amp;#39;https://Archie.tw/login?account=&amp;#39; &#43; account &#43; &amp;#39;&amp;amp;password=&amp;#39; &#43; password, method: &amp;#39;get&amp;#39; }, function(err, response) { let token = response.json().token; pm.'><title>POSTMAN – Pre-request script</title>
 
-<link rel='canonical' href='https://example.com/p/postman-pre-request-script/'>
+<link rel='canonical' href='https://www.archie.tw/p/postman-pre-request-script/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='POSTMAN – Pre-request script'>
 <meta property='og:description' content='POSTMAN 除了可以發送 request 到 server 之外，也有提供 pre-request script 的功能，讓我們可以撰寫 script 來進行一連串的測試。 舉個例子，我們有三支 API，邏輯為 名稱（Request body）【Response body】：
  登入（帳號、密碼）【Token】 取得使用者的消費紀錄列表（Token）【Array】 取得單筆消費紀錄（Receipt ID）【Receipt】  在沒有撰寫 pre-request 之前若要取得 Receipt 的話，我們得要先呼叫 登入，接著手動複製 Token 到 取得使用者的消費紀錄列表 的 request body 裡頭，然後再複製⋯⋯（你們應該懂） 這邊就來教教如何先寫好 script，之後只要按最後你想得到的那支 API 就行了！
 let account = &amp;#39;account&amp;#39; let password = &amp;#39;password&amp;#39; let index = 0 pm.sendRequest({ url: &amp;#39;https://Archie.tw/login?account=&amp;#39; &#43; account &#43; &amp;#39;&amp;amp;password=&amp;#39; &#43; password, method: &amp;#39;get&amp;#39; }, function(err, response) { let token = response.json().token; pm.'>
-<meta property='og:url' content='https://example.com/p/postman-pre-request-script/'>
+<meta property='og:url' content='https://www.archie.tw/p/postman-pre-request-script/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2018-10-19T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-10-19T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
     <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="POSTMAN – Pre-request script">
 <meta name="twitter:description" content="POSTMAN 除了可以發送 request 到 server 之外，也有提供 pre-request script 的功能，讓我們可以撰寫 script 來進行一連串的測試。 舉個例子，我們有三支 API，邏輯為 名稱（Request body）【Response body】：
  登入（帳號、密碼）【Token】 取得使用者的消費紀錄列表（Token）【Array】 取得單筆消費紀錄（Receipt ID）【Receipt】  在沒有撰寫 pre-request 之前若要取得 Receipt 的話，我們得要先呼叫 登入，接著手動複製 Token 到 取得使用者的消費紀錄列表 的 request body 裡頭，然後再複製⋯⋯（你們應該懂） 這邊就來教教如何先寫好 script，之後只要按最後你想得到的那支 API 就行了！
-let account = &amp;#39;account&amp;#39; let password = &amp;#39;password&amp;#39; let index = 0 pm.sendRequest({ url: &amp;#39;https://Archie.tw/login?account=&amp;#39; &#43; account &#43; &amp;#39;&amp;amp;password=&amp;#39; &#43; password, method: &amp;#39;get&amp;#39; }, function(err, response) { let token = response.json().token; pm.">
+let account = &amp;#39;account&amp;#39; let password = &amp;#39;password&amp;#39; let index = 0 pm.sendRequest({ url: &amp;#39;https://Archie.tw/login?account=&amp;#39; &#43; account &#43; &amp;#39;&amp;amp;password=&amp;#39; &#43; password, method: &amp;#39;get&amp;#39; }, function(err, response) { let token = response.json().token; pm."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page 
@@ -78,7 +80,7 @@ let account = &amp;#39;account&amp;#39; let password = &amp;#39;password&amp;#39
             </figure>
             
         
-        <h1 class="site-name"><a href="https://example.com">Archie</a></h1>
+        <h1 class="site-name"><a href="https://www.archie.tw">Archie</a></h1>
         <h2 class="site-description">獨立開發者的心路歷程</h2>
     </header>
 

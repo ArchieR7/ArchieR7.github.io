@@ -7,7 +7,7 @@ var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .paddi
 成果動畫  
 有任何問題歡迎在底下留言👏有寫法上的建議可以直接在 GitHub 上反應👍 有想看看一些廢話的話則是可以在 Twitter 直接找到我喔！😂'><title>SwiftUI 上的鍵盤處理方式</title>
 
-<link rel='canonical' href='https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/'>
+<link rel='canonical' href='https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='SwiftUI 上的鍵盤處理方式'>
 <meta property='og:description' content='在 iOS 的開發過程之中，難免會碰到一個狀況，那便是 UITextField/ UITextView 被鍵盤所遮住了⌨️ 在 UIKit 之下，多數人會使用套件來做全域的處理，如 IQKeyboardManager 就是一個十分經典的解決方案。
@@ -15,7 +15,7 @@ var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .paddi
 var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .padding(EdgeInsets(top: 0, leading: 0, bottom: bottomPadding, trailing: 0)) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillShowNotification), perform: updateFrame) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillHideNotification), perform: updateFrame) .animation(.default) } 完整的 struct 可以在 GitHub 上查看👍
 成果動畫  
 有任何問題歡迎在底下留言👏有寫法上的建議可以直接在 GitHub 上反應👍 有想看看一些廢話的話則是可以在 Twitter 直接找到我喔！😂'>
-<meta property='og:url' content='https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/'>
+<meta property='og:url' content='https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swfit' /><meta property='article:tag' content='SwiftUI' /><meta property='article:published_time' content='2019-09-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-09-02T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -24,7 +24,9 @@ var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .paddi
 來說說 SwiftUI 上的鍵盤處理方式 在 SwiftUI 上，我們也可以很優雅地處理這一塊，如在 List 元件中，只需要分別監聽 UIWindow.keyboardWillShowNotification 和 UIWindow.keyboardWillHideNotification，以及加上個 .animation(.default) 來優化使用者體驗。
 var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .padding(EdgeInsets(top: 0, leading: 0, bottom: bottomPadding, trailing: 0)) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillShowNotification), perform: updateFrame) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillHideNotification), perform: updateFrame) .animation(.default) } 完整的 struct 可以在 GitHub 上查看👍
 成果動畫  
-有任何問題歡迎在底下留言👏有寫法上的建議可以直接在 GitHub 上反應👍 有想看看一些廢話的話則是可以在 Twitter 直接找到我喔！😂">
+有任何問題歡迎在底下留言👏有寫法上的建議可以直接在 GitHub 上反應👍 有想看看一些廢話的話則是可以在 Twitter 直接找到我喔！😂"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -58,7 +60,7 @@ var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .paddi
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SwiftUI on Archie</title>
-    <link>https://example.com/tags/swiftui/</link>
+    <link>https://www.archie.tw/tags/swiftui/</link>
     <description>Recent content in SwiftUI on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/swiftui/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>發票收集雞 - 自己的發票自己收</title>
-      <link>https://example.com/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</link>
+      <link>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</link>
       <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</guid>
+      <guid>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</guid>
       <description>發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
 紙本發票的減少 在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。
 雲端發票專屬獎 而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！
@@ -24,10 +24,10 @@
     
     <item>
       <title>SwiftUI &#43; Google AdMob</title>
-      <link>https://example.com/p/swiftui-google-admob/</link>
+      <link>https://www.archie.tw/p/swiftui-google-admob/</link>
       <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/swiftui-google-admob/</guid>
+      <guid>https://www.archie.tw/p/swiftui-google-admob/</guid>
       <description>這篇是一個簡單介紹 UIViewControllerRepresentable 的範例， 由於 Google AdMob 的 GADBannerView 不像上次提及的 UITextField 一樣，可以直接使用 UIViewRepresentable 來包裝；原因是它必須設置一個 rootViewController，也就意味著我們需要使用 UIViewControllerRepresentable 才能完成它。
 Interfacing with UIKit 透過這個 Apple 官方的教學當中，我們可以從 UIPageViewController 的範例來做發想，故我的實作方式會是這樣：
 import GoogleMobileAds import SwiftUI import UIKit struct GADBannerViewController: UIViewControllerRepresentable { func makeUIViewController(context: Context) -&amp;gt; UIViewController { let view = GADBannerView(adSize: kGADAdSizeBanner) let viewController = UIViewController() view.adUnitID = &amp;#34;your ad unit id in there.&amp;#34; view.rootViewController = viewController viewController.view.addSubview(view) viewController.view.frame = CGRect(origin: .zero, size: kGADAdSizeBanner.size) view.load(GADRequest()) return viewController } func updateUIViewController(_ uiViewController: UIViewController, context: Context) {} } 如果需要處理 Delegate 的部分 你可以參閱上次 TextField 的處理方式，建構一個 Coordinator 來進行相關的作業👌</description>
@@ -35,10 +35,10 @@ import GoogleMobileAds import SwiftUI import UIKit struct GADBannerViewControlle
     
     <item>
       <title>對於 SwiftUI onDisappear 的誤解？</title>
-      <link>https://example.com/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</link>
+      <link>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</guid>
+      <guid>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</guid>
       <description>在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
  onDisappear 到底是不是壞的！
  這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
@@ -55,10 +55,10 @@ struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile 
     
     <item>
       <title>📒 SwiftUI &#43; CoreData 的實戰心得🔥</title>
-      <link>https://example.com/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</link>
+      <link>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</guid>
+      <guid>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</guid>
       <description>SwiftUI + CoreData  
 這篇文章會紀錄我在目前的 side project 上，如何在 SwiftUI 下導入 CoreData； 而如同 在 SwiftUI 處理中文輸入法所會遇上的問題 所提及的，SwiftUI 身為一個還在測試階段的 framework，我們必須將當下的開發環境紀錄下來，以避免造成日後官方修正所造成的誤解。
 開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  使用情境 我要做一個貨幣的列表，並讓使用者可以對相對應的貨幣做隱藏與否，所以規格大概是需要一個 List，而 Row 裡頭呈現貨幣的名稱以及用 Toggle 來做控制隱藏的開關。
@@ -69,10 +69,10 @@ struct ManageRow: View { @ObservedObject var currency: Currency var body: some V
     
     <item>
       <title>SwiftUI 上的鍵盤處理方式</title>
-      <link>https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</link>
+      <link>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</link>
       <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</guid>
       <description>在 iOS 的開發過程之中，難免會碰到一個狀況，那便是 UITextField/ UITextView 被鍵盤所遮住了⌨️ 在 UIKit 之下，多數人會使用套件來做全域的處理，如 IQKeyboardManager 就是一個十分經典的解決方案。
 來說說 SwiftUI 上的鍵盤處理方式 在 SwiftUI 上，我們也可以很優雅地處理這一塊，如在 List 元件中，只需要分別監聽 UIWindow.keyboardWillShowNotification 和 UIWindow.keyboardWillHideNotification，以及加上個 .animation(.default) 來優化使用者體驗。
 var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .padding(EdgeInsets(top: 0, leading: 0, bottom: bottomPadding, trailing: 0)) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillShowNotification), perform: updateFrame) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillHideNotification), perform: updateFrame) .animation(.default) } 完整的 struct 可以在 GitHub 上查看👍
@@ -82,10 +82,10 @@ var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .paddi
     
     <item>
       <title>在 SwiftUI 處理中文輸入法所會遇上的問題</title>
-      <link>https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link>
+      <link>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link>
       <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</guid>
+      <guid>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</guid>
       <description>最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。
 開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂 還沒有下載更新的朋友，可以快去更新一下！
 使用情境 我要來做一個搜尋的功能，讓使用者可以輸入關鍵字，並自動搜尋完後將結果呈現在下方👏

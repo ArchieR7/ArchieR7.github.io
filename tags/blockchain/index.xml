@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blockchain on Archie</title>
-    <link>https://example.com/tags/blockchain/</link>
+    <link>https://www.archie.tw/tags/blockchain/</link>
     <description>Recent content in Blockchain on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get ETH balance and tokens balance</title>
-      <link>https://example.com/p/get-eth-balance-and-tokens-balance/</link>
+      <link>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</link>
       <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/get-eth-balance-and-tokens-balance/</guid>
+      <guid>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</guid>
       <description>前言 最近都在處理區塊鏈相關的問題，其中一個就是怎麼直接透過節點（****.infura.io）來取得 ETH 和其他 ERC-20 的地址餘額（balance）。
 JSON RPC ETH 節點所使用的 request body 是依照 JSON RPC 的方式，也就是我們所使用的 request path 都是相同的，像是主要的 https://mainnet.infura.io ；不同的是，我們可以透過不同的 body 內容來區別不同的需求。
 基本的 body 格式 { &amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;method name&amp;#34;, &amp;#34;params&amp;#34;: [], &amp;#34;id&amp;#34;: 1 } 取得 ETH 餘額 取得 ETH 餘額的方式較為單純，節點有提供一個 method 是 eth_getBalance，使用起來如下
@@ -23,10 +23,10 @@ JSON RPC ETH 節點所使用的 request body 是依照 JSON RPC 的方式，也�
     
     <item>
       <title>BIP-39 Mnemonic validate</title>
-      <link>https://example.com/p/bip-39-mnemonic-validate/</link>
+      <link>https://www.archie.tw/p/bip-39-mnemonic-validate/</link>
       <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/bip-39-mnemonic-validate/</guid>
+      <guid>https://www.archie.tw/p/bip-39-mnemonic-validate/</guid>
       <description>前言 最近處理了一些加密貨幣的問題，其中一個是助記詞的驗證，這邊將會解釋助記詞的生成和驗證方式。
 生成助記詞 首先我們這邊所介紹的是助記詞生成方式，先建立一個 128 bytes 的隨機序列，也就是隨機產生 16 個 UInt8 的序列；
 主要有分成 128、160、192、224、256 bits（每 32 bits 做為一個區間），而下列會以 128 bits 作為流程解釋。

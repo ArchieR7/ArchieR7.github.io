@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Objective-C on Archie</title>
-    <link>https://example.com/tags/objective-c/</link>
+    <link>https://www.archie.tw/tags/objective-c/</link>
     <description>Recent content in Objective-C on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/objective-c/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/objective-c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KVOController</title>
-      <link>https://example.com/p/kvocontroller/</link>
+      <link>https://www.archie.tw/p/kvocontroller/</link>
       <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/kvocontroller/</guid>
+      <guid>https://www.archie.tw/p/kvocontroller/</guid>
       <description>KVOController 有關 Observe 的相關做法，在 Swift 上我會選擇使用 RxSwift，那 Objective-C 呢？ 在這邊簡單介紹一下 KVOController 的 solution 給 Objective-C 的開發者。 在 NSObject 的子類別下，都會繼承到一個 FBKVOController 的物件，名字為 KVOController； 而這邊要使用的 method 是這個：
 (void)observe:(nullable id)object keyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(FBKVONotificationBlock)block; object 是我們要觀察的物件 keyPath 是 object 底下的要觀察的值，它的名稱（key） options 則是填入 NSKeyValueObservingOptions block 再來決定當 object 的 keyPath 那物件有更動時，要做些什麼事
 舉個例子 [self.KVOController observe:self keyPath:NSStringFromSelector(@selector(observeObjectName)) options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id _Nullable observer, id _Nonnull object, NSDictionary&amp;lt;NSString *,id&amp;gt; * _Nonnull change) { //do something }];  observe:self keyPath:NSStringFromSelector(@selector(observeObjectName))  翻成白話文就是 self 去觀察 self.</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>Optional</title>
-      <link>https://example.com/p/optional/</link>
+      <link>https://www.archie.tw/p/optional/</link>
       <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/optional/</guid>
+      <guid>https://www.archie.tw/p/optional/</guid>
       <description>前言 Optional 正如其名，就是個可選擇或者說是可有可無的意思。
 Optional 在 Swift 的開發過程之中，我們可以看到「 ! 」、「 ? 」存在於變數之後，像是 var userName: String? 正式意味著 userName 這個 String 有可能是 nil。 有關 Swift optional 的解釋和 nil 對於 Swift 的介紹可以看看這篇，由小草哥所攥寫的文章。 這邊要補充的是，在 Objective-C 裏頭，則是使用 nonnull 和 nullable 來代表著 Swift 裡頭的「 ! 」、「 ? 」。 而在 Objective-C 之中，可以使用 NS_ASSUME_NONNULL_BEGIN 及 NS_ASSUME_NONNULL_END 來作為區域性的宣告 @property 的屬性為 nonnull；若其中有需要宣告成 nullable 的，則再補上即可。
 NS_ASSUME_NONNULL_BEGIN @interface DemoObject : NSObject @property (nonatomic) NSString *name; @property (nonatomic, nullable) NSString *address; @property (nonatomic, readonly) NSString *phoneNumber; @end NS_ASSUME_NONNULL_END </description>
@@ -31,10 +31,10 @@ NS_ASSUME_NONNULL_BEGIN @interface DemoObject : NSObject @property (nonatomic) N
     
     <item>
       <title>Weak</title>
-      <link>https://example.com/p/weak/</link>
+      <link>https://www.archie.tw/p/weak/</link>
       <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/weak/</guid>
+      <guid>https://www.archie.tw/p/weak/</guid>
       <description>在 iOS 的開發語言之中，不論是 Objective-C 或者 Swift，你或許都有看過這個詞
 weak 你可能會知道它可以避免 retain cycle，但其背後的觀念是什麼？
 ARC 在目前大家所熟悉的開發環境之中，記憶體的管理是由 iOS 或 macOS 自行去解決的；它會在你宣告或者呼叫物件的時候，替它在計數器上 +1，而當你用不到時，便會 -1。 當計數器為零的時候，便釋放掉這個物件的記憶體位置。 舉個例子，我在某個 ViewController 裏頭，宣告了一個變數 A 及執行一個異步的閉包（closure），並在裡頭使用到 A。 此時，A 在剛剛宣告產生的時候，計數器會是 +1，而在閉包內被使用到，故計數器會再 +1，所以在閉包執行時，它會是 2。

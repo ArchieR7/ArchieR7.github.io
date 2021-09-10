@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>📒 程式筆記 on Archie</title>
-    <link>https://example.com/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/</link>
+    <link>https://www.archie.tw/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/</link>
     <description>Recent content in 📒 程式筆記 on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown 嵌入 YouTube</title>
-      <link>https://example.com/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</link>
+      <link>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</guid>
+      <guid>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</guid>
       <description>前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
 嵌入的程式碼 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;https://www.youtube.com/embed/OyCN04p-uS8&amp;quot; title=&amp;quot;YouTube video player&amp;quot; frameborder=&amp;quot;0&amp;quot; allow=&amp;quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt; Markdown 其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以線上讀書會 RxSwift 分享來說
 首先就是先取得縮圖的 URL，格式為
@@ -21,10 +21,10 @@
     
     <item>
       <title>iOS 開發環境設置</title>
-      <link>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</link>
+      <link>https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</link>
       <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</guid>
+      <guid>https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</guid>
       <description>來算一算這是我第幾次來設置開發環境了⋯
  2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）  前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
 brew 首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！
@@ -35,10 +35,10 @@ iTerm2 接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這�
     
     <item>
       <title>Fastlane 503 Service Temporarily Unavailable</title>
-      <link>https://example.com/p/fastlane-503-service-temporarily-unavailable/</link>
+      <link>https://www.archie.tw/p/fastlane-503-service-temporarily-unavailable/</link>
       <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/fastlane-503-service-temporarily-unavailable/</guid>
+      <guid>https://www.archie.tw/p/fastlane-503-service-temporarily-unavailable/</guid>
       <description>Fastlane 503 Service Temporarity Unavaiable 當我們利用 Match 來更新 provisioning profiles 時，有時候會因為使用量過大而導致發生 503 Service Temporarity Unavaiable，這時候有幾種方式來處理。
  一次不要操作太多 Match action 清除 fastlane spaceship 的 cookie  第二種的使用方式就是直接執行下列指令就可以再次嘗試了
 rm $HOME/.fastlane/spaceship/*/cookie </description>
@@ -46,10 +46,10 @@ rm $HOME/.fastlane/spaceship/*/cookie </description>
     
     <item>
       <title>Change login shells without chsh</title>
-      <link>https://example.com/p/change-login-shells-without-chsh/</link>
+      <link>https://www.archie.tw/p/change-login-shells-without-chsh/</link>
       <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/change-login-shells-without-chsh/</guid>
+      <guid>https://www.archie.tw/p/change-login-shells-without-chsh/</guid>
       <description>前言 最近心血來潮更新了 brew，其中我正在使用的 shells – zsh 也一併更新了，才發現當初在從 bash 轉到 zsh 的時候有指定到版號的部分⋯也就是長得像這樣
 /usr/local/bin/zsh-5.6.1 而 zsh 一更新之後，我的 iterm2 便很合理地打不開，因為找不到 login 的 shells； 當初我是在 bash 裡頭使用 chsh 來變更
 chsh -s $(which zsh) 如今打不開 iterm2 該如何更改呢？
@@ -61,10 +61,10 @@ chsh -s $(which zsh) 如今打不開 iterm2 該如何更改呢？
     
     <item>
       <title>POSTMAN – Pre-request script</title>
-      <link>https://example.com/p/postman-pre-request-script/</link>
+      <link>https://www.archie.tw/p/postman-pre-request-script/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/postman-pre-request-script/</guid>
+      <guid>https://www.archie.tw/p/postman-pre-request-script/</guid>
       <description>POSTMAN 除了可以發送 request 到 server 之外，也有提供 pre-request script 的功能，讓我們可以撰寫 script 來進行一連串的測試。 舉個例子，我們有三支 API，邏輯為 名稱（Request body）【Response body】：
  登入（帳號、密碼）【Token】 取得使用者的消費紀錄列表（Token）【Array】 取得單筆消費紀錄（Receipt ID）【Receipt】  在沒有撰寫 pre-request 之前若要取得 Receipt 的話，我們得要先呼叫 登入，接著手動複製 Token 到 取得使用者的消費紀錄列表 的 request body 裡頭，然後再複製⋯⋯（你們應該懂） 這邊就來教教如何先寫好 script，之後只要按最後你想得到的那支 API 就行了！
 let account = &amp;#39;account&amp;#39; let password = &amp;#39;password&amp;#39; let index = 0 pm.sendRequest({ url: &amp;#39;https://Archie.tw/login?account=&amp;#39; + account + &amp;#39;&amp;amp;password=&amp;#39; + password, method: &amp;#39;get&amp;#39; }, function(err, response) { let token = response.json().token; pm.</description>
@@ -72,10 +72,10 @@ let account = &amp;#39;account&amp;#39; let password = &amp;#39;password&amp;#39
     
     <item>
       <title>Git submodule</title>
-      <link>https://example.com/p/git-submodule/</link>
+      <link>https://www.archie.tw/p/git-submodule/</link>
       <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/git-submodule/</guid>
+      <guid>https://www.archie.tw/p/git-submodule/</guid>
       <description>有些時候，我們會需要幾個檔案和其他專案共用，而 iOS 的專案可以採取 CocoaPods / Carthage，但如果是要和其他語言共用的話該怎麼辦呢？
 舉個例子，Server 和 Client 之間傳遞 Status Code，像是 code: 20000、20001、20002 之類的，收到 code 後要再做後續動作。
 不過一份 Code 的定義散落在多個平台 / 專案之中，難免會有人雷的時候；不論是 client 記錯或是 server 回錯，而若是有個地方可以共同維護的話，便可以減少這種失誤。
@@ -87,20 +87,20 @@ git pull 像是如果懶得在每一個檔案都 import PodName，就直接弄�
     
     <item>
       <title>CompactMap vs flatMap</title>
-      <link>https://example.com/p/compactmap-vs-flatmap/</link>
+      <link>https://www.archie.tw/p/compactmap-vs-flatmap/</link>
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/compactmap-vs-flatmap/</guid>
+      <guid>https://www.archie.tw/p/compactmap-vs-flatmap/</guid>
       <description>直接從 code 來看兩者之間和 map 的差異
 CompactMap let scores = [&amp;#34;1&amp;#34;, &amp;#34;2&amp;#34;, &amp;#34;3&amp;#34;, &amp;#34;four&amp;#34;, &amp;#34;5&amp;#34;] let mapped: [Int?] = scores.map { str in Int(str) } // [1, 2, 3, nil, 5]  let compactMapped: [Int] = scores.compactMap { str in Int(str) } // [1, 2, 3, 5] flatMap let users = [User(name: &amp;#34;Archie&amp;#34;, scores: [1, 2, 4]), User(name: &amp;#34;ArchieChang&amp;#34;, scores: [3,2,5])] let mapped = users.map { $0.scores } // [[1, 2, 4], [3, 2, 5]] let flatMapped = users.</description>
     </item>
     
     <item>
       <title>Git LFS ( Large File Storage )</title>
-      <link>https://example.com/p/git-lfs-large-file-storage/</link>
+      <link>https://www.archie.tw/p/git-lfs-large-file-storage/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/git-lfs-large-file-storage/</guid>
+      <guid>https://www.archie.tw/p/git-lfs-large-file-storage/</guid>
       <description>今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。
 至於為什麼會將 Pods 的檔案全推到 GitHub 上呢？
 而在 git push 的時候，有顯示解決的方法，便是今天的主題：
@@ -114,10 +114,10 @@ git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併�
     
     <item>
       <title>upgrade git</title>
-      <link>https://example.com/p/upgrade-git/</link>
+      <link>https://www.archie.tw/p/upgrade-git/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/upgrade-git/</guid>
+      <guid>https://www.archie.tw/p/upgrade-git/</guid>
       <description>前言 git 最近被發現有重大的漏洞，以我們能做的事情就是更新自己的 git！
 在 macOS 上更新 在 macOS 上，預設的 git 為 git version 2.15.1 (Apple Git-101)， 所以我們需要先透過 brew 來安裝 git。 首先，我們先來更新 brew，這點和 CocoaPods 類似，需要更新本機端的項目； 順道升級 brew 目前裡頭的項目。
 brew update &amp;amp;&amp;amp; brew upgrade 接著就透過 brew 來安裝 git
@@ -128,10 +128,10 @@ git --version </description>
     
     <item>
       <title>Commitizen</title>
-      <link>https://example.com/p/commitizen/</link>
+      <link>https://www.archie.tw/p/commitizen/</link>
       <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/commitizen/</guid>
+      <guid>https://www.archie.tw/p/commitizen/</guid>
       <description>閒聊一下 最近處於求職的階段，評估一份職缺的觀點也和過往不同； 以這篇文章來說，Git Commit Style 便是其中一點，詢問對方是否有固定的 commit 格式， 就可以大致上瞭解團隊的風格是哪種。 若還沒有個規範，或是想要參考的，可以繼續閱讀下去。
 Git Commit 是以 AngularJS 的格式，區分成
 &amp;lt;type&amp;gt;(&amp;lt;scope&amp;gt;): &amp;lt;subject&amp;gt; &amp;lt;BLANK LINE&amp;gt; &amp;lt;body&amp;gt; &amp;lt;BLANK LINE&amp;gt; &amp;lt;footer&amp;gt; 其中 type、scope、subject、body、footer 等，有一定的規範， 詳細的內容可以在 angular.js/DEVELOPERS.md 看到。 這篇文章主要要介紹的是一個可以讓 commit 符合上述規範的工具 – Commitizen。
@@ -143,20 +143,20 @@ npm install -g cz-conventional-changelog 在電腦中安裝完上述兩者之後
     
     <item>
       <title>Word deletion shortcut in iTerm</title>
-      <link>https://example.com/p/word-deletion-shortcut-in-iterm/</link>
+      <link>https://www.archie.tw/p/word-deletion-shortcut-in-iterm/</link>
       <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/word-deletion-shortcut-in-iterm/</guid>
+      <guid>https://www.archie.tw/p/word-deletion-shortcut-in-iterm/</guid>
       <description>在使用 iTerm 的時候，想要一次刪除一個字的話， 可以在 Preferences ➡️ Keys 新增一組 Keyboard Shortcut， Action 選擇 Send Hex Code，並填上 0x17 即可！
  iTerm2</description>
     </item>
     
     <item>
       <title>Facebook 隱私權條款問題</title>
-      <link>https://example.com/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</link>
+      <link>https://www.archie.tw/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</guid>
+      <guid>https://www.archie.tw/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</guid>
       <description>由於之前上架的 App 有使用到 Facebook 的登入功能， 於是這幾天一直收到這類的信件： Demo 但是由於本身對這方面可以說是完全沒有涉略， 所以便找找有沒有什麼辦法解決。
 Free Privacy Policy
 於是找到了這個，回答五種題型便可以得到它們產生的條款， 再找個地方貼上補連結到 Facebook 即可！</description>
@@ -164,10 +164,10 @@ Free Privacy Policy
     
     <item>
       <title>重灌 macOS 的工程（下）- Terminal 篇</title>
-      <link>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</link>
+      <link>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</link>
       <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</guid>
+      <guid>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</guid>
       <description>前情提要 重灌 macOS 的工程（上）
 開始進入本篇 iTerm2 首先要先處理的，是 Terminal 的部分； 除了 macOS 所內建的 Terminal 之外，我目前嘗試使用 iTerm2， 主要是看上有較多個人化設定的部分。 而我所使用的主題風格是 Dracula，相關的安裝方式裡頭有蠻清楚的介紹。
 Homebrew 這套相信大家都不會太陌生，而不清楚的人就在這邊簡單解釋一下， Homebrew 主要是負責 Mac 上的一些套件管理； 就有點像是 Swift package manager、CocoaPods 或是 Carthage。
@@ -176,10 +176,10 @@ zsh 在 iterm2 之中安裝完 homebrew 之後， 接著就繼續來安裝 zsh�
     
     <item>
       <title>重灌 macOS 的工程（上）</title>
-      <link>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</link>
+      <link>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</link>
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</guid>
+      <guid>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</guid>
       <description>前言 幾天前，Apple 釋出了 High Sierra 的安裝檔， 一時手癢的我，便將自己的 MacBook Pro (Retina, 13-inch, Mid 2014) 來進行更新！ 早上上班前出門開始更新，晚上回到家後卻還卡在剩餘 33 分鐘處⋯⋯ 覺得詭異的我，便強制關機，而再次打開便只能 command + R 開始重灌系統。 但事情往往不會那麼簡單，在重灌系統時，一直遇上卡在剩餘 1 分鐘的進度； 使用 command + L 查看安裝記錄，便發現是一直在安裝檔的驗證失敗⋯⋯ 直到今天早上，在重灌一次，才順利完成 High Sierra 的安裝。
 但故事往往都不會那麼順利 不知道為什麼的，我的 Disk password 一直輸入失敗， 但在 command + R 的修復模式之中，那組密碼是可以順利解開 Filevault 的⋯⋯ 進入到重置密碼的頁面後，跟著步驟完成後卻得到發生內部錯誤的訊息⋯⋯ 反覆試了幾次之後，得到兩個結論：
  格式化硬碟再重灌看來是最快的方式 下次絕對不要輕易使用 Filevault  於是乎，花了數個小時後，便得到一台新的 MacBook Pro！
@@ -194,10 +194,10 @@ iCloud 能勾的全勾：單純在 iPhone、iPad、以及其他 Mac 之間切換
     
     <item>
       <title>Third-party Payment</title>
-      <link>https://example.com/p/third-party-payment/</link>
+      <link>https://www.archie.tw/p/third-party-payment/</link>
       <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/third-party-payment/</guid>
+      <guid>https://www.archie.tw/p/third-party-payment/</guid>
       <description>Third-party Payment 這篇要來聊聊第三方支付，其主要的內容會介紹幾個台灣所可以使用的第三方支付方案； 而第三方支付主要解決的問題是，替我們向銀行方溝通及串接請款等動作， 讓使用者可以透過第三方支付的服務付款，而我們再和第三方支付的服務商談拆帳方式， 它可以讓我們不必親自去和銀行接洽運作的方式，只需要透過其官方的一些文件或是管理後台， 便能較輕易地處理掉金流這一塊的相關問題。 而這邊會談到下列幾間的一些資訊：
  智付通 綠界 TapPay  智付通 智付寶為智冠科技旗下的金流平台公司，而智付通則是其主要的服務名稱。
 會員 我們需要先到智付通的網站之中，創建一組收款帳號：
@@ -211,10 +211,10 @@ iCloud 能勾的全勾：單純在 iPhone、iPad、以及其他 Mac 之間切換
     
     <item>
       <title>Credit Card Number</title>
-      <link>https://example.com/p/credit-card-number/</link>
+      <link>https://www.archie.tw/p/credit-card-number/</link>
       <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/credit-card-number/</guid>
+      <guid>https://www.archie.tw/p/credit-card-number/</guid>
       <description>最近在串信用卡支付相關的服務，順道筆記信用卡卡號的相關規則。
 驗證卡號 信用卡卡號的驗證方式是，最後一碼為驗證碼； 舉個例子來說： MasterCard – 5200 8282 8282 8210 其中最後一碼 0 是由 5200 8282 8282 821 去做一些邏輯運算後得到的結果； 也就是你其實可以前面隨便亂打，最後一碼再從 0 測試到 9 就可以通過基本的卡號驗證。
 驗證方式 信用卡的驗證方式，是用 The Luhn Formula，也就是說， 當我們取得一組卡號，驗證碼產生的流程為：
@@ -223,10 +223,10 @@ iCloud 能勾的全勾：單純在 iPhone、iPad、以及其他 Mac 之間切換
     
     <item>
       <title>GraphQL</title>
-      <link>https://example.com/p/graphql/</link>
+      <link>https://www.archie.tw/p/graphql/</link>
       <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/graphql/</guid>
+      <guid>https://www.archie.tw/p/graphql/</guid>
       <description>GraphQL v.s REST 首先，看到這個標題，要先了解一下什麼是「REST」； 我們在先前的文章中有提到關於 Firebase Database REST API 的內容， 但並沒有在文章內解釋其含義是什麼。
 REST REST（Representational State Transfer），是一種架構，而非協定或是標準； 透過 HTTP 協議所提供的動作（POST、GET、PUT、DELETE）來對資源進行 CRUD（Create、Read、Update、Delete）， 並以 URI 的方式來指定資源：
  POST /games：建立遊戲 GET /games：取得遊戲清單 PUT /games/123：修改 id = 123 的遊戲內容 DELETE /games/123：刪除 id = 123 的遊戲 在 iOS 開發的串接 RESTful API 的經驗中，不論是取得的資料，或是回傳回 server 的資料， 大多是以 JSON 的格式在做溝通。 前後端之間可以透過 RESTful 的方式進行明確的溝通，進而開發出相對應的功能。  REST 的缺點 但有時候還是會遇到一些問題
@@ -237,10 +237,10 @@ REST REST（Representational State Transfer），是一種架構，而非協定�
     
     <item>
       <title>chmod with ssh key</title>
-      <link>https://example.com/p/chmod-with-ssh-key/</link>
+      <link>https://www.archie.tw/p/chmod-with-ssh-key/</link>
       <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/chmod-with-ssh-key/</guid>
+      <guid>https://www.archie.tw/p/chmod-with-ssh-key/</guid>
       <description>chmod 是由 change mode 所組成，其指令功能便是更改檔案或者資料夾底下所有檔案的權限。 而權限位是由 9 個權限位來控制，每 3 位為一組，分別為
  User Group Other  chmod 的八進位語法的數字說明：
  r: read – 4 w: write -2 x: execute – 1 所以，舉個例子： 5 = 可讀可執行（4 + 1） 6 = 可讀可寫（4 + 2） 7 = 可讀可寫可執行（4 + 2 + 1） 那麼，chmod 600 則就代表著 User 可讀可寫，但 Group 和 Other 則無法使用。  chmod ssh key 若我們更改一下 ssh 的 private key，會發生什麼事呢？
@@ -249,10 +249,10 @@ REST REST（Representational State Transfer），是一種架構，而非協定�
     
     <item>
       <title>Socket</title>
-      <link>https://example.com/p/socket/</link>
+      <link>https://www.archie.tw/p/socket/</link>
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/socket/</guid>
+      <guid>https://www.archie.tw/p/socket/</guid>
       <description>最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
  Datagram sockets(connectionless) Stream sockets(connection-oriented)  Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
 Stream sockets(connection-oriented) 而 Stream sockets 則是使用 TCP 封包來傳遞， 其因為會先需要確認 Server 和 Client 兩者連接狀態後再傳遞， 故速度較慢一些，但至少能確認資料的有序性以及完整度。
@@ -262,10 +262,10 @@ Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須�
     
     <item>
       <title>多個帳號的 SSH Config 設定</title>
-      <link>https://example.com/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</link>
+      <link>https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</link>
       <pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</guid>
+      <guid>https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</guid>
       <description>一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
 如果公司使用的 git server，是我原本就沒有使用的呢？ 那就沒什麼差了。 就像是我第一份工作，公司所使用的 git server 為 AWS 的 CodeCommit， 而原先我根本就不用使用到那邊的服務，所以建立一組 SSH key 在 AWS 上使用也沒什麼衝突。 且 AWS 上的教學文件，會讓你在 ~/.ssh/config 之中，以 Host 作為區別； 所以它只會在 AWS 上使用你為了 AWS 所建立的 key。
 但⋯最容易發生的情形就是： 公司也使用 Github 作為組織的 git server 通常我們會有一組自己私人的 Github 帳號，若公司不反對你使用私人帳號加入組織的話， 其實你也就沒什麼差了； 但大多數的情形是會給你一組（或是請你申請一組）公司信箱的 Github 帳號， 來維護 private git repository。
@@ -274,10 +274,10 @@ Public key 我們先來看看 ssh 的 public key 裡頭，帶了哪些資訊： 
     
     <item>
       <title>JWT</title>
-      <link>https://example.com/p/jwt/</link>
+      <link>https://www.archie.tw/p/jwt/</link>
       <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/jwt/</guid>
+      <guid>https://www.archie.tw/p/jwt/</guid>
       <description>JWT JWT（ JSON Web Token）和 iOS 比較有相關聯的地方， 便是在於 APNs p8 是使用 JWT 格式作為傳遞； 而有關於 JWT 的相關資料，可以參考 這個網站。 以之前所提到的 APNs 來說，是由三個部分所組成：
  Header Payload Verify signature  Header 在 APNs 裡頭，需要包含這兩者
 alg：所使用的加密方式（algorithm），p8 是使用 ES256 作為加密方式 kid：鑰匙的 ID（key identifier） 例如： alg: ES256 kid: 12345678
@@ -287,10 +287,10 @@ Verify signature 這邊便是將上述兩者，分別做 base 64 加密後輸出
     
     <item>
       <title>淺談 Android 的逆向工程</title>
-      <link>https://example.com/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
+      <link>https://www.archie.tw/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
+      <guid>https://www.archie.tw/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
       <description>Android？ 是的，這篇正是要寫有關於 Android 的逆向工程，儘管這也很可能是本站唯一一篇XD
 起因 看到放在「Hack」的分類上，便可以得知，是因為想要修改遊戲參數而開始涉略⋯⋯ 提到 Android 的遊戲開發方式，我們可以簡單地分為兩種類型：
  以 Java 開發 以 Unity 開發 這篇主要會以 Java 開發的遊戲作為內容分享（因為我想改的遊戲是此類型XD）  先說結論 我目前還沒有修改成功，因為這款遊戲有對 apk 進行混淆的動作⋯⋯
@@ -303,10 +303,10 @@ dex2jar 和 jd-gui dex2jar 的功用在於將 .apk 轉成 .jar，配合 jd-gui �
     
     <item>
       <title>開發人員與 UI / UX 設計師之間的合作模式</title>
-      <link>https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</guid>
       <description>UI / UX 設計師 在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師， 而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。
 設計師所使用的工具 在 UX 設計師裏頭，有配合過使用 Axure、Adobe Xd、或是用 Sketch 直接和 UI 一起出的。 而在 Sketch 的模式下，它裡頭有個詞叫做「symbol」，其意義和 iOS 裡頭的 UIView 相關物件相同。
 物件的概念 Sketch 提供了 Symbol 的建立，讓使用者在設計時，能夠把一些重複使用到的元件，做成一個 symbol， 而它會自動定義這個 symbol 哪些值是可以被異動的：
@@ -317,19 +317,19 @@ dex2jar 和 jd-gui dex2jar 的功用在於將 .apk 轉成 .jar，配合 jd-gui �
     
     <item>
       <title>七天學會設計模式 - Facade</title>
-      <link>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</link>
+      <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</link>
       <pubDate>Tue, 09 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</guid>
+      <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</guid>
       <description>Facade 其實 Facade 的概念簡單來說，就是簡化使用物件方的介面。 舉個例來說，我建立了一個 Calendar 的 UICollectionView，可能裡頭會需要很多的邏輯判斷；像是「計算 Cell 的 Size」、「判斷日期是否為假日」、「判斷月份」⋯⋯等，但使用這個物件的人，基本上不需要（也不應該）去煩惱這些事情。 如同我們吹電風扇，只需要「強、中、弱、關」的使用介面，並不需要知道它內部是調整不同的功率去達到這效果，但對使用者而言並不是那麼的重要。 而在 MVC 的架構底下便是如此，使用者只需要 ViewController 上可以操作的 function 即可，底部的 Model 是如何操作以及邏輯運算如何，就相對的沒那麼重要，丟給系統去做就好！ 所以在 Facade 的設計模式下，每個物件的介面需要被規劃過，哪些需要使用 private、fileprivate、class 等，適時地分配各個變數或常數及方法的使用權限。</description>
     </item>
     
     <item>
       <title>七天學會設計模式 – Observe</title>
-      <link>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</link>
+      <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</link>
       <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</guid>
+      <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</guid>
       <description>訂閱 有使用過網誌或是一些新聞類型的網站時，通常可以在旁邊看到「訂閱」的按鈕，接著點擊下去後就可以在作者有發動或異動文章時，收到通知。
 Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去「訂閱」某個物件，當它做了某些事情或者其值改變時，可以去做相對應的動作。
 應用 舉個比較常會遇到的案例：鍵盤 我們通常會希望在鍵盤升起來時，調整我們的畫面，看是移動 View 的 frame，或是設定 TableView 的 ContentOffset 之類的。 而大多數採取的方式是「監聽」 NotificationCenter 的「鍵盤升起」的事件，所以當「鍵盤升起」時，我們可以做相對應的處理；而當「鍵盤收起」時，我們也可以執行另一段 function。 這，便是 Observe 的設計模式。 我們去「訂閱」或者「監聽」某個事件，像是 Value changed 或是某個 function 被呼叫，來做相對應的處理。
@@ -339,10 +339,10 @@ Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去
     
     <item>
       <title>七天學會設計模式 - Singleton</title>
-      <link>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</link>
+      <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</guid>
+      <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</guid>
       <description>前言 最近和同事一起購入七天學會設計模式，不過書中是以 Java 作為示範語言； 而這邊，我會以 Swift 及 Objective-C 來攥寫範例並補充些內容。
 Singleton 如同它的命名一般，在整個 App 運作時，僅會有一個 instance。
 Swift Swift 宣告 Singleton 的方式很簡單，就是在 class 底下宣告一個 static 的常數（constant）。

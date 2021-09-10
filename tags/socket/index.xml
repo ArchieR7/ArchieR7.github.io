@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Socket on Archie</title>
-    <link>https://example.com/tags/socket/</link>
+    <link>https://www.archie.tw/tags/socket/</link>
     <description>Recent content in Socket on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/socket/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Socket</title>
-      <link>https://example.com/p/socket/</link>
+      <link>https://www.archie.tw/p/socket/</link>
       <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/socket/</guid>
+      <guid>https://www.archie.tw/p/socket/</guid>
       <description>最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
  Datagram sockets(connectionless) Stream sockets(connection-oriented)  Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
 Stream sockets(connection-oriented) 而 Stream sockets 則是使用 TCP 封包來傳遞， 其因為會先需要確認 Server 和 Client 兩者連接狀態後再傳遞， 故速度較慢一些，但至少能確認資料的有序性以及完整度。

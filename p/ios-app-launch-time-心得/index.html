@@ -6,14 +6,14 @@
 App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;amp; Binding / ObjC Setup / Initializer 如何查看 pre main time  
 透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。'><title>iOS App launch time 心得</title>
 
-<link rel='canonical' href='https://example.com/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/'>
+<link rel='canonical' href='https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='iOS App launch time 心得'>
 <meta property='og:description' content='如何減少 iOS App launch time 這篇文章就來紀錄一下今日的研究項目，主要的起因是前一篇使用 Xcode 建立一個 Framework有談到如何選擇要創建的是 static library 還是 dynamic framework，其中一個差異是 dyld ( dynamic loader ) 會在 pre main 的時候去載入 dynanmic frameworks，所以若是有越多的 dynamic frameworks 需要載入時，便會花上越多時間。而Apple也建議我們不要使用超過 6 個非系統的 dynamic frameworks。
 再來搭配服用 weak self - 25: 難道公司發大財了！？App Launch Time 加速面面觀，一併做一個筆記整理。
 App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;amp; Binding / ObjC Setup / Initializer 如何查看 pre main time  
 透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。'>
-<meta property='og:url' content='https://example.com/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/'>
+<meta property='og:url' content='https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2020-03-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-27T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -21,7 +21,9 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
 <meta name="twitter:description" content="如何減少 iOS App launch time 這篇文章就來紀錄一下今日的研究項目，主要的起因是前一篇使用 Xcode 建立一個 Framework有談到如何選擇要創建的是 static library 還是 dynamic framework，其中一個差異是 dyld ( dynamic loader ) 會在 pre main 的時候去載入 dynanmic frameworks，所以若是有越多的 dynamic frameworks 需要載入時，便會花上越多時間。而Apple也建議我們不要使用超過 6 個非系統的 dynamic frameworks。
 再來搭配服用 weak self - 25: 難道公司發大財了！？App Launch Time 加速面面觀，一併做一個筆記整理。
 App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;amp; Binding / ObjC Setup / Initializer 如何查看 pre main time  
-透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。">
+透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -55,7 +57,7 @@ App 啟動的三個階段 Pre-main: Loading (MachO &#43; dylib) / Rebase &amp;am
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

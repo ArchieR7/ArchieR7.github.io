@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Archie</title>
-        <link>https://example.com/</link>
+        <link>https://www.archie.tw/</link>
         <description>Recent content on Archie</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Markdown 嵌入 YouTube</title>
-        <link>https://example.com/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</link>
+        <link>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</link>
         <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</guid>
+        <guid>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</guid>
         <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
 &lt;p&gt;一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？&lt;/p&gt;
 &lt;h3 id=&#34;嵌入的程式碼&#34;&gt;嵌入的程式碼&lt;/h3&gt;
@@ -97,10 +97,10 @@
         </item>
         <item>
         <title>發票收集雞 - 自己的發票自己收</title>
-        <link>https://example.com/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</link>
+        <link>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</link>
         <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</guid>
+        <guid>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</guid>
         <description>&lt;h1 id=&#34;發票收集雞httpsappsapplecomtwapp發票收集雞id1575857521&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://apps.apple.com/tw/app/%e7%99%bc%e7%a5%a8%e6%94%b6%e9%9b%86%e9%9b%9e/id1575857521&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;發票收集雞&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二&lt;/p&gt;
@@ -112,8 +112,8 @@
 &lt;p&gt;基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1630032452058.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1630032452058.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1630032452058.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1630032452058.png&#34;
 			
 			
 			
@@ -154,8 +154,8 @@
     &gt;發票收集雞的許願板&lt;/a&gt;查看我目前的開發進度和預計上線的功能。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1630032426248.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1630032426248.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1630032426248.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1630032426248.png&#34;
 			
 			
 			
@@ -171,8 +171,8 @@
 &lt;p&gt;在經過幾次的 rejected 之後，終於在 2021/8/26 23:20 上線啦！&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1630029996827.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1630029996827.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1630029996827.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1630029996827.png&#34;
 			
 			
 			
@@ -199,10 +199,10 @@
         </item>
         <item>
         <title>iOS 開發環境設置</title>
-        <link>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</link>
+        <link>https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</link>
         <pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</guid>
+        <guid>https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/</guid>
         <description>&lt;p&gt;來算一算這是我第幾次來設置開發環境了⋯&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;2014 - 買了自己的第一台 MacBook Pro&lt;/li&gt;
@@ -293,10 +293,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>Fastlane 503 Service Temporarily Unavailable</title>
-        <link>https://example.com/p/fastlane-503-service-temporarily-unavailable/</link>
+        <link>https://www.archie.tw/p/fastlane-503-service-temporarily-unavailable/</link>
         <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/fastlane-503-service-temporarily-unavailable/</guid>
+        <guid>https://www.archie.tw/p/fastlane-503-service-temporarily-unavailable/</guid>
         <description>&lt;h1 id=&#34;fastlane-503-service-temporarity-unavaiable&#34;&gt;Fastlane 503 Service Temporarity Unavaiable&lt;/h1&gt;
 &lt;p&gt;當我們利用 Match 來更新 provisioning profiles 時，有時候會因為使用量過大而導致發生 &lt;code&gt;503 Service Temporarity Unavaiable&lt;/code&gt;，這時候有幾種方式來處理。&lt;/p&gt;
 &lt;ol&gt;
@@ -309,10 +309,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>從 Terminal 讓模擬器開啟連結</title>
-        <link>https://example.com/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</link>
+        <link>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</link>
         <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</guid>
+        <guid>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</guid>
         <description>&lt;p&gt;一般在開發的時候，如果需要在模擬器測試 Deep link 的話，則需要做一個開啟連結的動作；比較手動的就會開啟一個 Safari，輸入特定的連結後前往，而這邊分享一個指令。&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xcrun simctl openurl booted &amp;lt;url&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;xcrun&lt;/code&gt; 主要就是執行 Xcode 的一個工具，而 &lt;code&gt;simctl&lt;/code&gt; 則是和模擬器的管理工具，而 &lt;code&gt;booted&lt;/code&gt; 是指目前開啟著的模擬器。&lt;/p&gt;
@@ -327,16 +327,16 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>WWDC21 - Platforms State of the Union</title>
-        <link>https://example.com/p/wwdc21-platforms-state-of-the-union/</link>
+        <link>https://www.archie.tw/p/wwdc21-platforms-state-of-the-union/</link>
         <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/wwdc21-platforms-state-of-the-union/</guid>
+        <guid>https://www.archie.tw/p/wwdc21-platforms-state-of-the-union/</guid>
         <description>&lt;h3 id=&#34;xcode-cloud&#34;&gt;Xcode Cloud&lt;/h3&gt;
 &lt;p&gt;一般我們的發佈流程為，從寫程式到測試，接著整合後發佈，再來接著收集資訊後再進行下一輪開發。
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1623429314442.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1623429314442.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1623429314442.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1623429314442.png&#34;
 			
 			
 			
@@ -348,8 +348,8 @@ gem &#39;cocoapods&#39;
 &lt;p&gt;Xcode Cloud 將這一切整合在同一個服務之中，讓我們可以直接寫完程式之後，建立 workflow 並整合 Git 服務（GitHub, GitLab 等），接著串接 App Store Connect 進行 TestFlight 和發佈。
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1623429354737.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1623429354737.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1623429354737.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1623429354737.png&#34;
 			
 			
 			
@@ -372,8 +372,8 @@ gem &#39;cocoapods&#39;
     &gt;這個連結來註冊 Beta 使用&lt;/a&gt;，若有機會的話再來詳細寫一篇這部分的體驗。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1623431306073.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1623431306073.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1623431306073.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1623431306073.png&#34;
 			
 			
 			
@@ -459,8 +459,8 @@ gem &#39;cocoapods&#39;
 &lt;p&gt;Swift Playground 4 將今年上線，使用者可以直接在上頭 build app 並上傳到 App Store 去，意味著只使用 iPad 作為開發者裝置的可行性出現了。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1623467033840.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1623467033840.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1623467033840.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1623467033840.png&#34;
 			
 			
 			
@@ -471,8 +471,8 @@ gem &#39;cocoapods&#39;
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1623467129289.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1623467129289.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1623467129289.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1623467129289.png&#34;
 			
 			
 			
@@ -509,18 +509,18 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>Magic Keyboard 2 藍牙連接延遲修正</title>
-        <link>https://example.com/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</link>
+        <link>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</link>
         <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</guid>
+        <guid>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</guid>
         <description>&lt;p&gt;前陣子我的 Magic Keyboard 2 若沒有連接著線，則打字會有延遲的情況；一開始還以為是電腦卡頓的問題，但 Magic Trackpad 卻滑動地很順暢⋯
 便接著線工作了一段時間，直到剛剛決定嘗試修復這問題&lt;/p&gt;
 &lt;p&gt;以 &lt;code&gt;option&lt;/code&gt; + &lt;code&gt;shift&lt;/code&gt; 點擊藍牙，我先是「重置藍牙模組」後仍沒有排除延遲的問題，後來選擇了「將所有連接的 Apple 裝置重置為出廠值」，
 之後便一切恢復正常了！&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1623427646574.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1623427646574.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1623427646574.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1623427646574.png&#34;
 			
 			
 			
@@ -533,10 +533,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>設計學習補助計畫</title>
-        <link>https://example.com/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</link>
+        <link>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</link>
         <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</guid>
+        <guid>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</guid>
         <description>&lt;p&gt;站在公司的角度來看，學習補助計畫是一個對於勞資雙方都有利的福利措施，不論員工的學習補助是投入在工作技能上或是日常生活的其他技能；如運動健身、廚藝或是音樂上，都能夠有機會使團隊成員在工作之餘學習新知，提升各成員的能力。&lt;/p&gt;
 &lt;p&gt;而這邊我會以個人的角度，站在公司和員工的立場之間做思考和設計，有興趣的人可以一同分享你目前公司的補助方式或是想法。&lt;/p&gt;
 &lt;h3 id=&#34;成本問題&#34;&gt;成本問題&lt;/h3&gt;
@@ -660,10 +660,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>Apple Watch App 開發除錯心得</title>
-        <link>https://example.com/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</link>
+        <link>https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</link>
         <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</guid>
+        <guid>https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;前陣子在幫&lt;a class=&#34;link&#34; href=&#34;https://apps.apple.com/tw/app/%e6%b0%b4%e6%bb%b4%e7%99%bc%e7%a5%a8/id1522605672&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;水滴發票&lt;/a&gt;加入 Apple Watch 的功能，這篇文章會紀錄下開發的一些想法。&lt;/p&gt;
@@ -689,10 +689,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>新創神秘故事：造假的學經歷背景</title>
-        <link>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</link>
+        <link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</link>
         <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</guid>
+        <guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -758,10 +758,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>新創神秘故事：老闆的弟弟</title>
-        <link>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</link>
+        <link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</link>
         <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</guid>
+        <guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -827,10 +827,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>為什麼加入新創公司？</title>
-        <link>https://example.com/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</link>
+        <link>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</link>
         <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</guid>
+        <guid>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</guid>
         <description>&lt;h2 id=&#34;為什麼加入____公司&#34;&gt;為什麼加入____公司？&lt;/h2&gt;
 &lt;p&gt;如果你已經工作一段時間，或者是正打算開始求職的新鮮人，不妨先花個幾分鐘的時間思考一下這問題。&lt;/p&gt;
 &lt;p&gt;接著，我來回答這個問題&lt;/p&gt;
@@ -895,10 +895,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>RxSwift 6 上線啦！</title>
-        <link>https://example.com/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</link>
+        <link>https://www.archie.tw/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</link>
         <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</guid>
+        <guid>https://www.archie.tw/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</guid>
         <description>&lt;p&gt;2021 的開始，&lt;a class=&#34;link&#34; href=&#34;https://github.com/ReactiveX/RxSwift&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;RxSwift 6&lt;/a&gt; 悄悄地上線啦！你可以從&lt;a class=&#34;link&#34; href=&#34;https://dev.to/freak4pc/what-s-new-in-rxswift-6-2nog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;這個網站&lt;/a&gt;來看看有哪些更新，或看看這篇筆記📒&lt;/p&gt;
@@ -959,8 +959,8 @@ gem &#39;cocoapods&#39;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.archie.tw/wp-content/uploads/2021/01/image-1609899943346.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609898542190.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609898542190.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609898542190.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609898542190.png&#34;
 			
 			
 			
@@ -1001,8 +1001,8 @@ gem &#39;cocoapods&#39;
 &lt;a class=&#34;link&#34; href=&#34;https://www.archie.tw/wp-content/uploads/2021/01/image-1609899943346.png&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609899943346.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609899943346.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609899943346.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609899943346.png&#34;
 			
 			
 			
@@ -1097,10 +1097,10 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>職缺與履歷的互動 - 以水滴信用為例</title>
-        <link>https://example.com/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</link>
+        <link>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</link>
         <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</guid>
+        <guid>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://https://s3cdn.yourator.co/banners/banners/000/001/523/home/ce53fd42866bb72a43c9ac7f6382251203e2571f.png?1608089950&#34;  title=&#34;Credidi Inc.&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;figure 
@@ -1132,8 +1132,8 @@ gem &#39;cocoapods&#39;
 &lt;h3 id=&#34;seniod-android-engineer&#34;&gt;Seniod Android Engineer&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609748999616.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609748999616.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609748999616.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609748999616.png&#34;
 			
 			
 			
@@ -1145,8 +1145,8 @@ gem &#39;cocoapods&#39;
 &lt;h3 id=&#34;junior-ios-engineer&#34;&gt;Junior iOS Engineer&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609748821129.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609748821129.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609748821129.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609748821129.png&#34;
 			
 			
 			
@@ -1163,8 +1163,8 @@ gem &#39;cocoapods&#39;
 &lt;h3 id=&#34;senior-android-engineer&#34;&gt;Senior Android Engineer&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609749861414.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609749861414.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609749861414.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609749861414.png&#34;
 			
 			
 			
@@ -1176,8 +1176,8 @@ gem &#39;cocoapods&#39;
 &lt;h3 id=&#34;junior-ios-engineer-1&#34;&gt;Junior iOS Engineer&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609749851680.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609749851680.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609749851680.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609749851680.png&#34;
 			
 			
 			
@@ -1224,8 +1224,8 @@ gem &#39;cocoapods&#39;
 &lt;p&gt;這種就讓我有些興趣想看看他都在做什麼&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609751821163.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609751821163.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609751821163.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609751821163.png&#34;
 			
 			
 			
@@ -1237,8 +1237,8 @@ gem &#39;cocoapods&#39;
 &lt;p&gt;而這種的就不知道貼上來是幹嘛用的⋯&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609751953576.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609751953576.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609751953576.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609751953576.png&#34;
 			
 			
 			
@@ -1252,8 +1252,8 @@ gem &#39;cocoapods&#39;
 &lt;/ul&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609752156182.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609752156182.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609752156182.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609752156182.png&#34;
 			
 			
 			
@@ -1264,8 +1264,8 @@ gem &#39;cocoapods&#39;
 &lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1609752190143.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1609752190143.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1609752190143.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1609752190143.png&#34;
 			
 			
 			
@@ -1287,17 +1287,17 @@ gem &#39;cocoapods&#39;
         </item>
         <item>
         <title>GitHub Actions &#43; Fastlane &#43; Cache = 👍</title>
-        <link>https://example.com/p/github-actions-fastlane-cache/</link>
+        <link>https://www.archie.tw/p/github-actions-fastlane-cache/</link>
         <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/github-actions-fastlane-cache/</guid>
+        <guid>https://www.archie.tw/p/github-actions-fastlane-cache/</guid>
         <description>&lt;p&gt;這篇文章的內容主要是分享過去這兩天，我在專案上啟用 &lt;a class=&#34;link&#34; href=&#34;https://github.com/features/actions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;GitHub Actions&lt;/a&gt; 的筆記&lt;/p&gt;
 &lt;h1 id=&#34;github-actions&#34;&gt;GitHub Actions&lt;/h1&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1598001620510.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1598001620510.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1598001620510.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1598001620510.png&#34;
 			
 			
 			
@@ -1340,8 +1340,8 @@ jobs:
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;從上述的小範例來解釋，首先第一個 &lt;code&gt;name&lt;/code&gt; 是指 workflow 的名稱，會顯示在這&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1598002254474.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1598002254474.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1598002254474.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1598002254474.png&#34;
 			
 			
 			
@@ -1355,8 +1355,8 @@ jobs:
     &gt;這邊&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1598002381258.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1598002381258.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1598002381258.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1598002381258.png&#34;
 			
 			
 			
@@ -1369,8 +1369,8 @@ jobs:
 &lt;p&gt;這邊要考量一點是，我們是使用貴貴的 macos ⋯
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1598004974191.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1598004974191.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1598004974191.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1598004974191.png&#34;
 			
 			
 			
@@ -1384,8 +1384,8 @@ jobs:
 而我們可以將敏感的資料放在 &lt;code&gt;Secrets&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1598002732205.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1598002732205.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1598002732205.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1598002732205.png&#34;
 			
 			
 			
@@ -1431,8 +1431,8 @@ jobs:
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;並在使用 &lt;code&gt;upload_to_testflight&lt;/code&gt; 時，都會自己拿去使用來上傳到 TestFlight 上，但在 GitHub Actions 裡頭卻始終報錯&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1598003485596.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1598003485596.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1598003485596.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1598003485596.png&#34;
 			
 			
 			
@@ -1454,8 +1454,8 @@ jobs:
 &lt;p&gt;1 macOS minute counts as 10 regular minutes&amp;hellip;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1598005520491.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1598005520491.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1598005520491.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1598005520491.png&#34;
 			
 			
 			
@@ -1468,10 +1468,10 @@ jobs:
         </item>
         <item>
         <title>Go 的環境變數使用</title>
-        <link>https://example.com/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</link>
+        <link>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</link>
         <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</guid>
+        <guid>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</guid>
         <description>&lt;p&gt;在 Go 裡頭，使用環境變數的方式為&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import (
 	&amp;quot;os&amp;quot;
@@ -1499,17 +1499,17 @@ if err != nil {
         </item>
         <item>
         <title>Archie 的斜槓紀錄 2020-03</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</link>
         <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</guid>
         <description>&lt;h1 id=&#34;這個月-archie-的斜槓記錄又來啦&#34;&gt;這個月 Archie 的斜槓記錄又來啦！&lt;/h1&gt;
 &lt;h2 id=&#34;adsense&#34;&gt;AdSense&lt;/h2&gt;
 &lt;p&gt;這個月並沒有上架新的 App，所以數字並沒有上升的趨勢，處在 $ 162.31&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1586928125514.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1586928125514.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1586928125514.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1586928125514.png&#34;
 			
 			
 			
@@ -1522,8 +1522,8 @@ if err != nil {
 &lt;p&gt;因應疫情，收益有大幅下降的情況，目前一天大概都是在 USD $ 0.6 左右（$ 18.14）&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1586928567054.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1586928567054.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1586928567054.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1586928567054.png&#34;
 			
 			
 			
@@ -1545,10 +1545,10 @@ if err != nil {
         </item>
         <item>
         <title>Xcode 11.4 archive issue</title>
-        <link>https://example.com/p/xcode-11.4-archive-issue/</link>
+        <link>https://www.archie.tw/p/xcode-11.4-archive-issue/</link>
         <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/xcode-11.4-archive-issue/</guid>
+        <guid>https://www.archie.tw/p/xcode-11.4-archive-issue/</guid>
         <description>&lt;p&gt;今天使用了 Xcode 11.4 來打包&lt;a class=&#34;link&#34; href=&#34;&#34; &gt;找飲料 1.2.1 版本&lt;/a&gt;卻遇上了未知的錯誤，
 而這邊就紀錄目前所找到的解法&lt;/p&gt;
 &lt;h3 id=&#34;xcode-114---archiving-project---segmentation-fault-11httpsstackoverflowcomquestions60865057xcode-11-4-archiving-project-segmentation-fault-11&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/questions/60865057/xcode-11-4-archiving-project-segmentation-fault-11&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1561,10 +1561,10 @@ if err != nil {
         </item>
         <item>
         <title>【iOS 逆向】下載 Instagram 動態照片</title>
-        <link>https://example.com/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</link>
+        <link>https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</link>
         <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</guid>
+        <guid>https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</guid>
         <description>&lt;p&gt;這篇文章的起點是從 ZheChgLi 所發表的 &lt;a class=&#34;link&#34; href=&#34;https://medium.com/zrealm-ios-dev/ios-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e5%88%9d%e9%ab%94%e9%a9%97-7498e1ff93ce&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;iOS 逆向初體驗&lt;/a&gt;，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。&lt;/p&gt;
 &lt;h1 id=&#34;環境&#34;&gt;環境&lt;/h1&gt;
@@ -1592,8 +1592,8 @@ if err != nil {
 &lt;p&gt;首先，先在 iOS 裝置上安裝 Frida&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585645854648.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585645854648.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585645854648.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585645854648.png&#34;
 			
 			
 			
@@ -1609,8 +1609,8 @@ if err != nil {
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python3 dump.py -l
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585646173983.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585646173983.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585646173983.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585646173983.png&#34;
 			
 			
 			
@@ -1642,8 +1642,8 @@ if err != nil {
 &lt;p&gt;我們來打開 Xcode，便可以找到下方有 &lt;code&gt;MonkeyDev&lt;/code&gt; 的欄位，選擇 &lt;code&gt;MonkeyApp&lt;/code&gt; 來使用&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585648082516.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585648082516.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585648082516.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585648082516.png&#34;
 			
 			
 			
@@ -1655,8 +1655,8 @@ if err != nil {
 &lt;p&gt;建立好專案之後，將上面輸出的 .ipa 拖到專案之中按下 &lt;code&gt;command + B&lt;/code&gt; 來 build 一下。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585659072482.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585659072482.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585659072482.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585659072482.png&#34;
 			
 			
 			
@@ -1676,8 +1676,8 @@ if err != nil {
 &lt;p&gt;FLEX 是一個可以在 app 裡頭查看資訊的 debug 工具，MonkeyDev 如同一般的 Xcode 專案一樣，有支援 CocoaPods，所以我們可以透過 pods 的方式來加入 FLEX。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585660595694.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585660595694.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585660595694.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585660595694.png&#34;
 			
 			
 			
@@ -1690,8 +1690,8 @@ if err != nil {
 並在 instagramDylib.m 裡頭加入相對應的程式碼：&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585660579870.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585660579870.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585660579870.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585660579870.png&#34;
 			
 			
 			
@@ -1703,8 +1703,8 @@ if err != nil {
 &lt;p&gt;如此一來，在裝置上就可以使用 FLEX 了&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585660764177.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585660764177.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585660764177.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585660764177.png&#34;
 			
 			
 			
@@ -1720,8 +1720,8 @@ if err != nil {
 &lt;p&gt;首先來使用 select 的功能，點擊一下圖片得知是一個 &lt;code&gt;IGImageView&lt;/code&gt; 的 class&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585713489306.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585713489306.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585713489306.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585713489306.png&#34;
 			
 			
 			
@@ -1733,8 +1733,8 @@ if err != nil {
 &lt;p&gt;再透過 views 的功能找到上層的元件是 &lt;code&gt;IGImageProgressView&lt;/code&gt; 和 &lt;code&gt;IGFeedPhotoView&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585713471799.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585713471799.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585713471799.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585713471799.png&#34;
 			
 			
 			
@@ -1746,8 +1746,8 @@ if err != nil {
 &lt;p&gt;點進去可以查看 &lt;code&gt;IGFeedPhotoView&lt;/code&gt; 的 properties，嘗試了一下得知 instagram 是將 url 存在一個叫做 &lt;code&gt;IGImageSpecifier&lt;/code&gt; 的 class 裡頭&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585713642767.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585713642767.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585713642767.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585713642767.png&#34;
 			
 			
 			
@@ -1768,8 +1768,8 @@ if err != nil {
 &lt;p&gt;這裡頭就宣告一些我們打算使用到的 properties 就好了
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585713915196.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585713915196.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585713915196.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585713915196.png&#34;
 			
 			
 			
@@ -1782,8 +1782,8 @@ if err != nil {
 &lt;p&gt;查看了一下，發現有個 &lt;code&gt;_onDoubleTap&lt;/code&gt; 的 method，應該就是雙擊給愛心的功能&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585714061293.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585714061293.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585714061293.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585714061293.png&#34;
 			
 			
 			
@@ -1795,8 +1795,8 @@ if err != nil {
 &lt;p&gt;這部分我打算就來透過修改雙擊的動作來跳出一個選單，選單內可以選擇給 ❤️ 或是儲存到相簿&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585714246621.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585714246621.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585714246621.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585714246621.png&#34;
 			
 			
 			
@@ -1840,10 +1840,10 @@ if err != nil {
         </item>
         <item>
         <title>iOS App launch time 心得</title>
-        <link>https://example.com/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</link>
+        <link>https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</link>
         <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</guid>
+        <guid>https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</guid>
         <description>&lt;h1 id=&#34;如何減少-ios-app-launch-time&#34;&gt;如何減少 iOS App launch time&lt;/h1&gt;
 &lt;p&gt;這篇文章就來紀錄一下今日的研究項目，主要的起因是前一篇&lt;a class=&#34;link&#34; href=&#34;https://www.archie.tw/2020/03/26/%e4%bd%bf%e7%94%a8-xcode-%e5%bb%ba%e7%ab%8b%e4%b8%80%e5%80%8b-framework/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;使用 Xcode 建立一個 Framework&lt;/a&gt;有談到如何選擇要創建的是 static library 還是 dynamic framework，其中一個差異是 dyld ( dynamic loader ) 會在 pre main 的時候去載入 dynanmic frameworks，所以若是有越多的 dynamic frameworks 需要載入時，便會花上越多時間。而&lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/videos/play/wwdc2016/406/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1855,8 +1855,8 @@ if err != nil {
 &lt;h4 id=&#34;如何查看-pre-main-time&#34;&gt;如何查看 pre main time&lt;/h4&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585297124930.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585297124930.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585297124930.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585297124930.png&#34;
 			
 			
 			
@@ -1871,8 +1871,8 @@ if err != nil {
     &gt;找健身&lt;/a&gt;做了個兩次執行得到下面的結果：&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585297316708.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585297316708.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585297316708.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585297316708.png&#34;
 			
 			
 			
@@ -1888,8 +1888,8 @@ if err != nil {
 &lt;p&gt;我們便可以將 &lt;code&gt;use_framework!&lt;/code&gt; 換成 &lt;code&gt;use_modular_headers!&lt;/code&gt;，這樣所產生出來的 pods 便會以 static library 的方式連結。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585297223190.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585297223190.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585297223190.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585297223190.png&#34;
 			
 			
 			
@@ -1907,18 +1907,18 @@ if err != nil {
         </item>
         <item>
         <title>使用 Xcode 建立一個 Framework</title>
-        <link>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link>
+        <link>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link>
         <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid>
+        <guid>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid>
         <description>&lt;p&gt;之前有介紹過&lt;a class=&#34;link&#34; href=&#34;https://archie.tw/2018/09/15/create-cocoapods-by-yourself/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;如何建立一個 CocoaPods&lt;/a&gt;，而這篇文章則是紀錄一下這次直接在 Xcode 上建立 Framework 會遇上的問題。&lt;/p&gt;
 &lt;h2 id=&#34;建立-framework-專案&#34;&gt;建立 Framework 專案&lt;/h2&gt;
 &lt;p&gt;首先我們先打開 Xcode，並選擇 iOS 類別底下的 Framework &amp;amp; Library 裡頭的 Framework&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585214704363.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585214704363.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585214704363.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585214704363.png&#34;
 			
 			
 			
@@ -1930,8 +1930,8 @@ if err != nil {
 &lt;p&gt;並依照所需要的欄位填寫相關資訊，這邊目前都和直接建立一個專案一致流程。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585214821701.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585214821701.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585214821701.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585214821701.png&#34;
 			
 			
 			
@@ -1948,8 +1948,8 @@ if err != nil {
 &lt;p&gt;在這個 framework 的 target 之中，我們可以從 Build Settings 的 Mach-O Type 來決定它是一個怎樣的 framework&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585215154937.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585215154937.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585215154937.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585215154937.png&#34;
 			
 			
 			
@@ -1971,8 +1971,8 @@ if err != nil {
 &lt;h3 id=&#34;輸出成-framework&#34;&gt;輸出成 .framework&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585215683562.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585215683562.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585215683562.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585215683562.png&#34;
 			
 			
 			
@@ -1987,8 +1987,8 @@ if err != nil {
 &lt;p&gt;首先在 TARGETS 那邊點擊 + 來建立一個 Aggregate&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585215960325.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585215960325.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585215960325.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585215960325.png&#34;
 			
 			
 			
@@ -2029,8 +2029,8 @@ cp -R &amp;quot;${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework&amp;quot; &a
 open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1585215924044.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1585215924044.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1585215924044.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1585215924044.png&#34;
 			
 			
 			
@@ -2044,10 +2044,10 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>麥當勞報報 API 分析</title>
-        <link>https://example.com/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</link>
+        <link>https://www.archie.tw/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</link>
         <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</guid>
+        <guid>https://www.archie.tw/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</guid>
         <description>&lt;blockquote&gt;
 &lt;p&gt;2020.12.25 目前麥當勞的 API 已經從 Restful 轉成 WebSocket 的形式，所以該篇文章的方式目前是無法實作的。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -2061,8 +2061,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;從列表來看，我目前有使用到的是這五個 API&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1583115755262.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1583115755262.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1583115755262.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1583115755262.png&#34;
 			
 			
 			
@@ -2092,8 +2092,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;這就是每天可以呼叫一次來取得每日優惠的 API&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1583116554945.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1583116554945.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1583116554945.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1583116554945.png&#34;
 			
 			
 			
@@ -2114,10 +2114,10 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Archie 的斜槓紀錄 2020-02</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</link>
         <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</guid>
         <description>&lt;h1 id=&#34;這個月-archie-的斜槓記錄又來啦&#34;&gt;這個月 Archie 的斜槓記錄又來啦！&lt;/h1&gt;
 &lt;h2 id=&#34;adsense&#34;&gt;AdSense&lt;/h2&gt;
 &lt;p&gt;AdSense 的部分，這個月寫了兩款 App：&lt;/p&gt;
@@ -2127,8 +2127,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;所以 AdSense 的部分是上升的，但距離養活自己還是有很巨大的差距啊！&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1583067886425.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1583067886425.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1583067886425.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1583067886425.png&#34;
 			
 			
 			
@@ -2141,8 +2141,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;收益為 US$ 64.31
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1583068458262.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1583068458262.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1583068458262.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1583068458262.png&#34;
 			
 			
 			
@@ -2164,10 +2164,10 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>使用 API 來讀取 GitHub repository</title>
-        <link>https://example.com/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</link>
+        <link>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</link>
         <pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</guid>
+        <guid>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</guid>
         <description>&lt;p&gt;這篇文章將來介紹一下如何使用 API 來讀取 GitHub repository 上的檔案，而為什麼需要這樣做呢？&lt;/p&gt;
 &lt;h3 id=&#34;因為我專精的是-ios-啊&#34;&gt;因為我專精的是 iOS 啊&lt;/h3&gt;
 &lt;p&gt;以一個 iOS 工程師而言，我們若需要自己維護一個 side project（如 &lt;a class=&#34;link&#34; href=&#34;https://www.archie.tw/2020/02/06/%f0%9f%92%aa%e6%89%be%e5%81%a5%e8%ba%ab%f0%9f%92%aa-%e5%85%8d%e7%b6%81%e7%b4%84%e5%96%ae%e6%ac%a1%e6%94%b6%e8%b2%bb%e5%81%a5%e8%ba%ab%e6%88%bf%e6%b8%85%e5%96%ae/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2178,8 +2178,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;首先我們得先到 GitHub 的設定頁之中，去建立一組 API token&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581653754557.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581653754557.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581653754557.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581653754557.png&#34;
 			
 			
 			
@@ -2193,8 +2193,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;選取 Developer settings&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581653784216.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581653784216.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581653784216.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581653784216.png&#34;
 			
 			
 			
@@ -2208,8 +2208,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;選擇 Personal access tokens 並建立一組&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581653813496.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581653813496.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581653813496.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581653813496.png&#34;
 			
 			
 			
@@ -2223,8 +2223,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;再來依據你的需求選擇 scopes，像是 repo 存取全開&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581653863434.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581653863434.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581653863434.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581653863434.png&#34;
 			
 			
 			
@@ -2249,10 +2249,10 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>💪找健身💪-免綁約單次收費健身房清單</title>
-        <link>https://example.com/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</link>
+        <link>https://www.archie.tw/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</link>
         <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</guid>
+        <guid>https://www.archie.tw/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</guid>
         <description>&lt;p&gt;近年來健身風氣盛行
 許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現
 但這些都必須依靠長期的運動習慣來達成&lt;/p&gt;
@@ -2271,8 +2271,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
     &gt;iOS 下載點&lt;/a&gt;
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581003366354.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581003366354.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581003366354.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581003366354.png&#34;
 			
 			
 			
@@ -2287,8 +2287,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
     &gt;扣取港 Coach Duncan&lt;/a&gt;的一篇動態，有為這類需求的人做一份清單。
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581002466625.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581002466625.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581002466625.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581002466625.png&#34;
 			
 			
 			
@@ -2302,8 +2302,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
     &gt;PTT MuscleBeach 版&lt;/a&gt;也有相關文章在討論「單次」這個關鍵字：
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581003127787.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581003127787.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581003127787.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581003127787.png&#34;
 			
 			
 			
@@ -2317,8 +2317,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;h3 id=&#34;202023-萌生這個念頭&#34;&gt;2020/2/3 萌生這個念頭&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581003524978.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581003524978.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581003524978.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581003524978.png&#34;
 			
 			
 			
@@ -2331,8 +2331,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;2020/2/6 04:21 出現在架上🎉
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581003638894.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581003638894.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581003638894.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581003638894.png&#34;
 			
 			
 			
@@ -2345,8 +2345,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;第 52 名
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581003894579.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581003894579.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581003894579.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581003894579.png&#34;
 			
 			
 			
@@ -2359,8 +2359,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;第 45 名
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581004004863.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581004004863.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581004004863.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581004004863.png&#34;
 			
 			
 			
@@ -2373,8 +2373,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;第 50 名
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581003785230.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581003785230.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581003785230.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581003785230.png&#34;
 			
 			
 			
@@ -2387,8 +2387,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;第 31 名
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581099481621.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581099481621.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581099481621.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581099481621.png&#34;
 			
 			
 			
@@ -2401,8 +2401,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;第 25 名
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1581320588230.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1581320588230.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1581320588230.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1581320588230.png&#34;
 			
 			
 			
@@ -2509,17 +2509,17 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Archie 的斜槓紀錄 2020-01</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</link>
         <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</guid>
         <description>&lt;h1 id=&#34;這個月-archie-的斜槓記錄又來啦&#34;&gt;這個月 Archie 的斜槓記錄又來啦！&lt;/h1&gt;
 &lt;h2 id=&#34;adsense&#34;&gt;AdSense&lt;/h2&gt;
 &lt;p&gt;AdSense 的部分，沒什麼新作品加上文章幾乎兩個都沒在更新，所以收益下滑😭&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1580651581104.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1580651581104.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1580651581104.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1580651581104.png&#34;
 			
 			
 			
@@ -2532,8 +2532,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;1 月份的走勢
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1580651672843.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1580651672843.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1580651672843.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1580651672843.png&#34;
 			
 			
 			
@@ -2545,8 +2545,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;由於在前陣子突然一波高漲，目前我的放貸還有幾個高利率檔期中，各放了 30 天的長期&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1580651747903.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1580651747903.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1580651747903.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1580651747903.png&#34;
 			
 			
 			
@@ -2558,8 +2558,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;故上個月的收益很讚讚👏來到了 USD$ 58.25&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1580651808982.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1580651808982.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1580651808982.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1580651808982.png&#34;
 			
 			
 			
@@ -2578,18 +2578,18 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Reveal2Loader &#43; iOS 12.4</title>
-        <link>https://example.com/p/reveal2loader-ios-12.4/</link>
+        <link>https://www.archie.tw/p/reveal2loader-ios-12.4/</link>
         <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/reveal2loader-ios-12.4/</guid>
+        <guid>https://www.archie.tw/p/reveal2loader-ios-12.4/</guid>
         <description>&lt;p&gt;首先先來介紹 &lt;a class=&#34;link&#34; href=&#34;https://github.com/zidaneno5/Reveal2Loader&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Reveal2Loader&lt;/a&gt;，它是一款可以在越獄的裝置上讓 &lt;a class=&#34;link&#34; href=&#34;https://revealapp.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Reveal&lt;/a&gt; 讀取任何 app 的插件，至於 Reveal 的使用方式就先不在這邊提了。&lt;/p&gt;
 &lt;p&gt;我們可以透過這個方式來查看別人的 app 是怎麼設計 UI 的，以 Twitter 的 iOS app 為例子&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1580648212367.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1580648212367.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1580648212367.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1580648212367.png&#34;
 			
 			
 			
@@ -2616,8 +2616,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;安裝完 &lt;code&gt;Reveal2Loader&lt;/code&gt; 之後，你會發現在&lt;code&gt;設定&lt;/code&gt;裡頭多了 &lt;code&gt;Reveal&lt;/code&gt; 的選項&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1580649201599.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1580649201599.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1580649201599.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1580649201599.png&#34;
 			
 			
 			
@@ -2629,8 +2629,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;接著在 &lt;code&gt;Enabled Applications&lt;/code&gt; 裡頭打開你要觀看的 &lt;code&gt;USER APPLICATIONS&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1580649283472.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1580649283472.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1580649283472.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1580649283472.png&#34;
 			
 			
 			
@@ -2651,18 +2651,18 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Archie 的斜槓記錄 2019-12</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</link>
         <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</guid>
         <description>&lt;h1 id=&#34;這個月-archie-的斜槓記錄又來啦&#34;&gt;這個月 Archie 的斜槓記錄又來啦！&lt;/h1&gt;
 &lt;h2 id=&#34;adsense&#34;&gt;AdSense&lt;/h2&gt;
 &lt;p&gt;AdSense 的部分，12 月的獲利是 106.05 元，加入了 &lt;a class=&#34;link&#34; href=&#34;https://www.afen.tw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;阿芬的菜園&lt;/a&gt; 的廣告，所以突破 100 元！
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1578389424612.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1578389424612.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1578389424612.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1578389424612.png&#34;
 			
 			
 			
@@ -2675,8 +2675,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;12 月份的走勢
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1578389542887.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1578389542887.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1578389542887.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1578389542887.png&#34;
 			
 			
 			
@@ -2688,8 +2688,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;月初的時候一波下探，但後來有拉起來，所以整月份的收入為 $35.08
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1578389665045.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1578389665045.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1578389665045.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1578389665045.png&#34;
 			
 			
 			
@@ -2709,17 +2709,17 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Active Compilation Conditions</title>
-        <link>https://example.com/p/active-compilation-conditions/</link>
+        <link>https://www.archie.tw/p/active-compilation-conditions/</link>
         <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/active-compilation-conditions/</guid>
+        <guid>https://www.archie.tw/p/active-compilation-conditions/</guid>
         <description>&lt;p&gt;在 Xcode 7 以前的版本，我們若需要設立一些環境變數，需要透過 &lt;code&gt;Other Swift Flags&lt;/code&gt; 來處理；
 像是 &lt;code&gt;-DDEBUG&lt;/code&gt; &lt;code&gt;-DRELEASE&lt;/code&gt; 等，且在使用的時候，並不會自動檢查出是否正確。&lt;/p&gt;
 &lt;p&gt;而在 Xcode 8 加入了一個 &lt;code&gt;Active Compilation Conditions&lt;/code&gt;，現在我們可以在裡頭新增 &lt;code&gt;DEBUG&lt;/code&gt;、&lt;code&gt;RELEASE&lt;/code&gt; 即可達到原先的效果，並且會在寫程式的時候，自動補全了！&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1576552330941.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1576552330941.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1576552330941.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1576552330941.png&#34;
 			
 			
 			
@@ -2735,17 +2735,17 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Archie 的斜槓記錄 2019-11</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</link>
         <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</guid>
         <description>&lt;h1 id=&#34;這個月-archie-的斜槓記錄又來啦&#34;&gt;這個月 Archie 的斜槓記錄又來啦！&lt;/h1&gt;
 &lt;h2 id=&#34;adsense&#34;&gt;AdSense&lt;/h2&gt;
 &lt;p&gt;AdSense 的部分，上個月的獲利是 US$2.33 元，沒特別多做任何事，所以沒有特別的成長。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1575251294907.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1575251294907.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1575251294907.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1575251294907.png&#34;
 			
 			
 			
@@ -2758,8 +2758,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;十一月份的每日獲利走勢&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1575251472499.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1575251472499.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1575251472499.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1575251472499.png&#34;
 			
 			
 			
@@ -2771,8 +2771,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;總獲利一共 US$36.23&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1575251139885.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1575251139885.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1575251139885.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1575251139885.png&#34;
 			
 			
 			
@@ -2794,10 +2794,10 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>AWS Certificate Manager 申請流程</title>
-        <link>https://example.com/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link>
+        <link>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid>
+        <guid>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid>
         <description>&lt;h2 id=&#34;aws-certificate-manager-申請流程&#34;&gt;AWS Certificate Manager 申請流程&lt;/h2&gt;
 &lt;p&gt;我的這個網站架設在 AWS 的 EC2 上，搭配 Route 53 和 Load Balancer 以及這篇的主角 AWS Certificate Manager，這邊要迅速的記錄操作流程！&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;../aws-ec2-with-wordpress/&#34; &gt;環境架設的文章寫在這&lt;/a&gt;&lt;/p&gt;
@@ -2805,8 +2805,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;h3 id=&#34;申請憑證&#34;&gt;申請憑證&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1574913298126.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1574913298126.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1574913298126.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1574913298126.png&#34;
 			
 			
 			
@@ -2818,8 +2818,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;h3 id=&#34;新增網域名稱&#34;&gt;新增網域名稱&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/h../img/image-1574913315192.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/h../img/image-1574913315192.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/h../img/image-1574913315192.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/h../img/image-1574913315192.png&#34;
 			
 			
 			
@@ -2834,8 +2834,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;h3 id=&#34;選取驗證方式&#34;&gt;選取驗證方式&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1574913497809.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1574913497809.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1574913497809.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1574913497809.png&#34;
 			
 			
 			
@@ -2848,8 +2848,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;h3 id=&#34;新增標籤&#34;&gt;新增標籤&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1574913628816.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1574913628816.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1574913628816.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1574913628816.png&#34;
 			
 			
 			
@@ -2862,8 +2862,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;最後 AWS Certificate Manager 就會要求你&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1574913705474.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1574913705474.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1574913705474.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1574913705474.png&#34;
 			
 			
 			
@@ -2878,10 +2878,10 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Disable dark mode on iOS 13 in your application</title>
-        <link>https://example.com/p/disable-dark-mode-on-ios-13-in-your-application/</link>
+        <link>https://www.archie.tw/p/disable-dark-mode-on-ios-13-in-your-application/</link>
         <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/disable-dark-mode-on-ios-13-in-your-application/</guid>
+        <guid>https://www.archie.tw/p/disable-dark-mode-on-ios-13-in-your-application/</guid>
         <description>&lt;p&gt;在使用 Xcode 11 以後的版本開發時，應用程式會自動在 iOS 13 以後的系統跑 Dark mode；
 而在還沒有準備好支援 dark mode 的情況下，會直接是一個悲劇的 UI⋯⋯&lt;/p&gt;
 &lt;p&gt;這時候你可以選擇⋯⋯&lt;/p&gt;
@@ -2893,8 +2893,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;方法就是這篇文章的主軸&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1574404310536.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1574404310536.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1574404310536.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1574404310536.png&#34;
 			
 			
 			
@@ -2911,17 +2911,17 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
         </item>
         <item>
         <title>Archie 的斜槓記錄 2019-10</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</link>
         <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</guid>
         <description>&lt;p&gt;這個月 Archie 的斜槓記錄又來啦！&lt;/p&gt;
 &lt;h1 id=&#34;adsense&#34;&gt;AdSense&lt;/h1&gt;
 &lt;p&gt;少少的 US$1.41&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1572571942867.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1572571942867.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1572571942867.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1572571942867.png&#34;
 			
 			
 			
@@ -2934,8 +2934,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;這個月的年利率大約都落在 7 - 10 % 之間，不過最近因為習近平的一句話，有幾天上漲到 15 % 左右，但沒過多久就回歸到 9 % 的位置&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1572493319764.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1572493319764.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1572493319764.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1572493319764.png&#34;
 			
 			
 			
@@ -2947,8 +2947,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;所以這個月每日的利息走勢圖如下，多半時間是低於一塊美金的：
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1572493406442.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1572493406442.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1572493406442.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1572493406442.png&#34;
 			
 			
 			
@@ -2960,8 +2960,8 @@ open &amp;quot;${PROJECT_DIR}&amp;quot;
 &lt;p&gt;而這個月的收益為&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1572571673269.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1572571673269.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1572571673269.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1572571673269.png&#34;
 			
 			
 			
@@ -2988,10 +2988,10 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
         </item>
         <item>
         <title>Checklist template</title>
-        <link>https://example.com/p/checklist-template/</link>
+        <link>https://www.archie.tw/p/checklist-template/</link>
         <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/checklist-template/</guid>
+        <guid>https://www.archie.tw/p/checklist-template/</guid>
         <description>&lt;p&gt;這是一個新的分類，不侷限於 iOS 或是程式開發的層面，對於我而言是一個新的領域；這有點像是&lt;strong&gt;檢查清單&lt;/strong&gt;、&lt;strong&gt;必做清單&lt;/strong&gt;或是 &lt;strong&gt;SOP&lt;/strong&gt; 等概念，簡單舉幾個例子&lt;/p&gt;
 &lt;h2 id=&#34;雙-np-流程&#34;&gt;雙 NP 流程&lt;/h2&gt;
 &lt;ul&gt;
@@ -3005,8 +3005,8 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
 &lt;h2 id=&#34;cocoapods-binary-流程&#34;&gt;Cocoapods binary 流程&lt;/h2&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1570204471498.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1570204471498.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1570204471498.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1570204471498.png&#34;
 			
 			
 			
@@ -3031,10 +3031,10 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
         </item>
         <item>
         <title>【Checklist】雙 NP 流程</title>
-        <link>https://example.com/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</link>
+        <link>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</guid>
+        <guid>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</guid>
         <description>&lt;h2 id=&#34;checklist雙-np-流程&#34;&gt;【Checklist】雙 NP 流程&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;確認原電信合約&lt;/li&gt;
@@ -3052,18 +3052,18 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
         </item>
         <item>
         <title>Archie 的斜槓記錄 2019-09</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</link>
         <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</guid>
         <description>&lt;h2 id=&#34;這個月-archie-的斜槓記錄又來啦&#34;&gt;這個月 Archie 的斜槓記錄又來啦！&lt;/h2&gt;
 &lt;h3 id=&#34;adsense&#34;&gt;AdSense&lt;/h3&gt;
 &lt;p&gt;廣告部分，九月份上架了兩個 App；
 一個是 iOS 13+ 的匯率計算機、一個是 Flip clock，而流量都還是十分低的狀態，不過金額比上個月多了 US$ 1.2，來到了 US$ 2.53 。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1569891876656.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1569891876656.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1569891876656.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1569891876656.png&#34;
 			
 			
 			
@@ -3076,8 +3076,8 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
 &lt;p&gt;而九月份的放貸收入為 US$ 30.33，受到了虛擬貨幣價格走低的影響，這部分是比上個月來得少的，少了 US$ 1.35。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1569892092953.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1569892092953.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1569892092953.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1569892092953.png&#34;
 			
 			
 			
@@ -3104,16 +3104,16 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
         </item>
         <item>
         <title>雙 NP：中華電信➡️台灣大哥大➡️中華電信 v2</title>
-        <link>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</link>
+        <link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</link>
         <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</guid>
+        <guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</guid>
         <description>&lt;p&gt;繼上次&lt;a class=&#34;link&#34; href=&#34;../%e9%9b%99-np%e4%b8%ad%e8%8f%af%e9%9b%bb%e4%bf%a1%EF%B8%8F%e5%8f%b0%e7%81%a3%e5%a4%a7%e5%93%a5%e5%a4%a7%EF%B8%8F%e4%b8%ad%e8%8f%af%e9%9b%bb%e4%bf%a1/&#34; &gt;雙 NP&lt;/a&gt; 之後，合約又來到了即將到期的時候，而今日因昨晚發燒請了病假，中午狀況好轉後便順道處理了合約的問題。&lt;/p&gt;
 &lt;p&gt;這次打算申辦的是&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1569567145477.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1569567145477.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1569567145477.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1569567145477.png&#34;
 			
 			
 			
@@ -3141,10 +3141,10 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
         </item>
         <item>
         <title>如何更改模擬器上的狀態列</title>
-        <link>https://example.com/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</link>
+        <link>https://www.archie.tw/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</link>
         <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</guid>
+        <guid>https://www.archie.tw/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</guid>
         <description>&lt;p&gt;這篇就來談談我是如何更改模擬器上的狀態列🎤&lt;/p&gt;
 &lt;p&gt;在 Xcode 11 Beta 3 以前，我是使用 &lt;a class=&#34;link&#34; href=&#34;https://github.com/shinydevelopment/SimulatorStatusMagic&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;SimulatorStatusMagic&lt;/a&gt;
@@ -3154,8 +3154,8 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xcrun simctl status_bar
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1568274470294.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1568274470294.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1568274470294.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1568274470294.png&#34;
 			
 			
 			
@@ -3170,8 +3170,8 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;xcrun simctl status_bar booted override --time &amp;quot;02:01&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1568274344178.13.22.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1568274344178.13.22.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1568274344178.13.22.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1568274344178.13.22.png&#34;
 			
 			
 			
@@ -3187,10 +3187,10 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
         </item>
         <item>
         <title>SwiftUI &#43; Google AdMob</title>
-        <link>https://example.com/p/swiftui-google-admob/</link>
+        <link>https://www.archie.tw/p/swiftui-google-admob/</link>
         <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/swiftui-google-admob/</guid>
+        <guid>https://www.archie.tw/p/swiftui-google-admob/</guid>
         <description>&lt;p&gt;這篇是一個簡單介紹 &lt;code&gt;UIViewControllerRepresentable&lt;/code&gt; 的範例，
 由於 Google AdMob 的 &lt;code&gt;GADBannerView&lt;/code&gt; 不像&lt;a class=&#34;link&#34; href=&#34;../%e5%9c%a8-swiftui-%e8%99%95%e7%90%86%e4%b8%ad%e6%96%87%e8%bc%b8%e5%85%a5%e6%b3%95%e6%89%80%e6%9c%83%e9%81%87%e4%b8%8a%e7%9a%84%e5%95%8f%e9%a1%8c&#34; &gt;上次提及的 UITextField&lt;/a&gt; 一樣，可以直接使用 &lt;code&gt;UIViewRepresentable&lt;/code&gt; 來包裝；原因是它必須設置一個 &lt;code&gt;rootViewController&lt;/code&gt;，也就意味著我們需要使用 &lt;code&gt;UIViewControllerRepresentable&lt;/code&gt; 才能完成它。&lt;/p&gt;
 &lt;h3 id=&#34;interfacing-with-uikithttpsdeveloperapplecomtutorialsswiftuiinterfacing-with-uikit&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -3224,10 +3224,10 @@ $$11551.45 / 50,000 = 23.10%&lt;/p&gt;
         </item>
         <item>
         <title>對於 SwiftUI onDisappear 的誤解？</title>
-        <link>https://example.com/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</link>
+        <link>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</link>
         <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</guid>
+        <guid>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</guid>
         <description>&lt;p&gt;在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;onDisappear 到底是不是壞的！&lt;/p&gt;
@@ -3242,8 +3242,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
     &gt;StackOverFlow&lt;/a&gt; 上大家是這麼討論的&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1567592461034.webp&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1567592461034.webp&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1567592461034.webp&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1567592461034.webp&#34;
 			
 			
 			
@@ -3316,15 +3316,15 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
         </item>
         <item>
         <title>📒 SwiftUI &#43; CoreData 的實戰心得🔥</title>
-        <link>https://example.com/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</link>
+        <link>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</link>
         <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</guid>
+        <guid>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</guid>
         <description>&lt;h2 id=&#34;swiftui--coredata&#34;&gt;SwiftUI + CoreData&lt;/h2&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1567567373250.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1567567373250.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1567567373250.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1567567373250.png&#34;
 			
 			
 			
@@ -3346,8 +3346,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 &lt;h3 id=&#34;coredata-model---currency&#34;&gt;CoreData Model - Currency&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1567568104916.webp&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1567568104916.webp&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1567568104916.webp&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1567568104916.webp&#34;
 			
 			
 			
@@ -3381,8 +3381,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;畫面如下方所呈現的樣式：&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1567568029659.webp&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1567568029659.webp&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1567568029659.webp&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1567568029659.webp&#34;
 			
 			
 			
@@ -3445,10 +3445,10 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
         </item>
         <item>
         <title>SwiftUI 上的鍵盤處理方式</title>
-        <link>https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</link>
+        <link>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</link>
         <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</guid>
+        <guid>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</guid>
         <description>&lt;p&gt;在 iOS 的開發過程之中，難免會碰到一個狀況，那便是 UITextField/ UITextView 被鍵盤所遮住了⌨️
 在 UIKit 之下，多數人會使用套件來做全域的處理，如 &lt;a class=&#34;link&#34; href=&#34;https://github.com/hackiftekhar/IQKeyboardManager&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;IQKeyboardManager&lt;/a&gt; 就是一個十分經典的解決方案。&lt;/p&gt;
@@ -3468,8 +3468,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 &lt;h3 id=&#34;成果動畫&#34;&gt;成果動畫&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/KeyboardNotificationView.gif&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/KeyboardNotificationView.gif&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/KeyboardNotificationView.gif&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/KeyboardNotificationView.gif&#34;
 			
 			
 			
@@ -3485,10 +3485,10 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
         </item>
         <item>
         <title>Archie 的斜槓紀錄 2019-08</title>
-        <link>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</link>
+        <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</link>
         <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</guid>
+        <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</guid>
         <description>&lt;h3 id=&#34;這篇是什麼&#34;&gt;這篇是什麼？&lt;/h3&gt;
 &lt;p&gt;這篇文章的內容並不會圍繞 iOS 或是 Swift 等，而是投資理財的部分，其中並不會有什麼教學或是分析，單純只是我這個月的損益總結而已。&lt;/p&gt;
 &lt;h2 id=&#34;2019-年-8-月份總結&#34;&gt;2019 年 8 月份總結&lt;/h2&gt;
@@ -3499,8 +3499,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 將一個由 SwiftUI + Combine 所編寫的 side project 弄上架💦&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1567152135553.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1567152135553.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1567152135553.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1567152135553.png&#34;
 			
 			
 			
@@ -3514,8 +3514,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 八月份的報表大概如下
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/image-1567340956932.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/image-1567340956932.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/image-1567340956932.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/image-1567340956932.png&#34;
 			
 			
 			
@@ -3544,10 +3544,10 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
         </item>
         <item>
         <title>在 SwiftUI 處理中文輸入法所會遇上的問題</title>
-        <link>https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link>
+        <link>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link>
         <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</guid>
+        <guid>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</guid>
         <description>&lt;p&gt;最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。&lt;/p&gt;
 &lt;h3 id=&#34;開發環境&#34;&gt;開發環境&lt;/h3&gt;
 &lt;ul&gt;
@@ -3574,8 +3574,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 &lt;h3 id=&#34;那該怎麼辦呢&#34;&gt;那該怎麼辦呢？&lt;/h3&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/Screen-Shot-2019-08-30-at-12.11.32-PM.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/Screen-Shot-2019-08-30-at-12.11.32-PM.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/Screen-Shot-2019-08-30-at-12.11.32-PM.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/Screen-Shot-2019-08-30-at-12.11.32-PM.png&#34;
 			
 			
 			
@@ -3594,8 +3594,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 &lt;p&gt;當輸入了 &lt;code&gt;luo dong&lt;/code&gt; 但是還沒選字的話並不會有動作。&lt;/p&gt;
 &lt;p&gt;&lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/Screen-Shot-2019-08-30-at-11.57.22-AM.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/Screen-Shot-2019-08-30-at-11.57.22-AM.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/Screen-Shot-2019-08-30-at-11.57.22-AM.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/Screen-Shot-2019-08-30-at-11.57.22-AM.png&#34;
 			
 			
 			
@@ -3607,8 +3607,8 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
 而當選字後便會進行搜尋🔍
 &lt;figure 
 	&gt;
-	&lt;a href=&#34;https://example.com/../img/Screen-Shot-2019-08-30-at-12.00.31-PM.png&#34; &gt;
-		&lt;img src=&#34;https://example.com/../img/Screen-Shot-2019-08-30-at-12.00.31-PM.png&#34;
+	&lt;a href=&#34;https://www.archie.tw/../img/Screen-Shot-2019-08-30-at-12.00.31-PM.png&#34; &gt;
+		&lt;img src=&#34;https://www.archie.tw/../img/Screen-Shot-2019-08-30-at-12.00.31-PM.png&#34;
 			
 			
 			
@@ -3622,10 +3622,10 @@ by &lt;a class=&#34;link&#34; href=&#34;https://www.hackingwithswift.com/quick-s
         </item>
         <item>
         <title>建立 Xcode 的檔案範本</title>
-        <link>https://example.com/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</link>
+        <link>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</link>
         <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</guid>
+        <guid>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</guid>
         <description>&lt;h3 id=&#34;什麼是範本&#34;&gt;什麼是範本？&lt;/h3&gt;
 &lt;p&gt;在新增檔案的時候，會有預設的這幾種類型可以選擇；而當我們有一些自己常用的架構，如 Coordinator、ViewModel 等，可以自建一個範本來使用。
 下面舉例幾個預設的 Swift 檔案&lt;/p&gt;
@@ -3670,10 +3670,10 @@ import Foundation
         </item>
         <item>
         <title>Get ETH balance and tokens balance</title>
-        <link>https://example.com/p/get-eth-balance-and-tokens-balance/</link>
+        <link>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</link>
         <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/get-eth-balance-and-tokens-balance/</guid>
+        <guid>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;最近都在處理區塊鏈相關的問題，其中一個就是怎麼直接透過節點（****.infura.io）來取得 ETH 和其他 ERC-20 的地址餘額（balance）。&lt;/p&gt;
 &lt;h1 id=&#34;json-rpc&#34;&gt;JSON RPC&lt;/h1&gt;
@@ -3732,10 +3732,10 @@ import Foundation
         </item>
         <item>
         <title>BIP-39 Mnemonic validate</title>
-        <link>https://example.com/p/bip-39-mnemonic-validate/</link>
+        <link>https://www.archie.tw/p/bip-39-mnemonic-validate/</link>
         <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/bip-39-mnemonic-validate/</guid>
+        <guid>https://www.archie.tw/p/bip-39-mnemonic-validate/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;最近處理了一些加密貨幣的問題，其中一個是助記詞的驗證，這邊將會解釋助記詞的生成和驗證方式。&lt;/p&gt;
 &lt;h1 id=&#34;生成助記詞&#34;&gt;生成助記詞&lt;/h1&gt;
@@ -3758,10 +3758,10 @@ import Foundation
         </item>
         <item>
         <title>Change login shells without chsh</title>
-        <link>https://example.com/p/change-login-shells-without-chsh/</link>
+        <link>https://www.archie.tw/p/change-login-shells-without-chsh/</link>
         <pubDate>Fri, 15 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/change-login-shells-without-chsh/</guid>
+        <guid>https://www.archie.tw/p/change-login-shells-without-chsh/</guid>
         <description>&lt;p&gt;前言
 最近心血來潮更新了 brew，其中我正在使用的 shells – zsh 也一併更新了，才發現當初在從 bash 轉到 zsh 的時候有指定到版號的部分⋯也就是長得像這樣&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/usr/local/bin/zsh-5.6.1
@@ -3778,10 +3778,10 @@ import Foundation
         </item>
         <item>
         <title>Resign .ipa</title>
-        <link>https://example.com/p/resign-.ipa/</link>
+        <link>https://www.archie.tw/p/resign-.ipa/</link>
         <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/resign-.ipa/</guid>
+        <guid>https://www.archie.tw/p/resign-.ipa/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;我們都知道 iOS 是使用 ipa 檔案來安裝 app，而該如何換掉 ipa 裡頭的憑證呢？&lt;/p&gt;
 &lt;h2 id=&#34;解壓縮&#34;&gt;解壓縮&lt;/h2&gt;
@@ -3823,10 +3823,10 @@ import Foundation
         </item>
         <item>
         <title>CoreData with background task</title>
-        <link>https://example.com/p/coredata-with-background-task/</link>
+        <link>https://www.archie.tw/p/coredata-with-background-task/</link>
         <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/coredata-with-background-task/</guid>
+        <guid>https://www.archie.tw/p/coredata-with-background-task/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;雖然在 iOS 上開發了幾年的時間，但一直到最近才開始使用 CoreData；之前在第一份工作的專案之中是使用 FMDB 來處理資料存取，而後續則是用了 Realm。&lt;/p&gt;
 &lt;p&gt;選擇的原因分別是當時 FMDB 的速度較其餘兩者快速，而後來看上 Realm 的跨平台特色，不過近期開發的感想是能以原生為主的話，就儘量降低對於第三方套件的依賴性。&lt;/p&gt;
@@ -3879,10 +3879,10 @@ import Foundation
         </item>
         <item>
         <title>SwiftLint</title>
-        <link>https://example.com/p/swiftlint/</link>
+        <link>https://www.archie.tw/p/swiftlint/</link>
         <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/swiftlint/</guid>
+        <guid>https://www.archie.tw/p/swiftlint/</guid>
         <description>&lt;h1 id=&#34;swiftlint&#34;&gt;SwiftLint&lt;/h1&gt;
 &lt;p&gt;去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。&lt;/p&gt;
 &lt;h2 id=&#34;coding-style-的問題&#34;&gt;Coding Style 的問題&lt;/h2&gt;
@@ -3914,10 +3914,10 @@ import Foundation
         </item>
         <item>
         <title>AWS EC2 with WordPress</title>
-        <link>https://example.com/p/aws-ec2-with-wordpress/</link>
+        <link>https://www.archie.tw/p/aws-ec2-with-wordpress/</link>
         <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/aws-ec2-with-wordpress/</guid>
+        <guid>https://www.archie.tw/p/aws-ec2-with-wordpress/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;h2 id=&#34;vultr&#34;&gt;Vultr&lt;/h2&gt;
 &lt;p&gt;這個網站原本是在 Vultr 上開一台機器，每個月大概的費用為 USD $6 – 7 元之間，並利用 Certbot 自動更新 SSL 憑證。但後來發現不太會維護那台機器，時常因為記憶體造成資料庫錯誤，每隔兩三天就得去手動重新啟動來解決問題，乾脆就搬家到 WordPress.com 的服務。&lt;/p&gt;
@@ -3960,10 +3960,10 @@ import Foundation
         </item>
         <item>
         <title>POSTMAN – Pre-request script</title>
-        <link>https://example.com/p/postman-pre-request-script/</link>
+        <link>https://www.archie.tw/p/postman-pre-request-script/</link>
         <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/postman-pre-request-script/</guid>
+        <guid>https://www.archie.tw/p/postman-pre-request-script/</guid>
         <description>&lt;p&gt;POSTMAN 除了可以發送 request 到 server 之外，也有提供 pre-request script 的功能，讓我們可以撰寫 script 來進行一連串的測試。
 舉個例子，我們有三支 API，邏輯為 名稱（Request body）【Response body】：&lt;/p&gt;
 &lt;ul&gt;
@@ -3994,10 +3994,10 @@ pm.sendRequest&lt;span class=&#34;o&#34;&gt;({&lt;/span&gt;
         </item>
         <item>
         <title>Info.plist localized</title>
-        <link>https://example.com/p/info.plist-localized/</link>
+        <link>https://www.archie.tw/p/info.plist-localized/</link>
         <pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/info.plist-localized/</guid>
+        <guid>https://www.archie.tw/p/info.plist-localized/</guid>
         <description>&lt;p&gt;一些需要權限的功能都會需要在 Info.plist 裡頭加上說明，而這個說明要實作多語系則是建立一個 InfoPlist.strings（沒錯，名字就是這樣）
 然後對相對應得 Key 填寫翻譯，像是：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;NSLocationWhenInUseUsageDescription = &amp;quot;說明填寫&amp;quot;;
@@ -4009,10 +4009,10 @@ pm.sendRequest&lt;span class=&#34;o&#34;&gt;({&lt;/span&gt;
         </item>
         <item>
         <title>Git submodule</title>
-        <link>https://example.com/p/git-submodule/</link>
+        <link>https://www.archie.tw/p/git-submodule/</link>
         <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/git-submodule/</guid>
+        <guid>https://www.archie.tw/p/git-submodule/</guid>
         <description>&lt;p&gt;有些時候，我們會需要幾個檔案和其他專案共用，而 iOS 的專案可以採取 CocoaPods / Carthage，但如果是要和其他語言共用的話該怎麼辦呢？&lt;/p&gt;
 &lt;p&gt;舉個例子，Server 和 Client 之間傳遞 Status Code，像是 code: 20000、20001、20002 之類的，收到 code 後要再做後續動作。&lt;/p&gt;
 &lt;p&gt;不過一份 Code 的定義散落在多個平台 / 專案之中，難免會有人雷的時候；不論是 client 記錯或是 server 回錯，而若是有個地方可以共同維護的話，便可以減少這種失誤。&lt;/p&gt;
@@ -4028,10 +4028,10 @@ pm.sendRequest&lt;span class=&#34;o&#34;&gt;({&lt;/span&gt;
         </item>
         <item>
         <title>Create CocoaPods by yourself</title>
-        <link>https://example.com/p/create-cocoapods-by-yourself/</link>
+        <link>https://www.archie.tw/p/create-cocoapods-by-yourself/</link>
         <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/create-cocoapods-by-yourself/</guid>
+        <guid>https://www.archie.tw/p/create-cocoapods-by-yourself/</guid>
         <description>&lt;p&gt;這篇文章會介紹建立自己的 &lt;a class=&#34;link&#34; href=&#34;../cocoapods&#34; &gt;CocoaPods&lt;/a&gt; 流程，而我當初是看了 &lt;a class=&#34;link&#34; href=&#34;https://github.com/yoxisem544&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;David&lt;/a&gt; 的&lt;a class=&#34;link&#34; href=&#34;https://medium.com/@davidlin_98861/%e5%a6%82%e4%bd%95%e5%bb%ba%e7%ab%8b%e4%b8%80%e5%80%8b%e5%b1%ac%e6%96%bc%e8%87%aa%e5%b7%b1%e7%9a%84-cocoapods-ab0613a1d2e9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;教學文&lt;/a&gt;所跑的流程。&lt;/p&gt;
@@ -4055,10 +4055,10 @@ pm.sendRequest&lt;span class=&#34;o&#34;&gt;({&lt;/span&gt;
         </item>
         <item>
         <title>UUID with version 3, 5 and name spaces</title>
-        <link>https://example.com/p/uuid-with-version-3-5-and-name-spaces/</link>
+        <link>https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/</link>
         <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/uuid-with-version-3-5-and-name-spaces/</guid>
+        <guid>https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/</guid>
         <description>&lt;p&gt;在 Swift 裏頭，預設的 UUID 只能從 UUID() 來產生，或者是從另一個 UUID 來產生，
 這邊來記錄一下如何從 String 來產生 UUID。
 首先，先在 Bridge-Header.h 裡頭加入&lt;/p&gt;
@@ -4115,10 +4115,10 @@ pm.sendRequest&lt;span class=&#34;o&#34;&gt;({&lt;/span&gt;
         </item>
         <item>
         <title>Socket.IO</title>
-        <link>https://example.com/p/socket.io/</link>
+        <link>https://www.archie.tw/p/socket.io/</link>
         <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/socket.io/</guid>
+        <guid>https://www.archie.tw/p/socket.io/</guid>
         <description>&lt;p&gt;這篇文章會介紹有關於 Socket.IO 在 server 端以及 iOS 端的一些實作分享。&lt;/p&gt;
 &lt;h1 id=&#34;server&#34;&gt;Server&lt;/h1&gt;
 &lt;p&gt;首先我們可以先從 Socket.IO 的 &lt;a class=&#34;link&#34; href=&#34;https://socket.io/get-started/chat/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -4222,10 +4222,10 @@ let socket = manager.defaultSocket
         </item>
         <item>
         <title>StatusBarStyle</title>
-        <link>https://example.com/p/statusbarstyle/</link>
+        <link>https://www.archie.tw/p/statusbarstyle/</link>
         <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/statusbarstyle/</guid>
+        <guid>https://www.archie.tw/p/statusbarstyle/</guid>
         <description>&lt;p&gt;最近改寫了 StatusBarStyle 的控制方式，從 iOS 9 之前是使用&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;n&#34;&gt;UIApplication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shared&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;statusBarStyle&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;default&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;並在 info.plist 的 View controller-based status bar appearance 欄位設為 NO。
@@ -4255,10 +4255,10 @@ let socket = manager.defaultSocket
         </item>
         <item>
         <title>Xcode beta with CocoaPods</title>
-        <link>https://example.com/p/xcode-beta-with-cocoapods/</link>
+        <link>https://www.archie.tw/p/xcode-beta-with-cocoapods/</link>
         <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/xcode-beta-with-cocoapods/</guid>
+        <guid>https://www.archie.tw/p/xcode-beta-with-cocoapods/</guid>
         <description>&lt;p&gt;Xcode 10 beta 的 Swift 版本為 4.2，而若你目前所使用的 Pods 多數為 Swift 4 的話，該怎麼辦呢？&lt;/p&gt;
 &lt;p&gt;你可以在 Podfile 裏頭加上全域的參數來規範所有 Pods 的 Swift version：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;&lt;span class=&#34;n&#34;&gt;post_install&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;installer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;|&lt;/span&gt;
@@ -4273,10 +4273,10 @@ let socket = manager.defaultSocket
         </item>
         <item>
         <title>CompactMap vs flatMap</title>
-        <link>https://example.com/p/compactmap-vs-flatmap/</link>
+        <link>https://www.archie.tw/p/compactmap-vs-flatmap/</link>
         <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/compactmap-vs-flatmap/</guid>
+        <guid>https://www.archie.tw/p/compactmap-vs-flatmap/</guid>
         <description>&lt;p&gt;直接從 code 來看兩者之間和 map 的差異&lt;/p&gt;
 &lt;h1 id=&#34;compactmap&#34;&gt;CompactMap&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-swift&#34; data-lang=&#34;swift&#34;&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;scores&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;2&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;four&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;5&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
@@ -4297,10 +4297,10 @@ let socket = manager.defaultSocket
         </item>
         <item>
         <title>UserDefaults with Structure</title>
-        <link>https://example.com/p/userdefaults-with-structure/</link>
+        <link>https://www.archie.tw/p/userdefaults-with-structure/</link>
         <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/userdefaults-with-structure/</guid>
+        <guid>https://www.archie.tw/p/userdefaults-with-structure/</guid>
         <description>&lt;p&gt;有時候我們會將一些用戶資訊存在 UserDefaults 裡頭，是個方便且直覺的存取方式。&lt;/p&gt;
 &lt;p&gt;而 UserDefaults 並非是所有型別都可以接受，如你自己建構的 struct 或 class，&lt;/p&gt;
 &lt;p&gt;就需要先轉成 Data 的格式來存取。&lt;/p&gt;
@@ -4339,10 +4339,10 @@ UserDefaults.standard.user = user
         </item>
         <item>
         <title>Git LFS ( Large File Storage )</title>
-        <link>https://example.com/p/git-lfs-large-file-storage/</link>
+        <link>https://www.archie.tw/p/git-lfs-large-file-storage/</link>
         <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/git-lfs-large-file-storage/</guid>
+        <guid>https://www.archie.tw/p/git-lfs-large-file-storage/</guid>
         <description>&lt;p&gt;今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。&lt;/p&gt;
 &lt;p&gt;至於&lt;a class=&#34;link&#34; href=&#34;../pods-%e5%88%b0%e5%ba%95%e9%9c%80%e4%b8%8d%e9%9c%80%e8%a6%81%e6%94%be%e5%9c%a8-.gitignore&#34; &gt;為什麼會將 Pods 的檔案全推到 GitHub 上&lt;/a&gt;呢？&lt;/p&gt;
 &lt;p&gt;而在 git push 的時候，有顯示解決的方法，便是今天的主題：&lt;/p&gt;
@@ -4366,10 +4366,10 @@ git push
         </item>
         <item>
         <title>Fastlane pilot issue</title>
-        <link>https://example.com/p/fastlane-pilot-issue/</link>
+        <link>https://www.archie.tw/p/fastlane-pilot-issue/</link>
         <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/fastlane-pilot-issue/</guid>
+        <guid>https://www.archie.tw/p/fastlane-pilot-issue/</guid>
         <description>&lt;p&gt;這是和防火牆有關的 &lt;a class=&#34;link&#34; href=&#34;https://github.com/fastlane/fastlane/issues/11958&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;issue&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在 fastlane pilot 的 docs 有註記 &lt;a class=&#34;link&#34; href=&#34;https://docs.fastlane.tools/actions/pilot/#firewall-issues&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -4381,10 +4381,10 @@ git push
         </item>
         <item>
         <title>DeviceSupport</title>
-        <link>https://example.com/p/devicesupport/</link>
+        <link>https://www.archie.tw/p/devicesupport/</link>
         <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/devicesupport/</guid>
+        <guid>https://www.archie.tw/p/devicesupport/</guid>
         <description>&lt;p&gt;每當 iOS Beta 更新時，原先的 Xcode  便會無法支援，需要透過從 Xcode Beta 的 DeviceSupport 複製新的版本到正式版之中才能使用；
 反正都會做這件事，不如就將 Xcode Beta 裡頭的 DeviceSupport 上傳到 GitHub 上提供給 iOS 有更新，但還沒下載新的 Xcode Beta 的人使用吧！
 &lt;a class=&#34;link&#34; href=&#34;https://github.com/ArchieR7/DeviceSupport&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -4393,10 +4393,10 @@ git push
         </item>
         <item>
         <title>ignore Pods warning</title>
-        <link>https://example.com/p/ignore-pods-warning/</link>
+        <link>https://www.archie.tw/p/ignore-pods-warning/</link>
         <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ignore-pods-warning/</guid>
+        <guid>https://www.archie.tw/p/ignore-pods-warning/</guid>
         <description>&lt;p&gt;在使用 CocoaPods 的時候難免會碰上 warning，原因不外乎就是使用的套件本身在 build 的時候所產生的警告，但不建議直接 unlock Pods 去修改，請以那專案修改，並在處理完後發送 Pull Request 造福大眾。
 不過現階段來說，我們可以做的事情是忽略 Pods 的 Warning，
 只要在 Podfile 裡頭加上&lt;/p&gt;
@@ -4406,10 +4406,10 @@ git push
         </item>
         <item>
         <title>Pods 到底需不需要放在 .gitignore？</title>
-        <link>https://example.com/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</link>
+        <link>https://www.archie.tw/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</link>
         <pubDate>Sat, 09 Jun 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</guid>
+        <guid>https://www.archie.tw/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</guid>
         <description>&lt;p&gt;若有使用 GitHub 所預設的 Swift .gitignore，你會發現在 CocoaPods 的部分寫著&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# CocoaPods
 #
@@ -4432,10 +4432,10 @@ git push
         </item>
         <item>
         <title>upgrade git</title>
-        <link>https://example.com/p/upgrade-git/</link>
+        <link>https://www.archie.tw/p/upgrade-git/</link>
         <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/upgrade-git/</guid>
+        <guid>https://www.archie.tw/p/upgrade-git/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;git 最近被發現有&lt;a class=&#34;link&#34; href=&#34;https://blogs.msdn.microsoft.com/devops/2018/05/29/announcing-the-may-2018-git-security-vulnerability/#utm_source=Facebook_PicSee&amp;amp;utm_medium=Social&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;重大的漏洞&lt;/a&gt;，以我們能做的事情就是更新自己的 git！&lt;/p&gt;
@@ -4455,10 +4455,10 @@ git push
         </item>
         <item>
         <title>HEROKU</title>
-        <link>https://example.com/p/heroku/</link>
+        <link>https://www.archie.tw/p/heroku/</link>
         <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/heroku/</guid>
+        <guid>https://www.archie.tw/p/heroku/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。&lt;/p&gt;
 &lt;h1 id=&#34;herokuhttpsdashboardherokucom&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://dashboard.heroku.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -4511,10 +4511,10 @@ git push
         </item>
         <item>
         <title>Commitizen</title>
-        <link>https://example.com/p/commitizen/</link>
+        <link>https://www.archie.tw/p/commitizen/</link>
         <pubDate>Tue, 08 May 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/commitizen/</guid>
+        <guid>https://www.archie.tw/p/commitizen/</guid>
         <description>&lt;h1 id=&#34;閒聊一下&#34;&gt;閒聊一下&lt;/h1&gt;
 &lt;p&gt;最近處於求職的階段，評估一份職缺的觀點也和過往不同；
 以這篇文章來說，Git Commit Style 便是其中一點，詢問對方是否有固定的 commit 格式，
@@ -4595,10 +4595,10 @@ test
         </item>
         <item>
         <title>iOS Taiwan jobs</title>
-        <link>https://example.com/p/ios-taiwan-jobs/</link>
+        <link>https://www.archie.tw/p/ios-taiwan-jobs/</link>
         <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-taiwan-jobs/</guid>
+        <guid>https://www.archie.tw/p/ios-taiwan-jobs/</guid>
         <description>&lt;h1 id=&#34;ios-taiwan-jobshttpsgithubcomiostaiwanjobs&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/iOSTaiwan/jobs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;iOS Taiwan jobs&lt;/a&gt;&lt;/h1&gt;
 &lt;h1 id=&#34;緣起&#34;&gt;緣起&lt;/h1&gt;
@@ -4627,10 +4627,10 @@ test
         </item>
         <item>
         <title>Word deletion shortcut in iTerm</title>
-        <link>https://example.com/p/word-deletion-shortcut-in-iterm/</link>
+        <link>https://www.archie.tw/p/word-deletion-shortcut-in-iterm/</link>
         <pubDate>Tue, 06 Mar 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/word-deletion-shortcut-in-iterm/</guid>
+        <guid>https://www.archie.tw/p/word-deletion-shortcut-in-iterm/</guid>
         <description>&lt;p&gt;在使用 iTerm 的時候，想要一次刪除一個字的話，
 可以在 Preferences ➡️ Keys 新增一組 Keyboard Shortcut，
 Action 選擇 Send Hex Code，並填上 0x17 即可！&lt;/p&gt;
@@ -4652,10 +4652,10 @@ Action 選擇 Send Hex Code，並填上 0x17 即可！&lt;/p&gt;
         </item>
         <item>
         <title>ProvisionedDevices</title>
-        <link>https://example.com/p/provisioneddevices/</link>
+        <link>https://www.archie.tw/p/provisioneddevices/</link>
         <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/provisioneddevices/</guid>
+        <guid>https://www.archie.tw/p/provisioneddevices/</guid>
         <description>&lt;h1 id=&#34;前言&#34;&gt;前言&lt;/h1&gt;
 &lt;p&gt;這篇文章的內容會是記錄如何確認目前的 Provisioning Profile 擁有哪些測試裝置，
 以便在使用 adhoc 打包時，確保裝置可以執行。&lt;/p&gt;
@@ -4682,10 +4682,10 @@ Action 選擇 Send Hex Code，並填上 0x17 即可！&lt;/p&gt;
         </item>
         <item>
         <title>Python – SMTP</title>
-        <link>https://example.com/p/python-smtp/</link>
+        <link>https://www.archie.tw/p/python-smtp/</link>
         <pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/python-smtp/</guid>
+        <guid>https://www.archie.tw/p/python-smtp/</guid>
         <description>&lt;h1 id=&#34;前情提要&#34;&gt;前情提要&lt;/h1&gt;
 &lt;p&gt;痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話，
 感覺像是他們自己本身內部的錯誤導致 Time out 之類的。
@@ -4757,10 +4757,10 @@ smtpserver.login(username, password)
         </item>
         <item>
         <title>Firebase Cloud Functions with Database and Messaging</title>
-        <link>https://example.com/p/firebase-cloud-functions-with-database-and-messaging/</link>
+        <link>https://www.archie.tw/p/firebase-cloud-functions-with-database-and-messaging/</link>
         <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/firebase-cloud-functions-with-database-and-messaging/</guid>
+        <guid>https://www.archie.tw/p/firebase-cloud-functions-with-database-and-messaging/</guid>
         <description>&lt;h1 id=&#34;cloud-functions&#34;&gt;Cloud Functions&lt;/h1&gt;
 &lt;p&gt;Firebase 一直以來便是以 serverless 為主要的方向，
 而 Functions 則是一個十分有趣的功能；
@@ -4825,10 +4825,10 @@ smtpserver.login(username, password)
         </item>
         <item>
         <title>Selenium</title>
-        <link>https://example.com/p/selenium/</link>
+        <link>https://www.archie.tw/p/selenium/</link>
         <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/selenium/</guid>
+        <guid>https://www.archie.tw/p/selenium/</guid>
         <description>&lt;h1 id=&#34;selenium&#34;&gt;Selenium&lt;/h1&gt;
 &lt;p&gt;需要在 Python 上操作瀏覽器的話，我會選擇使用 Selenium；
 以爬蟲來說，和 requests 不同的地方在於，
@@ -4978,10 +4978,10 @@ smtpserver.login(username, password)
         </item>
         <item>
         <title>Twitter Follow all users script</title>
-        <link>https://example.com/p/twitter-follow-all-users-script/</link>
+        <link>https://www.archie.tw/p/twitter-follow-all-users-script/</link>
         <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/twitter-follow-all-users-script/</guid>
+        <guid>https://www.archie.tw/p/twitter-follow-all-users-script/</guid>
         <description>&lt;h1 id=&#34;追隨所有-twitter-用戶&#34;&gt;追隨所有 Twitter 用戶&lt;/h1&gt;
 &lt;p&gt;之前在弄一個自動發文的機器人，便想要在 Twitter 上同步發送；
 而苦無沒有人追隨的情況下，決定先來追隨別人，
@@ -5048,10 +5048,10 @@ Twitter@ 6 個數字
         </item>
         <item>
         <title>Crontab</title>
-        <link>https://example.com/p/crontab/</link>
+        <link>https://www.archie.tw/p/crontab/</link>
         <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/crontab/</guid>
+        <guid>https://www.archie.tw/p/crontab/</guid>
         <description>&lt;h1 id=&#34;crontab&#34;&gt;Crontab&lt;/h1&gt;
 &lt;p&gt;Crontab 在 Ubuntu 裏頭是預載的，其功能是可以根據時間參數來執行工作排程；
 它的格式如下：&lt;/p&gt;
@@ -5103,10 +5103,10 @@ crontab -r
         </item>
         <item>
         <title>Facebook 隱私權條款問題</title>
-        <link>https://example.com/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</link>
+        <link>https://www.archie.tw/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</link>
         <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</guid>
+        <guid>https://www.archie.tw/p/facebook-%E9%9A%B1%E7%A7%81%E6%AC%8A%E6%A2%9D%E6%AC%BE%E5%95%8F%E9%A1%8C/</guid>
         <description>&lt;p&gt;由於之前上架的 App 有使用到 Facebook 的登入功能，
 於是這幾天一直收到這類的信件：
 Demo
@@ -5120,10 +5120,10 @@ Demo
         </item>
         <item>
         <title>CocoaPods</title>
-        <link>https://example.com/p/cocoapods/</link>
+        <link>https://www.archie.tw/p/cocoapods/</link>
         <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/cocoapods/</guid>
+        <guid>https://www.archie.tw/p/cocoapods/</guid>
         <description>&lt;p&gt;上一篇介紹 &lt;a class=&#34;link&#34; href=&#34;../carthage&#34; &gt;Carthage&lt;/a&gt;，這篇寫一下 CocoaPods。
 其實我個人是先使用 CocoaPods，後來才部分改用 Carthage 作為主要的管理方式；
 而 CocoaPods 的安裝方式也很簡單，可以透過 gem 來安裝：&lt;/p&gt;
@@ -5149,10 +5149,10 @@ CocoaPods 會建立一個 local 的所有 repo 資訊，若找不到的時候，
         </item>
         <item>
         <title>Carthage</title>
-        <link>https://example.com/p/carthage/</link>
+        <link>https://www.archie.tw/p/carthage/</link>
         <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/carthage/</guid>
+        <guid>https://www.archie.tw/p/carthage/</guid>
         <description>&lt;p&gt;Carthage 是一個套件管理的開源軟體，可以使用 Homebrew 安裝：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;brew install carthage
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;和 CocoaPods 的差異在於它並不會將第三方的 Framework 直接加入專案，
@@ -5178,10 +5178,10 @@ CocoaPods 的話則會在每次 build 的時候同時 build 你所匯入的 fram
         </item>
         <item>
         <title>FireabseDatabase - Read</title>
-        <link>https://example.com/p/fireabsedatabase-read/</link>
+        <link>https://www.archie.tw/p/fireabsedatabase-read/</link>
         <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/fireabsedatabase-read/</guid>
+        <guid>https://www.archie.tw/p/fireabsedatabase-read/</guid>
         <description>&lt;p&gt;之前有寫過 &lt;a class=&#34;link&#34; href=&#34;../firebase-database-rest-api&#34; &gt;FirebaseDatabase REST API&lt;/a&gt;的文章，
 而這篇則會是在 iOS 上的使用。&lt;/p&gt;
 &lt;h1 id=&#34;安裝套件&#34;&gt;安裝套件&lt;/h1&gt;
@@ -5237,10 +5237,10 @@ Reference 便是 path 的概念，
         </item>
         <item>
         <title>MKGeodesicPolyline</title>
-        <link>https://example.com/p/mkgeodesicpolyline/</link>
+        <link>https://www.archie.tw/p/mkgeodesicpolyline/</link>
         <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/mkgeodesicpolyline/</guid>
+        <guid>https://www.archie.tw/p/mkgeodesicpolyline/</guid>
         <description>&lt;p&gt;先來看看 MKGeodesicPolyline 在 Apple Developer Documentation 上的介紹：
 A line-based shape that follows the contours of the Earth to create the shortest path between the specified points.&lt;/p&gt;
 &lt;h1 id=&#34;繪製-polyline&#34;&gt;繪製 Polyline&lt;/h1&gt;
@@ -5277,10 +5277,10 @@ A line-based shape that follows the contours of the Earth to create the shortest
         </item>
         <item>
         <title>Siren – 通知使用者更新</title>
-        <link>https://example.com/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</link>
+        <link>https://www.archie.tw/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Sun, 03 Dec 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</guid>
+        <guid>https://www.archie.tw/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</guid>
         <description>&lt;p&gt;我們時常可以在 App 之中看到，「目前有新版本可以提供下載」等相關的訊息；
 而實作通知使用者更新的方法很多，這篇則是介紹一個開源的 Framework：&lt;/p&gt;
 &lt;h1 id=&#34;siren&#34;&gt;Siren&lt;/h1&gt;
@@ -5318,10 +5318,10 @@ revision 則讓它跟著 commit 的數量。&lt;/p&gt;
         </item>
         <item>
         <title>UIActivityViewController</title>
-        <link>https://example.com/p/uiactivityviewcontroller/</link>
+        <link>https://www.archie.tw/p/uiactivityviewcontroller/</link>
         <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/uiactivityviewcontroller/</guid>
+        <guid>https://www.archie.tw/p/uiactivityviewcontroller/</guid>
         <description>&lt;h3 id=&#34;這些話寫在前面&#34;&gt;這些話寫在前面⋯⋯&lt;/h3&gt;
 &lt;p&gt;最近在開發的產品需要加入「分享」的功能，
 希望將一些資訊及圖片分享到其他 App 或平台上；
@@ -5410,10 +5410,10 @@ revision 則讓它跟著 commit 的數量。&lt;/p&gt;
         </item>
         <item>
         <title>3D Touch</title>
-        <link>https://example.com/p/3d-touch/</link>
+        <link>https://www.archie.tw/p/3d-touch/</link>
         <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/3d-touch/</guid>
+        <guid>https://www.archie.tw/p/3d-touch/</guid>
         <description>&lt;h3 id=&#34;這些寫在前面&#34;&gt;這些寫在前面⋯⋯&lt;/h3&gt;
 &lt;p&gt;最近剛從 iPhone 6 Plus 晉升到 iPhone X，其中一項硬體差異便是「3D Touch」；
 而這也讓我花了一些時間，來加入 3D Touch 的相關功能開發。
@@ -5452,10 +5452,10 @@ revision 則讓它跟著 commit 的數量。&lt;/p&gt;
         </item>
         <item>
         <title>失業給付 &#43; 提早就業獎金</title>
-        <link>https://example.com/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</link>
+        <link>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</link>
         <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</guid>
+        <guid>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</guid>
         <description>&lt;h3 id=&#34;這些話寫在前面&#34;&gt;這些話寫在前面⋯⋯&lt;/h3&gt;
 &lt;p&gt;由於和上一間公司的工作方式處不來，而對方決定以資遣的方式來處理，
 故便在六月中解鎖了「領取資遣證明」的成就。&lt;/p&gt;
@@ -5527,10 +5527,10 @@ revision 則讓它跟著 commit 的數量。&lt;/p&gt;
         </item>
         <item>
         <title>重灌 macOS 的工程（下）- Terminal 篇</title>
-        <link>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</link>
+        <link>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</link>
         <pubDate>Sun, 08 Oct 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</guid>
+        <guid>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8B-terminal-%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;前情提要&#34;&gt;前情提要&lt;/h1&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;../%e9%87%8d%e7%81%8c-macos-%e7%9a%84%e5%b7%a5%e7%a8%8b%e4%b8%8a&#34; &gt;重灌 macOS 的工程（上）&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;開始進入本篇&#34;&gt;開始進入本篇&lt;/h1&gt;
@@ -5575,10 +5575,10 @@ fpath=(/usr/local/share/zsh-completions $fpath)
         </item>
         <item>
         <title>UIImage memory issue</title>
-        <link>https://example.com/p/uiimage-memory-issue/</link>
+        <link>https://www.archie.tw/p/uiimage-memory-issue/</link>
         <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/uiimage-memory-issue/</guid>
+        <guid>https://www.archie.tw/p/uiimage-memory-issue/</guid>
         <description>&lt;p&gt;今天要來分享的內容，是有關於 UIImage 的一個記憶體爆炸情況，
 而我先闡述一下發現這問題的情境：
 專案內有個功能會需要匯入大型圖片做縮放以及拖拉功能，
@@ -5632,10 +5632,10 @@ UIImage(name: ImageName) 來產生 UIImage 物件，並將畫面上的 UIImageVi
         </item>
         <item>
         <title>雙 NP：中華電信➡️台灣大哥大➡️中華電信</title>
-        <link>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</link>
+        <link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</link>
         <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</guid>
+        <guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</guid>
         <description>&lt;p&gt;首先，先附上&lt;a class=&#34;link&#34; href=&#34;https://www.landtop.com.tw/discount&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;地標網通的價目表&lt;/a&gt;，
 我所要選擇的方案是雙 NP 回中華電信的智慧大玩家 999 方案，
@@ -5685,10 +5685,10 @@ UIImage(name: ImageName) 來產生 UIImage 物件，並將畫面上的 UIImageVi
         </item>
         <item>
         <title>重灌 macOS 的工程（上）</title>
-        <link>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</link>
+        <link>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</link>
         <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</guid>
+        <guid>https://www.archie.tw/p/%E9%87%8D%E7%81%8C-macos-%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%8A/</guid>
         <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
 &lt;p&gt;幾天前，Apple 釋出了 High Sierra 的安裝檔，
 一時手癢的我，便將自己的 MacBook Pro (Retina, 13-inch, Mid 2014) 來進行更新！
@@ -5737,10 +5737,10 @@ UIImage(name: ImageName) 來產生 UIImage 物件，並將畫面上的 UIImageVi
         </item>
         <item>
         <title>Swift 4 JSON</title>
-        <link>https://example.com/p/swift-4-json/</link>
+        <link>https://www.archie.tw/p/swift-4-json/</link>
         <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/swift-4-json/</guid>
+        <guid>https://www.archie.tw/p/swift-4-json/</guid>
         <description>&lt;p&gt;在 Swift 之中，JSON (JavaScript Object Notation) 的型別為 [String: Any]，
 也就是一個 Dictionary 的概念，以一組 Key 對應一組 Value。
 大多數會碰到 JSON 格式是在做網路溝通時，
@@ -5825,10 +5825,10 @@ UIImage(name: ImageName) 來產生 UIImage 物件，並將畫面上的 UIImageVi
         </item>
         <item>
         <title>Third-party Payment</title>
-        <link>https://example.com/p/third-party-payment/</link>
+        <link>https://www.archie.tw/p/third-party-payment/</link>
         <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/third-party-payment/</guid>
+        <guid>https://www.archie.tw/p/third-party-payment/</guid>
         <description>&lt;h1 id=&#34;third-party-payment&#34;&gt;Third-party Payment&lt;/h1&gt;
 &lt;p&gt;這篇要來聊聊第三方支付，其主要的內容會介紹幾個台灣所可以使用的第三方支付方案；
 而第三方支付主要解決的問題是，替我們向銀行方溝通及串接請款等動作，
@@ -5920,10 +5920,10 @@ UIImage(name: ImageName) 來產生 UIImage 物件，並將畫面上的 UIImageVi
         </item>
         <item>
         <title>Credit Card Number</title>
-        <link>https://example.com/p/credit-card-number/</link>
+        <link>https://www.archie.tw/p/credit-card-number/</link>
         <pubDate>Tue, 05 Sep 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/credit-card-number/</guid>
+        <guid>https://www.archie.tw/p/credit-card-number/</guid>
         <description>&lt;p&gt;最近在串信用卡支付相關的服務，順道筆記信用卡卡號的相關規則。&lt;/p&gt;
 &lt;h1 id=&#34;驗證卡號&#34;&gt;驗證卡號&lt;/h1&gt;
 &lt;p&gt;信用卡卡號的驗證方式是，最後一碼為驗證碼；
@@ -5952,10 +5952,10 @@ JCB 則是前四碼在 3528 – 3589 範圍內。
         </item>
         <item>
         <title>Status bar style</title>
-        <link>https://example.com/p/status-bar-style/</link>
+        <link>https://www.archie.tw/p/status-bar-style/</link>
         <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/status-bar-style/</guid>
+        <guid>https://www.archie.tw/p/status-bar-style/</guid>
         <description>&lt;h1 id=&#34;status-bar-style&#34;&gt;Status bar style&lt;/h1&gt;
 &lt;p&gt;一般在 iOS 裡頭，status bar style 可以被分成兩種&lt;/p&gt;
 &lt;ul&gt;
@@ -5985,10 +5985,10 @@ View controller-based status bar appearance – YES / NO
         </item>
         <item>
         <title>ViewModel with POP</title>
-        <link>https://example.com/p/viewmodel-with-pop/</link>
+        <link>https://www.archie.tw/p/viewmodel-with-pop/</link>
         <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/viewmodel-with-pop/</guid>
+        <guid>https://www.archie.tw/p/viewmodel-with-pop/</guid>
         <description>&lt;h1 id=&#34;viewmodel-with-pop&#34;&gt;ViewModel with POP&lt;/h1&gt;
 &lt;p&gt;這邊有兩個名詞需要解釋一下，一個是 ViewModel，另一個則是 POP：&lt;/p&gt;
 &lt;h2 id=&#34;viewmodel&#34;&gt;ViewModel&lt;/h2&gt;
@@ -6028,10 +6028,10 @@ UITableViewDataSource 的 cellForRowAt 就可以簡單一些：&lt;/p&gt;
         </item>
         <item>
         <title>iOS UIView shadow</title>
-        <link>https://example.com/p/ios-uiview-shadow/</link>
+        <link>https://www.archie.tw/p/ios-uiview-shadow/</link>
         <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-uiview-shadow/</guid>
+        <guid>https://www.archie.tw/p/ios-uiview-shadow/</guid>
         <description>&lt;p&gt;最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。&lt;/p&gt;
 &lt;h1 id=&#34;calayer&#34;&gt;CALayer&lt;/h1&gt;
 &lt;p&gt;陰影相關的實作方式，是以 CALayer 底下的這五個變數來控制&lt;/p&gt;
@@ -6071,10 +6071,10 @@ UITableViewDataSource 的 cellForRowAt 就可以簡單一些：&lt;/p&gt;
         </item>
         <item>
         <title>iOS User Interface Default Value</title>
-        <link>https://example.com/p/ios-user-interface-default-value/</link>
+        <link>https://www.archie.tw/p/ios-user-interface-default-value/</link>
         <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/ios-user-interface-default-value/</guid>
+        <guid>https://www.archie.tw/p/ios-user-interface-default-value/</guid>
         <description>&lt;p&gt;我們在開發 iOS App 的時候，對於 User interface 的開發模式有幾種流派&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Storyboard&lt;/li&gt;
@@ -6145,10 +6145,10 @@ UITableViewDataSource 的 cellForRowAt 就可以簡單一些：&lt;/p&gt;
         </item>
         <item>
         <title>GraphQL</title>
-        <link>https://example.com/p/graphql/</link>
+        <link>https://www.archie.tw/p/graphql/</link>
         <pubDate>Tue, 08 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/graphql/</guid>
+        <guid>https://www.archie.tw/p/graphql/</guid>
         <description>&lt;h1 id=&#34;graphql-vs-rest&#34;&gt;GraphQL v.s REST&lt;/h1&gt;
 &lt;p&gt;首先，看到這個標題，要先了解一下什麼是「REST」；
 我們在先前的文章中有提到關於 Firebase Database REST API 的內容，
@@ -6237,10 +6237,10 @@ GET /books/123：取得 id = 123 的書本資料
         </item>
         <item>
         <title>chmod with ssh key</title>
-        <link>https://example.com/p/chmod-with-ssh-key/</link>
+        <link>https://www.archie.tw/p/chmod-with-ssh-key/</link>
         <pubDate>Mon, 07 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/chmod-with-ssh-key/</guid>
+        <guid>https://www.archie.tw/p/chmod-with-ssh-key/</guid>
         <description>&lt;p&gt;chmod 是由 &lt;code&gt;ch&lt;/code&gt;ange &lt;code&gt;mod&lt;/code&gt;e 所組成，其指令功能便是更改檔案或者資料夾底下所有檔案的權限。
 而權限位是由 9 個權限位來控制，每 3 位為一組，分別為&lt;/p&gt;
 &lt;ul&gt;
@@ -6267,10 +6267,10 @@ Group 和 Other 則都不能開放，否則就會無法使用。&lt;/p&gt;
         </item>
         <item>
         <title>Firebase Database REST API</title>
-        <link>https://example.com/p/firebase-database-rest-api/</link>
+        <link>https://www.archie.tw/p/firebase-database-rest-api/</link>
         <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/firebase-database-rest-api/</guid>
+        <guid>https://www.archie.tw/p/firebase-database-rest-api/</guid>
         <description>&lt;p&gt;這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API，
 所提供的相關內容和使用方式。&lt;/p&gt;
 &lt;h1 id=&#34;firebase-database&#34;&gt;Firebase Database&lt;/h1&gt;
@@ -6326,10 +6326,10 @@ ETag = kmHkuKx9sCx742tosJOV4oH+JBQ=
         </item>
         <item>
         <title>Vapor</title>
-        <link>https://example.com/p/vapor/</link>
+        <link>https://www.archie.tw/p/vapor/</link>
         <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/vapor/</guid>
+        <guid>https://www.archie.tw/p/vapor/</guid>
         <description>&lt;h1 id=&#34;vapor&#34;&gt;Vapor&lt;/h1&gt;
 &lt;p&gt;在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。
 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用；
@@ -6395,10 +6395,10 @@ Vapor 將 Views 放置在 /Resources/Views 裡頭，並可以使用 drop.view(�
         </item>
         <item>
         <title>Fastlane - match</title>
-        <link>https://example.com/p/fastlane-match/</link>
+        <link>https://www.archie.tw/p/fastlane-match/</link>
         <pubDate>Tue, 18 Jul 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/fastlane-match/</guid>
+        <guid>https://www.archie.tw/p/fastlane-match/</guid>
         <description>&lt;h3 id=&#34;fastlane-是什麼&#34;&gt;Fastlane 是什麼？&lt;/h3&gt;
 &lt;p&gt;簡單來說，它可以替你解決除了寫程式以外的很多事情；
 像是「螢幕截圖」、「打包上傳到 Testflight」、「建立 App Store 的 App 資訊」等等，
@@ -6444,10 +6444,10 @@ p.s 如果專案原先就有 certificate ，執行 fastlane match nuke 就可以
         </item>
         <item>
         <title>Socket</title>
-        <link>https://example.com/p/socket/</link>
+        <link>https://www.archie.tw/p/socket/</link>
         <pubDate>Sat, 15 Jul 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/socket/</guid>
+        <guid>https://www.archie.tw/p/socket/</guid>
         <description>&lt;p&gt;最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接，
 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。
 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種&lt;/p&gt;
@@ -6630,10 +6630,10 @@ p.s 如果專案原先就有 certificate ，執行 fastlane match nuke 就可以
         </item>
         <item>
         <title>多個帳號的 SSH Config 設定</title>
-        <link>https://example.com/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</link>
+        <link>https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</link>
         <pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</guid>
+        <guid>https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</guid>
         <description>&lt;p&gt;一般的情形下，我們不會太需要去做 config 檔案的設定，
 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩；
 但隨著身份的增加（大多數是因為工作關係），
@@ -6688,10 +6688,10 @@ IdentityFile ~/.ssh/github
         </item>
         <item>
         <title>print</title>
-        <link>https://example.com/p/print/</link>
+        <link>https://www.archie.tw/p/print/</link>
         <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/print/</guid>
+        <guid>https://www.archie.tw/p/print/</guid>
         <description>&lt;h2 id=&#34;print&#34;&gt;print&lt;/h2&gt;
 &lt;p&gt;在第一次接觸一個沒學過的程式語言時，我們多半可以看到會以「Hello, world!」作為開頭；
 而你第一個所使用的 method，也很有可能就是印出東西相關的。
@@ -6750,10 +6750,10 @@ IdentityFile ~/.ssh/github
         </item>
         <item>
         <title>Apple Pay</title>
-        <link>https://example.com/p/apple-pay/</link>
+        <link>https://www.archie.tw/p/apple-pay/</link>
         <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/apple-pay/</guid>
+        <guid>https://www.archie.tw/p/apple-pay/</guid>
         <description>&lt;h3 id=&#34;apple-pay&#34;&gt;Apple Pay&lt;/h3&gt;
 &lt;p&gt;Apple Pay 已經在台灣流通一段時間，第三方支付的相關業者也相接著推出串接的服務；
 而撇除串接第三方支付的 SDK， iOS 開發者本身的流程呢？&lt;/p&gt;
@@ -6830,10 +6830,10 @@ IdentityFile ~/.ssh/github
         </item>
         <item>
         <title>JWT</title>
-        <link>https://example.com/p/jwt/</link>
+        <link>https://www.archie.tw/p/jwt/</link>
         <pubDate>Mon, 03 Jul 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/jwt/</guid>
+        <guid>https://www.archie.tw/p/jwt/</guid>
         <description>&lt;h1 id=&#34;jwt&#34;&gt;JWT&lt;/h1&gt;
 &lt;p&gt;JWT（ JSON Web Token）和 iOS 比較有相關聯的地方，
 便是在於 APNs p8 是使用 JWT 格式作為傳遞；
@@ -6870,10 +6870,10 @@ iat：所發送的時間（issued at）&lt;/p&gt;
         </item>
         <item>
         <title>Wifi 密碼 – 共享密碼的平台</title>
-        <link>https://example.com/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</link>
+        <link>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</link>
         <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid>
+        <guid>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid>
         <description>&lt;p&gt;上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具，
 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊：
 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯
@@ -6951,10 +6951,10 @@ iat：所發送的時間（issued at）&lt;/p&gt;
         </item>
         <item>
         <title>APNs</title>
-        <link>https://example.com/p/apns/</link>
+        <link>https://www.archie.tw/p/apns/</link>
         <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/apns/</guid>
+        <guid>https://www.archie.tw/p/apns/</guid>
         <description>&lt;h3 id=&#34;apns-apple-push-notification-service&#34;&gt;APNs（ Apple Push Notification service）&lt;/h3&gt;
 &lt;p&gt;相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生；
 簡單來說，它就是推播的功能。
@@ -7031,10 +7031,10 @@ Python 和 Swift 看起來有點類似，所以應該不難看懂 APNs.py 是在
         </item>
         <item>
         <title>AdMob 獎勵式廣告實作</title>
-        <link>https://example.com/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</link>
+        <link>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</link>
         <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</guid>
+        <guid>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</guid>
         <description>&lt;h3 id=&#34;admob&#34;&gt;AdMob&lt;/h3&gt;
 &lt;p&gt;在 Google 的廣告投放服務之中，是以 AdSense 作為主軸，整合所有廣告相關的服務；
 而 AdMob 則是其中一個專門針對行動裝置的部分。
@@ -7122,10 +7122,10 @@ GADMobileAds.configure(withApplicationID: Your_Ads_ApplicationID)&lt;/p&gt;
         </item>
         <item>
         <title>淺談 Android 的逆向工程</title>
-        <link>https://example.com/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
+        <link>https://www.archie.tw/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</link>
         <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
+        <guid>https://www.archie.tw/p/%E6%B7%BA%E8%AB%87-android-%E7%9A%84%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/</guid>
         <description>&lt;h3 id=&#34;android&#34;&gt;Android？&lt;/h3&gt;
 &lt;p&gt;是的，這篇正是要寫有關於 Android 的逆向工程，儘管這也很可能是本站唯一一篇XD&lt;/p&gt;
 &lt;h3 id=&#34;起因&#34;&gt;起因&lt;/h3&gt;
@@ -7161,10 +7161,10 @@ GADMobileAds.configure(withApplicationID: Your_Ads_ApplicationID)&lt;/p&gt;
         </item>
         <item>
         <title>開發人員與 UI / UX 設計師之間的合作模式</title>
-        <link>https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</link>
+        <link>https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</link>
         <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</guid>
+        <guid>https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</guid>
         <description>&lt;h3 id=&#34;ui--ux-設計師&#34;&gt;UI / UX 設計師&lt;/h3&gt;
 &lt;p&gt;在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師，
 而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。&lt;/p&gt;
@@ -7219,10 +7219,10 @@ white = #FFFFFF
         </item>
         <item>
         <title>Unit test with async functions</title>
-        <link>https://example.com/p/unit-test-with-async-functions/</link>
+        <link>https://www.archie.tw/p/unit-test-with-async-functions/</link>
         <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/unit-test-with-async-functions/</guid>
+        <guid>https://www.archie.tw/p/unit-test-with-async-functions/</guid>
         <description>&lt;h3 id=&#34;ios-unit-test&#34;&gt;iOS Unit test&lt;/h3&gt;
 &lt;p&gt;在寫 Unit test 的時候，有時候會遇到要測試的 function 是 async 的，
 但在 Unit test 的 function 之中，它本身就是走單一 thread 來決定測試結果；
@@ -7242,10 +7242,10 @@ white = #FFFFFF
         </item>
         <item>
         <title>dismiss function</title>
-        <link>https://example.com/p/dismiss-function/</link>
+        <link>https://www.archie.tw/p/dismiss-function/</link>
         <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/dismiss-function/</guid>
+        <guid>https://www.archie.tw/p/dismiss-function/</guid>
         <description>&lt;h3 id=&#34;dismissanimatedcompletion&#34;&gt;dismiss(animated:completion:)&lt;/h3&gt;
 &lt;p&gt;這個 method 對於大家而言，應該都不陌生；
 UIViewController 可以呼叫這個 method 來關閉，而它所關閉的概念如下：
@@ -7270,10 +7270,10 @@ UINavigationController&lt;/p&gt;
         </item>
         <item>
         <title>網域相關設定</title>
-        <link>https://example.com/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</link>
+        <link>https://www.archie.tw/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</link>
         <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</guid>
+        <guid>https://www.archie.tw/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</guid>
         <description>&lt;p&gt;昨天，終於在 PChome 購買到 &lt;a class=&#34;link&#34; href=&#34;http://www.Archie.tw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;www.Archie.tw&lt;/a&gt;
 來和大家分享一下這段經歷。
@@ -7306,10 +7306,10 @@ UINavigationController&lt;/p&gt;
         </item>
         <item>
         <title>KVOController</title>
-        <link>https://example.com/p/kvocontroller/</link>
+        <link>https://www.archie.tw/p/kvocontroller/</link>
         <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/kvocontroller/</guid>
+        <guid>https://www.archie.tw/p/kvocontroller/</guid>
         <description>&lt;h3 id=&#34;kvocontroller&#34;&gt;KVOController&lt;/h3&gt;
 &lt;p&gt;有關 Observe 的相關做法，在 Swift 上我會選擇使用 RxSwift，那 Objective-C 呢？
 在這邊簡單介紹一下 KVOController 的 solution 給 Objective-C 的開發者。
@@ -7344,10 +7344,10 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
         </item>
         <item>
         <title>Optional</title>
-        <link>https://example.com/p/optional/</link>
+        <link>https://www.archie.tw/p/optional/</link>
         <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/optional/</guid>
+        <guid>https://www.archie.tw/p/optional/</guid>
         <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
 &lt;p&gt;Optional 正如其名，就是個可選擇或者說是可有可無的意思。&lt;/p&gt;
 &lt;h3 id=&#34;optional&#34;&gt;Optional&lt;/h3&gt;
@@ -7370,10 +7370,10 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
         </item>
         <item>
         <title>七天學會設計模式 - Facade</title>
-        <link>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</link>
+        <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</link>
         <pubDate>Tue, 09 May 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</guid>
+        <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</guid>
         <description>&lt;h3 id=&#34;facade&#34;&gt;Facade&lt;/h3&gt;
 &lt;p&gt;其實 Facade 的概念簡單來說，就是簡化使用物件方的介面。
 舉個例來說，我建立了一個 Calendar 的 UICollectionView，可能裡頭會需要很多的邏輯判斷；像是「計算 Cell 的 Size」、「判斷日期是否為假日」、「判斷月份」⋯⋯等，但使用這個物件的人，基本上不需要（也不應該）去煩惱這些事情。
@@ -7384,10 +7384,10 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
         </item>
         <item>
         <title>七天學會設計模式 – Observe</title>
-        <link>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</link>
+        <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</link>
         <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</guid>
+        <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</guid>
         <description>&lt;h3 id=&#34;訂閱&#34;&gt;訂閱&lt;/h3&gt;
 &lt;p&gt;有使用過網誌或是一些新聞類型的網站時，通常可以在旁邊看到「訂閱」的按鈕，接著點擊下去後就可以在作者有發動或異動文章時，收到通知。&lt;/p&gt;
 &lt;h3 id=&#34;observe&#34;&gt;Observe&lt;/h3&gt;
@@ -7407,10 +7407,10 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
         </item>
         <item>
         <title>Weak</title>
-        <link>https://example.com/p/weak/</link>
+        <link>https://www.archie.tw/p/weak/</link>
         <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/weak/</guid>
+        <guid>https://www.archie.tw/p/weak/</guid>
         <description>&lt;p&gt;在 iOS 的開發語言之中，不論是 Objective-C 或者 Swift，你或許都有看過這個詞&lt;/p&gt;
 &lt;h3 id=&#34;weak&#34;&gt;weak&lt;/h3&gt;
 &lt;p&gt;你可能會知道它可以避免 retain cycle，但其背後的觀念是什麼？&lt;/p&gt;
@@ -7427,10 +7427,10 @@ readonly 的物件，因為 observe 為監聽 set 的動作，若是直接使用
         </item>
         <item>
         <title>502 Bad Gateway Error with nginx</title>
-        <link>https://example.com/p/502-bad-gateway-error-with-nginx/</link>
+        <link>https://www.archie.tw/p/502-bad-gateway-error-with-nginx/</link>
         <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/502-bad-gateway-error-with-nginx/</guid>
+        <guid>https://www.archie.tw/p/502-bad-gateway-error-with-nginx/</guid>
         <description>&lt;h3 id=&#34;源頭&#34;&gt;源頭&lt;/h3&gt;
 &lt;p&gt;在攥寫&lt;a class=&#34;link&#34; href=&#34;../%e4%b8%83%e5%a4%a9%e5%ad%b8%e6%9c%83%e8%a8%ad%e8%a8%88%e6%a8%a1%e5%bc%8f-singleton&#34; &gt;七天學會設計模式 – Singleton&lt;/a&gt;時，發生了點小狀況。
 我點擊 WordPress 的「全部文章」時，顯示 502 Bad Gateway 的錯誤訊息；
@@ -7471,10 +7471,10 @@ swapon /var/swap.img
         </item>
         <item>
         <title>工作一年半的一些心得分享</title>
-        <link>https://example.com/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</link>
+        <link>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</link>
         <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</guid>
+        <guid>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</guid>
         <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
 &lt;p&gt;前陣子在 &lt;a class=&#34;link&#34; href=&#34;https://www.ptt.cc/bbs/MacDev/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PTT MacDev 版&lt;/a&gt;寫了篇心得，這邊就轉載過來&lt;/p&gt;
@@ -7505,10 +7505,10 @@ swapon /var/swap.img
         </item>
         <item>
         <title>線上讀書會 RxSwift 分享</title>
-        <link>https://example.com/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</link>
+        <link>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</link>
         <pubDate>Thu, 23 Feb 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</guid>
+        <guid>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?=OyCN04p-uS8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;figure 
 	&gt;
@@ -7527,11 +7527,52 @@ swapon /var/swap.img
 </description>
         </item>
         <item>
-        <title>七天學會設計模式 - Singleton</title>
-        <link>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</link>
+        <title>Privacy Policy</title>
+        <link>https://www.archie.tw/p/privacy-policy/</link>
         <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</guid>
+        <guid>https://www.archie.tw/p/privacy-policy/</guid>
+        <description>&lt;p&gt;This Privacy Policy governs the manner in which Archie collects, uses, maintains and discloses information collected from users (each, a &amp;ldquo;User&amp;rdquo;) of the &lt;a class=&#34;link&#34; href=&#34;https://www.Archie.tw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.Archie.tw&lt;/a&gt; website (&amp;ldquo;Site&amp;rdquo;).&lt;/p&gt;
+&lt;h3 id=&#34;personal-identification-information&#34;&gt;Personal identification information&lt;/h3&gt;
+&lt;p&gt;We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, and in connection with other activities, services, features or resources we make available on our Site. Users may be asked for, as appropriate, email address. Users may, however, visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.&lt;/p&gt;
+&lt;h3 id=&#34;non-personal-identification-information&#34;&gt;Non-personal identification information&lt;/h3&gt;
+&lt;p&gt;We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.&lt;/p&gt;
+&lt;h3 id=&#34;web-browser-cookies&#34;&gt;Web browser cookies&lt;/h3&gt;
+&lt;p&gt;Our Site may use “cookies” to enhance User experience. User’s web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. User may choose to set their web browser to refuse cookies, or to alert you when cookies are being sent. If they do so, note that some parts of the Site may not function properly.&lt;/p&gt;
+&lt;h3 id=&#34;how-we-use-collected-information&#34;&gt;How we use collected information&lt;/h3&gt;
+&lt;p&gt;Archie may collect and use Users personal information for the following purposes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To run and operate our Site
+We may need your information display content on the Site correctly.&lt;/li&gt;
+&lt;li&gt;To improve customer service
+Information you provide helps us respond to your customer service requests and support needs more efficiently.&lt;/li&gt;
+&lt;li&gt;To improve our Site
+We may use feedback you provide to improve our products and services.&lt;/li&gt;
+&lt;li&gt;To send periodic emails
+We may use the email address to send them information and updates pertaining to their order.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;how-we-protect-your-information&#34;&gt;How we protect your information&lt;/h3&gt;
+&lt;p&gt;We adopt appropriate data collection, storage and processing practices and security measures to protect against unauthorized access, alteration, disclosure or destruction of your personal information, username, password, transaction information and data stored on our Site.&lt;/p&gt;
+&lt;h3 id=&#34;sharing-your-personal-information&#34;&gt;Sharing your personal information&lt;/h3&gt;
+&lt;p&gt;We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above.&lt;/p&gt;
+&lt;h3 id=&#34;third-party-websites&#34;&gt;Third party websites&lt;/h3&gt;
+&lt;p&gt;Users may find advertising or other content on our Site that link to the sites and services of our partners, suppliers, advertisers, sponsors, licensors and other third parties. We do not control the content or links that appear on these sites and are not responsible for the practices employed by websites linked to or from our Site. In addition, these sites or services, including their content and links, may be constantly changing. These sites and services may have their own privacy policies and customer service policies. Browsing and interaction on any other website, including websites which have a link to our Site, is subject to that website’s own terms and policies.&lt;/p&gt;
+&lt;h3 id=&#34;changes-to-this-privacy-policy&#34;&gt;Changes to this privacy policy&lt;/h3&gt;
+&lt;p&gt;Archie has the discretion to update this privacy policy at any time. When we do, we will post a notification on the main page of our Site. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.&lt;/p&gt;
+&lt;h3 id=&#34;your-acceptance-of-these-terms&#34;&gt;Your acceptance of these terms&lt;/h3&gt;
+&lt;p&gt;By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes. This privacy policy was built the web’s favourite privacy policy generator.&lt;/p&gt;
+&lt;h3 id=&#34;contacting-us&#34;&gt;Contacting us&lt;/h3&gt;
+&lt;p&gt;If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us.&lt;/p&gt;
+&lt;p&gt;This document was last updated on May 30, 2018&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>七天學會設計模式 - Singleton</title>
+        <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</link>
+        <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</guid>
         <description>&lt;h3 id=&#34;前言&#34;&gt;前言&lt;/h3&gt;
 &lt;p&gt;最近和同事一起購入&lt;a class=&#34;link&#34; href=&#34;http://www.books.com.tw/products/0010750585&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;七天學會設計模式&lt;/a&gt;，不過書中是以 Java 作為示範語言；

@@ -5,20 +5,22 @@
 #import &amp;lt;CommonCrypto/CommonCrypto.h&amp;gt; 再來寫個 UUID 的 extension：
 extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace.'><title>UUID with version 3, 5 and name spaces</title>
 
-<link rel='canonical' href='https://example.com/p/uuid-with-version-3-5-and-name-spaces/'>
+<link rel='canonical' href='https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='UUID with version 3, 5 and name spaces'>
 <meta property='og:description' content='在 Swift 裏頭，預設的 UUID 只能從 UUID() 來產生，或者是從另一個 UUID 來產生， 這邊來記錄一下如何從 String 來產生 UUID。 首先，先在 Bridge-Header.h 裡頭加入
 #import &amp;lt;CommonCrypto/CommonCrypto.h&amp;gt; 再來寫個 UUID 的 extension：
 extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace.'>
-<meta property='og:url' content='https://example.com/p/uuid-with-version-3-5-and-name-spaces/'>
+<meta property='og:url' content='https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2018-09-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-09-14T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
     <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="UUID with version 3, 5 and name spaces">
 <meta name="twitter:description" content="在 Swift 裏頭，預設的 UUID 只能從 UUID() 來產生，或者是從另一個 UUID 來產生， 這邊來記錄一下如何從 String 來產生 UUID。 首先，先在 Bridge-Header.h 裡頭加入
 #import &amp;lt;CommonCrypto/CommonCrypto.h&amp;gt; 再來寫個 UUID 的 extension：
-extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace.">
+extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page 
@@ -78,7 +80,7 @@ extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5Na
             </figure>
             
         
-        <h1 class="site-name"><a href="https://example.com">Archie</a></h1>
+        <h1 class="site-name"><a href="https://www.archie.tw">Archie</a></h1>
         <h2 class="site-description">獨立開發者的心路歷程</h2>
     </header>
 

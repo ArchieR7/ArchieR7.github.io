@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>心得文 on Archie</title>
-    <link>https://example.com/tags/%E5%BF%83%E5%BE%97%E6%96%87/</link>
+    <link>https://www.archie.tw/tags/%E5%BF%83%E5%BE%97%E6%96%87/</link>
     <description>Recent content in 心得文 on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/%E5%BF%83%E5%BE%97%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/%E5%BF%83%E5%BE%97%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>開發人員與 UI / UX 設計師之間的合作模式</title>
-      <link>https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/</guid>
       <description>UI / UX 設計師 在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師， 而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。
 設計師所使用的工具 在 UX 設計師裏頭，有配合過使用 Axure、Adobe Xd、或是用 Sketch 直接和 UI 一起出的。 而在 Sketch 的模式下，它裡頭有個詞叫做「symbol」，其意義和 iOS 裡頭的 UIView 相關物件相同。
 物件的概念 Sketch 提供了 Symbol 的建立，讓使用者在設計時，能夠把一些重複使用到的元件，做成一個 symbol， 而它會自動定義這個 symbol 哪些值是可以被異動的：
@@ -23,10 +23,10 @@
     
     <item>
       <title>工作一年半的一些心得分享</title>
-      <link>https://example.com/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</link>
+      <link>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</link>
       <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</guid>
+      <guid>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</guid>
       <description>前言 前陣子在 PTT MacDev 版寫了篇心得，這邊就轉載過來
 正文開始 各位好，這篇文章主要是給新手一些方向和想法～ 純屬個人的經歷和看法，可以一起以輕鬆的態度聊聊～ 我個人是在 2015 年中開始接觸 iOS 的開發，以 Objective-C 為一開始自學方向。 從簡單遊戲開始下手，像是猜數字、圈圈叉叉之類的， 練練基本的拉拉 UI、認識Storyboard、.h 的宣告、.m 的實作等。 接著剛好 Xcode 7 開始讓免費的開發者可以裝 App 至實體裝置上， 發現自己原本都用 4.7 吋的模擬器執行，而到了 5.7 吋的裝置上時， 會有跑版的問題，於是花了一些時間學習 AutoLayout。 而基本上 AutoLayout 有個概念熟悉即可， 除非是比較特別的效果需要思考一下彼此之間的 priority， 不然一般 App 都還蠻輕易解決這方面的問題； 而比較有趣的是，像在 ScrollView 裏頭做 AutoLayout 時， 要有 contentSize 的概念，而不要輕易的點「讓系統補完 constraints」的按鈕。
 接著，在我準備面試前的一兩個月，加入了一些 iOS 的開發社群 （e.g iOS @ Taipei、Cocoaheads Taipei等） 厚著臉皮加了版上比較活躍的幾位前輩，並詢問他們一些問題和方向， 於是開始練習其他實作：
@@ -35,10 +35,10 @@
     
     <item>
       <title>線上讀書會 RxSwift 分享</title>
-      <link>https://example.com/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</link>
+      <link>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</link>
       <pubDate>Thu, 23 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</guid>
+      <guid>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</guid>
       <description>線上讀書會 RxSwift 分享</description>
     </item>
     

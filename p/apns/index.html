@@ -6,14 +6,14 @@
 Remote notification 遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！）， 在 AppDelegate.swift 註冊那些的就不寫在這了～ 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作， 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD 但總會有需要自己打推播測試、或是開發自己 app 的時候， 這邊就來談談 iOS 開發者該怎麼做！
 APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 .'><title>APNs</title>
 
-<link rel='canonical' href='https://example.com/p/apns/'>
+<link rel='canonical' href='https://www.archie.tw/p/apns/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='APNs'>
 <meta property='og:description' content='APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
  Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。  Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
 Remote notification 遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！）， 在 AppDelegate.swift 註冊那些的就不寫在這了～ 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作， 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD 但總會有需要自己打推播測試、或是開發自己 app 的時候， 這邊就來談談 iOS 開發者該怎麼做！
 APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 .'>
-<meta property='og:url' content='https://example.com/p/apns/'>
+<meta property='og:url' content='https://www.archie.tw/p/apns/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2017-06-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-06-27T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -21,7 +21,9 @@ APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限�
 <meta name="twitter:description" content="APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
  Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。  Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
 Remote notification 遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！）， 在 AppDelegate.swift 註冊那些的就不寫在這了～ 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作， 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD 但總會有需要自己打推播測試、或是開發自己 app 的時候， 這邊就來談談 iOS 開發者該怎麼做！
-APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 .">
+APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 ."><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -55,7 +57,7 @@ APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限�
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

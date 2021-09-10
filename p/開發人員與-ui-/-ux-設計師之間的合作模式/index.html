@@ -8,7 +8,7 @@
 以 iOS developer 來說 設計師可以了解到，UINavigationBar 的樣貌大概是長這樣，並明白 UIBarButtonItem 能夠控制的外觀欄位有哪些，像是這邊顯示的 Edit 字串。 而設計師也可以自行建構 symbol，來增加重複使用的便利性；這點也如同我們在開發 App 一樣， 會建立一些較容易重複使用到的 UIView 來呈現畫面。 設計師可以更明確地定義物件哪些欄位是會怎麼變動的，像是一個「客製化的按鈕」， 可以先明白它的背景色可能會在其他頁面做換色、或是字體會更改， 這都可以讓開發人員在一開始設計這個按鈕時，都考慮進去來增加彈性。
 維持一致性 symbol 的概念，可以維持整個專案的外觀一致性； 也就是說當設計師需要調整剛剛所說的「客製化按鈕」， 想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可， 不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel； developer 也一樣，只需要更改其類別即可，省去重複定義的時間。 也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。'><title>開發人員與 UI / UX 設計師之間的合作模式</title>
 
-<link rel='canonical' href='https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/'>
+<link rel='canonical' href='https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='開發人員與 UI / UX 設計師之間的合作模式'>
 <meta property='og:description' content='UI / UX 設計師 在工作了一段時間後，陸續接觸了幾位不同的 UI / UX 設計師， 而每個人做事的方法都有所差異，在這邊簡單地列出幾個想法。
@@ -17,7 +17,7 @@
 如同上方寫的「中華電信」，便是可被異動的值，但更改這個字串並不會影響整體的外觀。
 以 iOS developer 來說 設計師可以了解到，UINavigationBar 的樣貌大概是長這樣，並明白 UIBarButtonItem 能夠控制的外觀欄位有哪些，像是這邊顯示的 Edit 字串。 而設計師也可以自行建構 symbol，來增加重複使用的便利性；這點也如同我們在開發 App 一樣， 會建立一些較容易重複使用到的 UIView 來呈現畫面。 設計師可以更明確地定義物件哪些欄位是會怎麼變動的，像是一個「客製化的按鈕」， 可以先明白它的背景色可能會在其他頁面做換色、或是字體會更改， 這都可以讓開發人員在一開始設計這個按鈕時，都考慮進去來增加彈性。
 維持一致性 symbol 的概念，可以維持整個專案的外觀一致性； 也就是說當設計師需要調整剛剛所說的「客製化按鈕」， 想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可， 不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel； developer 也一樣，只需要更改其類別即可，省去重複定義的時間。 也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。'>
-<meta property='og:url' content='https://example.com/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/'>
+<meta property='og:url' content='https://www.archie.tw/p/%E9%96%8B%E7%99%BC%E4%BA%BA%E5%93%A1%E8%88%87-ui-/-ux-%E8%A8%AD%E8%A8%88%E5%B8%AB%E4%B9%8B%E9%96%93%E7%9A%84%E5%90%88%E4%BD%9C%E6%A8%A1%E5%BC%8F/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='心得文' /><meta property='article:published_time' content='2017-06-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-06-20T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -27,7 +27,9 @@
 物件的概念 Sketch 提供了 Symbol 的建立，讓使用者在設計時，能夠把一些重複使用到的元件，做成一個 symbol， 而它會自動定義這個 symbol 哪些值是可以被異動的：
 如同上方寫的「中華電信」，便是可被異動的值，但更改這個字串並不會影響整體的外觀。
 以 iOS developer 來說 設計師可以了解到，UINavigationBar 的樣貌大概是長這樣，並明白 UIBarButtonItem 能夠控制的外觀欄位有哪些，像是這邊顯示的 Edit 字串。 而設計師也可以自行建構 symbol，來增加重複使用的便利性；這點也如同我們在開發 App 一樣， 會建立一些較容易重複使用到的 UIView 來呈現畫面。 設計師可以更明確地定義物件哪些欄位是會怎麼變動的，像是一個「客製化的按鈕」， 可以先明白它的背景色可能會在其他頁面做換色、或是字體會更改， 這都可以讓開發人員在一開始設計這個按鈕時，都考慮進去來增加彈性。
-維持一致性 symbol 的概念，可以維持整個專案的外觀一致性； 也就是說當設計師需要調整剛剛所說的「客製化按鈕」， 想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可， 不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel； developer 也一樣，只需要更改其類別即可，省去重複定義的時間。 也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。">
+維持一致性 symbol 的概念，可以維持整個專案的外觀一致性； 也就是說當設計師需要調整剛剛所說的「客製化按鈕」， 想把圓角從 5 pixel 改為 10 pixel，便只需要更改 symbol 即可， 不需要再到各個使用到相同外觀的按鈕，都去一一調整為 10 pixel； developer 也一樣，只需要更改其類別即可，省去重複定義的時間。 也可降低設計師和開發人員之間的溝通成本，讓彼此能夠更專注地做好自己的工作。"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -61,7 +63,7 @@
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />

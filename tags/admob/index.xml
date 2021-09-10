@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AdMob on Archie</title>
-    <link>https://example.com/tags/admob/</link>
+    <link>https://www.archie.tw/tags/admob/</link>
     <description>Recent content in AdMob on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/admob/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/admob/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AdMob 獎勵式廣告實作</title>
-      <link>https://example.com/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</link>
+      <link>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</link>
       <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</guid>
+      <guid>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</guid>
       <description>AdMob 在 Google 的廣告投放服務之中，是以 AdSense 作為主軸，整合所有廣告相關的服務； 而 AdMob 則是其中一個專門針對行動裝置的部分。 所以若 iOS 的開發者想在其應用上放置廣告單元，則需要從 AdMob 著手。
 建立廣告單元 首先，需要先到 AdMob 的控制台中，新建一個新的應用程式， 並將 app 的相關資訊填寫完整。
 再者，則是建立一個廣告單元，而這篇所要分享的是「獎勵式廣告」的實作。

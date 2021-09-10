@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSH on Archie</title>
-    <link>https://example.com/tags/ssh/</link>
+    <link>https://www.archie.tw/tags/ssh/</link>
     <description>Recent content in SSH on Archie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Jul 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>多個帳號的 SSH Config 設定</title>
-      <link>https://example.com/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</link>
+      <link>https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</link>
       <pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://example.com/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</guid>
+      <guid>https://www.archie.tw/p/%E5%A4%9A%E5%80%8B%E5%B8%B3%E8%99%9F%E7%9A%84-ssh-config-%E8%A8%AD%E5%AE%9A/</guid>
       <description>一般的情形下，我們不會太需要去做 config 檔案的設定， 因為其實不太需要建立太多組的 SSH key 來增加管理上的麻煩； 但隨著身份的增加（大多數是因為工作關係）， 我們會需要用到其他組 SSH key 來連接 git server。
 如果公司使用的 git server，是我原本就沒有使用的呢？ 那就沒什麼差了。 就像是我第一份工作，公司所使用的 git server 為 AWS 的 CodeCommit， 而原先我根本就不用使用到那邊的服務，所以建立一組 SSH key 在 AWS 上使用也沒什麼衝突。 且 AWS 上的教學文件，會讓你在 ~/.ssh/config 之中，以 Host 作為區別； 所以它只會在 AWS 上使用你為了 AWS 所建立的 key。
 但⋯最容易發生的情形就是： 公司也使用 Github 作為組織的 git server 通常我們會有一組自己私人的 Github 帳號，若公司不反對你使用私人帳號加入組織的話， 其實你也就沒什麼差了； 但大多數的情形是會給你一組（或是請你申請一組）公司信箱的 Github 帳號， 來維護 private git repository。

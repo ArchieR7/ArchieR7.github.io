@@ -11,7 +11,7 @@ shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
  layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！'><title>iOS UIView shadow</title>
 
-<link rel='canonical' href='https://example.com/p/ios-uiview-shadow/'>
+<link rel='canonical' href='https://www.archie.tw/p/ios-uiview-shadow/'>
 
 <link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='iOS UIView shadow'>
 <meta property='og:description' content='最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
@@ -23,7 +23,7 @@ shadowRadius 預設值為 3，系統本身會進行發散的動作。
 shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰影，並沒有需要客製化的話， 只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
  layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！'>
-<meta property='og:url' content='https://example.com/p/ios-uiview-shadow/'>
+<meta property='og:url' content='https://www.archie.tw/p/ios-uiview-shadow/'>
 <meta property='og:site_name' content='Archie'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2017-08-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-08-10T00:00:00&#43;00:00'/>
 <meta name="twitter:site" content="@ChangArchie">
@@ -36,7 +36,9 @@ shadowOffset 預設值為 [0, -3]，來調整陰影的位移。
 shadowRadius 預設值為 3，系統本身會進行發散的動作。
 shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰影，並沒有需要客製化的話， 只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
- layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！">
+ layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
     </head>
     <body class="
     article-page has-toc
@@ -70,7 +72,7 @@ cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話�
 ">
     
         <div id="article-toolbar">
-            <a href="https://example.com" class="back-home">
+            <a href="https://www.archie.tw" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />
