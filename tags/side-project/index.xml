@@ -1,8 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Side project on Archie</title><link>https://www.archie.tw/tags/side-project/</link><description>Recent content in Side project on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/side-project/index.xml" rel="self" type="application/rss+xml"/><item><title>Wifi 密碼 – 共享密碼的平台</title><link>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</link><pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid><description>上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Side project on Archie</title>
+    <link>https://www.archie.tw/tags/side-project/</link>
+    <description>Recent content in Side project on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jun 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/side-project/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wifi 密碼 – 共享密碼的平台</title>
+      <link>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid>
+      <description>上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
 使用流程 打開 Wifi 密碼 – 共享密碼的平台 後，會需要使用 Facebook 做登入的動作， 其主要原因是，裡頭的資訊是由全部使用者共同維護的（共筆的概念）， 所以其實會紀錄是哪個使用者新增 Wifi 資訊，但並不會顯示出來。 為了讓使用者承擔一點點微薄的責任，來讓大家都可以比較信任 Wifi 裡頭的資訊可信度， 便加入的登入的系統。
-登入畫面
+ 登入畫面 
 接著我們會看到主畫面：
-Wifi 列表
+ Wifi 列表 
 可以看到目前共筆上，有哪些 Wifi 的資訊：
-名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。 舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
-實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。</description></item></channel></rss>
+ 名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。  舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
+實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。</description>
+    </item>
+    
+  </channel>
+</rss>

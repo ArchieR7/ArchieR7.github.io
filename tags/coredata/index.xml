@@ -1,5 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CoreData on Archie</title><link>https://www.archie.tw/tags/coredata/</link><description>Recent content in CoreData on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 23 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/coredata/index.xml" rel="self" type="application/rss+xml"/><item><title>CoreData with background task</title><link>https://www.archie.tw/p/coredata-with-background-task/</link><pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/coredata-with-background-task/</guid><description>前言 雖然在 iOS 上開發了幾年的時間，但一直到最近才開始使用 CoreData；之前在第一份工作的專案之中是使用 FMDB 來處理資料存取，而後續則是用了 Realm。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CoreData on Archie</title>
+    <link>https://www.archie.tw/tags/coredata/</link>
+    <description>Recent content in CoreData on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/coredata/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CoreData with background task</title>
+      <link>https://www.archie.tw/p/coredata-with-background-task/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/coredata-with-background-task/</guid>
+      <description>前言 雖然在 iOS 上開發了幾年的時間，但一直到最近才開始使用 CoreData；之前在第一份工作的專案之中是使用 FMDB 來處理資料存取，而後續則是用了 Realm。
 選擇的原因分別是當時 FMDB 的速度較其餘兩者快速，而後來看上 Realm 的跨平台特色，不過近期開發的感想是能以原生為主的話，就儘量降低對於第三方套件的依賴性。
 這篇文章會記錄些什麼 其實這篇文章並不會從頭到尾寫下教學，而把重點放在一些我踩到的雷上，像是⋯⋯
 記得要附上 sqlite 的路徑 原先我的 persistentContainer 的產生方式如下
-lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯</description></item></channel></rss>
+lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯</description>
+    </item>
+    
+  </channel>
+</rss>

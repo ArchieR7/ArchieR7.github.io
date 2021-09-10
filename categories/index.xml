@@ -1,1 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Archie</title><link>https://www.archie.tw/categories/</link><description>Recent content in Categories on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/index.xml" rel="self" type="application/rss+xml"/><item><title>📒 程式筆記</title><link>https://www.archie.tw/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/</guid><description/></item><item><title>🍎 開發心得</title><link>https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/</link><pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/</guid><description/></item><item><title>🍀 生活相關</title><link>https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</link><pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</guid><description/></item><item><title>💻 Backend</title><link>https://www.archie.tw/categories/backend/</link><pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/categories/backend/</guid><description/></item><item><title>🪙 區塊鏈</title><link>https://www.archie.tw/categories/%E5%8D%80%E5%A1%8A%E9%8F%88/</link><pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/categories/%E5%8D%80%E5%A1%8A%E9%8F%88/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Archie</title>
+    <link>https://www.archie.tw/categories/</link>
+    <description>Recent content in Categories on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>📒 程式筆記</title>
+      <link>https://www.archie.tw/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>🍎 開發心得</title>
+      <link>https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>🍀 生活相關</title>
+      <link>https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</link>
+      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>💻 Backend</title>
+      <link>https://www.archie.tw/categories/backend/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/categories/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>🪙 區塊鏈</title>
+      <link>https://www.archie.tw/categories/%E5%8D%80%E5%A1%8A%E9%8F%88/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/categories/%E5%8D%80%E5%A1%8A%E9%8F%88/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,13 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blockchain on Archie</title><link>https://www.archie.tw/tags/blockchain/</link><description>Recent content in Blockchain on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/blockchain/index.xml" rel="self" type="application/rss+xml"/><item><title>Get ETH balance and tokens balance</title><link>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</link><pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</guid><description>前言 最近都在處理區塊鏈相關的問題，其中一個就是怎麼直接透過節點（****.infura.io）來取得 ETH 和其他 ERC-20 的地址餘額（balance）。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blockchain on Archie</title>
+    <link>https://www.archie.tw/tags/blockchain/</link>
+    <description>Recent content in Blockchain on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/blockchain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get ETH balance and tokens balance</title>
+      <link>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</link>
+      <pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/get-eth-balance-and-tokens-balance/</guid>
+      <description>前言 最近都在處理區塊鏈相關的問題，其中一個就是怎麼直接透過節點（****.infura.io）來取得 ETH 和其他 ERC-20 的地址餘額（balance）。
 JSON RPC ETH 節點所使用的 request body 是依照 JSON RPC 的方式，也就是我們所使用的 request path 都是相同的，像是主要的 https://mainnet.infura.io ；不同的是，我們可以透過不同的 body 內容來區別不同的需求。
 基本的 body 格式 { &amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;method name&amp;#34;, &amp;#34;params&amp;#34;: [], &amp;#34;id&amp;#34;: 1 } 取得 ETH 餘額 取得 ETH 餘額的方式較為單純，節點有提供一個 method 是 eth_getBalance，使用起來如下
 { &amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;eth_getBalance&amp;#34;, &amp;#34;params&amp;#34;: [&amp;#34;你的 ETH 地址&amp;#34;, &amp;#34;latest&amp;#34;], &amp;#34;id&amp;#34;: 1 } 其中這邊的 latest 意思是指向最新的那個區塊取資料的意思；
 我們便可以得到 response：
-{ &amp;#34;id&amp;#34;:1, &amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;result&amp;#34;: &amp;#34;0x0234c8a3397aab58&amp;#34; // 158972490234375000 } 其中注意到一點是，result 所回應的是你這個地址有幾聰的 hex 字串，所以當我們取得的時候得注意一下。</description></item><item><title>BIP-39 Mnemonic validate</title><link>https://www.archie.tw/p/bip-39-mnemonic-validate/</link><pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/bip-39-mnemonic-validate/</guid><description>前言 最近處理了一些加密貨幣的問題，其中一個是助記詞的驗證，這邊將會解釋助記詞的生成和驗證方式。
+{ &amp;#34;id&amp;#34;:1, &amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;result&amp;#34;: &amp;#34;0x0234c8a3397aab58&amp;#34; // 158972490234375000 } 其中注意到一點是，result 所回應的是你這個地址有幾聰的 hex 字串，所以當我們取得的時候得注意一下。</description>
+    </item>
+    
+    <item>
+      <title>BIP-39 Mnemonic validate</title>
+      <link>https://www.archie.tw/p/bip-39-mnemonic-validate/</link>
+      <pubDate>Mon, 22 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/bip-39-mnemonic-validate/</guid>
+      <description>前言 最近處理了一些加密貨幣的問題，其中一個是助記詞的驗證，這邊將會解釋助記詞的生成和驗證方式。
 生成助記詞 首先我們這邊所介紹的是助記詞生成方式，先建立一個 128 bytes 的隨機序列，也就是隨機產生 16 個 UInt8 的序列；
 主要有分成 128、160、192、224、256 bits（每 32 bits 做為一個區間），而下列會以 128 bits 作為流程解釋。
 對隨機序列加密（SHA256） 我們對剛剛所產生的序列做 SHA256 加密，便會得到由 32 個 UInt8 所組成的 Array。
 Checksum 用來驗證助記詞是否正確的方式是透過 Checksum 來辨別，而 Checksum 的 size 為序列的長度 / 區間，如我們這邊所提及的 128 / 32 = 4；
 意思便是剛剛所加密完的序列，我們取前面 4 bytes 的數值當作 checksum。
 產生助記詞 而剛剛的隨機序列（128 bits）加上 4 bits 的 checksum 組成 132 bits，接著我們每 11 bits 作為一個分隔，也就可以得到 132 / 11 = 12 個數字。
-而每 11 bits 作為一個分隔的意思也意味著數字的區間落在 0 – 2047 之間，也就是為什麼 12 字的助記詞所支援的單字庫數量為 2048。</description></item></channel></rss>
+而每 11 bits 作為一個分隔的意思也意味著數字的區間落在 0 – 2047 之間，也就是為什麼 12 字的助記詞所支援的單字庫數量為 2048。</description>
+    </item>
+    
+  </channel>
+</rss>

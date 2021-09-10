@@ -1,70 +1,156 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="GraphQL v.s REST 首先，看到這個標題，要先了解一下什麼是「REST」； 我們在先前的文章中有提到關於 Firebase Database REST API 的內容， 但並沒有在文章內解釋其含義是什麼。
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='GraphQL v.s REST 首先，看到這個標題，要先了解一下什麼是「REST」； 我們在先前的文章中有提到關於 Firebase Database REST API 的內容， 但並沒有在文章內解釋其含義是什麼。
 REST REST（Representational State Transfer），是一種架構，而非協定或是標準； 透過 HTTP 協議所提供的動作（POST、GET、PUT、DELETE）來對資源進行 CRUD（Create、Read、Update、Delete）， 並以 URI 的方式來指定資源：
  POST /games：建立遊戲 GET /games：取得遊戲清單 PUT /games/123：修改 id = 123 的遊戲內容 DELETE /games/123：刪除 id = 123 的遊戲 在 iOS 開發的串接 RESTful API 的經驗中，不論是取得的資料，或是回傳回 server 的資料， 大多是以 JSON 的格式在做溝通。 前後端之間可以透過 RESTful 的方式進行明確的溝通，進而開發出相對應的功能。  REST 的缺點 但有時候還是會遇到一些問題
 會拿到多餘的欄位 巢狀資源的處理 越來越多支 API 會拿到多餘的欄位
 有時候我們為了顯示一個商品，在畫面上需要呈現
- 商品名稱 價錢 照片 URL  但可能在 GET /products/1 的時候，會拿到整個商品的資料回來："><title>GraphQL</title>
-<link rel=canonical href=https://www.archie.tw/p/graphql/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="GraphQL">
-<meta property="og:description" content="GraphQL v.s REST 首先，看到這個標題，要先了解一下什麼是「REST」； 我們在先前的文章中有提到關於 Firebase Database REST API 的內容， 但並沒有在文章內解釋其含義是什麼。
+ 商品名稱 價錢 照片 URL  但可能在 GET /products/1 的時候，會拿到整個商品的資料回來：'><title>GraphQL</title>
+
+<link rel='canonical' href='https://www.archie.tw/p/graphql/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='GraphQL'>
+<meta property='og:description' content='GraphQL v.s REST 首先，看到這個標題，要先了解一下什麼是「REST」； 我們在先前的文章中有提到關於 Firebase Database REST API 的內容， 但並沒有在文章內解釋其含義是什麼。
+REST REST（Representational State Transfer），是一種架構，而非協定或是標準； 透過 HTTP 協議所提供的動作（POST、GET、PUT、DELETE）來對資源進行 CRUD（Create、Read、Update、Delete）， 並以 URI 的方式來指定資源：
+ POST /games：建立遊戲 GET /games：取得遊戲清單 PUT /games/123：修改 id = 123 的遊戲內容 DELETE /games/123：刪除 id = 123 的遊戲 在 iOS 開發的串接 RESTful API 的經驗中，不論是取得的資料，或是回傳回 server 的資料， 大多是以 JSON 的格式在做溝通。 前後端之間可以透過 RESTful 的方式進行明確的溝通，進而開發出相對應的功能。  REST 的缺點 但有時候還是會遇到一些問題
+會拿到多餘的欄位 巢狀資源的處理 越來越多支 API 會拿到多餘的欄位
+有時候我們為了顯示一個商品，在畫面上需要呈現
+ 商品名稱 價錢 照片 URL  但可能在 GET /products/1 的時候，會拿到整個商品的資料回來：'>
+<meta property='og:url' content='https://www.archie.tw/p/graphql/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2017-08-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-08-08T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="GraphQL">
+<meta name="twitter:description" content="GraphQL v.s REST 首先，看到這個標題，要先了解一下什麼是「REST」； 我們在先前的文章中有提到關於 Firebase Database REST API 的內容， 但並沒有在文章內解釋其含義是什麼。
 REST REST（Representational State Transfer），是一種架構，而非協定或是標準； 透過 HTTP 協議所提供的動作（POST、GET、PUT、DELETE）來對資源進行 CRUD（Create、Read、Update、Delete）， 並以 URI 的方式來指定資源：
  POST /games：建立遊戲 GET /games：取得遊戲清單 PUT /games/123：修改 id = 123 的遊戲內容 DELETE /games/123：刪除 id = 123 的遊戲 在 iOS 開發的串接 RESTful API 的經驗中，不論是取得的資料，或是回傳回 server 的資料， 大多是以 JSON 的格式在做溝通。 前後端之間可以透過 RESTful 的方式進行明確的溝通，進而開發出相對應的功能。  REST 的缺點 但有時候還是會遇到一些問題
 會拿到多餘的欄位 巢狀資源的處理 越來越多支 API 會拿到多餘的欄位
 有時候我們為了顯示一個商品，在畫面上需要呈現
  商品名稱 價錢 照片 URL  但可能在 GET /products/1 的時候，會拿到整個商品的資料回來：">
-<meta property="og:url" content="https://www.archie.tw/p/graphql/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2017-08-08T00:00:00+00:00"><meta property="article:modified_time" content="2017-08-08T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="GraphQL">
-<meta name=twitter:description content="GraphQL v.s REST 首先，看到這個標題，要先了解一下什麼是「REST」； 我們在先前的文章中有提到關於 Firebase Database REST API 的內容， 但並沒有在文章內解釋其含義是什麼。
-REST REST（Representational State Transfer），是一種架構，而非協定或是標準； 透過 HTTP 協議所提供的動作（POST、GET、PUT、DELETE）來對資源進行 CRUD（Create、Read、Update、Delete）， 並以 URI 的方式來指定資源：
- POST /games：建立遊戲 GET /games：取得遊戲清單 PUT /games/123：修改 id = 123 的遊戲內容 DELETE /games/123：刪除 id = 123 的遊戲 在 iOS 開發的串接 RESTful API 的經驗中，不論是取得的資料，或是回傳回 server 的資料， 大多是以 JSON 的格式在做溝通。 前後端之間可以透過 RESTful 的方式進行明確的溝通，進而開發出相對應的功能。  REST 的缺點 但有時候還是會遇到一些問題
-會拿到多餘的欄位 巢狀資源的處理 越來越多支 API 會拿到多餘的欄位
-有時候我們為了顯示一個商品，在畫面上需要呈現
- 商品名稱 價錢 照片 URL  但可能在 GET /products/1 的時候，會拿到整個商品的資料回來：">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.archie.tw" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span></span>
+            </a>
+        </div>
+    
 <main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>
-📒 程式筆記
-</a>
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" >
+                📒 程式筆記
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/graphql/">GraphQL</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 08, 2017</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
 </header>
-<h2 class=article-title>
-<a href=/p/graphql/>GraphQL</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Aug 08, 2017</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=graphql-vs-rest>GraphQL v.s REST</h1>
+
+    <section class="article-content">
+    <h1 id="graphql-vs-rest">GraphQL v.s REST</h1>
 <p>首先，看到這個標題，要先了解一下什麼是「REST」；
 我們在先前的文章中有提到關於 Firebase Database REST API 的內容，
 但並沒有在文章內解釋其含義是什麼。</p>
-<h2 id=rest>REST</h2>
+<h2 id="rest">REST</h2>
 <p>REST（Representational State Transfer），是一種架構，而非協定或是標準；
 透過 HTTP 協議所提供的動作（POST、GET、PUT、DELETE）來對資源進行 CRUD（Create、Read、Update、Delete），
 並以 URI 的方式來指定資源：</p>
@@ -77,9 +163,9 @@ extended">
 大多是以 JSON 的格式在做溝通。
 前後端之間可以透過 RESTful 的方式進行明確的溝通，進而開發出相對應的功能。</li>
 </ul>
-<h3 id=rest-的缺點>REST 的缺點</h3>
+<h3 id="rest-的缺點">REST 的缺點</h3>
 <p>但有時候還是會遇到一些問題</p>
-<h3 id=會拿到多餘的欄位>會拿到多餘的欄位</h3>
+<h3 id="會拿到多餘的欄位">會拿到多餘的欄位</h3>
 <p>巢狀資源的處理
 越來越多支 API
 會拿到多餘的欄位</p>
@@ -100,7 +186,7 @@ extended">
 <li>最後更新時間
 不過在顯示端僅需要呈現三個項目，那麼其他回傳的資料就浪費了彼此之間的網路傳輸。</li>
 </ul>
-<h3 id=巢狀資源的處理>巢狀資源的處理</h3>
+<h3 id="巢狀資源的處理">巢狀資源的處理</h3>
 <p>像是在一個畫面中，需要顯示「我的最愛」；
 在 REST 的架構下，我們會設計出兩支 API：</p>
 <p>GET /users/1/favorites：取得 id = 1 的會員的最愛清單
@@ -108,7 +194,7 @@ GET /books/123：取得 id = 123 的書本資料
 我們會在第一支 API 中取得一個書本 ID 列表，再來呼叫第二支 API 來取得書本資訊；
 如果將書本的資訊直接併入最愛之中，雖然可以減少查詢的次數，但又會在某些不需要關聯的時候，
 而讓書本成為多餘的欄位。</p>
-<h3 id=於是乎就會越來越多支-api>於是乎就會越來越多支 API</h3>
+<h3 id="於是乎就會越來越多支-api">於是乎就會越來越多支 API</h3>
 <p>上述幾種狀況，可能就會開始出現：</p>
 <ul>
 <li>GET /products-with-photo</li>
@@ -118,18 +204,18 @@ GET /books/123：取得 id = 123 的書本資料
 但這也破壞了 REST 原先的架構設計風格。
 所以，Facebook 便在 2012 年開始在公司內部使用另一種架設風格來解決這些問題：</li>
 </ul>
-<h2 id=graphql>GraphQL</h2>
+<h2 id="graphql">GraphQL</h2>
 <p>GraphQL 是由 Facebook 所提出的一種 query language，從 2012 年內部開始使用，到 2015 年 7 月開源。
 其精神便是將所有的 API 都統整成一支 GraphQL 的 API：</p>
 <ul>
 <li>GET /graphql?query={ user(id: “1”) { name, address { zipCode } } }</li>
 </ul>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
-    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Archie&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;address&#34;</span><span class=p>:</span> <span class=p>{</span>
-        <span class=nt>&#34;zipCode&#34;</span><span class=p>:</span> <span class=s2>&#34;12345&#34;</span>
-    <span class=p>}</span>
-<span class=p>}</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Archie&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;address&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;zipCode&#34;</span><span class="p">:</span> <span class="s2">&#34;12345&#34;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div><p>回傳的資料由呼叫 API 的人決定，有點像是讓呼叫人的負責下 query 的條件。
 讓前後端共同使用一份 schema 來定義出個物件的 type 和定義好 Query 這個物件的內容，
 再來就由呼叫方來自由發揮需要取得哪些資訊自訂組裝。
@@ -140,138 +226,302 @@ GET /books/123：取得 id = 123 的書本資料
 <li>可以自行決定拿到哪些欄位
 進而改善上面所提到的問題。</li>
 </ul>
-<h1 id=結論>結論</h1>
+<h1 id="結論">結論</h1>
 <p>對於 iOS 的開發人員而言，是一種蠻新潮且有趣的串接方式，
 但在後端就不知道是一個怎樣的複雜程度了⋯⋯畢竟我比較著重在 iOS 的應用方面，
 有興趣的人可以看看我所一開始看的這篇文章。</p>
+
 </section>
-<footer class=article-footer>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
 </article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/>
-<div class=article-details>
-<h2 class=article-title>Markdown 嵌入 YouTube</h2>
-</div>
-</a>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title"></h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/markdown-%E5%B5%8C%E5%85%A5-youtube/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown 嵌入 YouTube</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>
-<div class=article-details>
-<h2 class=article-title>iOS 開發環境設置</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS 開發環境設置</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/fastlane-503-service-temporarily-unavailable/>
-<div class=article-details>
-<h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/fastlane-503-service-temporarily-unavailable/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Fastlane 503 Service Temporarily Unavailable</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/change-login-shells-without-chsh/>
-<div class=article-details>
-<h2 class=article-title>Change login shells without chsh</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/change-login-shells-without-chsh/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Change login shells without chsh</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/postman-pre-request-script/>
-<div class=article-details>
-<h2 class=article-title>POSTMAN – Pre-request script</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/postman-pre-request-script/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">POSTMAN – Pre-request script</h2>
+        </div>
+    </a>
 </article>
-</div>
-</div>
+                
+            </div>
+        </div>
+    
 </aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
-2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+         <br />
+        
+    </section>
 </footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#rest>REST</a>
-<ol>
-<li><a href=#rest-的缺點>REST 的缺點</a></li>
-<li><a href=#會拿到多餘的欄位>會拿到多餘的欄位</a></li>
-<li><a href=#巢狀資源的處理>巢狀資源的處理</a></li>
-<li><a href=#於是乎就會越來越多支-api>於是乎就會越來越多支 API</a></li>
-</ol>
-</li>
-<li><a href=#graphql>GraphQL</a></li>
-</ol>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title"></h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#rest">REST</a>
+      <ol>
+        <li><a href="#rest-的缺點">REST 的缺點</a></li>
+        <li><a href="#會拿到多餘的欄位">會拿到多餘的欄位</a></li>
+        <li><a href="#巢狀資源的處理">巢狀資源的處理</a></li>
+        <li><a href="#於是乎就會越來越多支-api">於是乎就會越來越多支 API</a></li>
+      </ol>
+    </li>
+    <li><a href="#graphql">GraphQL</a></li>
+  </ol>
 </nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

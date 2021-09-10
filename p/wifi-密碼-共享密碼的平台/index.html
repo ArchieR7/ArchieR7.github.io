@@ -1,16 +1,32 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
 使用流程 打開 Wifi 密碼 – 共享密碼的平台 後，會需要使用 Facebook 做登入的動作， 其主要原因是，裡頭的資訊是由全部使用者共同維護的（共筆的概念）， 所以其實會紀錄是哪個使用者新增 Wifi 資訊，但並不會顯示出來。 為了讓使用者承擔一點點微薄的責任，來讓大家都可以比較信任 Wifi 裡頭的資訊可信度， 便加入的登入的系統。
  登入畫面 
 接著我們會看到主畫面：
  Wifi 列表 
 可以看到目前共筆上，有哪些 Wifi 的資訊：
  名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。  舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
-實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。"><title>Wifi 密碼 – 共享密碼的平台</title>
-<link rel=canonical href=https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Wifi 密碼 – 共享密碼的平台">
-<meta property="og:description" content="上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
+實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。'><title>Wifi 密碼 – 共享密碼的平台</title>
+
+<link rel='canonical' href='https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Wifi 密碼 – 共享密碼的平台'>
+<meta property='og:description' content='上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
+使用流程 打開 Wifi 密碼 – 共享密碼的平台 後，會需要使用 Facebook 做登入的動作， 其主要原因是，裡頭的資訊是由全部使用者共同維護的（共筆的概念）， 所以其實會紀錄是哪個使用者新增 Wifi 資訊，但並不會顯示出來。 為了讓使用者承擔一點點微薄的責任，來讓大家都可以比較信任 Wifi 裡頭的資訊可信度， 便加入的登入的系統。
+ 登入畫面 
+接著我們會看到主畫面：
+ Wifi 列表 
+可以看到目前共筆上，有哪些 Wifi 的資訊：
+ 名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。  舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
+實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。'>
+<meta property='og:url' content='https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:tag' content='Side project' /><meta property='article:published_time' content='2017-06-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-06-28T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="Wifi 密碼 – 共享密碼的平台">
+<meta name="twitter:description" content="上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
 使用流程 打開 Wifi 密碼 – 共享密碼的平台 後，會需要使用 Facebook 做登入的動作， 其主要原因是，裡頭的資訊是由全部使用者共同維護的（共筆的概念）， 所以其實會紀錄是哪個使用者新增 Wifi 資訊，但並不會顯示出來。 為了讓使用者承擔一點點微薄的責任，來讓大家都可以比較信任 Wifi 裡頭的資訊可信度， 便加入的登入的系統。
  登入畫面 
 接著我們會看到主畫面：
@@ -18,77 +34,163 @@
 可以看到目前共筆上，有哪些 Wifi 的資訊：
  名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。  舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
 實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。">
-<meta property="og:url" content="https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:tag" content="Side project"><meta property="article:published_time" content="2017-06-28T00:00:00+00:00"><meta property="article:modified_time" content="2017-06-28T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Wifi 密碼 – 共享密碼的平台">
-<meta name=twitter:description content="上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
-使用流程 打開 Wifi 密碼 – 共享密碼的平台 後，會需要使用 Facebook 做登入的動作， 其主要原因是，裡頭的資訊是由全部使用者共同維護的（共筆的概念）， 所以其實會紀錄是哪個使用者新增 Wifi 資訊，但並不會顯示出來。 為了讓使用者承擔一點點微薄的責任，來讓大家都可以比較信任 Wifi 裡頭的資訊可信度， 便加入的登入的系統。
- 登入畫面 
-接著我們會看到主畫面：
- Wifi 列表 
-可以看到目前共筆上，有哪些 Wifi 的資訊：
- 名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。  舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
-實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.archie.tw" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span></span>
+            </a>
+        </div>
+    
 <main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
-🍎 開發心得
-</a>
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/" >
+                🍎 開發心得
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/">Wifi 密碼 – 共享密碼的平台</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 28, 2017</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
 </header>
-<h2 class=article-title>
-<a href=/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/>Wifi 密碼 – 共享密碼的平台</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Jun 28, 2017</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<p>上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具，
+
+    <section class="article-content">
+    <p>上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具，
 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊：
 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯
 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來，
 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。</p>
-<h3 id=使用流程>使用流程</h3>
+<h3 id="使用流程">使用流程</h3>
 <p>打開 Wifi 密碼 – 共享密碼的平台 後，會需要使用 Facebook 做登入的動作，
 其主要原因是，裡頭的資訊是由全部使用者共同維護的（共筆的概念），
 所以其實會紀錄是哪個使用者新增 Wifi 資訊，但並不會顯示出來。
 為了讓使用者承擔一點點微薄的責任，來讓大家都可以比較信任 Wifi 裡頭的資訊可信度，
 便加入的登入的系統。</p>
-<p><figure>
-<a href="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple117/v4/36/68/07/3668075d-1735-c23f-1651-2b2056bf3ef6/screen696x696.jpeg?resize=392%2C696">
-<img src="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple117/v4/36/68/07/3668075d-1735-c23f-1651-2b2056bf3ef6/screen696x696.jpeg?resize=392%2C696" loading=lazy alt=登入畫面>
-</a>
-<figcaption>登入畫面</figcaption>
+<p><figure 
+	>
+	<a href="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple117/v4/36/68/07/3668075d-1735-c23f-1651-2b2056bf3ef6/screen696x696.jpeg?resize=392%2C696" >
+		<img src="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple117/v4/36/68/07/3668075d-1735-c23f-1651-2b2056bf3ef6/screen696x696.jpeg?resize=392%2C696"
+			
+			
+			
+			loading="lazy"
+			alt="登入畫面">
+	</a>
+	
+	<figcaption>登入畫面</figcaption>
+	
 </figure></p>
 <p>接著我們會看到主畫面：</p>
-<p><figure>
-<a href="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple127/v4/3f/19/33/3f193350-748a-44cc-a94d-fad154dea76c/screen696x696.jpeg?resize=392%2C696">
-<img src="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple127/v4/3f/19/33/3f193350-748a-44cc-a94d-fad154dea76c/screen696x696.jpeg?resize=392%2C696" loading=lazy alt="Wifi 列表">
-</a>
-<figcaption>Wifi 列表</figcaption>
+<p><figure 
+	>
+	<a href="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple127/v4/3f/19/33/3f193350-748a-44cc-a94d-fad154dea76c/screen696x696.jpeg?resize=392%2C696" >
+		<img src="https://i0.wp.com/a4.mzstatic.com/us/r30/Purple127/v4/3f/19/33/3f193350-748a-44cc-a94d-fad154dea76c/screen696x696.jpeg?resize=392%2C696"
+			
+			
+			
+			loading="lazy"
+			alt="Wifi 列表">
+	</a>
+	
+	<figcaption>Wifi 列表</figcaption>
+	
 </figure></p>
 <p>可以看到目前共筆上，有哪些 Wifi 的資訊：</p>
 <ul>
@@ -96,17 +198,17 @@ extended">
 <li>地點</li>
 <li>狀態</li>
 <li>最後更新時間
-點擊進去之後，有可能會跳出 <a class=link href=../admob-%e7%8d%8e%e5%8b%b5%e5%bc%8f%e5%bb%a3%e5%91%8a%e5%af%a6%e4%bd%9c>AdMob 的獎勵型影片廣告</a>，可以點擊連結看看當初實作的流程。
+點擊進去之後，有可能會跳出 <a class="link" href="../admob-%e7%8d%8e%e5%8b%b5%e5%bc%8f%e5%bb%a3%e5%91%8a%e5%af%a6%e4%bd%9c" >AdMob 的獎勵型影片廣告</a>，可以點擊連結看看當初實作的流程。
 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。</li>
 </ul>
-<h3 id=舉報無效>舉報無效</h3>
+<h3 id="舉報無效">舉報無效</h3>
 <p>下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」，
 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。
 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯</p>
-<h3 id=實作方向--登入>實作方向 – 登入</h3>
+<h3 id="實作方向--登入">實作方向 – 登入</h3>
 <p>臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式；
 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。</p>
-<h3 id=資料庫>資料庫</h3>
+<h3 id="資料庫">資料庫</h3>
 <p>這邊是繼續使用 Firebase 上的 Database，它是 NoSQL 的架構，並且可以在 rules 上設計相關規則；
 目前我只有使用 .indexOn 和判斷 Auth 是否合法，來決定資料庫的讀寫權限。</p>
 <p>###使用到的 Framework</p>
@@ -117,144 +219,314 @@ extended">
 <li>ReachabilitySwift</li>
 <li>MapKit</li>
 </ul>
-<h3 id=下載連結>下載連結</h3>
-<p><a class=link href=https://appsto.re/tw/cHvLkb.i target=_blank rel=noopener>Wifi 密碼 – 共享密碼的平台</a>
+<h3 id="下載連結">下載連結</h3>
+<p><a class="link" href="https://appsto.re/tw/cHvLkb.i"  target="_blank" rel="noopener"
+    >Wifi 密碼 – 共享密碼的平台</a>
 有興趣的大大，可以下載下來玩玩！
 目前裡頭資訊還很少，大多數是我從自己 MacBook 裡頭的 Wifi 資訊貼上去的；
 希望藉由大家的共享來充實這方面的資訊。</p>
+
 </section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-<a href=/tags/side-project/>Side project</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">iOS</a>
+        
+            <a href="/tags/swift/">Swift</a>
+        
+            <a href="/tags/side-project/">Side project</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
 </article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title"></h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">發票收集雞 - 自己的發票自己收</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Apple Watch App 開發除錯心得</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/>
-<div class=article-details>
-<h2 class=article-title>RxSwift 6 上線啦！</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RxSwift 6 上線啦！</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/>
-<div class=article-details>
-<h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【iOS 逆向】下載 Instagram 動態照片</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>iOS App launch time 心得</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS App launch time 心得</h2>
+        </div>
+    </a>
 </article>
-</div>
-</div>
+                
+            </div>
+        </div>
+    
 </aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
-2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+         <br />
+        
+    </section>
 </footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li>
-<ol>
-<li><a href=#使用流程>使用流程</a></li>
-<li><a href=#舉報無效>舉報無效</a></li>
-<li><a href=#實作方向--登入>實作方向 – 登入</a></li>
-<li><a href=#資料庫>資料庫</a></li>
-<li><a href=#下載連結>下載連結</a></li>
-</ol>
-</li>
-</ol>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title"></h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#使用流程">使用流程</a></li>
+        <li><a href="#舉報無效">舉報無效</a></li>
+        <li><a href="#實作方向--登入">實作方向 – 登入</a></li>
+        <li><a href="#資料庫">資料庫</a></li>
+        <li><a href="#下載連結">下載連結</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

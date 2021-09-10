@@ -1,18 +1,35 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
-環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader + iOS 12.4。
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
+環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader &#43; iOS 12.4。
 連上越獄裝置 流程如同之前所提及的，先開啟 iproxy 來代理 22 port
 iproxy 2222 22 並透過 ssh 的方式連上越獄裝置
 ssh -p 2222 root@127.0.0.1 密碼預設會是 alpine
 提取 .ipa 我照著 medium 上的教學，使用 frida-ios-dump 作為提取的方式。
 frida-ios-dump 安裝 首先，先在 iOS 裝置上安裝 Frida
  
-這邊會取決於你的裝置是哪一種 CPU 而不同。"><title>【iOS 逆向】下載 Instagram 動態照片</title>
-<link rel=canonical href=https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="【iOS 逆向】下載 Instagram 動態照片">
-<meta property="og:description" content="這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
-環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader + iOS 12.4。
+這邊會取決於你的裝置是哪一種 CPU 而不同。'><title>【iOS 逆向】下載 Instagram 動態照片</title>
+
+<link rel='canonical' href='https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='【iOS 逆向】下載 Instagram 動態照片'>
+<meta property='og:description' content='這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
+環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader &#43; iOS 12.4。
+連上越獄裝置 流程如同之前所提及的，先開啟 iproxy 來代理 22 port
+iproxy 2222 22 並透過 ssh 的方式連上越獄裝置
+ssh -p 2222 root@127.0.0.1 密碼預設會是 alpine
+提取 .ipa 我照著 medium 上的教學，使用 frida-ios-dump 作為提取的方式。
+frida-ios-dump 安裝 首先，先在 iOS 裝置上安裝 Frida
+ 
+這邊會取決於你的裝置是哪一種 CPU 而不同。'>
+<meta property='og:url' content='https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2020-04-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-04-01T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="【iOS 逆向】下載 Instagram 動態照片">
+<meta name="twitter:description" content="這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
+環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader &#43; iOS 12.4。
 連上越獄裝置 流程如同之前所提及的，先開啟 iproxy 來代理 22 port
 iproxy 2222 22 並透過 ssh 的方式連上越獄裝置
 ssh -p 2222 root@127.0.0.1 密碼預設會是 alpine
@@ -20,57 +37,127 @@ ssh -p 2222 root@127.0.0.1 密碼預設會是 alpine
 frida-ios-dump 安裝 首先，先在 iOS 裝置上安裝 Frida
  
 這邊會取決於你的裝置是哪一種 CPU 而不同。">
-<meta property="og:url" content="https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2020-04-01T00:00:00+00:00"><meta property="article:modified_time" content="2020-04-01T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="【iOS 逆向】下載 Instagram 動態照片">
-<meta name=twitter:description content="這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
-環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader + iOS 12.4。
-連上越獄裝置 流程如同之前所提及的，先開啟 iproxy 來代理 22 port
-iproxy 2222 22 並透過 ssh 的方式連上越獄裝置
-ssh -p 2222 root@127.0.0.1 密碼預設會是 alpine
-提取 .ipa 我照著 medium 上的教學，使用 frida-ios-dump 作為提取的方式。
-frida-ios-dump 安裝 首先，先在 iOS 裝置上安裝 Frida
- 
-這邊會取決於你的裝置是哪一種 CPU 而不同。">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.archie.tw" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span></span>
+            </a>
+        </div>
+    
 <main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
-🍎 開發心得
-</a>
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/" >
+                🍎 開發心得
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/">【iOS 逆向】下載 Instagram 動態照片</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 01, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
 </header>
-<h2 class=article-title>
-<a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/>【iOS 逆向】下載 Instagram 動態照片</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Apr 01, 2020</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<p>這篇文章的起點是從 ZheChgLi 所發表的 <a class=link href=https://medium.com/zrealm-ios-dev/ios-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e5%88%9d%e9%ab%94%e9%a9%97-7498e1ff93ce target=_blank rel=noopener>iOS 逆向初體驗</a>，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。</p>
-<h1 id=環境>環境</h1>
+
+    <section class="article-content">
+    <p>這篇文章的起點是從 ZheChgLi 所發表的 <a class="link" href="https://medium.com/zrealm-ios-dev/ios-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e5%88%9d%e9%ab%94%e9%a9%97-7498e1ff93ce"  target="_blank" rel="noopener"
+    >iOS 逆向初體驗</a>，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。</p>
+<h1 id="環境">環境</h1>
 <ul>
 <li><strong>macOS:</strong> 10.15.4</li>
 <li><strong>iOS 裝置</strong>
@@ -81,300 +168,582 @@ extended">
 </li>
 <li><strong>Xcode</strong> 11.4</li>
 </ul>
-<p>我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - <a class=link href=../reveal2loader-ios-12.4/>Reveal2Loader + iOS 12.4</a>。</p>
-<h1 id=連上越獄裝置>連上越獄裝置</h1>
+<p>我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - <a class="link" href="../reveal2loader-ios-12.4/" >Reveal2Loader + iOS 12.4</a>。</p>
+<h1 id="連上越獄裝置">連上越獄裝置</h1>
 <p>流程如同之前所提及的，先開啟 <code>iproxy</code> 來代理 22 port</p>
-<pre tabindex=0><code>iproxy 2222 22
+<pre tabindex="0"><code>iproxy 2222 22
 </code></pre><p>並透過 ssh 的方式連上越獄裝置</p>
-<pre tabindex=0><code>ssh -p 2222 root@127.0.0.1
+<pre tabindex="0"><code>ssh -p 2222 root@127.0.0.1
 </code></pre><p>密碼預設會是 <code>alpine</code></p>
-<h1 id=提取-ipa>提取 .ipa</h1>
-<p>我照著 medium 上的教學，使用 <a class=link href=https://github.com/AloneMonkey/frida-ios-dump target=_blank rel=noopener>frida-ios-dump</a> 作為提取的方式。</p>
-<h2 id=frida-ios-dump-安裝>frida-ios-dump 安裝</h2>
+<h1 id="提取-ipa">提取 .ipa</h1>
+<p>我照著 medium 上的教學，使用 <a class="link" href="https://github.com/AloneMonkey/frida-ios-dump"  target="_blank" rel="noopener"
+    >frida-ios-dump</a> 作為提取的方式。</p>
+<h2 id="frida-ios-dump-安裝">frida-ios-dump 安裝</h2>
 <p>首先，先在 iOS 裝置上安裝 Frida</p>
-<p><figure>
-<a href=/../img/image-1585645854648.png>
-<img src=/../img/image-1585645854648.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585645854648.png" >
+		<img src="/../img/image-1585645854648.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>這邊會取決於你的裝置是哪一種 CPU 而不同。</p>
 <p>接著 clone frida-ios-dump 的 repository 並使用 pip 來安裝需要的套件。</p>
-<pre tabindex=0><code>sudo pip install -r requirements.txt --upgrade
+<pre tabindex="0"><code>sudo pip install -r requirements.txt --upgrade
 </code></pre><p>都完成了之後，就可以透過 <code>dump.py</code> 來操作，像是列出裝置上所有應用程式</p>
-<pre tabindex=0><code>python3 dump.py -l
-</code></pre><p><figure>
-<a href=/../img/image-1585646173983.png>
-<img src=/../img/image-1585646173983.png loading=lazy>
-</a>
+<pre tabindex="0"><code>python3 dump.py -l
+</code></pre><p><figure 
+	>
+	<a href="/../img/image-1585646173983.png" >
+		<img src="/../img/image-1585646173983.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>找到目標之後來提取相對應的 .ipa</p>
-<pre tabindex=0><code>python3 dump.py com.burbn.instagram -o /PathToSave/instagram.ipa
+<pre tabindex="0"><code>python3 dump.py com.burbn.instagram -o /PathToSave/instagram.ipa
 </code></pre><p>你便可以得到一個脫殼的 <code>instagram.ipa</code> 了！</p>
-<h1 id=使用-monkeydevhttpsgithubcomalonemonkeymonkeydev>使用 <a class=link href=https://github.com/AloneMonkey/MonkeyDev target=_blank rel=noopener>MonkeyDev</a></h1>
+<h1 id="使用-monkeydevhttpsgithubcomalonemonkeymonkeydev">使用 <a class="link" href="https://github.com/AloneMonkey/MonkeyDev"  target="_blank" rel="noopener"
+    >MonkeyDev</a></h1>
 <p>再來介紹這個很厲害的工具 - MonkeyDev，它是一個 Xcode 的插件，讓我們可以在非越獄上的裝置安裝脫殼完的 ipa，進而實現一些 hook！
 這邊就可以來介紹一下如何在非越獄的裝置上查看 Reveal！</p>
-<h2 id=安裝-monkeydevhttpsgithubcomalonemonkeymonkeydevwiki安装><a class=link href=https://github.com/AloneMonkey/MonkeyDev/wiki/%e5%ae%89%e8%a3%85 target=_blank rel=noopener>安裝 MonkeyDev</a></h2>
-<p>安裝 <a class=link href=https://github.com/theos/theos/wiki/Installation target=_blank rel=noopener>theos</a></p>
-<pre tabindex=0><code>sudo git clone --recursive https://github.com/theos/theos.git /opt/theos
+<h2 id="安裝-monkeydevhttpsgithubcomalonemonkeymonkeydevwiki安装"><a class="link" href="https://github.com/AloneMonkey/MonkeyDev/wiki/%e5%ae%89%e8%a3%85"  target="_blank" rel="noopener"
+    >安裝 MonkeyDev</a></h2>
+<p>安裝 <a class="link" href="https://github.com/theos/theos/wiki/Installation"  target="_blank" rel="noopener"
+    >theos</a></p>
+<pre tabindex="0"><code>sudo git clone --recursive https://github.com/theos/theos.git /opt/theos
 </code></pre><p>安裝 ldid</p>
-<pre tabindex=0><code>brew install ldid
+<pre tabindex="0"><code>brew install ldid
 </code></pre><p>執行安裝指令</p>
-<pre tabindex=0><code>sudo /bin/sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/AloneMonkey/MonkeyDev/master/bin/md-install)&quot;
-</code></pre><h4 id=安裝錯誤找不到-xcode>安裝錯誤：找不到 Xcode</h4>
+<pre tabindex="0"><code>sudo /bin/sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/AloneMonkey/MonkeyDev/master/bin/md-install)&quot;
+</code></pre><h4 id="安裝錯誤找不到-xcode">安裝錯誤：找不到 Xcode</h4>
 <p>它會安裝在預設的 Xcode 路徑上，也就是 <code>xcode-select -p</code> 的位置，而經過我的測試，若你的 Xcode 名稱有空格的話，會發生它找不到 Xcode 路徑的錯誤。
 如 <code>Xcode 11.4.app</code> 就會找不到，我的做法是把空格刪去吧。</p>
-<h2 id=使用-monkeydev>使用 MonkeyDev</h2>
+<h2 id="使用-monkeydev">使用 MonkeyDev</h2>
 <p>我們來打開 Xcode，便可以找到下方有 <code>MonkeyDev</code> 的欄位，選擇 <code>MonkeyApp</code> 來使用</p>
-<p><figure>
-<a href=/../img/image-1585648082516.png>
-<img src=/../img/image-1585648082516.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585648082516.png" >
+		<img src="/../img/image-1585648082516.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>建立好專案之後，將上面輸出的 .ipa 拖到專案之中按下 <code>command + B</code> 來 build 一下。</p>
-<p><figure>
-<a href=/../img/image-1585659072482.png>
-<img src=/../img/image-1585659072482.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585659072482.png" >
+		<img src="/../img/image-1585659072482.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>你也可以直接安裝到你的手機上，這樣其實就達成了一個多開的功效了；畢竟它們的 bundle identifier 並不同。
 一個重點是，你必須將越獄的裝置也同時接著線才行，MonkeyDev 在那裝的時候</p>
-<h2 id=打開-reveal-查看>打開 Reveal 查看</h2>
+<h2 id="打開-reveal-查看">打開 Reveal 查看</h2>
 <p>這時候打開 Reveal 便可以發現，剛剛安裝 app 有出現在列表上了！</p>
-<p>但你點擊後可能會發現和<a class=link href=https://archie.tw/2020/02/02/reveal2loader-ios-12-4/ target=_blank rel=noopener>上次遇到一樣的問題 - RevealServer 版本過舊</a> 這時候就將 <code>/Users/Archie/Library/Application Support/Reveal/RevealServer</code> 複製到 <code>/opt/MonkeyDev/Frameworks/</code> 取代並再 run 一次即可。</p>
-<h2 id=加入-flexhttpsgithubcomflipboardflex>加入 <a class=link href=https://github.com/Flipboard/FLEX target=_blank rel=noopener>FLEX</a></h2>
+<p>但你點擊後可能會發現和<a class="link" href="https://archie.tw/2020/02/02/reveal2loader-ios-12-4/"  target="_blank" rel="noopener"
+    >上次遇到一樣的問題 - RevealServer 版本過舊</a> 這時候就將 <code>/Users/Archie/Library/Application Support/Reveal/RevealServer</code> 複製到 <code>/opt/MonkeyDev/Frameworks/</code> 取代並再 run 一次即可。</p>
+<h2 id="加入-flexhttpsgithubcomflipboardflex">加入 <a class="link" href="https://github.com/Flipboard/FLEX"  target="_blank" rel="noopener"
+    >FLEX</a></h2>
 <p>FLEX 是一個可以在 app 裡頭查看資訊的 debug 工具，MonkeyDev 如同一般的 Xcode 專案一樣，有支援 CocoaPods，所以我們可以透過 pods 的方式來加入 FLEX。</p>
-<p><figure>
-<a href=/../img/image-1585660595694.png>
-<img src=/../img/image-1585660595694.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585660595694.png" >
+		<img src="/../img/image-1585660595694.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>唯一的重點就是，FLEX 是要加入到 Dylib 裡頭透過 hook 的方式注入，所以 Podfile 那邊要寫對地方。
 並在 instagramDylib.m 裡頭加入相對應的程式碼：</p>
-<p><figure>
-<a href=/../img/image-1585660579870.png>
-<img src=/../img/image-1585660579870.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585660579870.png" >
+		<img src="/../img/image-1585660579870.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>如此一來，在裝置上就可以使用 FLEX 了</p>
-<p><figure>
-<a href=/../img/image-1585660764177.png>
-<img src=/../img/image-1585660764177.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585660764177.png" >
+		<img src="/../img/image-1585660764177.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
-<h1 id=靈感發想>靈感發想</h1>
+<h1 id="靈感發想">靈感發想</h1>
 <p>我這次打算加入個功能，讓我可以透過一些操作來直接取得圖片；
 於是得先來分析一下如何取得照片。</p>
-<h2 id=利用-flex-來定位元件>利用 FLEX 來定位元件</h2>
+<h2 id="利用-flex-來定位元件">利用 FLEX 來定位元件</h2>
 <p>首先來使用 select 的功能，點擊一下圖片得知是一個 <code>IGImageView</code> 的 class</p>
-<p><figure>
-<a href=/../img/image-1585713489306.png>
-<img src=/../img/image-1585713489306.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585713489306.png" >
+		<img src="/../img/image-1585713489306.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>再透過 views 的功能找到上層的元件是 <code>IGImageProgressView</code> 和 <code>IGFeedPhotoView</code></p>
-<p><figure>
-<a href=/../img/image-1585713471799.png>
-<img src=/../img/image-1585713471799.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585713471799.png" >
+		<img src="/../img/image-1585713471799.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>點進去可以查看 <code>IGFeedPhotoView</code> 的 properties，嘗試了一下得知 instagram 是將 url 存在一個叫做 <code>IGImageSpecifier</code> 的 class 裡頭</p>
-<p><figure>
-<a href=/../img/image-1585713642767.png>
-<img src=/../img/image-1585713642767.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585713642767.png" >
+		<img src="/../img/image-1585713642767.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>於是我們就可以開始 hook 了！</p>
-<h2 id=建立-header>建立 Header</h2>
+<h2 id="建立-header">建立 Header</h2>
 <p>我們先到 instagramDylib 的資料夾中，建立兩個檔案</p>
 <ul>
-<li><a class=link href=htps://github.com/ArchieR7/InstagramHook/blob/master/instagramDylib/Hook/InstagramHeader.h>InstagramHeader.h</a>：來寫一些原本 Instagram 本身的 header</li>
-<li><a class=link href=https://github.com/ArchieR7/InstagramHook/blob/master/instagramDylib/Hook/IGFeedPhotoViewHook.m target=_blank rel=noopener>IGFeedPhotoViewHook.m</a>：來寫 hook</li>
+<li><a class="link" href="htps://github.com/ArchieR7/InstagramHook/blob/master/instagramDylib/Hook/InstagramHeader.h" >InstagramHeader.h</a>：來寫一些原本 Instagram 本身的 header</li>
+<li><a class="link" href="https://github.com/ArchieR7/InstagramHook/blob/master/instagramDylib/Hook/IGFeedPhotoViewHook.m"  target="_blank" rel="noopener"
+    >IGFeedPhotoViewHook.m</a>：來寫 hook</li>
 </ul>
-<h3 id=instagramheaderh>InstagramHeader.h</h3>
+<h3 id="instagramheaderh">InstagramHeader.h</h3>
 <p>這裡頭就宣告一些我們打算使用到的 properties 就好了
-<figure>
-<a href=/../img/image-1585713915196.png>
-<img src=/../img/image-1585713915196.png loading=lazy>
-</a>
+<figure 
+	>
+	<a href="/../img/image-1585713915196.png" >
+		<img src="/../img/image-1585713915196.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
-<h3 id=igfeedphotoviewhookm>IGFeedPhotoViewHook.m</h3>
+<h3 id="igfeedphotoviewhookm">IGFeedPhotoViewHook.m</h3>
 <p>查看了一下，發現有個 <code>_onDoubleTap</code> 的 method，應該就是雙擊給愛心的功能</p>
-<p><figure>
-<a href=/../img/image-1585714061293.png>
-<img src=/../img/image-1585714061293.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585714061293.png" >
+		<img src="/../img/image-1585714061293.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
 <p>這部分我打算就來透過修改雙擊的動作來跳出一個選單，選單內可以選擇給 ❤️ 或是儲存到相簿</p>
-<p><figure>
-<a href=/../img/image-1585714246621.png>
-<img src=/../img/image-1585714246621.png loading=lazy>
-</a>
+<p><figure 
+	>
+	<a href="/../img/image-1585714246621.png" >
+		<img src="/../img/image-1585714246621.png"
+			
+			
+			
+			loading="lazy"
+			>
+	</a>
+	
 </figure></p>
-<h2 id=demo>Demo</h2>
-<p>我將程式放上了 <a class=link href=https://github.com/ArchieR7/InstagramHook target=_blank rel=noopener>GitHub</a>，你可以直接來查看！
+<h2 id="demo">Demo</h2>
+<p>我將程式放上了 <a class="link" href="https://github.com/ArchieR7/InstagramHook"  target="_blank" rel="noopener"
+    >GitHub</a>，你可以直接來查看！
 不過 Instagram.ipa 有點過大所以有些 framework 沒有傳上，所以你要玩的話最好自己覆蓋過去一份新的。</p>
-<p><figure>
-<a href=https://github.com/ArchieR7/InstagramHook/raw/master/DEMO.gif>
-<img src=https://github.com/ArchieR7/InstagramHook/raw/master/DEMO.gif loading=lazy alt=Demo>
-</a>
-<figcaption>Demo</figcaption>
+<p><figure 
+	>
+	<a href="https://github.com/ArchieR7/InstagramHook/raw/master/DEMO.gif" >
+		<img src="https://github.com/ArchieR7/InstagramHook/raw/master/DEMO.gif"
+			
+			
+			
+			loading="lazy"
+			alt="Demo">
+	</a>
+	
+	<figcaption>Demo</figcaption>
+	
 </figure></p>
-<h1 id=相關的參考資料>相關的參考資料</h1>
+<h1 id="相關的參考資料">相關的參考資料</h1>
 <ul>
-<li><a class=link href=https://mp.weixin.qq.com/s/TpwZtPu0DKOwm2d6B9fTmg target=_blank rel=noopener>给微信添加聊天记录截图功能</a></li>
-<li><a class=link href=https://sherlockz.github.io/2017/10/22/ios-hook/ target=_blank rel=noopener>不懂汇编,如何逆向(iOS)</a></li>
-<li><a class=link href=https://blog.csdn.net/qq_21051503/article/details/85586275 target=_blank rel=noopener>基于MonkeyDev实现不越狱修改钉钉位置打卡和签到</a></li>
-<li><a class=link href=https://blog.csdn.net/yca8939/article/details/50638368 target=_blank rel=noopener>iOS越狱插件编写 - 支付宝自动咻咻 （一）</a></li>
-<li><a class=link href=https://medium.com/zrealm-ios-dev/ios-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e5%88%9d%e9%ab%94%e9%a9%97-7498e1ff93ce target=_blank rel=noopener>iOS 逆向工程初體驗</a></li>
+<li><a class="link" href="https://mp.weixin.qq.com/s/TpwZtPu0DKOwm2d6B9fTmg"  target="_blank" rel="noopener"
+    >给微信添加聊天记录截图功能</a></li>
+<li><a class="link" href="https://sherlockz.github.io/2017/10/22/ios-hook/"  target="_blank" rel="noopener"
+    >不懂汇编,如何逆向(iOS)</a></li>
+<li><a class="link" href="https://blog.csdn.net/qq_21051503/article/details/85586275"  target="_blank" rel="noopener"
+    >基于MonkeyDev实现不越狱修改钉钉位置打卡和签到</a></li>
+<li><a class="link" href="https://blog.csdn.net/yca8939/article/details/50638368"  target="_blank" rel="noopener"
+    >iOS越狱插件编写 - 支付宝自动咻咻 （一）</a></li>
+<li><a class="link" href="https://medium.com/zrealm-ios-dev/ios-%e9%80%86%e5%90%91%e5%b7%a5%e7%a8%8b%e5%88%9d%e9%ab%94%e9%a9%97-7498e1ff93ce"  target="_blank" rel="noopener"
+    >iOS 逆向工程初體驗</a></li>
 </ul>
+
 </section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">iOS</a>
+        
+            <a href="/tags/swift/">Swift</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
 </article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title"></h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">發票收集雞 - 自己的發票自己收</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Apple Watch App 開發除錯心得</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/>
-<div class=article-details>
-<h2 class=article-title>RxSwift 6 上線啦！</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RxSwift 6 上線啦！</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>iOS App launch time 心得</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS App launch time 心得</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/>
-<div class=article-details>
-<h2 class=article-title>使用 Xcode 建立一個 Framework</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用 Xcode 建立一個 Framework</h2>
+        </div>
+    </a>
 </article>
-</div>
-</div>
+                
+            </div>
+        </div>
+    
 </aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
-2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+         <br />
+        
+    </section>
 </footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#frida-ios-dump-安裝>frida-ios-dump 安裝</a></li>
-</ol>
-<ol>
-<li><a href=#安裝-monkeydevhttpsgithubcomalonemonkeymonkeydevwiki安装><a href=https://github.com/AloneMonkey/MonkeyDev/wiki/%E5%AE%89%E8%A3%85>安裝 MonkeyDev</a></a>
-<ol>
-<li>
-<ol>
-<li><a href=#安裝錯誤找不到-xcode>安裝錯誤：找不到 Xcode</a></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><a href=#使用-monkeydev>使用 MonkeyDev</a></li>
-<li><a href=#打開-reveal-查看>打開 Reveal 查看</a></li>
-<li><a href=#加入-flexhttpsgithubcomflipboardflex>加入 <a href=https://github.com/Flipboard/FLEX>FLEX</a></a></li>
-</ol>
-<ol>
-<li><a href=#利用-flex-來定位元件>利用 FLEX 來定位元件</a></li>
-<li><a href=#建立-header>建立 Header</a>
-<ol>
-<li><a href=#instagramheaderh>InstagramHeader.h</a></li>
-<li><a href=#igfeedphotoviewhookm>IGFeedPhotoViewHook.m</a></li>
-</ol>
-</li>
-<li><a href=#demo>Demo</a></li>
-</ol>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title"></h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#frida-ios-dump-安裝">frida-ios-dump 安裝</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#安裝-monkeydevhttpsgithubcomalonemonkeymonkeydevwiki安装"><a href="https://github.com/AloneMonkey/MonkeyDev/wiki/%E5%AE%89%E8%A3%85">安裝 MonkeyDev</a></a>
+      <ol>
+        <li>
+          <ol>
+            <li><a href="#安裝錯誤找不到-xcode">安裝錯誤：找不到 Xcode</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#使用-monkeydev">使用 MonkeyDev</a></li>
+    <li><a href="#打開-reveal-查看">打開 Reveal 查看</a></li>
+    <li><a href="#加入-flexhttpsgithubcomflipboardflex">加入 <a href="https://github.com/Flipboard/FLEX">FLEX</a></a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#利用-flex-來定位元件">利用 FLEX 來定位元件</a></li>
+    <li><a href="#建立-header">建立 Header</a>
+      <ol>
+        <li><a href="#instagramheaderh">InstagramHeader.h</a></li>
+        <li><a href="#igfeedphotoviewhookm">IGFeedPhotoViewHook.m</a></li>
+      </ol>
+    </li>
+    <li><a href="#demo">Demo</a></li>
+  </ol>
 </nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

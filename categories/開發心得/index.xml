@@ -1,121 +1,332 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🍎 開發心得 on Archie</title><link>https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/</link><description>Recent content in 🍎 開發心得 on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml"/><item><title>發票收集雞 - 自己的發票自己收</title><link>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</link><pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</guid><description>發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🍎 開發心得 on Archie</title>
+    <link>https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/</link>
+    <description>Recent content in 🍎 開發心得 on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>發票收集雞 - 自己的發票自己收</title>
+      <link>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</link>
+      <pubDate>Fri, 27 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/</guid>
+      <description>發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
 紙本發票的減少 在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。
 雲端發票專屬獎 而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！
 基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。
+ 
 為什麼寫這個 App 主要是以自己的需求出發，來練一些技術，在 SwiftUI 推出後一直都還沒有機會拿來作為一個產品的開發架構，於是便起心動念開工！
-使用到了什麼服務和技術 🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷 發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。</description></item><item><title>從 Terminal 讓模擬器開啟連結</title><link>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</guid><description>一般在開發的時候，如果需要在模擬器測試 Deep link 的話，則需要做一個開啟連結的動作；比較手動的就會開啟一個 Safari，輸入特定的連結後前往，而這邊分享一個指令。
+使用到了什麼服務和技術  🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷  發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。</description>
+    </item>
+    
+    <item>
+      <title>從 Terminal 讓模擬器開啟連結</title>
+      <link>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</link>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</guid>
+      <description>一般在開發的時候，如果需要在模擬器測試 Deep link 的話，則需要做一個開啟連結的動作；比較手動的就會開啟一個 Safari，輸入特定的連結後前往，而這邊分享一個指令。
 xcrun simctl openurl booted &amp;lt;url&amp;gt; xcrun 主要就是執行 Xcode 的一個工具，而 simctl 則是和模擬器的管理工具，而 booted 是指目前開啟著的模擬器。
-步驟 打開模擬器 打開任何 Terminal 的 app 輸入上述的指令 這樣模擬器便會開啟連結了！</description></item><item><title>WWDC21 - Platforms State of the Union</title><link>https://www.archie.tw/p/wwdc21-platforms-state-of-the-union/</link><pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/wwdc21-platforms-state-of-the-union/</guid><description>Xcode Cloud 一般我們的發佈流程為，從寫程式到測試，接著整合後發佈，再來接著收集資訊後再進行下一輪開發。
-Xcode Cloud 將這一切整合在同一個服務之中，讓我們可以直接寫完程式之後，建立 workflow 並整合 Git 服務（GitHub, GitLab 等），接著串接 App Store Connect 進行 TestFlight 和發佈。
+步驟  打開模擬器 打開任何 Terminal 的 app 輸入上述的指令  這樣模擬器便會開啟連結了！</description>
+    </item>
+    
+    <item>
+      <title>WWDC21 - Platforms State of the Union</title>
+      <link>https://www.archie.tw/p/wwdc21-platforms-state-of-the-union/</link>
+      <pubDate>Sat, 12 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/wwdc21-platforms-state-of-the-union/</guid>
+      <description>Xcode Cloud 一般我們的發佈流程為，從寫程式到測試，接著整合後發佈，再來接著收集資訊後再進行下一輪開發。  
+Xcode Cloud 將這一切整合在同一個服務之中，讓我們可以直接寫完程式之後，建立 workflow 並整合 Git 服務（GitHub, GitLab 等），接著串接 App Store Connect 進行 TestFlight 和發佈。  
 我們之後就可以從單一的 Xcode Cloud 介面處理完上述的所有事情，而建立這些 CI/CD 只需要一分鐘的時間。
 相比之前弄 GitHub action，應該可以算是更加容易許多（？
-建構四步驟 選擇 product 確認 workflow 授權相對應的 source code 連接 App Store Connect 在 CI/CD 的測試以及 Code Review 上的體驗都會比原先使用其他服務上好很多，畢竟是原生的體驗，在 DEMO 影片上看起來都蠻有趣的。
+建構四步驟  選擇 product 確認 workflow 授權相對應的 source code 連接 App Store Connect  在 CI/CD 的測試以及 Code Review 上的體驗都會比原先使用其他服務上好很多，畢竟是原生的體驗，在 DEMO 影片上看起來都蠻有趣的。
 目前可以透過這個連結來註冊 Beta 使用，若有機會的話再來詳細寫一篇這部分的體驗。
+ 
 Swift concurrency async 和 await 的來臨讓我們能夠取代原先的 completion handler
 Completion handler
-func prepareForShow(completion: @escaping (Result&amp;lt;Scene, Error&amp;gt;) -&amp;gt; Void) { danceCompany.</description></item><item><title>Apple Watch App 開發除錯心得</title><link>https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</link><pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</guid><description>前陣子在幫水滴發票加入 Apple Watch 的功能，這篇文章會紀錄下開發的一些想法。
-資料傳遞方面 因為 Watch app 本身可以為一個獨立的 app，所以 UserDefaults 的部分則會擁有自己的一份，也就是說兩者之間無法像是 Widget 一般透過同一個 Group 的 UserDefault 來同步資料。
+func prepareForShow(completion: @escaping (Result&amp;lt;Scene, Error&amp;gt;) -&amp;gt; Void) { danceCompany.</description>
+    </item>
+    
+    <item>
+      <title>Apple Watch App 開發除錯心得</title>
+      <link>https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/</guid>
+      <description>前陣子在幫水滴發票加入 Apple Watch 的功能，這篇文章會紀錄下開發的一些想法。
+ 資料傳遞方面 因為 Watch app 本身可以為一個獨立的 app，所以 UserDefaults 的部分則會擁有自己的一份，也就是說兩者之間無法像是 Widget 一般透過同一個 Group 的 UserDefault 來同步資料。
 解決方法 利用 WCSession 來做傳遞資料。
 實機測試時，WCSession.isReachable 始終為 false 主要就是手機和手錶之間一直無法透過 WCSession 連接上彼此，會造成幾個問題如
-Apple Watch App 一直卡在安裝中，無法順利安裝 無法透過 WCSession 從 iOS app 傳遞資料過去給 Watch app 解決方法 我遇到這情況是都選擇重開 iPhone 來處理。
-Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int.</description></item><item><title>RxSwift 6 上線啦！</title><link>https://www.archie.tw/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</link><pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</guid><description>2021 的開始，RxSwift 6 悄悄地上線啦！你可以從這個網站來看看有哪些更新，或看看這篇筆記📒
-這次更新的項目為 新的 logo 將 Binder 從 RxCocoa 移植到 RxSwift RxSwift 新增 withUnretained 透過 @dynamicMemberLookup 來自動建立 Binders Infallible Observable&amp;lt;Data&amp;gt; 新增 decode(type:decoder:) Variadic drive() 和 emit() 將 Single 的結果調整成 Result distinctUntilChange(at:) 支援 Key Paths 新增 ReplayRelay 新增 DisposeBag 的 functional builder 重新命名運算子 新的 logo powered by dev.to
-將 Binder 從 RxCocoa 移植到 RxSwift 原本 Binder 是屬於 RxCocoa 裡頭的元件，而在社群大家的討論下，便在這一次的更新內容，將其收納進了 RxSwift 之中。
-RxSwift 新增 withUnretained 我們在寫 RxSwift 時，還是得注意 retain cycle 的問題，而多半我們處理的方式如下</description></item><item><title>GitHub Actions + Fastlane + Cache = 👍</title><link>https://www.archie.tw/p/github-actions-fastlane-cache/</link><pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/github-actions-fastlane-cache/</guid><description>這篇文章的內容主要是分享過去這兩天，我在專案上啟用 GitHub Actions 的筆記
-GitHub Actions
+ Apple Watch App 一直卡在安裝中，無法順利安裝 無法透過 WCSession 從 iOS app 傳遞資料過去給 Watch app  解決方法 我遇到這情況是都選擇重開 iPhone 來處理。
+Apple Watch 模擬器和實機上的測試結果不同 在這次的開發之中，我們有使用到比較大的數字在中間傳遞，而原先沒多考慮就以 Int 來存 Timestamp，並在 Apple Watch 的模擬器上測試過幾輪沒出現問題；直到發佈 TestFlight 後才陸續出現在實體裝置上。 進而才意會到模擬器上的 Int 是 64 bit（Int.max = 9223372036854775807），而實際上以 Apple Watch SE6 來說，是 32 bit（Int.</description>
+    </item>
+    
+    <item>
+      <title>RxSwift 6 上線啦！</title>
+      <link>https://www.archie.tw/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</link>
+      <pubDate>Wed, 06 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/</guid>
+      <description>2021 的開始，RxSwift 6 悄悄地上線啦！你可以從這個網站來看看有哪些更新，或看看這篇筆記📒
+這次更新的項目為   新的 logo 將 Binder 從 RxCocoa 移植到 RxSwift RxSwift 新增 withUnretained 透過 @dynamicMemberLookup 來自動建立 Binders Infallible Observable&amp;lt;Data&amp;gt; 新增 decode(type:decoder:) Variadic drive() 和 emit() 將 Single 的結果調整成 Result distinctUntilChange(at:) 支援 Key Paths 新增 ReplayRelay 新增 DisposeBag 的 functional builder 重新命名運算子  新的 logo   powered by dev.to 
+將 Binder 從 RxCocoa 移植到 RxSwift  原本 Binder 是屬於 RxCocoa 裡頭的元件，而在社群大家的討論下，便在這一次的更新內容，將其收納進了 RxSwift 之中。
+RxSwift 新增 withUnretained  我們在寫 RxSwift 時，還是得注意 retain cycle 的問題，而多半我們處理的方式如下</description>
+    </item>
+    
+    <item>
+      <title>GitHub Actions &#43; Fastlane &#43; Cache = 👍</title>
+      <link>https://www.archie.tw/p/github-actions-fastlane-cache/</link>
+      <pubDate>Fri, 21 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/github-actions-fastlane-cache/</guid>
+      <description>這篇文章的內容主要是分享過去這兩天，我在專案上啟用 GitHub Actions 的筆記
+GitHub Actions  
 如上面圖示所言，GitHub 現在也提供了 workflows 讓我們可以在上頭做 CI/CD，而最大的優點就是它本身即掌管程式碼的所在地，所以在 trigger 方面自然會比其他單純做 CI/CD 的服務有一些優勢。
 建立方式 首先，你得在你的專案裏頭建立一個 workflows 的資料夾，其路徑得為
 /.github/workflows 並在裡頭新增一個 .yml 檔案，來讓 GitHub 讀取。
-yml 編輯 name: Workflow name on: workflow_dispatch push: branches: [ master ] pull_request: branches: [ master ] jobs: build: runs-on: macos-latest steps: - uses: actions/checkout@v2 - name: Setup SSH key run: | mkdir -p ~/.ssh echo &amp;quot;${{ secrets.CERTIFICATE_SSH_KEY }}&amp;quot; &amp;gt;&amp;gt; ~/.ssh/id_rsa echo &amp;quot;${{ secrets.</description></item><item><title>Xcode 11.4 archive issue</title><link>https://www.archie.tw/p/xcode-11.4-archive-issue/</link><pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/xcode-11.4-archive-issue/</guid><description>今天使用了 Xcode 11.4 來打包找飲料 1.2.1 版本卻遇上了未知的錯誤， 而這邊就紀錄目前所找到的解法
+yml 編輯 name: Workflow name on: workflow_dispatch push: branches: [ master ] pull_request: branches: [ master ] jobs: build: runs-on: macos-latest steps: - uses: actions/checkout@v2 - name: Setup SSH key run: | mkdir -p ~/.ssh echo &amp;quot;${{ secrets.CERTIFICATE_SSH_KEY }}&amp;quot; &amp;gt;&amp;gt; ~/.ssh/id_rsa echo &amp;quot;${{ secrets.</description>
+    </item>
+    
+    <item>
+      <title>Xcode 11.4 archive issue</title>
+      <link>https://www.archie.tw/p/xcode-11.4-archive-issue/</link>
+      <pubDate>Mon, 06 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/xcode-11.4-archive-issue/</guid>
+      <description>今天使用了 Xcode 11.4 來打包找飲料 1.2.1 版本卻遇上了未知的錯誤， 而這邊就紀錄目前所找到的解法
 Xcode 11.4 - Archiving project - Segmentation Fault 11 經實測後無效
-Xcode 11.4, error: Segmentation fault: 11 經實測後可以順利打包上傳到 App Store</description></item><item><title>【iOS 逆向】下載 Instagram 動態照片</title><link>https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</link><pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</guid><description>這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
-環境 macOS: 10.15.4 iOS 裝置 iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4 Xcode 11.4 我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader + iOS 12.4。
+Xcode 11.4, error: Segmentation fault: 11 經實測後可以順利打包上傳到 App Store</description>
+    </item>
+    
+    <item>
+      <title>【iOS 逆向】下載 Instagram 動態照片</title>
+      <link>https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/</guid>
+      <description>這篇文章的起點是從 ZheChgLi 所發表的 iOS 逆向初體驗，我會紀錄自己在 Instagram.app 上的操作流程，並補足一些細節部分。
+環境  macOS: 10.15.4 iOS 裝置  iPhone 6 iOS 12.4 （越獄） iPhone X iOS 13.4   Xcode 11.4  我這邊準備了兩個裝置，其中越獄的方式可以參考之前的文章 - Reveal2Loader + iOS 12.4。
 連上越獄裝置 流程如同之前所提及的，先開啟 iproxy 來代理 22 port
 iproxy 2222 22 並透過 ssh 的方式連上越獄裝置
 ssh -p 2222 root@127.0.0.1 密碼預設會是 alpine
 提取 .ipa 我照著 medium 上的教學，使用 frida-ios-dump 作為提取的方式。
 frida-ios-dump 安裝 首先，先在 iOS 裝置上安裝 Frida
-這邊會取決於你的裝置是哪一種 CPU 而不同。</description></item><item><title>iOS App launch time 心得</title><link>https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</link><pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</guid><description>如何減少 iOS App launch time 這篇文章就來紀錄一下今日的研究項目，主要的起因是前一篇使用 Xcode 建立一個 Framework有談到如何選擇要創建的是 static library 還是 dynamic framework，其中一個差異是 dyld ( dynamic loader ) 會在 pre main 的時候去載入 dynanmic frameworks，所以若是有越多的 dynamic frameworks 需要載入時，便會花上越多時間。而Apple也建議我們不要使用超過 6 個非系統的 dynamic frameworks。
+ 
+這邊會取決於你的裝置是哪一種 CPU 而不同。</description>
+    </item>
+    
+    <item>
+      <title>iOS App launch time 心得</title>
+      <link>https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/</guid>
+      <description>如何減少 iOS App launch time 這篇文章就來紀錄一下今日的研究項目，主要的起因是前一篇使用 Xcode 建立一個 Framework有談到如何選擇要創建的是 static library 還是 dynamic framework，其中一個差異是 dyld ( dynamic loader ) 會在 pre main 的時候去載入 dynanmic frameworks，所以若是有越多的 dynamic frameworks 需要載入時，便會花上越多時間。而Apple也建議我們不要使用超過 6 個非系統的 dynamic frameworks。
 再來搭配服用 weak self - 25: 難道公司發大財了！？App Launch Time 加速面面觀，一併做一個筆記整理。
-App 啟動的三個階段 Pre-main: Loading (MachO + dylib) / Rebase &amp;amp; Binding / ObjC Setup / Initializer 如何查看 pre main time
-透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。</description></item><item><title>使用 Xcode 建立一個 Framework</title><link>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link><pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid><description>之前有介紹過如何建立一個 CocoaPods，而這篇文章則是紀錄一下這次直接在 Xcode 上建立 Framework 會遇上的問題。
+App 啟動的三個階段 Pre-main: Loading (MachO + dylib) / Rebase &amp;amp; Binding / ObjC Setup / Initializer 如何查看 pre main time  
+透過在 Target 的 Environment Variables 加入 DYLD_PRINT_STATISTICS 並設為 1 便可以在 Debug console log 得到資訊。</description>
+    </item>
+    
+    <item>
+      <title>使用 Xcode 建立一個 Framework</title>
+      <link>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</link>
+      <pubDate>Thu, 26 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-xcode-%E5%BB%BA%E7%AB%8B%E4%B8%80%E5%80%8B-framework/</guid>
+      <description>之前有介紹過如何建立一個 CocoaPods，而這篇文章則是紀錄一下這次直接在 Xcode 上建立 Framework 會遇上的問題。
 建立 Framework 專案 首先我們先打開 Xcode，並選擇 iOS 類別底下的 Framework &amp;amp; Library 裡頭的 Framework
+ 
 並依照所需要的欄位填寫相關資訊，這邊目前都和直接建立一個專案一致流程。
+ 
 而如果你有打算在裡頭寫測試的話，就將 Include Unit Tests ☑️
 Framework 開發 使用 Xcode 建立起來和 CocoaPods 創建，在開發上並沒有什麼差異；所以就依照著相對應的存取限制來設計你的 framework 即可。
 這篇的重點會落在一些參數設定。
 Mach-O Type 決定方式 在這個 framework 的 target 之中，我們可以從 Build Settings 的 Mach-O Type 來決定它是一個怎樣的 framework
+ 
 而要如何取捨這個 framework 的輸出型態，可以依據一些使用方式來判斷
-Static Library 有使用到其他 static library 使用 Singleton Dynamic Library 有包含其他檔案，如圖片、JSON 之類的 輸出成 .</description></item><item><title>💪找健身💪-免綁約單次收費健身房清單</title><link>https://www.archie.tw/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</link><pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</guid><description>近年來健身風氣盛行 許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現 但這些都必須依靠長期的運動習慣來達成
+Static Library  有使用到其他 static library 使用 Singleton  Dynamic Library  有包含其他檔案，如圖片、JSON 之類的  輸出成 .</description>
+    </item>
+    
+    <item>
+      <title>💪找健身💪-免綁約單次收費健身房清單</title>
+      <link>https://www.archie.tw/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</link>
+      <pubDate>Thu, 06 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E6%89%BE%E5%81%A5%E8%BA%AB-%E5%85%8D%E7%B6%81%E7%B4%84%E5%96%AE%E6%AC%A1%E6%94%B6%E8%B2%BB%E5%81%A5%E8%BA%AB%E6%88%BF%E6%B8%85%E5%96%AE/</guid>
+      <description>近年來健身風氣盛行 許多人會依靠健身來雕塑身形、增強身體機能、增加運動表現 但這些都必須依靠長期的運動習慣來達成
 當你過年回家想健身卻找不到健身房 當你出門旅遊想健身卻找不到健身房 當你被派到外縣市出差一個月卻找不到健身房 這些困擾 我們懂
 所以我們開發了一款 app 能幫助大家迅速找到最近的、收費最合理的單次收費健身房 只要開啟定位 所有困難就能迎刃而解
 另外 app 內也設有使用者回報機制 當你發現有新開的單次收費健身房也歡迎回報 一起完整這個健身網！
-iOS 下載點
+iOS 下載點  
 緣起 在這幾年健身的風氣逐漸熱絡，健身房的類型也越來越多種類；舉凡綁約制、課程型、月費制、單次收費等，健身的產業帶動了相關人才的產出，使得一般大眾接觸健身的門檻降低不少。
-撇除一般知名度較大的連鎖會員制健身房，若我們想要在周遭找到一間不用綁約、單次收費的健身房，那麼則需要花上一些時間做功課。於是便在某天發現了扣取港 Coach Duncan的一篇動態，有為這類需求的人做一份清單。 從 2018年7月27日開始並有持續地在更新維護。
-而 PTT MuscleBeach 版也有相關文章在討論「單次」這個關鍵字： 於是乎便萌生了整合這類資訊的念頭，進而生出了這個 app
-過程紀錄 2020/2/3 萌生這個念頭
-2020/2/5 送出第一版（28 家健身房） 2020/2/6 04:21 出現在架上🎉
-2020/2/6 15:47 第一次 Side project 站上排行榜📈 第 52 名
-2020/2/6 18:22 一度還跑到了前 50 名😂 第 45 名</description></item><item><title>Reveal2Loader + iOS 12.4</title><link>https://www.archie.tw/p/reveal2loader-ios-12.4/</link><pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/reveal2loader-ios-12.4/</guid><description>首先先來介紹 Reveal2Loader，它是一款可以在越獄的裝置上讓 Reveal 讀取任何 app 的插件，至於 Reveal 的使用方式就先不在這邊提了。
+撇除一般知名度較大的連鎖會員制健身房，若我們想要在周遭找到一間不用綁約、單次收費的健身房，那麼則需要花上一些時間做功課。於是便在某天發現了扣取港 Coach Duncan的一篇動態，有為這類需求的人做一份清單。   從 2018年7月27日開始並有持續地在更新維護。
+而 PTT MuscleBeach 版也有相關文章在討論「單次」這個關鍵字：   於是乎便萌生了整合這類資訊的念頭，進而生出了這個 app
+過程紀錄 2020/2/3 萌生這個念頭  
+2020/2/5 送出第一版（28 家健身房） 2020/2/6 04:21 出現在架上🎉  
+2020/2/6 15:47 第一次 Side project 站上排行榜📈 第 52 名  
+2020/2/6 18:22 一度還跑到了前 50 名😂 第 45 名</description>
+    </item>
+    
+    <item>
+      <title>Reveal2Loader &#43; iOS 12.4</title>
+      <link>https://www.archie.tw/p/reveal2loader-ios-12.4/</link>
+      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/reveal2loader-ios-12.4/</guid>
+      <description>首先先來介紹 Reveal2Loader，它是一款可以在越獄的裝置上讓 Reveal 讀取任何 app 的插件，至於 Reveal 的使用方式就先不在這邊提了。
 我們可以透過這個方式來查看別人的 app 是怎麼設計 UI 的，以 Twitter 的 iOS app 為例子
+ 
 我們可以看到他們所使用的字型、大小、顏色以及元件名稱等，像是這邊就是他們自己定義的 T1StatusAttributedTextView。
 越獄 我是使用 iOS 12.4 的 iPhone 6 搭配 unc0ver 來進行越獄，你可以很輕易地使用手機來開啟這個網頁來進行操作，這步驟沒什麼難度。
 安裝 Reveal2Loader 透過 Cydia 來安裝 Reveal2Loader，如果安裝的時候出現了找不到來源的錯誤時，可以重新讀取 Sources 試試看。
 安裝 Dropbear 我的 SSH 是使用 Dropbear，你可以透過 http://cydia.ichitaso.com 這個 Source 來安裝。
 安裝 usbmuxd 我是使用 USB 的方式來連接手機裝置的，所以先在 macOS 上安裝 usbmuxd
 brew install usbmuxd 並且透過指令將特定的 port 來代理原本用來連接 ssh 的 port 22。
-iproxy 5678 22 接著我們就可以利用 port 5678 來連上裝置了。</description></item><item><title>Active Compilation Conditions</title><link>https://www.archie.tw/p/active-compilation-conditions/</link><pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/active-compilation-conditions/</guid><description>在 Xcode 7 以前的版本，我們若需要設立一些環境變數，需要透過 Other Swift Flags 來處理； 像是 -DDEBUG -DRELEASE 等，且在使用的時候，並不會自動檢查出是否正確。
+iproxy 5678 22 接著我們就可以利用 port 5678 來連上裝置了。</description>
+    </item>
+    
+    <item>
+      <title>Active Compilation Conditions</title>
+      <link>https://www.archie.tw/p/active-compilation-conditions/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/active-compilation-conditions/</guid>
+      <description>在 Xcode 7 以前的版本，我們若需要設立一些環境變數，需要透過 Other Swift Flags 來處理； 像是 -DDEBUG -DRELEASE 等，且在使用的時候，並不會自動檢查出是否正確。
 而在 Xcode 8 加入了一個 Active Compilation Conditions，現在我們可以在裡頭新增 DEBUG、RELEASE 即可達到原先的效果，並且會在寫程式的時候，自動補全了！
-file
-我竟然到 Xcode 11 出來後才發現這點，畢竟原本就都寫好了😂</description></item><item><title>Disable dark mode on iOS 13 in your application</title><link>https://www.archie.tw/p/disable-dark-mode-on-ios-13-in-your-application/</link><pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/disable-dark-mode-on-ios-13-in-your-application/</guid><description>在使用 Xcode 11 以後的版本開發時，應用程式會自動在 iOS 13 以後的系統跑 Dark mode； 而在還沒有準備好支援 dark mode 的情況下，會直接是一個悲劇的 UI⋯⋯
+ file 
+我竟然到 Xcode 11 出來後才發現這點，畢竟原本就都寫好了😂</description>
+    </item>
+    
+    <item>
+      <title>Disable dark mode on iOS 13 in your application</title>
+      <link>https://www.archie.tw/p/disable-dark-mode-on-ios-13-in-your-application/</link>
+      <pubDate>Fri, 22 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/disable-dark-mode-on-ios-13-in-your-application/</guid>
+      <description>在使用 Xcode 11 以後的版本開發時，應用程式會自動在 iOS 13 以後的系統跑 Dark mode； 而在還沒有準備好支援 dark mode 的情況下，會直接是一個悲劇的 UI⋯⋯
 這時候你可以選擇⋯⋯
-調整大部分的 UI 來支援 Dark mode 在你的應用程式中設立成一般模式 在你有新功能要上線且還未準備的情況下，建議你選擇後者會比較符合效益👌
+ 調整大部分的 UI 來支援 Dark mode 在你的應用程式中設立成一般模式  在你有新功能要上線且還未準備的情況下，建議你選擇後者會比較符合效益👌
 方法就是這篇文章的主軸
-file 就是在 Info.plist 設立 UIUserInterfaceStyle 為 light 或是 dark
-如果只有特定的 UIWindow、UIViewController、UIView等需要調整時，可以找到它們底下的這個參數 overrideUserInterfaceStyle 來去做調整即可👌</description></item><item><title>如何更改模擬器上的狀態列</title><link>https://www.archie.tw/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</link><pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</guid><description>這篇就來談談我是如何更改模擬器上的狀態列🎤
+ file  就是在 Info.plist 設立 UIUserInterfaceStyle 為 light 或是 dark
+如果只有特定的 UIWindow、UIViewController、UIView等需要調整時，可以找到它們底下的這個參數 overrideUserInterfaceStyle  來去做調整即可👌</description>
+    </item>
+    
+    <item>
+      <title>如何更改模擬器上的狀態列</title>
+      <link>https://www.archie.tw/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</link>
+      <pubDate>Thu, 12 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E6%A8%A1%E6%93%AC%E5%99%A8%E4%B8%8A%E7%9A%84%E7%8B%80%E6%85%8B%E5%88%97/</guid>
+      <description>這篇就來談談我是如何更改模擬器上的狀態列🎤
 在 Xcode 11 Beta 3 以前，我是使用 SimulatorStatusMagic 而今天要弄截圖的時候發現，原來在 Xcode 11 Beta 4 之後，有內建的使用方法！
 我喜歡讓 App store previews 上的時間顯示我自己的生日🎂算是一個小巧思（但沒人想知道）
 而現在可以透過內建的指令來完成這件事，其中你可以使用下列這些
-xcrun simctl status_bar 指令
+xcrun simctl status_bar  指令 
 像是更改目前開著的模擬器時間：
-xcrun simctl status_bar booted override --time &amp;quot;02:01&amp;quot; 成果圖
-而若是你的 Xcode 版本是 6 - 10 的話，就繼續使用 SimulatorStatusMagic 吧👌</description></item><item><title>SwiftUI + Google AdMob</title><link>https://www.archie.tw/p/swiftui-google-admob/</link><pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/swiftui-google-admob/</guid><description>這篇是一個簡單介紹 UIViewControllerRepresentable 的範例， 由於 Google AdMob 的 GADBannerView 不像上次提及的 UITextField 一樣，可以直接使用 UIViewRepresentable 來包裝；原因是它必須設置一個 rootViewController，也就意味著我們需要使用 UIViewControllerRepresentable 才能完成它。
+xcrun simctl status_bar booted override --time &amp;quot;02:01&amp;quot;  成果圖 
+而若是你的 Xcode 版本是 6 - 10 的話，就繼續使用 SimulatorStatusMagic 吧👌</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI &#43; Google AdMob</title>
+      <link>https://www.archie.tw/p/swiftui-google-admob/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/swiftui-google-admob/</guid>
+      <description>這篇是一個簡單介紹 UIViewControllerRepresentable 的範例， 由於 Google AdMob 的 GADBannerView 不像上次提及的 UITextField 一樣，可以直接使用 UIViewRepresentable 來包裝；原因是它必須設置一個 rootViewController，也就意味著我們需要使用 UIViewControllerRepresentable 才能完成它。
 Interfacing with UIKit 透過這個 Apple 官方的教學當中，我們可以從 UIPageViewController 的範例來做發想，故我的實作方式會是這樣：
-import GoogleMobileAds import SwiftUI import UIKit struct GADBannerViewController: UIViewControllerRepresentable { func makeUIViewController(context: Context) -&amp;gt; UIViewController { let view = GADBannerView(adSize: kGADAdSizeBanner) let viewController = UIViewController() view.adUnitID = &amp;#34;your ad unit id in there.&amp;#34; view.rootViewController = viewController viewController.view.addSubview(view) viewController.view.frame = CGRect(origin: .zero, size: kGADAdSizeBanner.size) view.load(GADRequest()) return viewController } func updateUIViewController(_ uiViewController: UIViewController, context: Context) {} } 如果需要處理 Delegate 的部分 你可以參閱上次 TextField 的處理方式，建構一個 Coordinator 來進行相關的作業👌</description></item><item><title>對於 SwiftUI onDisappear 的誤解？</title><link>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</link><pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</guid><description>在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
-onDisappear 到底是不是壞的！
-這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
-Note: In the current SwiftUI beta onDisappear will never be called. by HackingWithSwift
-或是你可以看到在 StackOverFlow 上大家是這麼討論的
-討論串
+import GoogleMobileAds import SwiftUI import UIKit struct GADBannerViewController: UIViewControllerRepresentable { func makeUIViewController(context: Context) -&amp;gt; UIViewController { let view = GADBannerView(adSize: kGADAdSizeBanner) let viewController = UIViewController() view.adUnitID = &amp;#34;your ad unit id in there.&amp;#34; view.rootViewController = viewController viewController.view.addSubview(view) viewController.view.frame = CGRect(origin: .zero, size: kGADAdSizeBanner.size) view.load(GADRequest()) return viewController } func updateUIViewController(_ uiViewController: UIViewController, context: Context) {} } 如果需要處理 Delegate 的部分 你可以參閱上次 TextField 的處理方式，建構一個 Coordinator 來進行相關的作業👌</description>
+    </item>
+    
+    <item>
+      <title>對於 SwiftUI onDisappear 的誤解？</title>
+      <link>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</link>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/</guid>
+      <description>在接觸 SwiftUI 的這段時間以來，我一直在試著釐清一件事情，那就是
+ onDisappear 到底是不是壞的！
+ 這件事情很玄，畢竟網路上大部分的資訊都告訴我們 onAppear 類似於 viewDidAppear、onDisappear 類似於 ViewDidDisappear，然後再補上一句
+ Note: In the current SwiftUI beta onDisappear will never be called. by HackingWithSwift
+ 或是你可以看到在 StackOverFlow 上大家是這麼討論的
+ 討論串 
 接著，在這一路以來，你又曾經碰過真的是 Apple 的 bug，所以你就會很理所當然地認為⋯⋯
-沒錯，onDisappear 就是壞的！
-直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了這篇 並下載下來研究發現
-onDisappear 是會動的⋯
-這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。 來看看官方的這個 View
-struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: .</description></item><item><title>📒 SwiftUI + CoreData 的實戰心得🔥</title><link>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</link><pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</guid><description>SwiftUI + CoreData
+ 沒錯，onDisappear 就是壞的！
+ 直到認真找找官方文件到底有沒有使用到 onDisappear 的範例，於是找到了這篇 並下載下來研究發現
+ onDisappear 是會動的⋯
+ 這代表著一件事，就是其實是我誤解它的使用方式，而非它是壞的。 來看看官方的這個 View
+struct ProfileHost: View { @Environment(\.editMode) var mode @State var profile = Profile.default @State var draftProfile = Profile.default var body: some View { VStack(alignment: .</description>
+    </item>
+    
+    <item>
+      <title>📒 SwiftUI &#43; CoreData 的實戰心得🔥</title>
+      <link>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/</guid>
+      <description>SwiftUI + CoreData  
 這篇文章會紀錄我在目前的 side project 上，如何在 SwiftUI 下導入 CoreData； 而如同 在 SwiftUI 處理中文輸入法所會遇上的問題 所提及的，SwiftUI 身為一個還在測試階段的 framework，我們必須將當下的開發環境紀錄下來，以避免造成日後官方修正所造成的誤解。
-開發環境 Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta 使用情境 我要做一個貨幣的列表，並讓使用者可以對相對應的貨幣做隱藏與否，所以規格大概是需要一個 List，而 Row 裡頭呈現貨幣的名稱以及用 Toggle 來做控制隱藏的開關。
-CoreData Model - Currency
+開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  使用情境 我要做一個貨幣的列表，並讓使用者可以對相對應的貨幣做隱藏與否，所以規格大概是需要一個 List，而 Row 裡頭呈現貨幣的名稱以及用 Toggle 來做控制隱藏的開關。
+CoreData Model - Currency  
 Row 的部分 在 Xcode 11 Beta 5 之後， NSManagedObject 可以視為一個 @ObservedObject，所以我們可以不必再弄一個 ManageRowModel，而是直接使用 NSManagedObject 來連動。 這邊我需要以英文大寫來顯示貨幣名稱以及一個控制是否顯示在主畫面上的開關。
-struct ManageRow: View { @ObservedObject var currency: Currency var body: some View { HStack { VStack { Text(currency.</description></item><item><title>SwiftUI 上的鍵盤處理方式</title><link>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</link><pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</guid><description>在 iOS 的開發過程之中，難免會碰到一個狀況，那便是 UITextField/ UITextView 被鍵盤所遮住了⌨️ 在 UIKit 之下，多數人會使用套件來做全域的處理，如 IQKeyboardManager 就是一個十分經典的解決方案。
+struct ManageRow: View { @ObservedObject var currency: Currency var body: some View { HStack { VStack { Text(currency.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI 上的鍵盤處理方式</title>
+      <link>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 02 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/swiftui-%E4%B8%8A%E7%9A%84%E9%8D%B5%E7%9B%A4%E8%99%95%E7%90%86%E6%96%B9%E5%BC%8F/</guid>
+      <description>在 iOS 的開發過程之中，難免會碰到一個狀況，那便是 UITextField/ UITextView 被鍵盤所遮住了⌨️ 在 UIKit 之下，多數人會使用套件來做全域的處理，如 IQKeyboardManager 就是一個十分經典的解決方案。
 來說說 SwiftUI 上的鍵盤處理方式 在 SwiftUI 上，我們也可以很優雅地處理這一塊，如在 List 元件中，只需要分別監聽 UIWindow.keyboardWillShowNotification 和 UIWindow.keyboardWillHideNotification，以及加上個 .animation(.default) 來優化使用者體驗。
 var body: some View { List(viewModel.rowModels, rowContent: DemoRow.init) .padding(EdgeInsets(top: 0, leading: 0, bottom: bottomPadding, trailing: 0)) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillShowNotification), perform: updateFrame) .onReceive(NotificationCenter.default.publisher(for: UIWindow.keyboardWillHideNotification), perform: updateFrame) .animation(.default) } 完整的 struct 可以在 GitHub 上查看👍
-成果動畫
-有任何問題歡迎在底下留言👏有寫法上的建議可以直接在 GitHub 上反應👍 有想看看一些廢話的話則是可以在 Twitter 直接找到我喔！😂</description></item><item><title>在 SwiftUI 處理中文輸入法所會遇上的問題</title><link>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link><pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</guid><description>最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。
-開發環境 Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta 記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂 還沒有下載更新的朋友，可以快去更新一下！
+成果動畫  
+有任何問題歡迎在底下留言👏有寫法上的建議可以直接在 GitHub 上反應👍 有想看看一些廢話的話則是可以在 Twitter 直接找到我喔！😂</description>
+    </item>
+    
+    <item>
+      <title>在 SwiftUI 處理中文輸入法所會遇上的問題</title>
+      <link>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</link>
+      <pubDate>Fri, 30 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/</guid>
+      <description>最近開始在嘗試把玩 SwiftUI 並打算作為一個 side project 的主要 UI 編寫方式，這篇文章則是其中一個使用情境所遇上的困難處。
+開發環境  Xcode 11 Beta 7（但顯示為 Beta 6 - 11M392r ） macOS Catalina - 19A546d iOS 13.1 Beta  記錄這點蠻重要的，因為可能過個幾版這篇文章就沒參考價值了😂 還沒有下載更新的朋友，可以快去更新一下！
 使用情境 我要來做一個搜尋的功能，讓使用者可以輸入關鍵字，並自動搜尋完後將結果呈現在下方👏
 於是我們可以用兩個 UI 元件來達成這件事
-TextField List 並寫一個 @Binding var 或是 @ObservedObject var 來讓 TextField 的 text 有個 binding 的地方，當它的值有更新時，觸發搜尋的動作🚀 而搜尋完的結構再來更新畫面上的 List。 聽起來沒什麼毛病，對吧？
+ TextField List 並寫一個 @Binding var 或是 @ObservedObject var 來讓 TextField 的 text 有個 binding 的地方，當它的值有更新時，觸發搜尋的動作🚀 而搜尋完的結構再來更新畫面上的 List。  聽起來沒什麼毛病，對吧？
 實際上你會遇上的問題⋯ 當你想和我一樣，用拼音的輸入方式時；不論是你拼音還是注音，當你按下第一個音時，便會跑一次上述的流程了⋯⋯ 而我們所期望的流程應該是使用者選完字後再進行搜尋，這點在目前的 TextField 是做不到的，因為它不會判別目前是否有還沒拼完音的狀況就發動了。
-那該怎麼辦呢？ 喵神這麼說
+那該怎麼辦呢？  喵神這麼說 
 你可以查看一下當時的相關推文
 我的作法就是以 UIViewRepresentable 來包裝，詳細的程式碼可以到 GitHub 查看👍
-成果 當輸入了 luo dong 但是還沒選字的話並不會有動作。</description></item><item><title>建立 Xcode 的檔案範本</title><link>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</link><pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</guid><description>什麼是範本？ 在新增檔案的時候，會有預設的這幾種類型可以選擇；而當我們有一些自己常用的架構，如 Coordinator、ViewModel 等，可以自建一個範本來使用。 下面舉例幾個預設的 Swift 檔案
+成果 當輸入了 luo dong 但是還沒選字的話並不會有動作。</description>
+    </item>
+    
+    <item>
+      <title>建立 Xcode 的檔案範本</title>
+      <link>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E5%BB%BA%E7%AB%8B-xcode-%E7%9A%84%E6%AA%94%E6%A1%88%E7%AF%84%E6%9C%AC/</guid>
+      <description>什麼是範本？ 在新增檔案的時候，會有預設的這幾種類型可以選擇；而當我們有一些自己常用的架構，如 Coordinator、ViewModel 等，可以自建一個範本來使用。 下面舉例幾個預設的 Swift 檔案
 Swift File 位置在 /Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/Source/Swift File.xctemplate
 //___FILEHEADER___ import Foundation SwiftUI View 位置在 /Applications/Xcode-beta.app/Contents/Developer/Library/Xcode/ExtraTemplates/File Templates/User Interface
 //___FILEHEADER___ import SwiftUI struct ___FILEBASENAMEASIDENTIFIER___ : View { var body: some View { Text(/*@START_MENU_TOKEN@*/&amp;#34;Hello World!&amp;#34;/*@END_MENU_TOKEN@*/) } } #if DEBUG struct ___FILEBASENAMEASIDENTIFIER____Previews : PreviewProvider { static var previews: some View { ___FILEBASENAMEASIDENTIFIER___() } } #endif 這些是跟著 Xcode.app 走的，而若是我們使用者自定義要使用的，得放在 /Users/UserName/Library/Developer/Xcode/Templates 先建立一個資料夾，或是可以到上述的位置複製一份過來。 需要至少三個檔案
-FILEBASENAME.swift TemplateIcon.png TemplateInfo.plist 我自己的使用方式是複製系統的 Swift file 來做修改 🔧 也比較好去熟悉可替換文字和 header 的使用方式 👍</description></item><item><title>Resign .ipa</title><link>https://www.archie.tw/p/resign-.ipa/</link><pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/resign-.ipa/</guid><description>前言 我們都知道 iOS 是使用 ipa 檔案來安裝 app，而該如何換掉 ipa 裡頭的憑證呢？
+ FILEBASENAME.swift TemplateIcon.png TemplateInfo.plist  我自己的使用方式是複製系統的 Swift file 來做修改 🔧 也比較好去熟悉可替換文字和 header 的使用方式 👍</description>
+    </item>
+    
+    <item>
+      <title>Resign .ipa</title>
+      <link>https://www.archie.tw/p/resign-.ipa/</link>
+      <pubDate>Wed, 13 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/resign-.ipa/</guid>
+      <description>前言 我們都知道 iOS 是使用 ipa 檔案來安裝 app，而該如何換掉 ipa 裡頭的憑證呢？
 解壓縮 首先，我們先將 Application.ipa 解壓縮，可以得到一個 PayLoad 的資料夾，裡頭包含著一個應用程式 Application。
 移除舊有的簽章 接著我們透過 terminal 來進行移除的動作
 rm -rf PayLoad/Application/_CodeSignature 找出你打算簽章的 provisionprofile
@@ -123,22 +334,58 @@ rm -rf PayLoad/Application/_CodeSignature 找出你打算簽章的 provisionprof
 嵌入 mobileprovision 到 app 之中 接著就複製並改名字放入 app 中
 cp yourProvisionProfile.mobileprovision Payload/Application.app/embedded.mobileprovision 來製作簽章所需要的 entitlements.plist 先將 .mobileprovision 輸入成 profile.plist
 security cms -D -i yourProvisionProfile.mobileprovision &amp;gt; profile.plist 再來利用 profile.plist 輸出成 entitlements.plist
-/usr/libexec/PlistBuddy -x -c 'Print :Entitlements' profile.</description></item><item><title>CoreData with background task</title><link>https://www.archie.tw/p/coredata-with-background-task/</link><pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/coredata-with-background-task/</guid><description>前言 雖然在 iOS 上開發了幾年的時間，但一直到最近才開始使用 CoreData；之前在第一份工作的專案之中是使用 FMDB 來處理資料存取，而後續則是用了 Realm。
+/usr/libexec/PlistBuddy -x -c &#39;Print :Entitlements&#39; profile.</description>
+    </item>
+    
+    <item>
+      <title>CoreData with background task</title>
+      <link>https://www.archie.tw/p/coredata-with-background-task/</link>
+      <pubDate>Wed, 23 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/coredata-with-background-task/</guid>
+      <description>前言 雖然在 iOS 上開發了幾年的時間，但一直到最近才開始使用 CoreData；之前在第一份工作的專案之中是使用 FMDB 來處理資料存取，而後續則是用了 Realm。
 選擇的原因分別是當時 FMDB 的速度較其餘兩者快速，而後來看上 Realm 的跨平台特色，不過近期開發的感想是能以原生為主的話，就儘量降低對於第三方套件的依賴性。
 這篇文章會記錄些什麼 其實這篇文章並不會從頭到尾寫下教學，而把重點放在一些我踩到的雷上，像是⋯⋯
 記得要附上 sqlite 的路徑 原先我的 persistentContainer 的產生方式如下
-lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯</description></item><item><title>SwiftLint</title><link>https://www.archie.tw/p/swiftlint/</link><pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/swiftlint/</guid><description>SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
+lazy var persistentContainer: NSPersistentContainer = { let container = NSPersistentContainer(name: &amp;#34;OfflineWallet&amp;#34;) let description = NSPersistentStoreDescription() description.shouldInferMappingModelAutomatically = true description.shouldMigrateStoreAutomatically = true container.persistentStoreDescriptions = [description] container.loadPersistentStores { _, error in if let error = error { fatalError(&amp;#34;Unresolved error \(error), \(String(describing: error._userInfo))&amp;#34;) } } return container }() 在模擬器上存取了幾次，每次都有 save 且第二次進入畫面的時候，都可以 fetch 得到資料，但是只要重開 App 就會從頭來過⋯⋯</description>
+    </item>
+    
+    <item>
+      <title>SwiftLint</title>
+      <link>https://www.archie.tw/p/swiftlint/</link>
+      <pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/swiftlint/</guid>
+      <description>SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
 Coding Style 的問題 剛進入到這家公司時，最痛苦的事情莫過於毫無章法的 Coding Style，這部分就不一一細數了，詳情可以看前陣子我的 Twitter 動態。
 專案裡頭每個人寫的格式不同，會造成其他人在閱讀專案時，大幅增加理解彼此想法的成本
-簡單來說就是浪費一堆時間在猜你在寫什麼
-為了讓專案裡頭的大家有差不多的 Coding Style，可以選擇使用 SwiftLint 來處理這個情況。
+ 簡單來說就是浪費一堆時間在猜你在寫什麼
+ 為了讓專案裡頭的大家有差不多的 Coding Style，可以選擇使用 SwiftLint 來處理這個情況。
 實際嘗試 首先先以 SwiftLint 的官方教學來安裝和建構環境，並利用 Ethan 的 SwiftLint rules 當作基底來調整，先以別人的規範來看看差異性。
 一跑下去便是直接噴了 3000+ issues⋯⋯
 可以透過 Rules.md 來逐條看看定義並透過 example 來看怎麼算是 Non Trggering 和 Triggering；再來一條一條調整改進。
 一些心得 目前公司的專案從 3000+ ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。
-private_outlet 和 private_action 而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯</description></item><item><title>Info.plist localized</title><link>https://www.archie.tw/p/info.plist-localized/</link><pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/info.plist-localized/</guid><description>一些需要權限的功能都會需要在 Info.plist 裡頭加上說明，而這個說明要實作多語系則是建立一個 InfoPlist.strings（沒錯，名字就是這樣） 然後對相對應得 Key 填寫翻譯，像是：
+private_outlet 和 private_action 而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯</description>
+    </item>
+    
+    <item>
+      <title>Info.plist localized</title>
+      <link>https://www.archie.tw/p/info.plist-localized/</link>
+      <pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/info.plist-localized/</guid>
+      <description>一些需要權限的功能都會需要在 Info.plist 裡頭加上說明，而這個說明要實作多語系則是建立一個 InfoPlist.strings（沒錯，名字就是這樣） 然後對相對應得 Key 填寫翻譯，像是：
 NSLocationWhenInUseUsageDescription = &amp;quot;說明填寫&amp;quot;; 就可以在要使用位置的說明處顯示多語系的結果了。
-至於其他的 Key 可以從 CocoaKey 官方文件以及 CoreFundationKey 找找。</description></item><item><title>Create CocoaPods by yourself</title><link>https://www.archie.tw/p/create-cocoapods-by-yourself/</link><pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/create-cocoapods-by-yourself/</guid><description>這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
+至於其他的 Key 可以從 CocoaKey 官方文件以及 CoreFundationKey 找找。</description>
+    </item>
+    
+    <item>
+      <title>Create CocoaPods by yourself</title>
+      <link>https://www.archie.tw/p/create-cocoapods-by-yourself/</link>
+      <pubDate>Sat, 15 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/create-cocoapods-by-yourself/</guid>
+      <description>這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
 首先，先建立一個新的 Pod
 pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會生成一個新的專案出來。
 再來將 Code.Swift 丟到 Pods/Development Pods/YourPodName，也就是它預設 ReplaceMe.Swift 的那個地方。
@@ -148,121 +395,391 @@ pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會
 都準備好之後，在 GitHub 上開一個 repository 來放置，記得要放上 tag 標記目前的版本。
 pod spec lint YourPodName.podspec 最後就送出去就好了！
 pod trunk push YourPodName.podspec 如果你沒有註冊過的話，得先註冊一下：
-pod trunk register email@domain.com 'Your Name' 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
-如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！</description></item><item><title>UUID with version 3, 5 and name spaces</title><link>https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/</link><pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/</guid><description>在 Swift 裏頭，預設的 UUID 只能從 UUID() 來產生，或者是從另一個 UUID 來產生， 這邊來記錄一下如何從 String 來產生 UUID。 首先，先在 Bridge-Header.h 裡頭加入
+pod trunk register email@domain.com &#39;Your Name&#39; 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
+如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！</description>
+    </item>
+    
+    <item>
+      <title>UUID with version 3, 5 and name spaces</title>
+      <link>https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/</link>
+      <pubDate>Fri, 14 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/uuid-with-version-3-5-and-name-spaces/</guid>
+      <description>在 Swift 裏頭，預設的 UUID 只能從 UUID() 來產生，或者是從另一個 UUID 來產生， 這邊來記錄一下如何從 String 來產生 UUID。 首先，先在 Bridge-Header.h 裡頭加入
 #import &amp;lt;CommonCrypto/CommonCrypto.h&amp;gt; 再來寫個 UUID 的 extension：
-extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace.</description></item><item><title>StatusBarStyle</title><link>https://www.archie.tw/p/statusbarstyle/</link><pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/statusbarstyle/</guid><description>最近改寫了 StatusBarStyle 的控制方式，從 iOS 9 之前是使用
+extension UUID { enum UUIDVersion: Int { case v3 = 3 case v5 = 5 } enum UUIDv5NameSpace: String { case dns = &amp;#34;6ba7b810-9dad-11d1-80b4-00c04fd430c8&amp;#34; case url = &amp;#34;6ba7b811-9dad-11d1-80b4-00c04fd430c8&amp;#34; case oid = &amp;#34;6ba7b812-9dad-11d1-80b4-00c04fd430c8&amp;#34; case x500 = &amp;#34;6ba7b814-9dad-11d1-80b4-00c04fd430c8&amp;#34; } init(version: UUIDVersion, name: String, nameSpace: UUIDv5NameSpace) { // Get UUID bytes from name space: let spaceUID = UUID(uuidString: nameSpace.</description>
+    </item>
+    
+    <item>
+      <title>StatusBarStyle</title>
+      <link>https://www.archie.tw/p/statusbarstyle/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/statusbarstyle/</guid>
+      <description>最近改寫了 StatusBarStyle 的控制方式，從 iOS 9 之前是使用
 UIApplication.shared.statusBarStyle = .default 並在 info.plist 的 View controller-based status bar appearance 欄位設為 NO。 而後來則改為覆寫 preferredStatusBarStyle 的方式，就不用在 viewWillAppear / viewWillDisappear 的時候手動控制 StatusBarStyle。 首先先確認 info.plist 之中 View controller-based status bar appearance 是為 YSE， 代表我們是透過 View controller-based 的方式來更改 status bar style。
 override var preferredStatusBarStyle: UIStatusBarStyle { return .default } 而配合 UINavigationController 的使用，可以以 Subclass 或是 Extension 的方式來實作， 這就得看專案需求了。
 Subclass 在 BaseNavigationController 裏頭，利用 childForStatusBarStyle 回傳要呼叫哪個 UIViewController 的 preferredStatusBarStyle
-override var childForStatusBarStyle: UIViewController?</description></item><item><title>Xcode beta with CocoaPods</title><link>https://www.archie.tw/p/xcode-beta-with-cocoapods/</link><pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/xcode-beta-with-cocoapods/</guid><description>Xcode 10 beta 的 Swift 版本為 4.2，而若你目前所使用的 Pods 多數為 Swift 4 的話，該怎麼辦呢？
+override var childForStatusBarStyle: UIViewController?</description>
+    </item>
+    
+    <item>
+      <title>Xcode beta with CocoaPods</title>
+      <link>https://www.archie.tw/p/xcode-beta-with-cocoapods/</link>
+      <pubDate>Tue, 11 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/xcode-beta-with-cocoapods/</guid>
+      <description>Xcode 10 beta 的 Swift 版本為 4.2，而若你目前所使用的 Pods 多數為 Swift 4 的話，該怎麼辦呢？
 你可以在 Podfile 裏頭加上全域的參數來規範所有 Pods 的 Swift version：
-post_install do |installer| installer.pods_project.targets.each do |target| target.build_configurations.each do |config| config.build_settings[&amp;#39;SWIFT_VERSION&amp;#39;] = &amp;#39;4&amp;#39; end end end 如此一番便可以輕鬆地在 Pods 還沒全面支援 Swift 4.2 時就可以使用 Xcode 10 Beta 開發👏</description></item><item><title>UserDefaults with Structure</title><link>https://www.archie.tw/p/userdefaults-with-structure/</link><pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/userdefaults-with-structure/</guid><description>有時候我們會將一些用戶資訊存在 UserDefaults 裡頭，是個方便且直覺的存取方式。
+post_install do |installer| installer.pods_project.targets.each do |target| target.build_configurations.each do |config| config.build_settings[&amp;#39;SWIFT_VERSION&amp;#39;] = &amp;#39;4&amp;#39; end end end 如此一番便可以輕鬆地在 Pods 還沒全面支援 Swift 4.2 時就可以使用 Xcode 10 Beta 開發👏</description>
+    </item>
+    
+    <item>
+      <title>UserDefaults with Structure</title>
+      <link>https://www.archie.tw/p/userdefaults-with-structure/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/userdefaults-with-structure/</guid>
+      <description>有時候我們會將一些用戶資訊存在 UserDefaults 裡頭，是個方便且直覺的存取方式。
 而 UserDefaults 並非是所有型別都可以接受，如你自己建構的 struct 或 class，
 就需要先轉成 Data 的格式來存取。
 這邊就來介紹如何存取 User 這個 struct：
 struct User { var ID: String var name: String var email: String? } 這是一個簡單的 User structure，若要轉成 Data 的話，得先將 User 宣告成 Codable，
 這樣就可以透過 PropertyListEncoder 和 PropertyListDecoder 來處理 User 和 Data 之間的 encode decode。
 而最近喜歡使用 extension 的方式來處理 UserDefaults：
-extension UserDefaults { var user: User? { get { guard let data = data(forKey: #function) else { return nil } return try?</description></item><item><title>Fastlane pilot issue</title><link>https://www.archie.tw/p/fastlane-pilot-issue/</link><pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/fastlane-pilot-issue/</guid><description>這是和防火牆有關的 issue
+extension UserDefaults { var user: User? { get { guard let data = data(forKey: #function) else { return nil } return try?</description>
+    </item>
+    
+    <item>
+      <title>Fastlane pilot issue</title>
+      <link>https://www.archie.tw/p/fastlane-pilot-issue/</link>
+      <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/fastlane-pilot-issue/</guid>
+      <description>這是和防火牆有關的 issue
 在 fastlane pilot 的 docs 有註記 Firewall Issues
 可以透過
-ENV[&amp;quot;DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS&amp;quot;] = &amp;quot;-t DAV&amp;quot; 來避免上傳的問題！</description></item><item><title>DeviceSupport</title><link>https://www.archie.tw/p/devicesupport/</link><pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/devicesupport/</guid><description>每當 iOS Beta 更新時，原先的 Xcode 便會無法支援，需要透過從 Xcode Beta 的 DeviceSupport 複製新的版本到正式版之中才能使用； 反正都會做這件事，不如就將 Xcode Beta 裡頭的 DeviceSupport 上傳到 GitHub 上提供給 iOS 有更新，但還沒下載新的 Xcode Beta 的人使用吧！ 傳送門點我</description></item><item><title>ignore Pods warning</title><link>https://www.archie.tw/p/ignore-pods-warning/</link><pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/ignore-pods-warning/</guid><description>在使用 CocoaPods 的時候難免會碰上 warning，原因不外乎就是使用的套件本身在 build 的時候所產生的警告，但不建議直接 unlock Pods 去修改，請以那專案修改，並在處理完後發送 Pull Request 造福大眾。 不過現階段來說，我們可以做的事情是忽略 Pods 的 Warning， 只要在 Podfile 裡頭加上
-inhibit_all_warnings! 即可在目前的專案中忽略 Pods 相關的 warning。</description></item><item><title>Pods 到底需不需要放在 .gitignore？</title><link>https://www.archie.tw/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</link><pubDate>Sat, 09 Jun 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</guid><description>若有使用 GitHub 所預設的 Swift .gitignore，你會發現在 CocoaPods 的部分寫著
+ENV[&amp;quot;DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS&amp;quot;] = &amp;quot;-t DAV&amp;quot; 來避免上傳的問題！</description>
+    </item>
+    
+    <item>
+      <title>DeviceSupport</title>
+      <link>https://www.archie.tw/p/devicesupport/</link>
+      <pubDate>Thu, 21 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/devicesupport/</guid>
+      <description>每當 iOS Beta 更新時，原先的 Xcode 便會無法支援，需要透過從 Xcode Beta 的 DeviceSupport 複製新的版本到正式版之中才能使用； 反正都會做這件事，不如就將 Xcode Beta 裡頭的 DeviceSupport 上傳到 GitHub 上提供給 iOS 有更新，但還沒下載新的 Xcode Beta 的人使用吧！ 傳送門點我</description>
+    </item>
+    
+    <item>
+      <title>ignore Pods warning</title>
+      <link>https://www.archie.tw/p/ignore-pods-warning/</link>
+      <pubDate>Tue, 12 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/ignore-pods-warning/</guid>
+      <description>在使用 CocoaPods 的時候難免會碰上 warning，原因不外乎就是使用的套件本身在 build 的時候所產生的警告，但不建議直接 unlock Pods 去修改，請以那專案修改，並在處理完後發送 Pull Request 造福大眾。 不過現階段來說，我們可以做的事情是忽略 Pods 的 Warning， 只要在 Podfile 裡頭加上
+inhibit_all_warnings! 即可在目前的專案中忽略 Pods 相關的 warning。</description>
+    </item>
+    
+    <item>
+      <title>Pods 到底需不需要放在 .gitignore？</title>
+      <link>https://www.archie.tw/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</link>
+      <pubDate>Sat, 09 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/pods-%E5%88%B0%E5%BA%95%E9%9C%80%E4%B8%8D%E9%9C%80%E8%A6%81%E6%94%BE%E5%9C%A8-.gitignore/</guid>
+      <description>若有使用 GitHub 所預設的 Swift .gitignore，你會發現在 CocoaPods 的部分寫著
 # CocoaPods # # We recommend against adding the Pods directory to your .gitignore. However # you should judge for yourself, the pros and cons are mentioned at: # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control # # Pods/ 用意如同字面上的意思，GitHub 所提供的預設會建議你上傳 Pods 的內容到 git server 上，
 而我個人也認同這種做法，目前所想的原因如下：
-可以完整地打包套件當前狀態到 git 上，以避免套件有異動 若你們有直接修改 Pods 裡頭的 Source code 的話，更加得上傳（不過完全不建議這麼做） git clone 下來之後可以不用再 pod install 一次 不過也是有些壞處，如套件越多時，造成 git 上的專案肥大等。
-但是像是 Carthage 的話，就會建議加入到 .</description></item><item><title>ProvisionedDevices</title><link>https://www.archie.tw/p/provisioneddevices/</link><pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/provisioneddevices/</guid><description>前言 這篇文章的內容會是記錄如何確認目前的 Provisioning Profile 擁有哪些測試裝置， 以便在使用 adhoc 打包時，確保裝置可以執行。
+ 可以完整地打包套件當前狀態到 git 上，以避免套件有異動 若你們有直接修改 Pods 裡頭的 Source code 的話，更加得上傳（不過完全不建議這麼做） git clone 下來之後可以不用再 pod install 一次  不過也是有些壞處，如套件越多時，造成 git 上的專案肥大等。
+但是像是 Carthage 的話，就會建議加入到 .</description>
+    </item>
+    
+    <item>
+      <title>ProvisionedDevices</title>
+      <link>https://www.archie.tw/p/provisioneddevices/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/provisioneddevices/</guid>
+      <description>前言 這篇文章的內容會是記錄如何確認目前的 Provisioning Profile 擁有哪些測試裝置， 以便在使用 adhoc 打包時，確保裝置可以執行。
 Provisioning Profile Path ~/Library/MobileDevice/Provisioning Profiles/ 在 terminal 下執行
-security cms -D -I /path/to/MyProfile.mobileprovision 便可以看到相關的資訊，如下圖： ProvisionedDevices</description></item><item><title>Firebase Cloud Functions with Database and Messaging</title><link>https://www.archie.tw/p/firebase-cloud-functions-with-database-and-messaging/</link><pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/firebase-cloud-functions-with-database-and-messaging/</guid><description>Cloud Functions Firebase 一直以來便是以 serverless 為主要的方向， 而 Functions 則是一個十分有趣的功能； 它可以自動地隨著事件的回應，如資料庫的異動或是收到 HTTP 的 requests 時，執行程式碼。 其中一個重點是，我們也不需要去管理或是 scale 伺服器。
-Triggers Cloud Firestore Triggers Realtime Database Triggers Firebase Authentication Triggers Google Analytics for Firebase Triggers Crashlytics Triggers Cloud Storage Triggers Cloud Pub/Sub Triggers HTTP Triggers 範例 需求 Realtime Database 底下的資料有異動的話，進行推播
-直接上 Code const functions = require(&amp;#39;firebase-functions&amp;#39;); const admin = require(&amp;#39;firebase-admin&amp;#39;); admin.initializeApp(functions.config().firebase); exports.updateTodayNews = functions.database.ref(&amp;#39;/today/{newsCategory}/updatedTime&amp;#39;).onWrite(event =&amp;gt; { const newsCategory = event.params.newsCategory; return admin.</description></item><item><title>CocoaPods</title><link>https://www.archie.tw/p/cocoapods/</link><pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/cocoapods/</guid><description>上一篇介紹 Carthage，這篇寫一下 CocoaPods。 其實我個人是先使用 CocoaPods，後來才部分改用 Carthage 作為主要的管理方式； 而 CocoaPods 的安裝方式也很簡單，可以透過 gem 來安裝：
+security cms -D -I /path/to/MyProfile.mobileprovision 便可以看到相關的資訊，如下圖：  ProvisionedDevices</description>
+    </item>
+    
+    <item>
+      <title>Firebase Cloud Functions with Database and Messaging</title>
+      <link>https://www.archie.tw/p/firebase-cloud-functions-with-database-and-messaging/</link>
+      <pubDate>Thu, 18 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/firebase-cloud-functions-with-database-and-messaging/</guid>
+      <description>Cloud Functions Firebase 一直以來便是以 serverless 為主要的方向， 而 Functions 則是一個十分有趣的功能； 它可以自動地隨著事件的回應，如資料庫的異動或是收到 HTTP 的 requests 時，執行程式碼。 其中一個重點是，我們也不需要去管理或是 scale 伺服器。
+Triggers  Cloud Firestore Triggers Realtime Database Triggers Firebase Authentication Triggers Google Analytics for Firebase Triggers Crashlytics Triggers Cloud Storage Triggers Cloud Pub/Sub Triggers HTTP Triggers  範例 需求 Realtime Database 底下的資料有異動的話，進行推播
+直接上 Code const functions = require(&amp;#39;firebase-functions&amp;#39;); const admin = require(&amp;#39;firebase-admin&amp;#39;); admin.initializeApp(functions.config().firebase); exports.updateTodayNews = functions.database.ref(&amp;#39;/today/{newsCategory}/updatedTime&amp;#39;).onWrite(event =&amp;gt; { const newsCategory = event.params.newsCategory; return admin.</description>
+    </item>
+    
+    <item>
+      <title>CocoaPods</title>
+      <link>https://www.archie.tw/p/cocoapods/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/cocoapods/</guid>
+      <description>上一篇介紹 Carthage，這篇寫一下 CocoaPods。 其實我個人是先使用 CocoaPods，後來才部分改用 Carthage 作為主要的管理方式； 而 CocoaPods 的安裝方式也很簡單，可以透過 gem 來安裝：
 安裝 sudo gem install cocoapods 不同於 Carthage 的 Cartfile，CocoaPods 的是使用 Podfile， 格式有些不同，不過都可以在資料夾下使用 Terminal 輸入初始化的指令：
 pod init 系統就會自行建立一個 Podfile，並用 pod search 的指令來找找你要什麼東西。 弄完 Podfile 之後，就可以執行安裝進專案：
 pod install 並打開它幫你建立的 .xcworkspace 就好了。
-一些分享 可安裝的版本和 GitHub 上寫的不同？ CocoaPods 會建立一個 local 的所有 repo 資訊，若找不到的時候，可以先試著更新它： pod repo update Carthage 和 CocoaPods 是可以混用的</description></item><item><title>Carthage</title><link>https://www.archie.tw/p/carthage/</link><pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/carthage/</guid><description>Carthage 是一個套件管理的開源軟體，可以使用 Homebrew 安裝：
+一些分享  可安裝的版本和 GitHub 上寫的不同？ CocoaPods 會建立一個 local 的所有 repo 資訊，若找不到的時候，可以先試著更新它：  pod repo update  Carthage 和 CocoaPods 是可以混用的  </description>
+    </item>
+    
+    <item>
+      <title>Carthage</title>
+      <link>https://www.archie.tw/p/carthage/</link>
+      <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/carthage/</guid>
+      <description>Carthage 是一個套件管理的開源軟體，可以使用 Homebrew 安裝：
 brew install carthage 和 CocoaPods 的差異在於它並不會將第三方的 Framework 直接加入專案， 而是獨立在外，並在 build 的時候直接將 framework 複製進去到 App 內； CocoaPods 的話則會在每次 build 的時候同時 build 你所匯入的 framework， 而隨著專案使用到的套件內容越多，則會花越多時間。
 去中心化 這個詞最近隨著區塊鏈的爆紅，也常常可以看見。 不過在這邊的情境是，CocoaPods 是由它那邊搜集很多個 repo，提供給我們來安裝； 所以若 CocoaPods 的 repo 資料沒更新，或是作者只放在 GitHub 上，沒有提交到 CocoaPods 的話， 則無法使用。 而 Carthage 則沒有這方面的問題，可以自行將 GitHub 上的專案加入到 Cartfile
 github &amp;quot;ReactiveX/RxSwift&amp;quot; 不過這也是比較麻煩的地方，我們就沒有辦法像 CocoaPods 一樣直接在 Terminal 下 pods search RxSwift 來取得資訊。
-個人的使用方式 由於我自行在開發，同時會有很多個專案用到相同的 framework（e.g RxSwift、Siren）， 原本若是使用 CocoaPods 的話，則會在很多資料夾內都有一樣的東西； 而 Carthage 的話，則是將 FRAMEWORK_SEARCH_PATHS 都指定到同一個資料夾即可， 並在 Build phase 加上 Carthage 的 Run script。 而我大多數只會開發 iOS 的 App，Carthage update 的時候則可以只更新 iOS 的部分：</description></item><item><title>FireabseDatabase - Read</title><link>https://www.archie.tw/p/fireabsedatabase-read/</link><pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/fireabsedatabase-read/</guid><description>之前有寫過 FirebaseDatabase REST API的文章， 而這篇則會是在 iOS 上的使用。
+個人的使用方式 由於我自行在開發，同時會有很多個專案用到相同的 framework（e.g RxSwift、Siren）， 原本若是使用 CocoaPods 的話，則會在很多資料夾內都有一樣的東西； 而 Carthage 的話，則是將 FRAMEWORK_SEARCH_PATHS 都指定到同一個資料夾即可， 並在 Build phase 加上 Carthage 的 Run script。 而我大多數只會開發 iOS 的 App，Carthage update 的時候則可以只更新 iOS 的部分：</description>
+    </item>
+    
+    <item>
+      <title>FireabseDatabase - Read</title>
+      <link>https://www.archie.tw/p/fireabsedatabase-read/</link>
+      <pubDate>Mon, 25 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/fireabsedatabase-read/</guid>
+      <description>之前有寫過 FirebaseDatabase REST API的文章， 而這篇則會是在 iOS 上的使用。
 安裝套件 由於 Google 認為 Carthage 的方式不符合他們的使用模式， 畢竟 Firebase 的 framework 並非是開源的， 所以只有提供 CocoaPods 的安裝方式或是直接下載檔案； 而我這邊就以 CocoaPods 來安裝 Firebase 相關的套件，其他則用 Carthage 來管理。
 設定 我們在 Firebase console 那先建立好專案並匯入 GoogleService-Info.plist， 如果你有多個 Target 要使用的話，建議放在不同的資料夾，並且設定好 Target Membership。 並且要注意 Firebase console 內的 Database rules， 若沒有做 auth 相關內容的話，記得要調整； 如我開放給 App 讀取但不可寫入的話：
 { &amp;quot;rules&amp;quot;: { &amp;quot;.write&amp;quot;: &amp;quot;auth != null&amp;quot;, &amp;quot;.read&amp;quot;: true } } 接著在 AppDelegate.swift 中加入
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?</description></item><item><title>MKGeodesicPolyline</title><link>https://www.archie.tw/p/mkgeodesicpolyline/</link><pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/mkgeodesicpolyline/</guid><description>先來看看 MKGeodesicPolyline 在 Apple Developer Documentation 上的介紹： A line-based shape that follows the contours of the Earth to create the shortest path between the specified points.
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?</description>
+    </item>
+    
+    <item>
+      <title>MKGeodesicPolyline</title>
+      <link>https://www.archie.tw/p/mkgeodesicpolyline/</link>
+      <pubDate>Sat, 09 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/mkgeodesicpolyline/</guid>
+      <description>先來看看 MKGeodesicPolyline 在 Apple Developer Documentation 上的介紹： A line-based shape that follows the contours of the Earth to create the shortest path between the specified points.
 繪製 Polyline 首先我們在建置 MKGeodesicPolyline 的時候， 給予它一個 [CLLocationCoordinate2D]，並宣告要繪製幾個點； 接著讓 MKMapView 新增進去。
 let geodesicPolyline = MKGeodesicPolyline.init(coordinates: [start, end], count: 2) mapView.add(geodesicPolyline) 再來我們需要透過 MKMapViewDelegate 的 function 來定義 MKGeodesicPolyline 的 UI：
-func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -&amp;gt; MKOverlayRenderer { guard let polyline = overlay as? MKPolyline else { return MKOverlayRenderer(overlay: overlay) } let renderer = MKPolylineRenderer.</description></item><item><title>Siren – 通知使用者更新</title><link>https://www.archie.tw/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</link><pubDate>Sun, 03 Dec 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</guid><description>我們時常可以在 App 之中看到，「目前有新版本可以提供下載」等相關的訊息； 而實作通知使用者更新的方法很多，這篇則是介紹一個開源的 Framework：
+func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -&amp;gt; MKOverlayRenderer { guard let polyline = overlay as? MKPolyline else { return MKOverlayRenderer(overlay: overlay) } let renderer = MKPolylineRenderer.</description>
+    </item>
+    
+    <item>
+      <title>Siren – 通知使用者更新</title>
+      <link>https://www.archie.tw/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</link>
+      <pubDate>Sun, 03 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/siren-%E9%80%9A%E7%9F%A5%E4%BD%BF%E7%94%A8%E8%80%85%E6%9B%B4%E6%96%B0/</guid>
+      <description>我們時常可以在 App 之中看到，「目前有新版本可以提供下載」等相關的訊息； 而實作通知使用者更新的方法很多，這篇則是介紹一個開源的 Framework：
 Siren Siren 的運作邏輯是，你可以透過版號來決定跳出什麼通知來提醒使用者， 並且提供多語系的訊息內容。 它會透過 Bundle Identifier 去 App Store 上尋找資訊， 再來比對版號執行後續動作。
-版號的定義 1.0.123.5678 1：major 0：minor 123：patch 5678：revision 一般我個人的習慣是： major 會是在商業模式改變或是重大功能發布時，才會動到的； 而 minor 則是有必要的更新，像是嚴重的 bug 或是無法向下相容的異動。 patch 是更新一些 issue 或是修正 bug； revision 則讓它跟著 commit 的數量。
+版號的定義 1.0.123.5678  1：major 0：minor 123：patch 5678：revision  一般我個人的習慣是： major 會是在商業模式改變或是重大功能發布時，才會動到的； 而 minor 則是有必要的更新，像是嚴重的 bug 或是無法向下相容的異動。 patch 是更新一些 issue 或是修正 bug； revision 則讓它跟著 commit 的數量。
 Siren 的設定 舉個例子，在 major、minor 有提升時； 像是從 1.0.0 -&amp;gt; 2.0.0 或是 1.0.0 -&amp;gt; 1.1.0， 我會希望舊的使用者一定要更新 App 才能使用， 則會設為強制更新（.force）。 而 patch 則讓使用則決定要不要更新，或是可以跳過此次更新。
-Siren.shared.majorUpdateAlertType = .force Siren.shared.minorUpdateAlertType = .force Siren.shared.patchUpdateAlertType = .</description></item><item><title>UIActivityViewController</title><link>https://www.archie.tw/p/uiactivityviewcontroller/</link><pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/uiactivityviewcontroller/</guid><description>這些話寫在前面⋯⋯ 最近在開發的產品需要加入「分享」的功能， 希望將一些資訊及圖片分享到其他 App 或平台上； 這篇文章會先點出需求，再逐一闡述開發的過程。
-需求 Facebook 分享 hash tag 及圖片 其餘分享文字及圖片和網址 實作 我們利用 UIActivityViewController 來呈現分享的選單，並將分享的內容塞入 activityItems: [Any] 之中； 而 applicationActivities 則設為 nil，並沒有要客製 activity。 若沒有需要依照不同類別做出不同的判斷，我們可以將內容放置進去； 像是 URL、String、UIImage等等。 而幾個特點要注意一下：
-Facebook： String 只支援一個 hash tag（像是：“#Archie”），若超過或其他一般文字則不會顯示 有網址的話，就會顯示連結；意思是圖片和連結無法同時出現，會優先顯示連結 iMessage 若 String 裡頭的時間格式為 dd/MM/yyyy HH:mm 則可以點擊，並加入行事曆 圖片會以另一則訊息傳送 網址會以縮圖顯示（就如一般訊息收到的邏輯）
+Siren.shared.majorUpdateAlertType = .force Siren.shared.minorUpdateAlertType = .force Siren.shared.patchUpdateAlertType = .</description>
+    </item>
+    
+    <item>
+      <title>UIActivityViewController</title>
+      <link>https://www.archie.tw/p/uiactivityviewcontroller/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/uiactivityviewcontroller/</guid>
+      <description>這些話寫在前面⋯⋯ 最近在開發的產品需要加入「分享」的功能， 希望將一些資訊及圖片分享到其他 App 或平台上； 這篇文章會先點出需求，再逐一闡述開發的過程。
+需求  Facebook 分享 hash tag 及圖片 其餘分享文字及圖片和網址  實作 我們利用 UIActivityViewController 來呈現分享的選單，並將分享的內容塞入 activityItems: [Any] 之中； 而 applicationActivities 則設為 nil，並沒有要客製 activity。 若沒有需要依照不同類別做出不同的判斷，我們可以將內容放置進去； 像是 URL、String、UIImage等等。 而幾個特點要注意一下：
+Facebook：  String 只支援一個 hash tag（像是：“#Archie”），若超過或其他一般文字則不會顯示 有網址的話，就會顯示連結；意思是圖片和連結無法同時出現，會優先顯示連結  iMessage 若 String 裡頭的時間格式為 dd/MM/yyyy HH:mm 則可以點擊，並加入行事曆 圖片會以另一則訊息傳送 網址會以縮圖顯示（就如一般訊息收到的邏輯）
 依照類別提供不同內容 首先，我們可以先看 UIActivityType：
-extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebook: UIActivityType @available(iOS 6.0, *) public static let postToTwitter: UIActivityType @available(iOS 6.</description></item><item><title>3D Touch</title><link>https://www.archie.tw/p/3d-touch/</link><pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/3d-touch/</guid><description>這些寫在前面⋯⋯ 最近剛從 iPhone 6 Plus 晉升到 iPhone X，其中一項硬體差異便是「3D Touch」； 而這也讓我花了一些時間，來加入 3D Touch 的相關功能開發。 這篇文章前半部會寫 3D Touch 在主畫面上的一些差異， 後半部才會補上 Swift 的相關寫法。
+extension UIActivityType { @available(iOS 6.0, *) public static let postToFacebook: UIActivityType @available(iOS 6.0, *) public static let postToTwitter: UIActivityType @available(iOS 6.</description>
+    </item>
+    
+    <item>
+      <title>3D Touch</title>
+      <link>https://www.archie.tw/p/3d-touch/</link>
+      <pubDate>Mon, 13 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/3d-touch/</guid>
+      <description>這些寫在前面⋯⋯ 最近剛從 iPhone 6 Plus 晉升到 iPhone X，其中一項硬體差異便是「3D Touch」； 而這也讓我花了一些時間，來加入 3D Touch 的相關功能開發。 這篇文章前半部會寫 3D Touch 在主畫面上的一些差異， 後半部才會補上 Swift 的相關寫法。
 iOS 版本：11.1.1（15B150） 首先，先將 App 分成有 Today extension 以及沒有 Today extension 的這兩種：
 郵件 – 有 Today extension
 鬧鐘 – 沒有 Today extension
 從這兩張圖的比較下，我們可以得知在 iOS 11.1.1 之中， 若有 Today extension 的 App，在 3D Touch 的快捷鍵之中， 會顯示 Today extension，而反之則僅會露出原本的 App icon。 另一點是，快捷鍵的順序是依 index 越小則越靠近 App icon； 所以使用者將 App 放置在畫面上半部或下半部會影響由上到下的順序。
 鬧鐘 – 放置畫面下半部
-所以便不必太在意快捷鍵的排序問題，包含 Today extension 順序也是。</description></item><item><title>UIImage memory issue</title><link>https://www.archie.tw/p/uiimage-memory-issue/</link><pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/uiimage-memory-issue/</guid><description>今天要來分享的內容，是有關於 UIImage 的一個記憶體爆炸情況， 而我先闡述一下發現這問題的情境： 專案內有個功能會需要匯入大型圖片做縮放以及拖拉功能， 使用者可以切換大型圖片，而在點擊過多的圖片時，便會造成記憶體爆炸。
+所以便不必太在意快捷鍵的排序問題，包含 Today extension 順序也是。</description>
+    </item>
+    
+    <item>
+      <title>UIImage memory issue</title>
+      <link>https://www.archie.tw/p/uiimage-memory-issue/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/uiimage-memory-issue/</guid>
+      <description>今天要來分享的內容，是有關於 UIImage 的一個記憶體爆炸情況， 而我先闡述一下發現這問題的情境： 專案內有個功能會需要匯入大型圖片做縮放以及拖拉功能， 使用者可以切換大型圖片，而在點擊過多的圖片時，便會造成記憶體爆炸。
 原先的做法 在使用者點擊叫出某張圖時，會使用 UIImage(name: ImageName) 來產生 UIImage 物件，並將畫面上的 UIImageView.image 設為它。 看起來蠻合理的，當使用者切換後，我會再生成一個新的 UIImage 物件，並取代前者； 這樣前者就應該會釋放掉記憶體空間了！
 但⋯⋯事情並不是這樣發展 在使用者切換幾次後，發現記憶體只有一直往上增長，而未釋放掉； 意思是指雖然我將畫面上的 UIImageView.image 取代掉了， 不過實際上仍然佔據著記憶體空間⋯⋯
 為什麼？ 上網查了一下後，發現 UIImage(named: ImageName) 這種生成方式， 會自行將取出來的圖片放置到 cache； 而上述的使用情況就會變成當使用者一切換，便會將另一張大型圖片放置到 cache 而未釋放掉前一張。
 改良的做法 Data 在建構的時候，有一種選項是 .uncached， 也就是說，我們可以先將圖片以 Data 的方式打開，再轉回 UIImage， 則就可以避免掉它自動放置到 cache 而記憶體爆掉的情況。
-if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.png&amp;#34;), let data = try? Data(contentsOf: url, options: Data.ReadingOptions.uncached) { let image = UIImage(data: data) imageView.image = image } 這樣就可以解決 UIImage 的 cache 導致記憶體爆炸的情況。</description></item><item><title>Swift 4 JSON</title><link>https://www.archie.tw/p/swift-4-json/</link><pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/swift-4-json/</guid><description>在 Swift 之中，JSON (JavaScript Object Notation) 的型別為 [String: Any]， 也就是一個 Dictionary 的概念，以一組 Key 對應一組 Value。 大多數會碰到 JSON 格式是在做網路溝通時， 使用 JSON 格式並 encode 成 Data 的型態在傳輸資料。
+if let url = Bundle.main.url(forResource: ImageName, withExtension: &amp;#34;.png&amp;#34;), let data = try? Data(contentsOf: url, options: Data.ReadingOptions.uncached) { let image = UIImage(data: data) imageView.image = image } 這樣就可以解決 UIImage 的 cache 導致記憶體爆炸的情況。</description>
+    </item>
+    
+    <item>
+      <title>Swift 4 JSON</title>
+      <link>https://www.archie.tw/p/swift-4-json/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/swift-4-json/</guid>
+      <description>在 Swift 之中，JSON (JavaScript Object Notation) 的型別為 [String: Any]， 也就是一個 Dictionary 的概念，以一組 Key 對應一組 Value。 大多數會碰到 JSON 格式是在做網路溝通時， 使用 JSON 格式並 encode 成 Data 的型態在傳輸資料。
 Swift 3 以前 我們從 URLSession.shared.dataTask 的 handler 之中， 會得到 data、response 及 error，其中的 data 會使用下面的方式才轉換成 JSON：
-/* Create a Foundation object from JSON data. Set the NSJSONReadingAllowFragments option if the parser should allow top-level objects that are not an NSArray or NSDictionary. Setting the NSJSONReadingMutableContainers option will make the parser generate mutable NSArrays and NSDictionaries.</description></item><item><title>Status bar style</title><link>https://www.archie.tw/p/status-bar-style/</link><pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/status-bar-style/</guid><description>Status bar style 一般在 iOS 裡頭，status bar style 可以被分成兩種
-default lightContent 設定方式 我們可以在 info.plist 做全域的設定，讓整個 app 在執行的時候，都是同樣的 style； 這取決於 View controller-based status bar appearance – YES / NO 若設為 NO，則是整個 app 都會是同樣的 style； 而若設為 YES，就能在個別的 viewController 來做設定。
+/* Create a Foundation object from JSON data. Set the NSJSONReadingAllowFragments option if the parser should allow top-level objects that are not an NSArray or NSDictionary. Setting the NSJSONReadingMutableContainers option will make the parser generate mutable NSArrays and NSDictionaries.</description>
+    </item>
+    
+    <item>
+      <title>Status bar style</title>
+      <link>https://www.archie.tw/p/status-bar-style/</link>
+      <pubDate>Tue, 29 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/status-bar-style/</guid>
+      <description>Status bar style 一般在 iOS 裡頭，status bar style 可以被分成兩種
+ default lightContent  設定方式 我們可以在 info.plist 做全域的設定，讓整個 app 在執行的時候，都是同樣的 style； 這取決於 View controller-based status bar appearance – YES / NO 若設為 NO，則是整個 app 都會是同樣的 style； 而若設為 YES，就能在個別的 viewController 來做設定。
 View controller-base status bar appearance – YES 實作方式是更改 UIViewController 底下的 preferredStatusBarStyle， 而因為它是 { get } 的，所以我們只能透過覆寫的方式來更改：
-override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent } UINavigationController 如果你要更改的 UIViewController 是包在 UINavigationController 裡頭的話， 則需要更改的是 UINavigationController 的 preferredStatusBarStyle， 而非是當前的 UIViewController。</description></item><item><title>ViewModel with POP</title><link>https://www.archie.tw/p/viewmodel-with-pop/</link><pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/viewmodel-with-pop/</guid><description>ViewModel with POP 這邊有兩個名詞需要解釋一下，一個是 ViewModel，另一個則是 POP：
+override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent } UINavigationController 如果你要更改的 UIViewController 是包在 UINavigationController 裡頭的話， 則需要更改的是 UINavigationController 的 preferredStatusBarStyle， 而非是當前的 UIViewController。</description>
+    </item>
+    
+    <item>
+      <title>ViewModel with POP</title>
+      <link>https://www.archie.tw/p/viewmodel-with-pop/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/viewmodel-with-pop/</guid>
+      <description>ViewModel with POP 這邊有兩個名詞需要解釋一下，一個是 ViewModel，另一個則是 POP：
 ViewModel 在 iOS 的開發模式中，從你新建一個新專案的時候，它的預設內容是以 MVC 的架構為底； 而在 MVVM 的架構中，會在 View 以及 Model 之間，多夾帶一層 ViewModel 來分工。 在實作 ViewModel 的時候，我是以 structure 的方式才建構 ViewModel， 並在裡頭宣告 init(model: Model) 的方式，來將 Model 轉成 ViewModel。
-struct User { var id: String var name: String var age: Int } struct UserViewModel { var title: String var content: String init(user: User) { title = user.name content = &amp;#34;Hi, 我是 \(user.name)，今年 \(user.age)歲！&amp;#34; } } POP POP（Protocol-Oriendted Programing）是以 Protocol 來傳遞的方式； 以 UITableViewCell 來說，我會建立一個：</description></item><item><title>iOS UIView shadow</title><link>https://www.archie.tw/p/ios-uiview-shadow/</link><pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/ios-uiview-shadow/</guid><description>最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
+struct User { var id: String var name: String var age: Int } struct UserViewModel { var title: String var content: String init(user: User) { title = user.name content = &amp;#34;Hi, 我是 \(user.name)，今年 \(user.age)歲！&amp;#34; } } POP POP（Protocol-Oriendted Programing）是以 Protocol 來傳遞的方式； 以 UITableViewCell 來說，我會建立一個：</description>
+    </item>
+    
+    <item>
+      <title>iOS UIView shadow</title>
+      <link>https://www.archie.tw/p/ios-uiview-shadow/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/ios-uiview-shadow/</guid>
+      <description>最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
 CALayer 陰影相關的實作方式，是以 CALayer 底下的這五個變數來控制
-shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
+ shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float  shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
 shadowPath 預設值為 null，並支援 animated，可以在這邊調整陰影的路徑， 所以當 UIView 在透過 animated 調整大小時，我們可以一併調整 shadowPath 來跟著做變化。
 shadowOffset 預設值為 [0, -3]，來調整陰影的位移。
 shadowRadius 預設值為 3，系統本身會進行發散的動作。
 shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰影，並沒有需要客製化的話， 只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
-layer.masksToBounds clipsToBounds 因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！</description></item><item><title>iOS User Interface Default Value</title><link>https://www.archie.tw/p/ios-user-interface-default-value/</link><pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/ios-user-interface-default-value/</guid><description>我們在開發 iOS App 的時候，對於 User interface 的開發模式有幾種流派
-Storyboard Storyboard + xib xib Code 而這篇的主題，先撇除純 Code 流的開發方式，來聊聊使用 Storyboard 和 xib 的朋友，會遇到什麼事。
+ layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！</description>
+    </item>
+    
+    <item>
+      <title>iOS User Interface Default Value</title>
+      <link>https://www.archie.tw/p/ios-user-interface-default-value/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/ios-user-interface-default-value/</guid>
+      <description>我們在開發 iOS App 的時候，對於 User interface 的開發模式有幾種流派
+ Storyboard Storyboard + xib xib Code  而這篇的主題，先撇除純 Code 流的開發方式，來聊聊使用 Storyboard 和 xib 的朋友，會遇到什麼事。
 先說說為什麼我使用 User interface（Storyboard, xib） 一方面是因為一開始學習的時候，教學是從拉拉元件，連動按鈕開始， 比起純 Code 的寫法，這樣也讓人比較好上手； 再來便開始弄一些 Auto layout，讓畫面越來越完整。 而其中一點是，方便和設計師做討論， 看著畫面來調整 UI 會比我一直重新 Build 出 App 還快得一些。 但也正是為了讓設計師可以看到畫面，我可能得在一些 UIKit 的元件上先放置好預設的值， 好比說：
 儘管這個 UIViewController 在 viewDidLoad 的時候，會再配置一次多語系的文案以及更換些 icon 或者顏色， 但至少在初步上可以看到大概會長什麼樣子。
 若不清空預設值呢？ 我們就可能在部分畫面上會看到，原本打在 xib 的 UITextField 上的值（e.g Hinet CHT Auto）， 甚至是可能有些元件的 isHidden 是由程式判斷出需不需要呈現， 而畫面顯示到判斷完畢的中間，會造成畫面上元件閃現的情況。 於是原先我的做法會：
-清空 xib 上的所有預設值 在 viewDidLoad 的狀態，執行清空的動作 前者的做法，會影響到的就是 xib 失去了給設計師觀看的意義， 因為全空的畫面並不符合使用者的情境； 而後者的做法，當元件一多的時候，有時便會有疏忽。</description></item><item><title>Firebase Database REST API</title><link>https://www.archie.tw/p/firebase-database-rest-api/</link><pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/firebase-database-rest-api/</guid><description>這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
+ 清空 xib 上的所有預設值 在 viewDidLoad 的狀態，執行清空的動作  前者的做法，會影響到的就是 xib 失去了給設計師觀看的意義， 因為全空的畫面並不符合使用者的情境； 而後者的做法，當元件一多的時候，有時便會有疏忽。</description>
+    </item>
+    
+    <item>
+      <title>Firebase Database REST API</title>
+      <link>https://www.archie.tw/p/firebase-database-rest-api/</link>
+      <pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/firebase-database-rest-api/</guid>
+      <description>這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
 Firebase Database Firebase database 的儲存資料方式是屬於 NoSQL 的方式， 利用一組 key 配對一組 value 的模式來建構資料庫； 而在 Database 的介面中，我們可以清楚地看到資料是以 JSON 的格式呈現。
 在 iOS 開發的過程中，如果要使用 Firebase 的相關內容， 可以使用官方所提供的 Firebase iOS SDK； 或是在使用 Python 開發的時候，我會選擇使用官方推薦的 Pyrebase， 那若你目前的開發方式沒有相對應的 SDK 或是 third party 可以使用的話呢？ 那麼你就只能一起用 REST API 來完成要做的事情了！
 REST API Firebase 提供了五種 Http method
-GET PUT POST PATCH DELETE 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。 PUT PUT 就和平常使用 PUT 的方式一樣， 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。</description></item><item><title>Fastlane - match</title><link>https://www.archie.tw/p/fastlane-match/</link><pubDate>Tue, 18 Jul 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/fastlane-match/</guid><description>Fastlane 是什麼？ 簡單來說，它可以替你解決除了寫程式以外的很多事情； 像是「螢幕截圖」、「打包上傳到 Testflight」、「建立 App Store 的 App 資訊」等等， 尤其是在一個專案（project）擁有多個 target 的時候， 更是只需要一行就可以打包出十幾個 App，並且分別上架到 App Store。 而在這篇文章裡頭，會介紹其中一項功能的部分用法：
+ GET PUT POST PATCH DELETE 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。  PUT PUT 就和平常使用 PUT 的方式一樣， 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。</description>
+    </item>
+    
+    <item>
+      <title>Fastlane - match</title>
+      <link>https://www.archie.tw/p/fastlane-match/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/fastlane-match/</guid>
+      <description>Fastlane 是什麼？ 簡單來說，它可以替你解決除了寫程式以外的很多事情； 像是「螢幕截圖」、「打包上傳到 Testflight」、「建立 App Store 的 App 資訊」等等， 尤其是在一個專案（project）擁有多個 target 的時候， 更是只需要一行就可以打包出十幾個 App，並且分別上架到 App Store。 而在這篇文章裡頭，會介紹其中一項功能的部分用法：
 Match Match 主要負責和 Certificate 相關的處理，這邊所要帶給大家的使用情境是， 一個 iOS 專案同時有需要多人同時開發，我們通常會採取的作法有下列幾種：
 在 Apple Developer Team 之中加入專案各個開發人員使用自己的 Apple ID 在 Apple Developer Team 之中加入專案各個開發人員的公司 Apple ID 提供給專案各個開發人員相對應的 Provisioning Profile 第一種和第二種的做法差不多，但其壞處就是管理者無法有效地管理 Certificate， 所以有可能會時常出現一些奇怪的 App IDs 或是 iOS Provisioning Profile， 或是誰又不小心把誰的 certificate revoke ⋯⋯
 所以我們需要權限劃分清楚 建議的做法是註冊一組公用的開發者帳號，不和任何人產生連結性
 e.g dev@apple.com
-只放這組帳號在 Apple Developer Team 裡頭，開發相關的處理皆由這組帳號來負責， 而帳號密碼無需流通到僅負責開發的人員手中； 意思是指，讓單純寫 Code 開發的人員，無須註冊特別的 Apple ID 或是加入哪個 Team， 只需要透過 fastlane match 的方式來獲得 Certificate，可以開發就好！</description></item><item><title>print</title><link>https://www.archie.tw/p/print/</link><pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/print/</guid><description>print 在第一次接觸一個沒學過的程式語言時，我們多半可以看到會以「Hello, world!」作為開頭； 而你第一個所使用的 method，也很有可能就是印出東西相關的。 我在這邊寫的是 print，可能在別的語言並不是這個詞，是 printf 或是 console.log() 之類， 但這邊（或是這整個網站XD）就以 Swift 為主。
+只放這組帳號在 Apple Developer Team 裡頭，開發相關的處理皆由這組帳號來負責， 而帳號密碼無需流通到僅負責開發的人員手中； 意思是指，讓單純寫 Code 開發的人員，無須註冊特別的 Apple ID 或是加入哪個 Team， 只需要透過 fastlane match 的方式來獲得 Certificate，可以開發就好！</description>
+    </item>
+    
+    <item>
+      <title>print</title>
+      <link>https://www.archie.tw/p/print/</link>
+      <pubDate>Fri, 07 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/print/</guid>
+      <description>print 在第一次接觸一個沒學過的程式語言時，我們多半可以看到會以「Hello, world!」作為開頭； 而你第一個所使用的 method，也很有可能就是印出東西相關的。 我在這邊寫的是 print，可能在別的語言並不是這個詞，是 printf 或是 console.log() 之類， 但這邊（或是這整個網站XD）就以 Swift 為主。
 NSLog v.s print 有接觸過 iOS 開發的人，你可能也會看過別人使用 NSLog，而這邊就解釋一下兩者的差異：
 NSLog 它是屬於 Fundation 的一個 function：
 會加上 timestamp 會加上 identifier 會印在 device console 會花較多一些些的效能，所以會比較慢一些（因為前兩者）
 print 會印在 debugger console 所以，若你只是需要記錄在 debugger console 的話，則建議就使用 print 就好。
 開始使用 為了瞭解程式的執行內容，我們便開始在一些地方加上 print 的功能，像是
 if a == 1 { print(&amp;#34;a 等於 1&amp;#34;) } else { print(&amp;#34;a 不等於 1&amp;#34;) } 這樣就可以在 debugger console 那看到程式目前是進到哪個判斷式裡頭， 不過他大概就很簡略地顯示
-a 等於 1</description></item><item><title>Apple Pay</title><link>https://www.archie.tw/p/apple-pay/</link><pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/apple-pay/</guid><description>Apple Pay Apple Pay 已經在台灣流通一段時間，第三方支付的相關業者也相接著推出串接的服務； 而撇除串接第三方支付的 SDK， iOS 開發者本身的流程呢？
+a 等於 1</description>
+    </item>
+    
+    <item>
+      <title>Apple Pay</title>
+      <link>https://www.archie.tw/p/apple-pay/</link>
+      <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/apple-pay/</guid>
+      <description>Apple Pay Apple Pay 已經在台灣流通一段時間，第三方支付的相關業者也相接著推出串接的服務； 而撇除串接第三方支付的 SDK， iOS 開發者本身的流程呢？
 Apple developer 相關設定 首先，你需要先到 Apple developer &amp;gt; Identifiers &amp;gt; Merchant IDs 註冊一個 Identifier
 新建完之後，點擊裡頭的 edit，需要補上 CSR 檔； 而如果你只是要測試這個流程，沒有要走到金流相關的測試的話，可以先跳過這段。
 Xcode 相關設定 接著到你的專案裡頭，打開 Apple Pay 的開關並填入剛剛註冊的 Merchant ID。
 以及 import PassKit，便可以在專案中使用 Apple Pay！
 流程解釋 使用者按下 Apple Pay 的按鈕後，我們該做的流程為
-建立訂單（PKPaymentRequest） 填寫訂單相關內容 建立 Apple Pay 的畫面（PKPaymentAuthorizationViewController） 設定 PKPaymentAuthorizationViewController 的 delegate present Apple Pay 的畫面 而訂單相關內容可以填寫寄送相關（ship）以及聯絡人相關（contact）和金額那些基本的。 func applePay() { let request = PKPaymentRequest() request.merchantIdentifier = &amp;#34;merchant.</description></item><item><title>Wifi 密碼 – 共享密碼的平台</title><link>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</link><pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid><description>上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
+ 建立訂單（PKPaymentRequest） 填寫訂單相關內容 建立 Apple Pay 的畫面（PKPaymentAuthorizationViewController） 設定 PKPaymentAuthorizationViewController 的 delegate present Apple Pay 的畫面 而訂單相關內容可以填寫寄送相關（ship）以及聯絡人相關（contact）和金額那些基本的。  func applePay() { let request = PKPaymentRequest() request.merchantIdentifier = &amp;#34;merchant.</description>
+    </item>
+    
+    <item>
+      <title>Wifi 密碼 – 共享密碼的平台</title>
+      <link>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</link>
+      <pubDate>Wed, 28 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/wifi-%E5%AF%86%E7%A2%BC-%E5%85%B1%E4%BA%AB%E5%AF%86%E7%A2%BC%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid>
+      <description>上週利用一些閒暇時間，串接一些服務寫了這個簡單的小工具， 主要為了解決每次到一間新的店家時，都得先找找 Wifi 的資訊： 找店員問、找菜單上有沒有寫、找牆壁有沒有貼⋯⋯ 於是乎想找一個地方，把我所知道的 Wifi 帳號及密碼記下來， 儘管只要連線過一次，就不會再詢問了，但至少下次人家問我的時候可以告訴他。
 使用流程 打開 Wifi 密碼 – 共享密碼的平台 後，會需要使用 Facebook 做登入的動作， 其主要原因是，裡頭的資訊是由全部使用者共同維護的（共筆的概念）， 所以其實會紀錄是哪個使用者新增 Wifi 資訊，但並不會顯示出來。 為了讓使用者承擔一點點微薄的責任，來讓大家都可以比較信任 Wifi 裡頭的資訊可信度， 便加入的登入的系統。
-登入畫面
+ 登入畫面 
 接著我們會看到主畫面：
-Wifi 列表
+ Wifi 列表 
 可以看到目前共筆上，有哪些 Wifi 的資訊：
-名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。 舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
-實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。</description></item><item><title>APNs</title><link>https://www.archie.tw/p/apns/</link><pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/apns/</guid><description>APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
-Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。 Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
+ 名稱 地點 狀態 最後更新時間 點擊進去之後，有可能會跳出 AdMob 的獎勵型影片廣告，可以點擊連結看看當初實作的流程。 看完廣告之後才能進到內容頁面，來觀看 Wifi 密碼。  舉報無效 下方有個按鈕可以點選，便可以更改此 Wifi 資訊的狀態為「不可用」， 而目前版本會在前面的列表之中就直接篩選掉，所以並不會看到不可用的內容。 若是有人一直將你家的 Wifi 貼上來，你一直舉報也無法遏止這行為的話，請麻煩告知我⋯⋯
+實作方向 – 登入 臉書的登入參照 Facebook Developer 的相關文件，先建立一個 Facebook 的應用程式； 以及利用 Firebase 的 Auth，裡頭有和 Facebook 結合的文件可以依循著做。</description>
+    </item>
+    
+    <item>
+      <title>APNs</title>
+      <link>https://www.archie.tw/p/apns/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/apns/</guid>
+      <description>APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
+ Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。  Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
 Remote notification 遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！）， 在 AppDelegate.swift 註冊那些的就不寫在這了～ 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作， 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD 但總會有需要自己打推播測試、或是開發自己 app 的時候， 這邊就來談談 iOS 開發者該怎麼做！
-APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 .</description></item><item><title>AdMob 獎勵式廣告實作</title><link>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</link><pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</guid><description>AdMob 在 Google 的廣告投放服務之中，是以 AdSense 作為主軸，整合所有廣告相關的服務； 而 AdMob 則是其中一個專門針對行動裝置的部分。 所以若 iOS 的開發者想在其應用上放置廣告單元，則需要從 AdMob 著手。
+APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 .</description>
+    </item>
+    
+    <item>
+      <title>AdMob 獎勵式廣告實作</title>
+      <link>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/admob-%E7%8D%8E%E5%8B%B5%E5%BC%8F%E5%BB%A3%E5%91%8A%E5%AF%A6%E4%BD%9C/</guid>
+      <description>AdMob 在 Google 的廣告投放服務之中，是以 AdSense 作為主軸，整合所有廣告相關的服務； 而 AdMob 則是其中一個專門針對行動裝置的部分。 所以若 iOS 的開發者想在其應用上放置廣告單元，則需要從 AdMob 著手。
 建立廣告單元 首先，需要先到 AdMob 的控制台中，新建一個新的應用程式， 並將 app 的相關資訊填寫完整。
 再者，則是建立一個廣告單元，而這篇所要分享的是「獎勵式廣告」的實作。
 什麼是獎勵式廣告？ 獎勵式廣告的意思就如其名，是一個可以在編輯時設定， 反饋給觀看玩廣告的使用者一些獎勵的一種廣告模式； 如大部分的手機遊戲，觀看影片後可以得到一些鑽石、金幣或者特殊加成等。
@@ -271,20 +788,87 @@ APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限�
 Framework 安裝 你可以透過 CocoaPods 或是直接下載拉進專案之中； 這邊由於我所加入廣告的 App 有整合 Firebase 的相關服務， 而 Firebase 官方並無支援 Carthage，所以在這就一併使用 CocoaPods 來做套件的管理。 因為使用 Firebase，所以只需要在原先的 Podfile 之中加上
 pod &amp;#39;Firebase/AdMob&amp;#39; 並且執行 pod install，即可完成安裝。
 AppDelegate.swift 先在上方 import GoogleMobileAds，並需要在 FirebaseApp.configure() 之後，加上 AdMob 的廣告設定： GADMobileAds.configure(withApplicationID: Your_Ads_ApplicationID)
-import Firebase import GoogleMobileAds func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?</description></item><item><title>Unit test with async functions</title><link>https://www.archie.tw/p/unit-test-with-async-functions/</link><pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/unit-test-with-async-functions/</guid><description>iOS Unit test 在寫 Unit test 的時候，有時候會遇到要測試的 function 是 async 的， 但在 Unit test 的 function 之中，它本身就是走單一 thread 來決定測試結果； 若沒有多做其他處理，closure 或是其他 thread 做的事情，便不會反應到結果上。 所以我們需要告知 Unit test，要等待一下我們要測的內容。
-func testAsyncFunction() { let exp = expectation(description: &amp;#34;Async Expectation&amp;#34;) NetworkManager.shared.update(data: Data(), completeHandler: { exp.fulfill() }) waitForExpectations(timeout: 30, handler: nil) } 建立一個 expectation，並在 closure 裏頭執行一些測試結果判斷， 判斷完後，補上 exp.fulfill() 來告知 waitForExpectations 可以結束等待。 這樣就可以做 async functions 的 Unit test 了！</description></item><item><title>dismiss function</title><link>https://www.archie.tw/p/dismiss-function/</link><pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/dismiss-function/</guid><description>dismiss(animated:completion:) 這個 method 對於大家而言，應該都不陌生； UIViewController 可以呼叫這個 method 來關閉，而它所關閉的概念如下： UINavigationController
-UIViewController1 UIViewController2 UIViewController3 不論現在 presentingViewController 是 UIViewController 1、2、或者是 3， 在這三者呼叫 dismiss(animated:completion:) 時， 都會把 UINavigationController 的所有 viewControllers 都 dismiss。 然而一個很常的使用方式是，我們會在 UIViewController 的物件之中，自行呼叫 dismiss：
+import Firebase import GoogleMobileAds func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?</description>
+    </item>
+    
+    <item>
+      <title>Unit test with async functions</title>
+      <link>https://www.archie.tw/p/unit-test-with-async-functions/</link>
+      <pubDate>Fri, 16 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/unit-test-with-async-functions/</guid>
+      <description>iOS Unit test 在寫 Unit test 的時候，有時候會遇到要測試的 function 是 async 的， 但在 Unit test 的 function 之中，它本身就是走單一 thread 來決定測試結果； 若沒有多做其他處理，closure 或是其他 thread 做的事情，便不會反應到結果上。 所以我們需要告知 Unit test，要等待一下我們要測的內容。
+func testAsyncFunction() { let exp = expectation(description: &amp;#34;Async Expectation&amp;#34;) NetworkManager.shared.update(data: Data(), completeHandler: { exp.fulfill() }) waitForExpectations(timeout: 30, handler: nil) } 建立一個 expectation，並在 closure 裏頭執行一些測試結果判斷， 判斷完後，補上 exp.fulfill() 來告知 waitForExpectations 可以結束等待。 這樣就可以做 async functions 的 Unit test 了！</description>
+    </item>
+    
+    <item>
+      <title>dismiss function</title>
+      <link>https://www.archie.tw/p/dismiss-function/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/dismiss-function/</guid>
+      <description>dismiss(animated:completion:) 這個 method 對於大家而言，應該都不陌生； UIViewController 可以呼叫這個 method 來關閉，而它所關閉的概念如下： UINavigationController
+ UIViewController1 UIViewController2 UIViewController3  不論現在 presentingViewController 是 UIViewController 1、2、或者是 3， 在這三者呼叫 dismiss(animated:completion:) 時， 都會把 UINavigationController 的所有 viewControllers 都 dismiss。 然而一個很常的使用方式是，我們會在 UIViewController 的物件之中，自行呼叫 dismiss：
 dismiss(animated: true, completion: nil) 不過這麼做的話，執行 present(, animated: , completion: ) 的 UIViewController， 就不會知道是在哪個流程或是哪個畫面 dismiss 的。 比較好的做法是，會被 present 的 UIViewController 都能透過 delegate 的方式， 告知原本的 UIViewController 「我按下了什麼按鈕」， 再由前面的 UIViewController 來決定是否 dismiss 或是做其他事。
-讓整體的流程能夠得到比較好的控制，也讓 UIViewController 彼此之間的關係有個清楚的釐清。</description></item><item><title>KVOController</title><link>https://www.archie.tw/p/kvocontroller/</link><pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/kvocontroller/</guid><description>KVOController 有關 Observe 的相關做法，在 Swift 上我會選擇使用 RxSwift，那 Objective-C 呢？ 在這邊簡單介紹一下 KVOController 的 solution 給 Objective-C 的開發者。 在 NSObject 的子類別下，都會繼承到一個 FBKVOController 的物件，名字為 KVOController； 而這邊要使用的 method 是這個：
+讓整體的流程能夠得到比較好的控制，也讓 UIViewController 彼此之間的關係有個清楚的釐清。</description>
+    </item>
+    
+    <item>
+      <title>KVOController</title>
+      <link>https://www.archie.tw/p/kvocontroller/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/kvocontroller/</guid>
+      <description>KVOController 有關 Observe 的相關做法，在 Swift 上我會選擇使用 RxSwift，那 Objective-C 呢？ 在這邊簡單介紹一下 KVOController 的 solution 給 Objective-C 的開發者。 在 NSObject 的子類別下，都會繼承到一個 FBKVOController 的物件，名字為 KVOController； 而這邊要使用的 method 是這個：
 (void)observe:(nullable id)object keyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options block:(FBKVONotificationBlock)block; object 是我們要觀察的物件 keyPath 是 object 底下的要觀察的值，它的名稱（key） options 則是填入 NSKeyValueObservingOptions block 再來決定當 object 的 keyPath 那物件有更動時，要做些什麼事
-舉個例子 [self.KVOController observe:self keyPath:NSStringFromSelector(@selector(observeObjectName)) options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id _Nullable observer, id _Nonnull object, NSDictionary&amp;lt;NSString *,id&amp;gt; * _Nonnull change) { //do something }]; observe:self keyPath:NSStringFromSelector(@selector(observeObjectName)) 翻成白話文就是 self 去觀察 self.</description></item><item><title>Optional</title><link>https://www.archie.tw/p/optional/</link><pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/optional/</guid><description>前言 Optional 正如其名，就是個可選擇或者說是可有可無的意思。
+舉個例子 [self.KVOController observe:self keyPath:NSStringFromSelector(@selector(observeObjectName)) options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id _Nullable observer, id _Nonnull object, NSDictionary&amp;lt;NSString *,id&amp;gt; * _Nonnull change) { //do something }];  observe:self keyPath:NSStringFromSelector(@selector(observeObjectName))  翻成白話文就是 self 去觀察 self.</description>
+    </item>
+    
+    <item>
+      <title>Optional</title>
+      <link>https://www.archie.tw/p/optional/</link>
+      <pubDate>Tue, 23 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/optional/</guid>
+      <description>前言 Optional 正如其名，就是個可選擇或者說是可有可無的意思。
 Optional 在 Swift 的開發過程之中，我們可以看到「 ! 」、「 ? 」存在於變數之後，像是 var userName: String? 正式意味著 userName 這個 String 有可能是 nil。 有關 Swift optional 的解釋和 nil 對於 Swift 的介紹可以看看這篇，由小草哥所攥寫的文章。 這邊要補充的是，在 Objective-C 裏頭，則是使用 nonnull 和 nullable 來代表著 Swift 裡頭的「 ! 」、「 ? 」。 而在 Objective-C 之中，可以使用 NS_ASSUME_NONNULL_BEGIN 及 NS_ASSUME_NONNULL_END 來作為區域性的宣告 @property 的屬性為 nonnull；若其中有需要宣告成 nullable 的，則再補上即可。
-NS_ASSUME_NONNULL_BEGIN @interface DemoObject : NSObject @property (nonatomic) NSString *name; @property (nonatomic, nullable) NSString *address; @property (nonatomic, readonly) NSString *phoneNumber; @end NS_ASSUME_NONNULL_END</description></item><item><title>Weak</title><link>https://www.archie.tw/p/weak/</link><pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/weak/</guid><description>在 iOS 的開發語言之中，不論是 Objective-C 或者 Swift，你或許都有看過這個詞
+NS_ASSUME_NONNULL_BEGIN @interface DemoObject : NSObject @property (nonatomic) NSString *name; @property (nonatomic, nullable) NSString *address; @property (nonatomic, readonly) NSString *phoneNumber; @end NS_ASSUME_NONNULL_END </description>
+    </item>
+    
+    <item>
+      <title>Weak</title>
+      <link>https://www.archie.tw/p/weak/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/weak/</guid>
+      <description>在 iOS 的開發語言之中，不論是 Objective-C 或者 Swift，你或許都有看過這個詞
 weak 你可能會知道它可以避免 retain cycle，但其背後的觀念是什麼？
 ARC 在目前大家所熟悉的開發環境之中，記憶體的管理是由 iOS 或 macOS 自行去解決的；它會在你宣告或者呼叫物件的時候，替它在計數器上 +1，而當你用不到時，便會 -1。 當計數器為零的時候，便釋放掉這個物件的記憶體位置。 舉個例子，我在某個 ViewController 裏頭，宣告了一個變數 A 及執行一個異步的閉包（closure），並在裡頭使用到 A。 此時，A 在剛剛宣告產生的時候，計數器會是 +1，而在閉包內被使用到，故計數器會再 +1，所以在閉包執行時，它會是 2。
 那如果我們這時候，離開了 ViewController，照理說其裡頭的 instance 應該都要被釋放記憶體位置；但因為異步閉包的關係，我們無法確定在離開的時候，異步閉包是否在其他執行緒中正在執行，造成 A 的計數器仍為 1，且會繼續執行異步閉包的內容。
 weak 簡單來說就是，它並不會讓這個物件在計數器上 +1，並且在記憶體被釋放之後，指標會指向 nil；而在 Objective-C 及 Swift 裏頭，nil 的物件呼叫方法時，是不會造成崩潰的。
-retain cycle 就像是 A 使用到 B，並且 B 也使用到 A，兩者互相幫對方在計數器上 +1，那僅管我們今天離開了這個畫面，系統幫 A – 1 之後，仍然會因為 B 有使用到它，故釋放不掉 A，而 A 有使用 B，所以 B 也釋放不掉。（很饒舌，我知道） 所以在 A 裡頭使用到 B 時，將 B 宣告成 weak B，便不會幫 B 在計數器上記上一筆；當 A 要被釋放掉的時候，也不會因為 B 使用 A，而釋放不掉。</description></item><item><title>工作一年半的一些心得分享</title><link>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</link><pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</guid><description>前言 前陣子在 PTT MacDev 版寫了篇心得，這邊就轉載過來
+retain cycle 就像是 A 使用到 B，並且 B 也使用到 A，兩者互相幫對方在計數器上 +1，那僅管我們今天離開了這個畫面，系統幫 A – 1 之後，仍然會因為 B 有使用到它，故釋放不掉 A，而 A 有使用 B，所以 B 也釋放不掉。（很饒舌，我知道） 所以在 A 裡頭使用到 B 時，將 B 宣告成 weak B，便不會幫 B 在計數器上記上一筆；當 A 要被釋放掉的時候，也不會因為 B 使用 A，而釋放不掉。</description>
+    </item>
+    
+    <item>
+      <title>工作一年半的一些心得分享</title>
+      <link>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E5%B7%A5%E4%BD%9C%E4%B8%80%E5%B9%B4%E5%8D%8A%E7%9A%84%E4%B8%80%E4%BA%9B%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/</guid>
+      <description>前言 前陣子在 PTT MacDev 版寫了篇心得，這邊就轉載過來
 正文開始 各位好，這篇文章主要是給新手一些方向和想法～ 純屬個人的經歷和看法，可以一起以輕鬆的態度聊聊～ 我個人是在 2015 年中開始接觸 iOS 的開發，以 Objective-C 為一開始自學方向。 從簡單遊戲開始下手，像是猜數字、圈圈叉叉之類的， 練練基本的拉拉 UI、認識Storyboard、.h 的宣告、.m 的實作等。 接著剛好 Xcode 7 開始讓免費的開發者可以裝 App 至實體裝置上， 發現自己原本都用 4.7 吋的模擬器執行，而到了 5.7 吋的裝置上時， 會有跑版的問題，於是花了一些時間學習 AutoLayout。 而基本上 AutoLayout 有個概念熟悉即可， 除非是比較特別的效果需要思考一下彼此之間的 priority， 不然一般 App 都還蠻輕易解決這方面的問題； 而比較有趣的是，像在 ScrollView 裏頭做 AutoLayout 時， 要有 contentSize 的概念，而不要輕易的點「讓系統補完 constraints」的按鈕。
 接著，在我準備面試前的一兩個月，加入了一些 iOS 的開發社群 （e.g iOS @ Taipei、Cocoaheads Taipei等） 厚著臉皮加了版上比較活躍的幾位前輩，並詢問他們一些問題和方向， 於是開始練習其他實作：
-氣象資料開放平臺： 練習接 Api，當時我是寫了一個去接目前各雨量觀測站的 App， 篩選 10 分鐘內有偵測到雨量的， 並在 MapView 上放上大頭針，顯示當區目前雨量。 （AFNetworking、MapKit）</description></item><item><title>線上讀書會 RxSwift 分享</title><link>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</link><pubDate>Thu, 23 Feb 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</guid><description>線上讀書會 RxSwift 分享</description></item></channel></rss>
+氣象資料開放平臺： 練習接 Api，當時我是寫了一個去接目前各雨量觀測站的 App， 篩選 10 分鐘內有偵測到雨量的， 並在 MapView 上放上大頭針，顯示當區目前雨量。 （AFNetworking、MapKit）</description>
+    </item>
+    
+    <item>
+      <title>線上讀書會 RxSwift 分享</title>
+      <link>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Thu, 23 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/%E7%B7%9A%E4%B8%8A%E8%AE%80%E6%9B%B8%E6%9C%83-rxswift-%E5%88%86%E4%BA%AB/</guid>
+      <description>線上讀書會 RxSwift 分享</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,65 +1,151 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
 Firebase Database Firebase database 的儲存資料方式是屬於 NoSQL 的方式， 利用一組 key 配對一組 value 的模式來建構資料庫； 而在 Database 的介面中，我們可以清楚地看到資料是以 JSON 的格式呈現。
 在 iOS 開發的過程中，如果要使用 Firebase 的相關內容， 可以使用官方所提供的 Firebase iOS SDK； 或是在使用 Python 開發的時候，我會選擇使用官方推薦的 Pyrebase， 那若你目前的開發方式沒有相對應的 SDK 或是 third party 可以使用的話呢？ 那麼你就只能一起用 REST API 來完成要做的事情了！
 REST API Firebase 提供了五種 Http method
- GET PUT POST PATCH DELETE 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。  PUT PUT 就和平常使用 PUT 的方式一樣， 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。"><title>Firebase Database REST API</title>
-<link rel=canonical href=https://www.archie.tw/p/firebase-database-rest-api/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Firebase Database REST API">
-<meta property="og:description" content="這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
+ GET PUT POST PATCH DELETE 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。  PUT PUT 就和平常使用 PUT 的方式一樣， 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。'><title>Firebase Database REST API</title>
+
+<link rel='canonical' href='https://www.archie.tw/p/firebase-database-rest-api/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Firebase Database REST API'>
+<meta property='og:description' content='這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
+Firebase Database Firebase database 的儲存資料方式是屬於 NoSQL 的方式， 利用一組 key 配對一組 value 的模式來建構資料庫； 而在 Database 的介面中，我們可以清楚地看到資料是以 JSON 的格式呈現。
+在 iOS 開發的過程中，如果要使用 Firebase 的相關內容， 可以使用官方所提供的 Firebase iOS SDK； 或是在使用 Python 開發的時候，我會選擇使用官方推薦的 Pyrebase， 那若你目前的開發方式沒有相對應的 SDK 或是 third party 可以使用的話呢？ 那麼你就只能一起用 REST API 來完成要做的事情了！
+REST API Firebase 提供了五種 Http method
+ GET PUT POST PATCH DELETE 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。  PUT PUT 就和平常使用 PUT 的方式一樣， 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。'>
+<meta property='og:url' content='https://www.archie.tw/p/firebase-database-rest-api/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:tag' content='Firebase' /><meta property='article:published_time' content='2017-08-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2017-08-04T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="Firebase Database REST API">
+<meta name="twitter:description" content="這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
 Firebase Database Firebase database 的儲存資料方式是屬於 NoSQL 的方式， 利用一組 key 配對一組 value 的模式來建構資料庫； 而在 Database 的介面中，我們可以清楚地看到資料是以 JSON 的格式呈現。
 在 iOS 開發的過程中，如果要使用 Firebase 的相關內容， 可以使用官方所提供的 Firebase iOS SDK； 或是在使用 Python 開發的時候，我會選擇使用官方推薦的 Pyrebase， 那若你目前的開發方式沒有相對應的 SDK 或是 third party 可以使用的話呢？ 那麼你就只能一起用 REST API 來完成要做的事情了！
 REST API Firebase 提供了五種 Http method
  GET PUT POST PATCH DELETE 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。  PUT PUT 就和平常使用 PUT 的方式一樣， 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。">
-<meta property="og:url" content="https://www.archie.tw/p/firebase-database-rest-api/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:tag" content="Firebase"><meta property="article:published_time" content="2017-08-04T00:00:00+00:00"><meta property="article:modified_time" content="2017-08-04T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Firebase Database REST API">
-<meta name=twitter:description content="這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API， 所提供的相關內容和使用方式。
-Firebase Database Firebase database 的儲存資料方式是屬於 NoSQL 的方式， 利用一組 key 配對一組 value 的模式來建構資料庫； 而在 Database 的介面中，我們可以清楚地看到資料是以 JSON 的格式呈現。
-在 iOS 開發的過程中，如果要使用 Firebase 的相關內容， 可以使用官方所提供的 Firebase iOS SDK； 或是在使用 Python 開發的時候，我會選擇使用官方推薦的 Pyrebase， 那若你目前的開發方式沒有相對應的 SDK 或是 third party 可以使用的話呢？ 那麼你就只能一起用 REST API 來完成要做的事情了！
-REST API Firebase 提供了五種 Http method
- GET PUT POST PATCH DELETE 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。  PUT PUT 就和平常使用 PUT 的方式一樣， 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.archie.tw" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span></span>
+            </a>
+        </div>
+    
 <main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
-🍎 開發心得
-</a>
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/" >
+                🍎 開發心得
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/firebase-database-rest-api/">Firebase Database REST API</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 04, 2017</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
 </header>
-<h2 class=article-title>
-<a href=/p/firebase-database-rest-api/>Firebase Database REST API</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Aug 04, 2017</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<p>這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API，
+
+    <section class="article-content">
+    <p>這篇主要的內容會是簡單地記錄一下 Firebase Database RESTful API，
 所提供的相關內容和使用方式。</p>
-<h1 id=firebase-database>Firebase Database</h1>
+<h1 id="firebase-database">Firebase Database</h1>
 <p>Firebase database 的儲存資料方式是屬於 NoSQL 的方式，
 利用一組 key 配對一組 value 的模式來建構資料庫；
 而在 Database 的介面中，我們可以清楚地看到資料是以 JSON 的格式呈現。</p>
@@ -68,7 +154,7 @@ extended">
 或是在使用 Python 開發的時候，我會選擇使用官方推薦的 Pyrebase，
 那若你目前的開發方式沒有相對應的 SDK 或是 third party 可以使用的話呢？
 那麼你就只能一起用 REST API 來完成要做的事情了！</p>
-<h2 id=rest-api>REST API</h2>
+<h2 id="rest-api">REST API</h2>
 <p>Firebase 提供了五種 Http method</p>
 <ul>
 <li>GET</li>
@@ -78,18 +164,18 @@ extended">
 <li>DELETE
 其中 GET 和 DELETE 就沒什麼特別好說的，你就是取得一個 JSON 或是刪除一個。</li>
 </ul>
-<h3 id=put>PUT</h3>
+<h3 id="put">PUT</h3>
 <p>PUT 就和平常使用 PUT 的方式一樣，
 它會把整個 JSON 覆蓋成你目前丟上去的 JSON。</p>
-<h3 id=post>POST</h3>
+<h3 id="post">POST</h3>
 <p>POST 的話就有些不一樣，當你 POST 一個資料到某個 JSON 的時候，
 它會自行建立一組 key 並回傳 name 回來。
 而你所丟的資料會是那組 key 所對應的 value，
 所以簡單來說 POST 就是在做新增物件時使用，且 ID 是由它所建立的。</p>
-<h3 id=patch>PATCH</h3>
+<h3 id="patch">PATCH</h3>
 <p>PATCH 則是負責更新內容，它會先找到匹配的 key，再更新其 value；
 若沒有找到相對應的 key 的話，則會建立一筆新的 key-value。</p>
-<h3 id=如果有其中一個無法使用呢>如果有其中一個無法使用呢？</h3>
+<h3 id="如果有其中一個無法使用呢">如果有其中一個無法使用呢？</h3>
 <p>若遇到你所使用的開發語言或是瀏覽器等等，無法使用其中一項 method 時；
 舉個例子，DELETE 無法使用的話，Firebase 有提供你覆寫 method 的功能，
 method 使用 POST，而在 header 加上：
@@ -97,7 +183,7 @@ X-HTTP-Method-Override: DELETE
 便可以等同於上述所說的 DELETE。
 或是加在 url 裡頭也可以：
 https://[PROJECT_ID].firebaseio/[JSON_NAME].json?x-http-method-override=DELETE</p>
-<h3 id=firebase-etag>Firebase ETag</h3>
+<h3 id="firebase-etag">Firebase ETag</h3>
 <p>Firebase 也有支援 ETag，
 在 header 上加上 X-Firebase-ETag: true，它便會在回傳的 headers 中加上
 Access-Control-Expose-Headers = ETag
@@ -106,141 +192,310 @@ ETag = kmHkuKx9sCx742tosJOV4oH+JBQ=
 伺服器端便會驗證是否可以執行這次的要求；
 若最後一次的 ETag 和 if-match 的值相符的話，Firebase 便會回傳 412 Precondition failed。
 而 ETag 相關的資訊可以看這邊。</p>
-<h1 id=最後>最後</h1>
+<h1 id="最後">最後</h1>
 <p>整理完這些資訊後，就可以著手寫一些 database 的存取方法到 Vapor 的專案了！</p>
+
 </section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-<a href=/tags/firebase/>Firebase</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ios/">iOS</a>
+        
+            <a href="/tags/swift/">Swift</a>
+        
+            <a href="/tags/firebase/">Firebase</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
 </article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/firebase-cloud-functions-with-database-and-messaging/>
-<div class=article-details>
-<h2 class=article-title>Firebase Cloud Functions with Database and Messaging</h2>
-</div>
-</a>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title"></h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/firebase-cloud-functions-with-database-and-messaging/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Firebase Cloud Functions with Database and Messaging</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/fireabsedatabase-read/>
-<div class=article-details>
-<h2 class=article-title>FireabseDatabase - Read</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/fireabsedatabase-read/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">FireabseDatabase - Read</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">發票收集雞 - 自己的發票自己收</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Apple Watch App 開發除錯心得</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/>
-<div class=article-details>
-<h2 class=article-title>RxSwift 6 上線啦！</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">RxSwift 6 上線啦！</h2>
+        </div>
+    </a>
 </article>
-</div>
-</div>
+                
+            </div>
+        </div>
+    
 </aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
-2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+         <br />
+        
+    </section>
 </footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#rest-api>REST API</a>
-<ol>
-<li><a href=#put>PUT</a></li>
-<li><a href=#post>POST</a></li>
-<li><a href=#patch>PATCH</a></li>
-<li><a href=#如果有其中一個無法使用呢>如果有其中一個無法使用呢？</a></li>
-<li><a href=#firebase-etag>Firebase ETag</a></li>
-</ol>
-</li>
-</ol>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title"></h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#rest-api">REST API</a>
+      <ol>
+        <li><a href="#put">PUT</a></li>
+        <li><a href="#post">POST</a></li>
+        <li><a href="#patch">PATCH</a></li>
+        <li><a href="#如果有其中一個無法使用呢">如果有其中一個無法使用呢？</a></li>
+        <li><a href="#firebase-etag">Firebase ETag</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

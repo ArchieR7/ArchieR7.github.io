@@ -1,65 +1,151 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
 嵌入的程式碼 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;https://www.youtube.com/embed/OyCN04p-uS8&amp;quot; title=&amp;quot;YouTube video player&amp;quot; frameborder=&amp;quot;0&amp;quot; allow=&amp;quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt; Markdown 其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以線上讀書會 RxSwift 分享來說
 首先就是先取得縮圖的 URL，格式為
-   URL Description     https://img.youtube.com/vi/VIDEO_ID/0.jpg Full-size thumbnail   https://img.youtube.com/vi/VIDEO_ID/1.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/2.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/3.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/default.jpg Default thumbnail image   https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg High-quality default thumbnail image   https://img."><title>Markdown 嵌入 YouTube</title>
-<link rel=canonical href=https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Markdown 嵌入 YouTube">
-<meta property="og:description" content="前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
+   URL Description     https://img.youtube.com/vi/VIDEO_ID/0.jpg Full-size thumbnail   https://img.youtube.com/vi/VIDEO_ID/1.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/2.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/3.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/default.jpg Default thumbnail image   https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg High-quality default thumbnail image   https://img.'><title>Markdown 嵌入 YouTube</title>
+
+<link rel='canonical' href='https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Markdown 嵌入 YouTube'>
+<meta property='og:description' content='前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
+嵌入的程式碼 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;https://www.youtube.com/embed/OyCN04p-uS8&amp;quot; title=&amp;quot;YouTube video player&amp;quot; frameborder=&amp;quot;0&amp;quot; allow=&amp;quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt; Markdown 其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以線上讀書會 RxSwift 分享來說
+首先就是先取得縮圖的 URL，格式為
+   URL Description     https://img.youtube.com/vi/VIDEO_ID/0.jpg Full-size thumbnail   https://img.youtube.com/vi/VIDEO_ID/1.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/2.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/3.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/default.jpg Default thumbnail image   https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg High-quality default thumbnail image   https://img.'>
+<meta property='og:url' content='https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/'>
+<meta property='og:site_name' content='Archie'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='網站' /><meta property='article:published_time' content='2021-09-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-09-09T00:00:00&#43;00:00'/>
+<meta name="twitter:site" content="@ChangArchie">
+    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="Markdown 嵌入 YouTube">
+<meta name="twitter:description" content="前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
 嵌入的程式碼 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;https://www.youtube.com/embed/OyCN04p-uS8&amp;quot; title=&amp;quot;YouTube video player&amp;quot; frameborder=&amp;quot;0&amp;quot; allow=&amp;quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt; Markdown 其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以線上讀書會 RxSwift 分享來說
 首先就是先取得縮圖的 URL，格式為
    URL Description     https://img.youtube.com/vi/VIDEO_ID/0.jpg Full-size thumbnail   https://img.youtube.com/vi/VIDEO_ID/1.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/2.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/3.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/default.jpg Default thumbnail image   https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg High-quality default thumbnail image   https://img.">
-<meta property="og:url" content="https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="網站"><meta property="article:published_time" content="2021-09-09T00:00:00+00:00"><meta property="article:modified_time" content="2021-09-09T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Markdown 嵌入 YouTube">
-<meta name=twitter:description content="前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
-嵌入的程式碼 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;https://www.youtube.com/embed/OyCN04p-uS8&amp;quot; title=&amp;quot;YouTube video player&amp;quot; frameborder=&amp;quot;0&amp;quot; allow=&amp;quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt; Markdown 其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以線上讀書會 RxSwift 分享來說
-首先就是先取得縮圖的 URL，格式為
-   URL Description     https://img.youtube.com/vi/VIDEO_ID/0.jpg Full-size thumbnail   https://img.youtube.com/vi/VIDEO_ID/1.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/2.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/3.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/default.jpg Default thumbnail image   https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg High-quality default thumbnail image   https://img.">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-149460095-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
+     crossorigin="anonymous"></script>
+
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.archie.tw" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span></span>
+            </a>
+        </div>
+    
 <main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>
-📒 程式筆記
-</a>
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" >
+                📒 程式筆記
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/markdown-%E5%B5%8C%E5%85%A5-youtube/">Markdown 嵌入 YouTube</a>
+    </h2>
+
+    
+
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 09, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
 </header>
-<h2 class=article-title>
-<a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/>Markdown 嵌入 YouTube</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Sep 09, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h3 id=前言>前言</h3>
+
+    <section class="article-content">
+    <h3 id="前言">前言</h3>
 <p>一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？</p>
-<h3 id=嵌入的程式碼>嵌入的程式碼</h3>
-<pre tabindex=0><code>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/OyCN04p-uS8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
-</code></pre><h3 id=markdown>Markdown</h3>
-<p>其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以<a class=link href=../%e7%b7%9a%e4%b8%8a%e8%ae%80%e6%9b%b8%e6%9c%83-rxswift-%e5%88%86%e4%ba%ab>線上讀書會 RxSwift 分享</a>來說</p>
+<h3 id="嵌入的程式碼">嵌入的程式碼</h3>
+<pre tabindex="0"><code>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/OyCN04p-uS8&quot; title=&quot;YouTube video player&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen&gt;&lt;/iframe&gt;
+</code></pre><h3 id="markdown">Markdown</h3>
+<p>其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以<a class="link" href="../%e7%b7%9a%e4%b8%8a%e8%ae%80%e6%9b%b8%e6%9c%83-rxswift-%e5%88%86%e4%ba%ab" >線上讀書會 RxSwift 分享</a>來說</p>
 <p>首先就是先取得縮圖的 URL，格式為</p>
 <table>
 <thead>
@@ -70,182 +156,367 @@ extended">
 </thead>
 <tbody>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/0.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/0.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/0.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/0.jpg</a></td>
 <td>Full-size thumbnail</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/1.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/1.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/1.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/1.jpg</a></td>
 <td>Small thumbnail images</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/2.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/2.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/2.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/2.jpg</a></td>
 <td>Small thumbnail images</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/3.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/3.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/3.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/3.jpg</a></td>
 <td>Small thumbnail images</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/default.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/default.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/default.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/default.jpg</a></td>
 <td>Default thumbnail image</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg</a></td>
 <td>High-quality default thumbnail image</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg</a></td>
 <td>Medium-quality default thumbnail image</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/sddefault.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/sddefault.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/sddefault.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/sddefault.jpg</a></td>
 <td>Standard-definition default thumbnail image</td>
 </tr>
 <tr>
-<td><a class=link href=https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg target=_blank rel=noopener>https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg</a></td>
+<td><a class="link" href="https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg</a></td>
 <td>Maximum-resolution default thumbnail image</td>
 </tr>
 </tbody>
 </table>
 <p>於是我拿了一個最大尺寸的來使用</p>
-<pre tabindex=0><code>[![線上讀書會 RxSwift 分享](https://img.youtube.com/vi/OyCN04p-uS8/maxresdefault.jpg)](https://www.youtube.com/watch?=OyCN04p-uS8)
+<pre tabindex="0"><code>[![線上讀書會 RxSwift 分享](https://img.youtube.com/vi/OyCN04p-uS8/maxresdefault.jpg)](https://www.youtube.com/watch?=OyCN04p-uS8)
 
 </code></pre><p>效果如下：</p>
-<p><a class=link href="https://www.youtube.com/watch?=OyCN04p-uS8" target=_blank rel=noopener><figure>
-<a href=https://img.youtube.com/vi/OyCN04p-uS8/maxresdefault.jpg>
-<img src=https://img.youtube.com/vi/OyCN04p-uS8/maxresdefault.jpg loading=lazy alt="線上讀書會 RxSwift 分享">
-</a>
-<figcaption>線上讀書會 RxSwift 分享</figcaption>
+<p><a class="link" href="https://www.youtube.com/watch?=OyCN04p-uS8"  target="_blank" rel="noopener"
+    ><figure 
+	>
+	<a href="https://img.youtube.com/vi/OyCN04p-uS8/maxresdefault.jpg" >
+		<img src="https://img.youtube.com/vi/OyCN04p-uS8/maxresdefault.jpg"
+			
+			
+			
+			loading="lazy"
+			alt="線上讀書會 RxSwift 分享">
+	</a>
+	
+	<figcaption>線上讀書會 RxSwift 分享</figcaption>
+	
 </figure></a></p>
+
 </section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/%E7%B6%B2%E7%AB%99/>網站</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%B6%B2%E7%AB%99/">網站</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
 </article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>
-<div class=article-details>
-<h2 class=article-title>iOS 開發環境設置</h2>
-</div>
-</a>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title"></h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="">
+    <a href="/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">iOS 開發環境設置</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/fastlane-503-service-temporarily-unavailable/>
-<div class=article-details>
-<h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/fastlane-503-service-temporarily-unavailable/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Fastlane 503 Service Temporarily Unavailable</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/change-login-shells-without-chsh/>
-<div class=article-details>
-<h2 class=article-title>Change login shells without chsh</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/change-login-shells-without-chsh/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Change login shells without chsh</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/postman-pre-request-script/>
-<div class=article-details>
-<h2 class=article-title>POSTMAN – Pre-request script</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/postman-pre-request-script/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">POSTMAN – Pre-request script</h2>
+        </div>
+    </a>
 </article>
-<article>
-<a href=/p/git-submodule/>
-<div class=article-details>
-<h2 class=article-title>Git submodule</h2>
-</div>
-</a>
+                
+                    
+<article class="">
+    <a href="/p/git-submodule/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Git submodule</h2>
+        </div>
+    </a>
 </article>
-</div>
-</div>
+                
+            </div>
+        </div>
+    
 </aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+
+     
+     
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
-2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (DISQUS) {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2017 - 
+        
+        2021 Archie
+    </section>
+    
+    <section class="powerby">
+         <br />
+        
+    </section>
 </footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-<button class="pswp__button pswp__button--share" title=Share></button>
-<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li>
-<ol>
-<li><a href=#前言>前言</a></li>
-<li><a href=#嵌入的程式碼>嵌入的程式碼</a></li>
-<li><a href=#markdown>Markdown</a></li>
-</ol>
-</li>
-</ol>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title"></h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#前言">前言</a></li>
+        <li><a href="#嵌入的程式碼">嵌入的程式碼</a></li>
+        <li><a href="#markdown">Markdown</a></li>
+      </ol>
+    </li>
+  </ol>
 </nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
 </html>

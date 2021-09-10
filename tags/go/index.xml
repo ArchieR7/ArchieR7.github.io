@@ -1,6 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GO on Archie</title><link>https://www.archie.tw/tags/go/</link><description>Recent content in GO on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Go 的環境變數使用</title><link>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</link><pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</guid><description>在 Go 裡頭，使用環境變數的方式為
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GO on Archie</title>
+    <link>https://www.archie.tw/tags/go/</link>
+    <description>Recent content in GO on Archie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 的環境變數使用</title>
+      <link>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</guid>
+      <description>在 Go 裡頭，使用環境變數的方式為
 import ( &amp;quot;os&amp;quot; ) os.Setenv(&amp;quot;變數名稱&amp;quot;, &amp;quot;變數值&amp;quot;) os.Getenv(&amp;quot;變數名稱&amp;quot;) 而這邊要順帶介紹的是 GoDotEnv
 具體使用的方式為
 import ( &amp;quot;github.com/joho/godotenv&amp;quot; ) err := godotenv.Load() if err != nil { //something wrong } 這樣就可以去讀專案底下的 .env 檔案，也可以將這份檔案加入到 .gitignore 來忽略上傳，讓我們的程式碼可以開源也不會將自己的私鑰上傳上去。
 若不打算處理錯誤的話，可以更改為
-import ( _ &amp;quot;github.com/joho/godotenv/autoload&amp;quot; ) 便會在 package init() 的時候就自動 Load()</description></item></channel></rss>
+import ( _ &amp;quot;github.com/joho/godotenv/autoload&amp;quot; ) 便會在 package init() 的時候就自動 Load()</description>
+    </item>
+    
+  </channel>
+</rss>
