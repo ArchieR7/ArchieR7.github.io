@@ -1,46 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>七天學會設計模式 on Archie</title>
-    <link>https://www.archie.tw/tags/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/</link>
-    <description>Recent content in 七天學會設計模式 on Archie</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 09 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>七天學會設計模式 - Facade</title>
-      <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</link>
-      <pubDate>Tue, 09 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</guid>
-      <description>Facade 其實 Facade 的概念簡單來說，就是簡化使用物件方的介面。 舉個例來說，我建立了一個 Calendar 的 UICollectionView，可能裡頭會需要很多的邏輯判斷；像是「計算 Cell 的 Size」、「判斷日期是否為假日」、「判斷月份」⋯⋯等，但使用這個物件的人，基本上不需要（也不應該）去煩惱這些事情。 如同我們吹電風扇，只需要「強、中、弱、關」的使用介面，並不需要知道它內部是調整不同的功率去達到這效果，但對使用者而言並不是那麼的重要。 而在 MVC 的架構底下便是如此，使用者只需要 ViewController 上可以操作的 function 即可，底部的 Model 是如何操作以及邏輯運算如何，就相對的沒那麼重要，丟給系統去做就好！ 所以在 Facade 的設計模式下，每個物件的介面需要被規劃過，哪些需要使用 private、fileprivate、class 等，適時地分配各個變數或常數及方法的使用權限。</description>
-    </item>
-    
-    <item>
-      <title>七天學會設計模式 – Observe</title>
-      <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</link>
-      <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</guid>
-      <description>訂閱 有使用過網誌或是一些新聞類型的網站時，通常可以在旁邊看到「訂閱」的按鈕，接著點擊下去後就可以在作者有發動或異動文章時，收到通知。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>七天學會設計模式 on Archie</title><link>https://www.archie.tw/tags/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/</link><description>Recent content in 七天學會設計模式 on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 09 May 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml"/><item><title>七天學會設計模式 - Facade</title><link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</link><pubDate>Tue, 09 May 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-facade/</guid><description>Facade 其實 Facade 的概念簡單來說，就是簡化使用物件方的介面。 舉個例來說，我建立了一個 Calendar 的 UICollectionView，可能裡頭會需要很多的邏輯判斷；像是「計算 Cell 的 Size」、「判斷日期是否為假日」、「判斷月份」⋯⋯等，但使用這個物件的人，基本上不需要（也不應該）去煩惱這些事情。 如同我們吹電風扇，只需要「強、中、弱、關」的使用介面，並不需要知道它內部是調整不同的功率去達到這效果，但對使用者而言並不是那麼的重要。 而在 MVC 的架構底下便是如此，使用者只需要 ViewController 上可以操作的 function 即可，底部的 Model 是如何操作以及邏輯運算如何，就相對的沒那麼重要，丟給系統去做就好！ 所以在 Facade 的設計模式下，每個物件的介面需要被規劃過，哪些需要使用 private、fileprivate、class 等，適時地分配各個變數或常數及方法的使用權限。</description></item><item><title>七天學會設計模式 – Observe</title><link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</link><pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-observe/</guid><description>訂閱 有使用過網誌或是一些新聞類型的網站時，通常可以在旁邊看到「訂閱」的按鈕，接著點擊下去後就可以在作者有發動或異動文章時，收到通知。
 Observe 這個設計模式的概念類似於「訂閱」的功能，我們會去「訂閱」某個物件，當它做了某些事情或者其值改變時，可以去做相對應的動作。
 應用 舉個比較常會遇到的案例：鍵盤 我們通常會希望在鍵盤升起來時，調整我們的畫面，看是移動 View 的 frame，或是設定 TableView 的 ContentOffset 之類的。 而大多數採取的方式是「監聽」 NotificationCenter 的「鍵盤升起」的事件，所以當「鍵盤升起」時，我們可以做相對應的處理；而當「鍵盤收起」時，我們也可以執行另一段 function。 這，便是 Observe 的設計模式。 我們去「訂閱」或者「監聽」某個事件，像是 Value changed 或是某個 function 被呼叫，來做相對應的處理。
 第三方套件 RxSwift、ReactiveCocoa 便都是圍繞在 Observe 設計模式的框架，來做響應式的開發。
-響應式開發 如名稱所述，意思是指當 Model 或者 ViewModel 的狀態（值）更動時，畫面可以很即時地跟著變動。 對 RxSwift 有興趣的人，可以看看這篇文章 線上讀書會 RxSwift 分享。</description>
-    </item>
-    
-    <item>
-      <title>七天學會設計模式 - Singleton</title>
-      <link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</guid>
-      <description>前言 最近和同事一起購入七天學會設計模式，不過書中是以 Java 作為示範語言； 而這邊，我會以 Swift 及 Objective-C 來攥寫範例並補充些內容。
+響應式開發 如名稱所述，意思是指當 Model 或者 ViewModel 的狀態（值）更動時，畫面可以很即時地跟著變動。 對 RxSwift 有興趣的人，可以看看這篇文章 線上讀書會 RxSwift 分享。</description></item><item><title>七天學會設計模式 - Singleton</title><link>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</link><pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E4%B8%83%E5%A4%A9%E5%AD%B8%E6%9C%83%E8%A8%AD%E8%A8%88%E6%A8%A1%E5%BC%8F-singleton/</guid><description>前言 最近和同事一起購入七天學會設計模式，不過書中是以 Java 作為示範語言； 而這邊，我會以 Swift 及 Objective-C 來攥寫範例並補充些內容。
 Singleton 如同它的命名一般，在整個 App 運作時，僅會有一個 instance。
 Swift Swift 宣告 Singleton 的方式很簡單，就是在 class 底下宣告一個 static 的常數（constant）。
 class SingletonDemo { static let shared = SingletonDemo() } Objective-C 而 Objective-C 底下，我們要注意一些事情； 在 Multi-Thread 的情況下，我們得避免同時有多個 thread 執行建立 instance，故在創建時，必須使用 dispatch_once_t 來確保僅會有一個 thread 執行。
-#import &amp;lt;UIKit/UIKit.h&amp;gt; @interface SingletonDemo : NSObject + (instancetype)shared; @end #import &amp;#34;SingletonDemo.h&amp;#34; @implementation SingletonDemo + (instancetype)shared { static SingletonDemo *instance = nil; static dispatch_once_t once_token; dispatch_once(&amp;amp;once_token, ^{ instance = [[SingletonDemo alloc] init]; }); return instance; } @end 學會了如何創建 Singleton 之後，可以想想哪些物件適合以這種方式創建； 如「目前登入的使用者」，正是可以用 Singleton 的方式做設計，畢竟一個 App 同時僅能有一位使用者登入，是大多數軟體的設計，而這恰巧符合 Singleton 的精神。</description>
-    </item>
-    
-  </channel>
-</rss>
+#import &amp;lt;UIKit/UIKit.h&amp;gt; @interface SingletonDemo : NSObject + (instancetype)shared; @end #import &amp;#34;SingletonDemo.h&amp;#34; @implementation SingletonDemo + (instancetype)shared { static SingletonDemo *instance = nil; static dispatch_once_t once_token; dispatch_once(&amp;amp;once_token, ^{ instance = [[SingletonDemo alloc] init]; }); return instance; } @end 學會了如何創建 Singleton 之後，可以想想哪些物件適合以這種方式創建； 如「目前登入的使用者」，正是可以用 Singleton 的方式做設計，畢竟一個 App 同時僅能有一位使用者登入，是大多數軟體的設計，而這恰巧符合 Singleton 的精神。</description></item></channel></rss>

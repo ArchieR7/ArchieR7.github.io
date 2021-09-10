@@ -1,65 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>網站 on Archie</title>
-    <link>https://www.archie.tw/tags/%E7%B6%B2%E7%AB%99/</link>
-    <description>Recent content in 網站 on Archie</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/%E7%B6%B2%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Markdown 嵌入 YouTube</title>
-      <link>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</link>
-      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</guid>
-      <description>前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>網站 on Archie</title><link>https://www.archie.tw/tags/%E7%B6%B2%E7%AB%99/</link><description>Recent content in 網站 on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/%E7%B6%B2%E7%AB%99/index.xml" rel="self" type="application/rss+xml"/><item><title>Markdown 嵌入 YouTube</title><link>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</guid><description>前言 一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？
 嵌入的程式碼 &amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;https://www.youtube.com/embed/OyCN04p-uS8&amp;quot; title=&amp;quot;YouTube video player&amp;quot; frameborder=&amp;quot;0&amp;quot; allow=&amp;quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt; Markdown 其實就只有一個重點，就是得到影片的 ID；這個你可以從很多地方取得，以線上讀書會 RxSwift 分享來說
 首先就是先取得縮圖的 URL，格式為
-   URL Description     https://img.youtube.com/vi/VIDEO_ID/0.jpg Full-size thumbnail   https://img.youtube.com/vi/VIDEO_ID/1.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/2.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/3.jpg Small thumbnail images   https://img.youtube.com/vi/VIDEO_ID/default.jpg Default thumbnail image   https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg High-quality default thumbnail image   https://img.</description>
-    </item>
-    
-    <item>
-      <title>AWS EC2 with WordPress</title>
-      <link>https://www.archie.tw/p/aws-ec2-with-wordpress/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/aws-ec2-with-wordpress/</guid>
-      <description>前言 Vultr 這個網站原本是在 Vultr 上開一台機器，每個月大概的費用為 USD $6 – 7 元之間，並利用 Certbot 自動更新 SSL 憑證。但後來發現不太會維護那台機器，時常因為記憶體造成資料庫錯誤，每隔兩三天就得去手動重新啟動來解決問題，乾脆就搬家到 WordPress.com 的服務。
+URL Description https://img.youtube.com/vi/VIDEO_ID/0.jpg Full-size thumbnail https://img.youtube.com/vi/VIDEO_ID/1.jpg Small thumbnail images https://img.youtube.com/vi/VIDEO_ID/2.jpg Small thumbnail images https://img.youtube.com/vi/VIDEO_ID/3.jpg Small thumbnail images https://img.youtube.com/vi/VIDEO_ID/default.jpg Default thumbnail image https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg High-quality default thumbnail image https://img.</description></item><item><title>AWS EC2 with WordPress</title><link>https://www.archie.tw/p/aws-ec2-with-wordpress/</link><pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/aws-ec2-with-wordpress/</guid><description>前言 Vultr 這個網站原本是在 Vultr 上開一台機器，每個月大概的費用為 USD $6 – 7 元之間，並利用 Certbot 自動更新 SSL 憑證。但後來發現不太會維護那台機器，時常因為記憶體造成資料庫錯誤，每隔兩三天就得去手動重新啟動來解決問題，乾脆就搬家到 WordPress.com 的服務。
 WordPress.com 而 WordPress.com 的好處就是全部幫你處理好好的，然後我使用的是個人版的方案；NT$ 130 / 月，便有提供轉址的功能和一年份免費的網域。不過由於我自己是向 PChome 買 Archie.tw，所以主要是為了轉過去而付費。
 但使用服務和自己開一台機器的差異性就在於彈性，像是安裝外掛便被放在商務版的功能之中，而費用為 NT$ 799 / 月。
 這樣一用也用了一段時間，直到近期註冊了 AWS 的服務，便決定搬移到 AWS 上。
 AWS 在 AWS 上新註冊的用戶可以擁有一年的免費方案，而這個網站目前使用到幾個 AWS 服務分別為
- EC2 Load Balancer Certificate Manager Route 53  這邊來介紹我的流程：
+EC2 Load Balancer Certificate Manager Route 53 這邊來介紹我的流程：
 Key Pairs 首先我們先到 EC2 的頁面選擇 NETWORK &amp;amp; SECURITY ➡️ Key Pairs 來建立一組 Key pair，用於之後連接到 EC2 instance
-EC2 透過 AWS Markeyplace 開一台新的 instance，使用 WordPress Certified by Bitnami 搭配 t2.</description>
-    </item>
-    
-    <item>
-      <title>網域相關設定</title>
-      <link>https://www.archie.tw/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</guid>
-      <description>昨天，終於在 PChome 購買到 www.Archie.tw 來和大家分享一下這段經歷。 首先，從要建設這個網站的時候，就已經打算購買 Archie.tw 的網域名稱； 一來，讓人方便和我本身聯想在一塊， 二來，是為了解決這個問題：
+EC2 透過 AWS Markeyplace 開一台新的 instance，使用 WordPress Certified by Bitnami 搭配 t2.</description></item><item><title>網域相關設定</title><link>https://www.archie.tw/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</link><pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E7%B6%B2%E5%9F%9F%E7%9B%B8%E9%97%9C%E8%A8%AD%E5%AE%9A/</guid><description>昨天，終於在 PChome 購買到 www.Archie.tw 來和大家分享一下這段經歷。 首先，從要建設這個網站的時候，就已經打算購買 Archie.tw 的網域名稱； 一來，讓人方便和我本身聯想在一塊， 二來，是為了解決這個問題：
 通常在 Organization Identifier 會建議填上倒裝的網址，如 com.facebook、com.google 之類的， 而我之前私人所寫的 App，多半是隨便打⋯⋯（因為那時候沒有一個依循的地方）。
 不過，當初在 PChome 要點購買時，發現其實這是有人註冊走的⋯⋯ 但還好，它的期限剛好最近會到期（2017-05-12）。 想當然耳，我便是在等到 5 月 12 日時，馬上前往去註冊，深怕自己錯過！ 只是上頭的文字依舊是 2017-05-12 過期，並且還是之前那個人的相關資訊， 意思就是說其實網域是還沒被釋放出來的⋯⋯
 於是便去查詢了相關的資訊，原來網域到期後，會有一段贖回期和釋放期， 原先註冊的人可以在那段時間贖回其網域； 以 .tw 來說，贖回期為 30 天、刪除期為 3 天， 於是乎 2017-05-12 到期的這個網域，其實我得等到 33 天後的 2017-06-14 才能註冊。
 而就在昨日（2017-06-14）中午時，再更新一次購買的網頁，便發現可以註冊了！ 費用為 800 元 / 一年，透過線上刷卡的方式解決了這一個多月來的網域問題！ 等付款過後的一、兩個小時內，便可以設定 DNS，將原先 vultr 上的 IP 設定進去， 就可以透過 Archie.tw 連到 vultr 的機器了～
-另外，vultr 以及 WordPress 都需要做相關的設定，將原先顯示 IP 的地方， 都更改為剛剛獲得的網域名稱，並順道設定 https 的問題。</description>
-    </item>
-    
-    <item>
-      <title>502 Bad Gateway Error with nginx</title>
-      <link>https://www.archie.tw/p/502-bad-gateway-error-with-nginx/</link>
-      <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/502-bad-gateway-error-with-nginx/</guid>
-      <description>源頭 在攥寫七天學會設計模式 – Singleton時，發生了點小狀況。 我點擊 WordPress 的「全部文章」時，顯示 502 Bad Gateway 的錯誤訊息； 由於點下去後不久（一、兩秒內）就跳轉出錯誤，故猜測不是 timeout 的關係， 便開始了一段 debug 的故事⋯⋯
+另外，vultr 以及 WordPress 都需要做相關的設定，將原先顯示 IP 的地方， 都更改為剛剛獲得的網域名稱，並順道設定 https 的問題。</description></item><item><title>502 Bad Gateway Error with nginx</title><link>https://www.archie.tw/p/502-bad-gateway-error-with-nginx/</link><pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/502-bad-gateway-error-with-nginx/</guid><description>源頭 在攥寫七天學會設計模式 – Singleton時，發生了點小狀況。 我點擊 WordPress 的「全部文章」時，顯示 502 Bad Gateway 的錯誤訊息； 由於點下去後不久（一、兩秒內）就跳轉出錯誤，故猜測不是 timeout 的關係， 便開始了一段 debug 的故事⋯⋯
 環境 我是使用 WordPress（不是重點）的框架，並架設在 Vultr 的主機上； 主機的主要規格為 CPU 1 vCore、RAM 1024 MB、25 GB SSD。
 原因 透過 nginx 的 error log（cat /var/log/nginx/wordpress_https_error.log）， 發現關鍵字： upstream sent too big header while reading response header from upstream 拿去餵狗的結果是，需要調整 nginx.conf（vim /etc/nginx/nginx.conf）， 加上
-http { proxy_buffer_size 128k; proxy_buffers 4 256k; proxy_busy_buffers_size 256k; fastcgi_buffer_size 128k; fastcgi_buffers 4 256k; fastcgi_busy_buffers_size 128k; ... } 來調整 buffer size，來避免資源不足直接捨棄的情況（502）。 由於 5 塊美金的方案，Vultr 僅提供 1024 MB 的記憶體大小，但它有 25 GB 的 SSD！ 故可以透過 Swap 的方式，用硬碟換取記憶體的效能。</description>
-    </item>
-    
-  </channel>
-</rss>
+http { proxy_buffer_size 128k; proxy_buffers 4 256k; proxy_busy_buffers_size 256k; fastcgi_buffer_size 128k; fastcgi_buffers 4 256k; fastcgi_busy_buffers_size 128k; ... } 來調整 buffer size，來避免資源不足直接捨棄的情況（502）。 由於 5 塊美金的方案，Vultr 僅提供 1024 MB 的記憶體大小，但它有 25 GB 的 SSD！ 故可以透過 Swap 的方式，用硬碟換取記憶體的效能。</description></item></channel></rss>

@@ -1,363 +1,161 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>🍀 生活相關 on Archie</title>
-    <link>https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</link>
-    <description>Recent content in 🍀 生活相關 on Archie</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Magic Keyboard 2 藍牙連接延遲修正</title>
-      <link>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</link>
-      <pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</guid>
-      <description>前陣子我的 Magic Keyboard 2 若沒有連接著線，則打字會有延遲的情況；一開始還以為是電腦卡頓的問題，但 Magic Trackpad 卻滑動地很順暢⋯ 便接著線工作了一段時間，直到剛剛決定嘗試修復這問題
-以 option + shift 點擊藍牙，我先是「重置藍牙模組」後仍沒有排除延遲的問題，後來選擇了「將所有連接的 Apple 裝置重置為出廠值」， 之後便一切恢復正常了！</description>
-    </item>
-    
-    <item>
-      <title>設計學習補助計畫</title>
-      <link>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</link>
-      <pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</guid>
-      <description>站在公司的角度來看，學習補助計畫是一個對於勞資雙方都有利的福利措施，不論員工的學習補助是投入在工作技能上或是日常生活的其他技能；如運動健身、廚藝或是音樂上，都能夠有機會使團隊成員在工作之餘學習新知，提升各成員的能力。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>🍀 生活相關 on Archie</title><link>https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/</link><description>Recent content in 🍀 生活相關 on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 09 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E9%97%9C/index.xml" rel="self" type="application/rss+xml"/><item><title>Magic Keyboard 2 藍牙連接延遲修正</title><link>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</link><pubDate>Wed, 09 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/magic-keyboard-2-%E8%97%8D%E7%89%99%E9%80%A3%E6%8E%A5%E5%BB%B6%E9%81%B2%E4%BF%AE%E6%AD%A3/</guid><description>前陣子我的 Magic Keyboard 2 若沒有連接著線，則打字會有延遲的情況；一開始還以為是電腦卡頓的問題，但 Magic Trackpad 卻滑動地很順暢⋯ 便接著線工作了一段時間，直到剛剛決定嘗試修復這問題
+以 option + shift 點擊藍牙，我先是「重置藍牙模組」後仍沒有排除延遲的問題，後來選擇了「將所有連接的 Apple 裝置重置為出廠值」， 之後便一切恢復正常了！</description></item><item><title>設計學習補助計畫</title><link>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</link><pubDate>Wed, 02 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E8%A8%AD%E8%A8%88%E5%AD%B8%E7%BF%92%E8%A3%9C%E5%8A%A9%E8%A8%88%E7%95%AB/</guid><description>站在公司的角度來看，學習補助計畫是一個對於勞資雙方都有利的福利措施，不論員工的學習補助是投入在工作技能上或是日常生活的其他技能；如運動健身、廚藝或是音樂上，都能夠有機會使團隊成員在工作之餘學習新知，提升各成員的能力。
 而這邊我會以個人的角度，站在公司和員工的立場之間做思考和設計，有興趣的人可以一同分享你目前公司的補助方式或是想法。
 成本問題 我從 Yourator 上做了一些查詢，簡單舉四家新創公司的學習補助計畫
-   公司 金額     CodePro酷博兒童程式創客教育 $2,000 月（$24,000 / 年？）   有物報告 $10,000 / 年   均一平台教育基金會 $5,000 / 年   Surveycake $20,000 / 年    從這四家的金額來看，範圍落在 $5,000 - $24,000 / 年之間，假設有一個年薪 100 萬的員工來申請的話，意味著公司投入了 0.5 - 2.4% / 年的額外支出；而若這件事能夠使這名員工在工作上得到 0.5 - 2.4% 的成長，不論是工作表現或是團隊氣氛等，那在我看來都是一項划算的投資。
+公司 金額 CodePro酷博兒童程式創客教育 $2,000 月（$24,000 / 年？） 有物報告 $10,000 / 年 均一平台教育基金會 $5,000 / 年 Surveycake $20,000 / 年 從這四家的金額來看，範圍落在 $5,000 - $24,000 / 年之間，假設有一個年薪 100 萬的員工來申請的話，意味著公司投入了 0.5 - 2.4% / 年的額外支出；而若這件事能夠使這名員工在工作上得到 0.5 - 2.4% 的成長，不論是工作表現或是團隊氣氛等，那在我看來都是一項划算的投資。
 其中 Survercake 的方案為補助學費的 50%，代表員工本身在學習這一塊上也得投入一半的費用，這也許是一個不錯的方式，能讓員工更正視學習，畢竟自己也有投入一定的成本。
 非工作相關的課程補助 如健身、音樂、廚藝等非工作相關的課程，我先簡單找了幾個課程費用來評估
-   名稱 費用     丙級廚師證照班 $18,000   大安國民運動中心 $50 / 小時   健身一對一教練課 $1,200 / 次   鋼琴家教 $500 - 1,000 / 小時    工作相關的年度盛會門票價格    名稱 門票金額     Google I/O USD $1,150   WWDC USD $1,599   iPlayground TWD $1,800   Pycon TWD $3,500   IxDA TWD $9,800   MOPCON TWD $800    這邊列出來幾個和我工作比較相關聯的開發 / 設計大會，這類門票除了國外的 Google I/O 和 WWDC 以外，其餘的金額皆算是上述補助方案的範圍之內。</description>
-    </item>
-    
-    <item>
-      <title>新創神秘故事：造假的學經歷背景</title>
-      <link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</link>
-      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</guid>
-      <description>新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。
- 這些話寫在前面 這故事和 老闆的弟弟 是不同家公司，所以兩者之間並沒有關聯，神秘的地方也有所不同，這次的故事主角並非是 Founder / Co-Founder 的，而是某位神秘的員工。
+名稱 費用 丙級廚師證照班 $18,000 大安國民運動中心 $50 / 小時 健身一對一教練課 $1,200 / 次 鋼琴家教 $500 - 1,000 / 小時 工作相關的年度盛會門票價格 名稱 門票金額 Google I/O USD $1,150 WWDC USD $1,599 iPlayground TWD $1,800 Pycon TWD $3,500 IxDA TWD $9,800 MOPCON TWD $800 這邊列出來幾個和我工作比較相關聯的開發 / 設計大會，這類門票除了國外的 Google I/O 和 WWDC 以外，其餘的金額皆算是上述補助方案的範圍之內。</description></item><item><title>新創神秘故事：造假的學經歷背景</title><link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</link><pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E9%80%A0%E5%81%87%E7%9A%84%E5%AD%B8%E7%B6%93%E6%AD%B7%E8%83%8C%E6%99%AF/</guid><description>新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。
+這些話寫在前面 這故事和 老闆的弟弟 是不同家公司，所以兩者之間並沒有關聯，神秘的地方也有所不同，這次的故事主角並非是 Founder / Co-Founder 的，而是某位神秘的員工。
 故事開始 在加入這家公司時，已經有一些成員在裡頭，像是 backend、Android、UI / UX、HR 等，以一個新創團隊來說是相對完整的；不過其中最微妙的就是，在我剛進入的時候，公司有數個負責行銷、市場的實習生，詳細的人數有些忘了，印象中是 5 - 10 個這種數字。
 不過我確定的是，工程師包含我只有三人，也就是上述提及的三個工程師職位而已。
 這些實習生的 owner，是一位負責行銷和市場驗證的；他將這些實習生分成幾個功能面向，有些負責行銷發想，有些負責市場分析、有些負責調查，而實習生們會定期分享他們的成果。
- 這件事本身沒什麼問題，問題在於發生的時間點
- 工程和行銷之間的失衡 剛進去的時候，是預計要做一個新的 app 出來，也就是要做一個 MVP 的意思；而在還沒有產品的時候，公司卻投入了大量的人力和資源去做行銷這一塊，是有些本末倒置的。
+這件事本身沒什麼問題，問題在於發生的時間點
+工程和行銷之間的失衡 剛進去的時候，是預計要做一個新的 app 出來，也就是要做一個 MVP 的意思；而在還沒有產品的時候，公司卻投入了大量的人力和資源去做行銷這一塊，是有些本末倒置的。
 而在還沒有產品可以推出的時候，行銷團隊基本上只能做市場的調查和分析，以及使用者訪談等釐清功能的優先順序之類的。
 不過事情總是不可能如此順遂，一來是實習生能提供的多數是人力上的協助，產出的分析和調查能力有限、二來是當我們工程團隊的產出能量不及行銷團隊發想的爆炸速度時，多半後續的發想都偏向空想居多；也就是說無法在產品推出後先驗證一下市場，再進行下一步的規劃和分析調查。
 那段時間還會時不時地出現一顆顆的隕石砸落在工程團隊上，用新的分析或是功能設計來推翻前一次的結論等，也就加劇了彼此之間的失衡。
 這其中一個問題便是在 MVP 並沒有被定義清楚，導致產出上不斷地重新定義許多功能。
- 這時候不經讓我們思考，為何需要在這麼前期的時候聘用那麼多行銷實習生？
- 重新調整組織 這時候，上頭的人決定去和負責的同仁討論這部分的問題，不過該同仁十分堅決地表示自己需要這數量的實習生們協助她做這些調查和分析，才能夠好好做事；並開始放招，將過往的經歷一一拿出來來佐證自己的決策是可行的。
- 這部分其實也沒什麼問題，拿自身經驗來告知團隊決策的依據是什麼
- 不過她的一些行為開始讓我們有些懷疑，她過往的那些經歷和公司真的會使她能夠做出這種決策嗎？
+這時候不經讓我們思考，為何需要在這麼前期的時候聘用那麼多行銷實習生？
+重新調整組織 這時候，上頭的人決定去和負責的同仁討論這部分的問題，不過該同仁十分堅決地表示自己需要這數量的實習生們協助她做這些調查和分析，才能夠好好做事；並開始放招，將過往的經歷一一拿出來來佐證自己的決策是可行的。
+這部分其實也沒什麼問題，拿自身經驗來告知團隊決策的依據是什麼
+不過她的一些行為開始讓我們有些懷疑，她過往的那些經歷和公司真的會使她能夠做出這種決策嗎？
 這時，她提及的這些經歷在其他人的心中產生了一些不確定性，於是我們決定查驗一下。
 DD - Due Diligence 在新創圈這個詞應該算是蠻常見的，主要是投資方和被投資方去實際查核對方是的背景和談判的內容是否如實地在運行。
 而使用在人身上，便是去查核其履歷上提及的資訊，簡單來說就是徵信社的概念。
 這邊就會呼應到一件事，就是其實新創團隊在初期的時候並沒有那麼多資源可以投入在查核履歷這方面；有更多的時間和人力多半都會投資在開發 MVP 之上，而非花時間和精力去查核一個員工的履歷內容是否如其所說的。
 多半都會選擇相信對方來降低這部分的成本，除非⋯
- 選擇繼續相信的潛在成本已經高於查核這件事所需要的成本
- 開始柯南式的調查 首先，我們從他的學歷開始調查，於是便致電到他履歷上所寫的畢業系所去詢問一下；而這時候得到令人發寒的回訊⋯
+選擇繼續相信的潛在成本已經高於查核這件事所需要的成本
+開始柯南式的調查 首先，我們從他的學歷開始調查，於是便致電到他履歷上所寫的畢業系所去詢問一下；而這時候得到令人發寒的回訊⋯
 該系所的系秘告知，該同學在大學 O 年級的時候，因為一些原因便休學了。
- 「！」
- 辦公室氣氛開始陷入一個謎樣的狀態，我自己是有一種莫名的興奮，比較白話的心路歷程大概就是</description>
-    </item>
-    
-    <item>
-      <title>新創神秘故事：老闆的弟弟</title>
-      <link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</guid>
-      <description>新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。
- 故事開始 曾加入過一家新創 / 小公司，公司成員的組成為 CEO、CTO、PM、backend、Android、設計以及我負責 iOS。
+「！」
+辦公室氣氛開始陷入一個謎樣的狀態，我自己是有一種莫名的興奮，比較白話的心路歷程大概就是</description></item><item><title>新創神秘故事：老闆的弟弟</title><link>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</link><pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E6%96%B0%E5%89%B5%E7%A5%9E%E7%A7%98%E6%95%85%E4%BA%8B%E8%80%81%E9%97%86%E7%9A%84%E5%BC%9F%E5%BC%9F/</guid><description>新創神秘故事的內容來自親朋好友以及自身經驗，寫出來的宗旨為提供求職者或是在新創圈奮鬥的工程師們一個借鏡，以避免重蹈覆轍。
+故事開始 曾加入過一家新創 / 小公司，公司成員的組成為 CEO、CTO、PM、backend、Android、設計以及我負責 iOS。
 在面試的時候，是由 PM 來交辦面試流程，她會給你一個測驗用的專案，裡頭有 3 個 bugs 需要修，修完之後通知她，接著她就會照規格去驗證；從這個面試流程不難想像合作的時候，工作流程就是如此。
- 這部分我反倒覺得不錯，因為可以在面試的時候就先了解這公司的開發流程。
- 而這專案的 Xcode 和 Swift 版本都不是最新的，這部分就反應了兩個潛在問題需要釐清
- 面試的專案並沒有在維護 目前開發的專案本身就是舊版本的 Xcode + Swift 在開發  如果是後者的話，那就是一個蠻細心的面試題。
- 不過答案是前者。
- 接著就進到和 CEO 談 offer 的階段，這邊部分的面試給我的感覺還不錯，感覺的到對方是真的有希望你能夠加入；並有提及該職缺向上就是 CTO，且 CTO 人在國外，所以彼此會需要磨合開發的流程。
+這部分我反倒覺得不錯，因為可以在面試的時候就先了解這公司的開發流程。
+而這專案的 Xcode 和 Swift 版本都不是最新的，這部分就反應了兩個潛在問題需要釐清
+面試的專案並沒有在維護 目前開發的專案本身就是舊版本的 Xcode + Swift 在開發 如果是後者的話，那就是一個蠻細心的面試題。
+不過答案是前者。
+接著就進到和 CEO 談 offer 的階段，這邊部分的面試給我的感覺還不錯，感覺的到對方是真的有希望你能夠加入；並有提及該職缺向上就是 CTO，且 CTO 人在國外，所以彼此會需要磨合開發的流程。
 而 CEO 有提到，他並不會介入我們的開發規劃，所以只要 CTO 做的決策他這邊都可以接受。
- 這點也是好事，CEO 不會介入開發的時程安排，至少確定隕石流開發的可能降低了一半。
- 不過恐怖的事情也是如此發生的⋯
+這點也是好事，CEO 不會介入開發的時程安排，至少確定隕石流開發的可能降低了一半。
+不過恐怖的事情也是如此發生的⋯
 報到第一天 我所拿到的開發裝置是一台 iMac，PM 吩咐我說每天下班的時候都要記得關機（？），說這是上頭要求的。 在我對這事情還沒有太多頭緒，只覺得有點問號的時候，打開了這台 iMac 要開始安裝 Xcode 等軟體時發現⋯
 我並沒有權限可以直接安裝任何軟體。
 PM：「技術長有和我說，如果你有需要安裝什麼軟體的話，列出來他會負責安裝進去。」
- 意思就是技術長有遠端可以操控這台電腦的權限
- 我當下就覺得這件事情十分的不妙，於是便要求直接開權限給我，不過這件事被駁回了。
-「不然就先來看看工作內容吧⋯」</description>
-    </item>
-    
-    <item>
-      <title>為什麼加入新創公司？</title>
-      <link>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</link>
-      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</guid>
-      <description>為什麼加入____公司？ 如果你已經工作一段時間，或者是正打算開始求職的新鮮人，不妨先花個幾分鐘的時間思考一下這問題。
+意思就是技術長有遠端可以操控這台電腦的權限
+我當下就覺得這件事情十分的不妙，於是便要求直接開權限給我，不過這件事被駁回了。
+「不然就先來看看工作內容吧⋯」</description></item><item><title>為什麼加入新創公司？</title><link>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</link><pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E7%82%BA%E4%BB%80%E9%BA%BC%E5%8A%A0%E5%85%A5%E6%96%B0%E5%89%B5%E5%85%AC%E5%8F%B8/</guid><description>為什麼加入____公司？ 如果你已經工作一段時間，或者是正打算開始求職的新鮮人，不妨先花個幾分鐘的時間思考一下這問題。
 接著，我來回答這個問題
 為什麼加入新創公司？ 從幾個層面來分析我在求職上的選擇和考量
 學歷 我是名輔仁大學電機工程學系的學士畢業生，在求學期間並沒有額外去修資工的課程，憑著自己在替代役期間對於 iOS 開發的好奇和興趣，而走向了 iOS 工程師的職涯選擇。
 對於許多公司而言，我的學歷背景並非能夠吸引到他們，特別是比較有規模的公司。
 他們看重新鮮人的學歷，甚至以此為核薪的依據，畢竟拿學歷直接評斷一個人的能力，是一件相對輕鬆的事；他們就可以少花一些心力在了解求職者的想法上，讀書成績不錯，基本上確保了你這個人至少在學科上是有能力的。
 於是，在我第一次去參加某上市公司的 Junior iOS 工程師面試時，被要求要帶畢業證書影本（證明真的有大學畢業）和準備成績單這種事，似乎就不怎麼意外了。
- 「輔大畢業想領 OOK？我們這邊台大畢業生都只有 OOK 了！我這邊只願意開 OOK 給你！」
- 當下的感覺挺不舒服的（對，就是不爽），便直接婉拒後續的面談離開。
+「輔大畢業想領 OOK？我們這邊台大畢業生都只有 OOK 了！我這邊只願意開 OOK 給你！」
+當下的感覺挺不舒服的（對，就是不爽），便直接婉拒後續的面談離開。
 在有了經驗後，我開始刻意地避開要求學歷或本科系的 Junior 職缺，而尋找對於求職者比較 open mind 的職缺內容介紹。
 沒有學歷加分的情況下，我在準備面試的策略是個人的 side project，並尋找願意聽我分享開發 side project 心路歷程的公司。
 自己當時篩選的條件為
- 公司文化開放 做產品導向的公司，而非外包 不限本科系學生  而恰好多數的台灣新創都保留類似的特質，也給了我一個真正開始做產品的機會。
- 新創神秘故事：當公司十分看重學歷時
- 彈性 多數的新創公司都是責任制，上下班的時間較為彈性；這部分有些人喜歡，有些人反感。
+公司文化開放 做產品導向的公司，而非外包 不限本科系學生 而恰好多數的台灣新創都保留類似的特質，也給了我一個真正開始做產品的機會。
+新創神秘故事：當公司十分看重學歷時
+彈性 多數的新創公司都是責任制，上下班的時間較為彈性；這部分有些人喜歡，有些人反感。
 但以我的個性，本來就不適合太制式化的上班環境，像是穿制服、遲到要扣錢之類的，都不是心目中理想的工作環境。
 舉凡連假前能夠提早離開來避開車潮、遇到週末補班時選擇放假或是輕鬆的工作模式等，我認為都是新創比一般或是傳產較為願意調整的地方。
 上述談的是物理上的彈性，而實際上新創的工作氛圍還需要提供大家思維上的彈性空間，也就是讓多數人能夠且願意表達自己的想法。
- 新創神秘故事：表面上彈性，背地裏算計
- 參與產品的程度 在投入到新創的產業中，多半都有更多的機會可以參與到整個產品的開發和設計走向；不會只是單純做一個功能的維護開發或是效能的優化調教。
+新創神秘故事：表面上彈性，背地裏算計
+參與產品的程度 在投入到新創的產業中，多半都有更多的機會可以參與到整個產品的開發和設計走向；不會只是單純做一個功能的維護開發或是效能的優化調教。
 這部分也是見仁見智，有些人喜歡專研特定的技術並走得深入、有些人喜歡做產品，就得多碰許多不同層面的東西，但就沒那麼多心力可以投入在單一的點上。
 而新創團隊人數通常在一開始都不會太多，所以十分容易出現一個人負責一個平台，並需要常常跨平台、跨領域的去和其他人進行溝通討論。
 反之，若當公司的發展和產品的規劃，漸漸地都是由有權力的少數人在掌控時，那也就漸漸脫離新創的特質。
- 新創神秘故事：沒拿薪水的人說的算？
- 參與公司文化的建立 已經有一定規模的公司，基本上文化的部分是吸引人才加入的原因；而新創的話則是提供你一個可以去影響公司文化的舞台，簡單來說就是你的所作所為都有可能推動或是改變公司特定的風氣。
+新創神秘故事：沒拿薪水的人說的算？
+參與公司文化的建立 已經有一定規模的公司，基本上文化的部分是吸引人才加入的原因；而新創的話則是提供你一個可以去影響公司文化的舞台，簡單來說就是你的所作所為都有可能推動或是改變公司特定的風氣。
 在這方面上，已經和單純的軟體開發工作有一些落差；在新創裡頭，我們不只需要維護程式碼的品質，甚至是成員間的互動和想像。
 特別是越早加入的成員，影響公司的文化風氣越深；所以若有機會進入越早期的團隊，越有機會將團隊文化帶向你所期望的地方去。不過相對的就會越不穩定，個人的風險就會越高。
-高風險追求高報酬 新創提供不了大公司的穩定職涯環境，取而代之的是有爆發的潛力；多半的新創團隊在找尋人才時，需要提供相對高的利益條件（股權、薪資、休假福利等）才會越有機會說服對方捨棄大公司的穩定來一搏。</description>
-    </item>
-    
-    <item>
-      <title>職缺與履歷的互動 - 以水滴信用為例</title>
-      <link>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</link>
-      <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</guid>
-      <description>Credidi Inc. 
+高風險追求高報酬 新創提供不了大公司的穩定職涯環境，取而代之的是有爆發的潛力；多半的新創團隊在找尋人才時，需要提供相對高的利益條件（股權、薪資、休假福利等）才會越有機會說服對方捨棄大公司的穩定來一搏。</description></item><item><title>職缺與履歷的互動 - 以水滴信用為例</title><link>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</link><pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E8%81%B7%E7%BC%BA%E8%88%87%E5%B1%A5%E6%AD%B7%E7%9A%84%E4%BA%92%E5%8B%95-%E4%BB%A5%E6%B0%B4%E6%BB%B4%E4%BF%A1%E7%94%A8%E7%82%BA%E4%BE%8B/</guid><description>Credidi Inc.
 這篇文章是以我個人的角度來看「職缺與履歷的互動」這件事，並以我目前服務的公司 - 水滴信用在 Yourator 上開的職缺為例。
 職缺 在目前所開出的四個職缺當中，我所負責職缺內容為下列兩個
- Junior iOS Engineer Senior Android Engineer  所以在這，我能夠負責回答在整理這兩份職缺時的想法。
-工作內容 Seniod Android Engineer  
-Junior iOS Engineer  
+Junior iOS Engineer Senior Android Engineer 所以在這，我能夠負責回答在整理這兩份職缺時的想法。
+工作內容 Seniod Android Engineer
+Junior iOS Engineer
 這一段裡頭，框起來的文字是我所撰寫的；目標是在幾句話內讓求職者大略地了解自己會接觸到怎樣的架構和必要的工具。
 基本上不論是 iOS 或是 Android，都是以 MVVM + Rx 作為主要的架構；而 iOS 的部分多了 Coordinator 的使用。
 而 iOS 和 Android 這兩份職缺另一個不同的點是，Android 的需求是一位 Senior 的成員；我們期望他 / 她能夠參與前端架構的討論並協助負責其 repository 的 pull requests review 工作。
 這部分算是解釋了我們團隊目前所選擇的框架，也一定程度地透露了團隊在技術面上的喜好；以框架而言，我們期望可以找到對 Reactive 有興趣的人進來聊聊，而若你並不怎麼喜歡這技術的話，在投遞履歷前也可以多加評估。
-條件要求 Senior Android Engineer  
-Junior iOS Engineer</description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓紀錄 2020-03</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</link>
-      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</guid>
-      <description>這個月 Archie 的斜槓記錄又來啦！ AdSense 這個月並沒有上架新的 App，所以數字並沒有上升的趨勢，處在 $ 162.31
- 
+條件要求 Senior Android Engineer
+Junior iOS Engineer</description></item><item><title>Archie 的斜槓紀錄 2020-03</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</link><pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-03/</guid><description>這個月 Archie 的斜槓記錄又來啦！ AdSense 這個月並沒有上架新的 App，所以數字並沒有上升的趨勢，處在 $ 162.31
 Bitfinex 因應疫情，收益有大幅下降的情況，目前一天大概都是在 USD $ 0.6 左右（$ 18.14）
- 
 三月份共計 USD$ 36.07，相比上個月的 USD$ 64.31 ，幾乎是腰折等級😭
 股利 0050.tw 在 3/6 時發送的股利，我只有買一些些，故得股利 $ 653。
 Upwork 在三月份的時候，開始在 Upwork 上找案子做看看，投遞了幾個並得到一個小案子🎉一共獲利 USD$ 40
 Apple Connect 透過找飲料的 IAP，獲利了 $ 182
-總收入 折合台幣 $ 3,092.42</description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓紀錄 2020-02</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</link>
-      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</guid>
-      <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，這個月寫了兩款 App：
+總收入 折合台幣 $ 3,092.42</description></item><item><title>Archie 的斜槓紀錄 2020-02</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-02/</guid><description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，這個月寫了兩款 App：
 找健身
 找飲料
 所以 AdSense 的部分是上升的，但距離養活自己還是有很巨大的差距啊！
- 
-Bitfinex 收益為 US$ 64.31  
+Bitfinex 收益為 US$ 64.31
 統一發票兌獎 這個月電子發票中了一張 200 元，不無小補👍
-總收入  AdSense $191.36 Bitfinex $1,944 統一發票 $200  $ 2,335</description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓紀錄 2020-01</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</link>
-      <pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</guid>
-      <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，沒什麼新作品加上文章幾乎兩個都沒在更新，所以收益下滑😭
- 
-Bitfinex 1 月份的走勢  
+總收入 AdSense $191.36 Bitfinex $1,944 統一發票 $200 $ 2,335</description></item><item><title>Archie 的斜槓紀錄 2020-01</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</link><pubDate>Sun, 02 Feb 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2020-01/</guid><description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，沒什麼新作品加上文章幾乎兩個都沒在更新，所以收益下滑😭
+Bitfinex 1 月份的走勢
 由於在前陣子突然一波高漲，目前我的放貸還有幾個高利率檔期中，各放了 30 天的長期
- 
 故上個月的收益很讚讚👏來到了 USD$ 58.25
- 
-總收入  AdSense $76.56 Bitfinex $1760.84  $ 1837.4</description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓記錄 2019-12</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</link>
-      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</guid>
-      <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，12 月的獲利是 106.05 元，加入了 阿芬的菜園 的廣告，所以突破 100 元！  
-Bitfinex 12 月份的走勢  
-月初的時候一波下探，但後來有拉起來，所以整月份的收入為 $35.08  
+總收入 AdSense $76.56 Bitfinex $1760.84 $ 1837.4</description></item><item><title>Archie 的斜槓記錄 2019-12</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</link><pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-12/</guid><description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，12 月的獲利是 106.05 元，加入了 阿芬的菜園 的廣告，所以突破 100 元！
+Bitfinex 12 月份的走勢
+月初的時候一波下探，但後來有拉起來，所以整月份的收入為 $35.08
 台股就沒什麼獲利了，所以都要等明年了😂
-總收入  AdSense $106.05 Bitfinex $1,054.15  這個月總收入為 $1,160.2</description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓記錄 2019-11</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</link>
-      <pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</guid>
-      <description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，上個月的獲利是 US$2.33 元，沒特別多做任何事，所以沒有特別的成長。
- 
+總收入 AdSense $106.05 Bitfinex $1,054.15 這個月總收入為 $1,160.2</description></item><item><title>Archie 的斜槓記錄 2019-11</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</link><pubDate>Mon, 02 Dec 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-11/</guid><description>這個月 Archie 的斜槓記錄又來啦！ AdSense AdSense 的部分，上個月的獲利是 US$2.33 元，沒特別多做任何事，所以沒有特別的成長。
 Bitfinex 十一月份的每日獲利走勢
- 
 總獲利一共 US$36.23
- 
 台股獲利 0056 的股利在這個月發放，共計 $6,637
-總收入  AdSense US$2.33 Bitfinex US$36.23 股利 $6,637  這個月總收入 $7,812.1</description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓記錄 2019-10</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</link>
-      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</guid>
-      <description>這個月 Archie 的斜槓記錄又來啦！
+總收入 AdSense US$2.33 Bitfinex US$36.23 股利 $6,637 這個月總收入 $7,812.1</description></item><item><title>Archie 的斜槓記錄 2019-10</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</link><pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-10/</guid><description>這個月 Archie 的斜槓記錄又來啦！
 AdSense 少少的 US$1.41
- 
 Bitfinex 這個月的年利率大約都落在 7 - 10 % 之間，不過最近因為習近平的一句話，有幾天上漲到 15 % 左右，但沒過多久就回歸到 9 % 的位置
- 
-所以這個月每日的利息走勢圖如下，多半時間是低於一塊美金的：  
+所以這個月每日的利息走勢圖如下，多半時間是低於一塊美金的：
 而這個月的收益為
- 
 台股獲利 這個月買賣股票加上屁偉（我弟弟）抽中上海商銀直接賣掉的分紅，一共獲利 $10,760 元。
 總收入 美金持續下滑到 30.54 左右，所以 Bitfinex 那邊依然是被匯差吃死死⋯⋯😭
- AdSense US$1.41 -&amp;gt; $43 元 Bitfinex US$24.68 -&amp;gt; $754.47 元 台股獲利 $$10,759 元  這個月的斜槓收入為 $$11551.45 / 50,000 = 23.10%
+AdSense US$1.41 -&amp;gt; $43 元 Bitfinex US$24.68 -&amp;gt; $754.47 元 台股獲利 $$10,759 元 這個月的斜槓收入為 $$11551.45 / 50,000 = 23.10%
 [||||______ 23% __________]
-目前看起來 AdSense 那一塊真的太少了😂需要好好思考一下怎麼增加那一部分的收益🤔️ 而 11 月還會領到元大高股息 0056 的現金股利，希望台股獲利可以穩定👌</description>
-    </item>
-    
-    <item>
-      <title>Checklist template</title>
-      <link>https://www.archie.tw/p/checklist-template/</link>
-      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/checklist-template/</guid>
-      <description>這是一個新的分類，不侷限於 iOS 或是程式開發的層面，對於我而言是一個新的領域；這有點像是檢查清單、必做清單或是 SOP 等概念，簡單舉幾個例子
-雙 NP 流程  確認原電信合約 和原電信商解約 攜碼至另一家電信的預付卡 至通訊行辦理攜碼方案 等預付卡開通，使用其卡片 等原電信商開通  Cocoapods binary 流程  
- gem install cocoapods-binary 在 Podfile 最上方加入 plugin &#39;cocoapods-binary&#39; 和 all_binary! pod install  阿齊推薦的宜蘭十個小吃  阿德魯肉飯 ⋯⋯  諸如此類的，這些流程它可以是一個個人的 SOP 或是有點像是小教學，而這當然只是一個我自己的範本，你可以刪刪減減成自己的版本👌
-十月份先以這個分類為測試，若流量大一些的話，再擴大這個專案吧！</description>
-    </item>
-    
-    <item>
-      <title>【Checklist】雙 NP 流程</title>
-      <link>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</link>
-      <pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</guid>
-      <description>【Checklist】雙 NP 流程  確認原電信合約 和原電信商解約 攜碼至另一家電信的預付卡 至通訊行辦理攜碼方案 等預付卡開通，使用其卡片 等原電信商開通   2019 執行的心得文
-2017 執行的心得文
- </description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓記錄 2019-09</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</link>
-      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</guid>
-      <description>這個月 Archie 的斜槓記錄又來啦！ AdSense 廣告部分，九月份上架了兩個 App； 一個是 iOS 13+ 的匯率計算機、一個是 Flip clock，而流量都還是十分低的狀態，不過金額比上個月多了 US$ 1.2，來到了 US$ 2.53 。
- 
+目前看起來 AdSense 那一塊真的太少了😂需要好好思考一下怎麼增加那一部分的收益🤔️ 而 11 月還會領到元大高股息 0056 的現金股利，希望台股獲利可以穩定👌</description></item><item><title>Checklist template</title><link>https://www.archie.tw/p/checklist-template/</link><pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/checklist-template/</guid><description>這是一個新的分類，不侷限於 iOS 或是程式開發的層面，對於我而言是一個新的領域；這有點像是檢查清單、必做清單或是 SOP 等概念，簡單舉幾個例子
+雙 NP 流程 確認原電信合約 和原電信商解約 攜碼至另一家電信的預付卡 至通訊行辦理攜碼方案 等預付卡開通，使用其卡片 等原電信商開通 Cocoapods binary 流程
+gem install cocoapods-binary 在 Podfile 最上方加入 plugin 'cocoapods-binary' 和 all_binary! pod install 阿齊推薦的宜蘭十個小吃 阿德魯肉飯 ⋯⋯ 諸如此類的，這些流程它可以是一個個人的 SOP 或是有點像是小教學，而這當然只是一個我自己的範本，你可以刪刪減減成自己的版本👌
+十月份先以這個分類為測試，若流量大一些的話，再擴大這個專案吧！</description></item><item><title>【Checklist】雙 NP 流程</title><link>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</link><pubDate>Sat, 05 Oct 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/checklist%E9%9B%99-np-%E6%B5%81%E7%A8%8B/</guid><description>【Checklist】雙 NP 流程 確認原電信合約 和原電信商解約 攜碼至另一家電信的預付卡 至通訊行辦理攜碼方案 等預付卡開通，使用其卡片 等原電信商開通 2019 執行的心得文
+2017 執行的心得文</description></item><item><title>Archie 的斜槓記錄 2019-09</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</link><pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E8%A8%98%E9%8C%84-2019-09/</guid><description>這個月 Archie 的斜槓記錄又來啦！ AdSense 廣告部分，九月份上架了兩個 App； 一個是 iOS 13+ 的匯率計算機、一個是 Flip clock，而流量都還是十分低的狀態，不過金額比上個月多了 US$ 1.2，來到了 US$ 2.53 。
 Bitfinex 而九月份的放貸收入為 US$ 30.33，受到了虛擬貨幣價格走低的影響，這部分是比上個月來得少的，少了 US$ 1.35。
- 
 台股獲利 這個月領了合作金庫的股利 4,653 元，以及買賣其他股票小賺了 985 元。
 總收入 加上目前美金匯率也降到了 31，使得總獲利其實沒什麼成長。
- AdSense US$ 2.53 ➡️ $78.43 Bitfinex US$ 30.33 ➡️ $940.23 台股獲利 $5,548 額外收入 $1,500  這個月斜槓收入為 $8,066.55
+AdSense US$ 2.53 ➡️ $78.43 Bitfinex US$ 30.33 ➡️ $940.23 台股獲利 $5,548 額外收入 $1,500 這個月斜槓收入為 $8,066.55
 8,066.55 / 50,000 = 16.1331 %
 [|||_______ 16% __________]
-不過十月份印象中沒有股利可領，下一篇大概會少上許多吧😭</description>
-    </item>
-    
-    <item>
-      <title>雙 NP：中華電信➡️台灣大哥大➡️中華電信 v2</title>
-      <link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</guid>
-      <description>繼上次雙 NP 之後，合約又來到了即將到期的時候，而今日因昨晚發燒請了病假，中午狀況好轉後便順道處理了合約的問題。
+不過十月份印象中沒有股利可領，下一篇大概會少上許多吧😭</description></item><item><title>雙 NP：中華電信➡️台灣大哥大➡️中華電信 v2</title><link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</link><pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1-v2/</guid><description>繼上次雙 NP 之後，合約又來到了即將到期的時候，而今日因昨晚發燒請了病假，中午狀況好轉後便順道處理了合約的問題。
 這次打算申辦的是
- 購機-699 
+購機-699
 每月費用大約如下 699 - 7,000 / 30 = 466 元
 大地遊戲開始 2019-09-27 12:56 中華電信 由於我的合約到期日為 10/03，故要先到中華電信進行提前解約並繳納提前解約終端設備補貼款（我的部分是 106 元）
 2019-09-27 13:01 台灣大哥大直營門市 告知從中華電信攜碼轉預付卡，而將於 2019/9/28 開通台灣大哥大門號（可以接電話、沒網路）
 2019-09-27 13:10 地標網通 帶著前面的收據和申請書來申請，而中華電信的合約內容比較多，所以簽署了比較多份文件。 將於 2019/9/29 恢復成中華電信門號🎉
 全部在羅東跑完大概半小時內可以處理完畢，再來就是等各家電信開通服務即可！
-其他方案可以到地標網通查詢，或是其他通訊行做詢問。</description>
-    </item>
-    
-    <item>
-      <title>Archie 的斜槓紀錄 2019-08</title>
-      <link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</link>
-      <pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</guid>
-      <description>這篇是什麼？ 這篇文章的內容並不會圍繞 iOS 或是 Swift 等，而是投資理財的部分，其中並不會有什麼教學或是分析，單純只是我這個月的損益總結而已。
+其他方案可以到地標網通查詢，或是其他通訊行做詢問。</description></item><item><title>Archie 的斜槓紀錄 2019-08</title><link>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</link><pubDate>Sat, 31 Aug 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/archie-%E7%9A%84%E6%96%9C%E6%A7%93%E7%B4%80%E9%8C%84-2019-08/</guid><description>這篇是什麼？ 這篇文章的內容並不會圍繞 iOS 或是 Swift 等，而是投資理財的部分，其中並不會有什麼教學或是分析，單純只是我這個月的損益總結而已。
 2019 年 8 月份總結 Adsense 其實我一直沒有在看這方面的收入，不過看來要加把勁在廣告上才是💪 大多數都是從一、兩個我沒有在維護的 App 來的⋯⋯ 九月份會開始掛上網站的廣告和看能不能在 iOS 13 正式版上線的時候， 將一個由 SwiftUI + Combine 所編寫的 side project 弄上架💦
- 
-Bitfinex 我有在 Bitfinex 搭配 Coinlend 進行放貸，並在 8/9 加碼了 $ 50,000 元進去 八月份的報表大概如下   共獲利了 USD $ 31.68
+Bitfinex 我有在 Bitfinex 搭配 Coinlend 進行放貸，並在 8/9 加碼了 $ 50,000 元進去 八月份的報表大概如下 共獲利了 USD $ 31.68
 台股股利 這個月領了三次股利，共計 $ 1,596 元
-八月份總收入  Adsense USD $ 1.33 Bitfinex USD $ 31.68 台股股利 $ 1,596 元  共計 $ 2,629.87 元</description>
-    </item>
-    
-    <item>
-      <title>iOS Taiwan jobs</title>
-      <link>https://www.archie.tw/p/ios-taiwan-jobs/</link>
-      <pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/ios-taiwan-jobs/</guid>
-      <description>iOS Taiwan jobs 緣起 最近剛把手上的專案都告一個段落，便開始尋找工作上的合作機會。 恰巧看到 f2etw/jobs，透過 GitHub Issues 的方式提供工作資訊， 感覺挺好的，且是個大家都可以共同編輯的地方，於是便有了建立一個 iOS 版本的念頭。
+八月份總收入 Adsense USD $ 1.33 Bitfinex USD $ 31.68 台股股利 $ 1,596 元 共計 $ 2,629.87 元</description></item><item><title>iOS Taiwan jobs</title><link>https://www.archie.tw/p/ios-taiwan-jobs/</link><pubDate>Thu, 19 Apr 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/ios-taiwan-jobs/</guid><description>iOS Taiwan jobs 緣起 最近剛把手上的專案都告一個段落，便開始尋找工作上的合作機會。 恰巧看到 f2etw/jobs，透過 GitHub Issues 的方式提供工作資訊， 感覺挺好的，且是個大家都可以共同編輯的地方，於是便有了建立一個 iOS 版本的念頭。
 和 f2etw/jobs 差異性 issue title iOSTaiwan/jobs 僅提供 iOS 的工作機會，且技術較為單純（Objective-C、Swift）， 所以便選擇在 issue title 上僅提供公司名稱而已； 職稱以及使用的語言則使用 label 來作為區分依據，如 Intern、Junior、Senior、Swift 等。
 issue template 我先是參考了 f2etw/jobs 的範本，並加入部分 PTT Soft_Job 版上的徵才格式，如
- 員工是否需自備工具? (是/否) 公司地址(填寫詳細至號)  後記 並在 README 之中，附上一些求職的網站，如 Yourator、indeed 等； 裡頭也都先下好關鍵字，點擊連結可以直接看搜尋結果。 希望可以透過這個專案讓台灣的 iOS 工程師在求職路上有個幫助！
-之後再陸續整合一些資源到 Archie.tw 以及 iOSTaiwan，仿效 f2etw 的模式， 有興趣的朋友歡迎多加利用👏</description>
-    </item>
-    
-    <item>
-      <title>失業給付 &#43; 提早就業獎金</title>
-      <link>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</link>
-      <pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</guid>
-      <description>這些話寫在前面⋯⋯ 由於和上一間公司的工作方式處不來，而對方決定以資遣的方式來處理， 故便在六月中解鎖了「領取資遣證明」的成就。
-知道對方要資遣你時，先確認幾件事  近三年內勞保是否有投保滿一年 對方是否通報勞保局 對方是否會開立資遣證明  至於對方是用什麼條款開立，個人是認為沒什麼差異。
+員工是否需自備工具? (是/否) 公司地址(填寫詳細至號) 後記 並在 README 之中，附上一些求職的網站，如 Yourator、indeed 等； 裡頭也都先下好關鍵字，點擊連結可以直接看搜尋結果。 希望可以透過這個專案讓台灣的 iOS 工程師在求職路上有個幫助！
+之後再陸續整合一些資源到 Archie.tw 以及 iOSTaiwan，仿效 f2etw 的模式， 有興趣的朋友歡迎多加利用👏</description></item><item><title>失業給付 + 提早就業獎金</title><link>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</link><pubDate>Sun, 12 Nov 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%A4%B1%E6%A5%AD%E7%B5%A6%E4%BB%98-%E6%8F%90%E6%97%A9%E5%B0%B1%E6%A5%AD%E7%8D%8E%E9%87%91/</guid><description>這些話寫在前面⋯⋯ 由於和上一間公司的工作方式處不來，而對方決定以資遣的方式來處理， 故便在六月中解鎖了「領取資遣證明」的成就。
+知道對方要資遣你時，先確認幾件事 近三年內勞保是否有投保滿一年 對方是否通報勞保局 對方是否會開立資遣證明 至於對方是用什麼條款開立，個人是認為沒什麼差異。
 若上述的答案皆為「是」的話，你可以⋯⋯ 申請「失業給付」，而這篇文章會以我申請的流程為主，並以流水帳的方式呈現。
 2017/06/14（三） 對方中午開立資遣證明，並在上方註明最後工作日為 2017/06/16（五）， 也就是會支薪到週五的意思； 而上方會寫上這個月將依比例給付多少薪資以及資遣費計算結果。
 當天，便電話聯繫板橋就業服務站，詢問相關資訊和預約失業給付申請； 而對方有提供給我幾項重點：
- 失業給付申請得在最後工作日的隔一天後，以我的案例是 2017/06/17（六）以後申請 可以透過電話進行預約申請，並建議於預約時間前十分鐘先去填寫書面資料 記得帶預計讓失業給付入帳的銀行簿子影本，或帶正本去影印 攜帶證件及資遣證明正本 新北市的就業服務站失業認定無需當日現場報到，而台北市則需要  2017/06/19（一） 上午便到板橋就業服務站填寫書面資料，並和服務人員進行後續動作； 期間對方和我閒聊一些工作上的事，以及職業選擇之類的， 並提供一些就業的資訊和講座。 流程上會需要在 14 天內，進行兩次以上的「找工作」； 對方會要求要上「台灣就業通」（或是其他政府機關提供的找工作平台）， 去申請面試，並於兩週後和服務人員回報狀況。 回報的內容是一張表，需要填寫完之後送回就業服務站，也就是「第一次失業認定」； 板橋就業服務站可以透過郵寄的方式，將表格回寄，並打電話給當時接洽的人員即可， 而台北市則需要再跑一趟親送。
+失業給付申請得在最後工作日的隔一天後，以我的案例是 2017/06/17（六）以後申請 可以透過電話進行預約申請，並建議於預約時間前十分鐘先去填寫書面資料 記得帶預計讓失業給付入帳的銀行簿子影本，或帶正本去影印 攜帶證件及資遣證明正本 新北市的就業服務站失業認定無需當日現場報到，而台北市則需要 2017/06/19（一） 上午便到板橋就業服務站填寫書面資料，並和服務人員進行後續動作； 期間對方和我閒聊一些工作上的事，以及職業選擇之類的， 並提供一些就業的資訊和講座。 流程上會需要在 14 天內，進行兩次以上的「找工作」； 對方會要求要上「台灣就業通」（或是其他政府機關提供的找工作平台）， 去申請面試，並於兩週後和服務人員回報狀況。 回報的內容是一張表，需要填寫完之後送回就業服務站，也就是「第一次失業認定」； 板橋就業服務站可以透過郵寄的方式，將表格回寄，並打電話給當時接洽的人員即可， 而台北市則需要再跑一趟親送。
 2017/07/03（一） 打電話向服務人員確認狀況，並告知 14 天內沒有工作（以勞保投保記錄為主）， 請對方將第一次認定的申請書送到勞保局，而後續他們會繼續處理。
 2017/07/04（二） 持讀卡機到勞保局網頁，以自然人憑證查詢相關進度和資訊； 這邊建議下載「勞保局行動服務」，並進行「個人查詢」的裝置認證， 認證完後，之後都可以透過此 App 查詢，無需再用讀卡機進行登入。
 2017/07/12（三） 核付通過，並會在 3 至 5 個工作天匯款至當初提供的銀行戶頭之內。
 2017/07/17（一） 收到第一個月的失業給付，而若還未找到工作，則每個月需要再進行認定； 不過我已經有在工作，故沒有進行後續的失業給付申請認定。
 找到工作後，接下來呢⋯⋯ 當時在申請失業給付時，服務人員會告知「提早就業獎金」的申請規則和獎金計算方式： 為尚未領取失業給付金額（以我來說，便是 5 個月的失業給付金額） x 50% 一次性發放。
 2017/10/05（四） 使用讀卡機到勞保局網頁線上申請「提早就業獎金」，兩分鐘內點選完後送出。
-2017/11/01（三） 核付通過，並會在 3 至 5 個工作天匯款至「提早就業獎金」所申請的銀行戶頭之內。</description>
-    </item>
-    
-    <item>
-      <title>雙 NP：中華電信➡️台灣大哥大➡️中華電信</title>
-      <link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</link>
-      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</guid>
-      <description>首先，先附上地標網通的價目表， 我所要選擇的方案是雙 NP 回中華電信的智慧大玩家 999 方案， 而方案內容是 24 個月，每月月租 999 元，4G 吃到飽，網內60分/網外50分/市話20分。 透過雙 NP 的流程，我可以拿到 11,000 元的攜碼折扣，而算一下每月月租費約為 (999 x 24 – 11,000) / 24 = 540.66667 元
+2017/11/01（三） 核付通過，並會在 3 至 5 個工作天匯款至「提早就業獎金」所申請的銀行戶頭之內。</description></item><item><title>雙 NP：中華電信➡️台灣大哥大➡️中華電信</title><link>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</link><pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E9%9B%99-np%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1%EF%B8%8F%E5%8F%B0%E7%81%A3%E5%A4%A7%E5%93%A5%E5%A4%A7%EF%B8%8F%E4%B8%AD%E8%8F%AF%E9%9B%BB%E4%BF%A1/</guid><description>首先，先附上地標網通的價目表， 我所要選擇的方案是雙 NP 回中華電信的智慧大玩家 999 方案， 而方案內容是 24 個月，每月月租 999 元，4G 吃到飽，網內60分/網外50分/市話20分。 透過雙 NP 的流程，我可以拿到 11,000 元的攜碼折扣，而算一下每月月租費約為 (999 x 24 – 11,000) / 24 = 540.66667 元
 闖關流程 第一步，先確認一下自己的合約狀況： 以我的例子來說， 合約原本內容：
 我們可以看到，大多數的合約到期日為 10-03， 但由於第一項合約，其正是去年申請的老客戶優惠方案； 而它的到期日是在 12-23，所以我還是得到中華電話一趟來申請攜出。 於是我便在 10-03 當天的 17：30 左右， 到中華電信的長春服務中心辦理攜出業務。
 從中華電信攜出 和櫃檯人員說明我要攜出門號，而她也沒有多問些什麼， 便請我提供資料以及詢問門號轉出費用 240 元， 是要選擇跟著當期帳單還是直接繳清。 選擇直接繳清後，並簽個名，就順利拿到收據離開了； 前後加上等候叫號的時間，約莫十分鐘。
@@ -365,8 +163,4 @@ issue template 我先是參考了 f2etw/jobs 的範本，並加入部分 PTT Sof
 到台灣大哥大辦理門號攜入 接著到附近的台灣大哥大林森北二直營服務中心， 一進去後副店長便詢問我門號，而當我表示要轉入 4 G 1.8 的方案時， 他便直接問我是否要雙 NP，以及原電信是否為中華電信！ 我點了點頭示意，便交出了雙證件和簽了兩處名字， 他告知我通常隔天就可以再到台灣大哥大辦理攜出， 一樣繳納 240 轉出費後便可以去走接下來的流程！ 前後大概花了五分鐘，便簡單完成門號攜入了！
 再來就等明天的流程⋯⋯
 到台灣大哥大攜出 攜出流程應該和中華電信大同小異，明天預計到羅東台灣大哥大興東店辦理。
-最後，到地標網通申請智慧大玩家 999 方案 接著再到羅東的地標網通，出示從台灣大哥大攜出的收據辦理後續等開通。</description>
-    </item>
-    
-  </channel>
-</rss>
+最後，到地標網通申請智慧大玩家 999 方案 接著再到羅東的地標網通，出示從台灣大哥大攜出的收據辦理後續等開通。</description></item></channel></rss>

@@ -1,53 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Server on Archie</title>
-    <link>https://www.archie.tw/tags/server/</link>
-    <description>Recent content in Server on Archie</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/server/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AWS EC2 with WordPress</title>
-      <link>https://www.archie.tw/p/aws-ec2-with-wordpress/</link>
-      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/aws-ec2-with-wordpress/</guid>
-      <description>前言 Vultr 這個網站原本是在 Vultr 上開一台機器，每個月大概的費用為 USD $6 – 7 元之間，並利用 Certbot 自動更新 SSL 憑證。但後來發現不太會維護那台機器，時常因為記憶體造成資料庫錯誤，每隔兩三天就得去手動重新啟動來解決問題，乾脆就搬家到 WordPress.com 的服務。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Server on Archie</title><link>https://www.archie.tw/tags/server/</link><description>Recent content in Server on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/server/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS EC2 with WordPress</title><link>https://www.archie.tw/p/aws-ec2-with-wordpress/</link><pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/aws-ec2-with-wordpress/</guid><description>前言 Vultr 這個網站原本是在 Vultr 上開一台機器，每個月大概的費用為 USD $6 – 7 元之間，並利用 Certbot 自動更新 SSL 憑證。但後來發現不太會維護那台機器，時常因為記憶體造成資料庫錯誤，每隔兩三天就得去手動重新啟動來解決問題，乾脆就搬家到 WordPress.com 的服務。
 WordPress.com 而 WordPress.com 的好處就是全部幫你處理好好的，然後我使用的是個人版的方案；NT$ 130 / 月，便有提供轉址的功能和一年份免費的網域。不過由於我自己是向 PChome 買 Archie.tw，所以主要是為了轉過去而付費。
 但使用服務和自己開一台機器的差異性就在於彈性，像是安裝外掛便被放在商務版的功能之中，而費用為 NT$ 799 / 月。
 這樣一用也用了一段時間，直到近期註冊了 AWS 的服務，便決定搬移到 AWS 上。
 AWS 在 AWS 上新註冊的用戶可以擁有一年的免費方案，而這個網站目前使用到幾個 AWS 服務分別為
- EC2 Load Balancer Certificate Manager Route 53  這邊來介紹我的流程：
+EC2 Load Balancer Certificate Manager Route 53 這邊來介紹我的流程：
 Key Pairs 首先我們先到 EC2 的頁面選擇 NETWORK &amp;amp; SECURITY ➡️ Key Pairs 來建立一組 Key pair，用於之後連接到 EC2 instance
-EC2 透過 AWS Markeyplace 開一台新的 instance，使用 WordPress Certified by Bitnami 搭配 t2.</description>
-    </item>
-    
-    <item>
-      <title>HEROKU</title>
-      <link>https://www.archie.tw/p/heroku/</link>
-      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/heroku/</guid>
-      <description>前言 這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。
+EC2 透過 AWS Markeyplace 開一台新的 instance，使用 WordPress Certified by Bitnami 搭配 t2.</description></item><item><title>HEROKU</title><link>https://www.archie.tw/p/heroku/</link><pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/heroku/</guid><description>前言 這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。
 HEROKU 是一個有提供免費伺服器方案的平台，支援的語言算多，而我的爬蟲是以 Python 3.6 作為開發語言的，故選擇它來玩玩。 在免費的方案之中有一些限制，如 24 小時內得休息 6 小時之類的； 不過在這邊，我需要的只是一個可以執行 Cron Job 的地方，所以不需要升級主機的部分。 目前我的 HEROKU 裡頭包含著三個動作：
- 每天台灣時間 00:00 時，到星座網爬蟲並記錄當日運勢到 Firebase 每天台灣時間 09:00 時，到 PTT CodeJob 以及 Soft_Job 版搜尋 iOS 相關的文章，並 mail 到我的信箱 每天台灣時間 12:00 時，爬 PTT 一些熱門看板的文章並發佈到機器人部落格以及機器人推特之中 我分成三個 .py 檔案，下方會說明我的作法。  簡單的建構步驟 首先，先到 HEROKU 的 dashboard 建立一個新的 App，接著照著它的敘述完成 Git 的建置。 我在資料夾當中，放入了下列的檔案：
- PTT.py – 12:00 該做的事 iOS.py – 09:00 該做的事 Astro.py – 00:00 該做的事 requirements.</description>
-    </item>
-    
-    <item>
-      <title>Vapor</title>
-      <link>https://www.archie.tw/p/vapor/</link>
-      <pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/vapor/</guid>
-      <description>Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
+每天台灣時間 00:00 時，到星座網爬蟲並記錄當日運勢到 Firebase 每天台灣時間 09:00 時，到 PTT CodeJob 以及 Soft_Job 版搜尋 iOS 相關的文章，並 mail 到我的信箱 每天台灣時間 12:00 時，爬 PTT 一些熱門看板的文章並發佈到機器人部落格以及機器人推特之中 我分成三個 .py 檔案，下方會說明我的作法。 簡單的建構步驟 首先，先到 HEROKU 的 dashboard 建立一個新的 App，接著照著它的敘述完成 Git 的建置。 我在資料夾當中，放入了下列的檔案：
+PTT.py – 12:00 該做的事 iOS.py – 09:00 該做的事 Astro.py – 00:00 該做的事 requirements.</description></item><item><title>Vapor</title><link>https://www.archie.tw/p/vapor/</link><pubDate>Thu, 03 Aug 2017 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/vapor/</guid><description>Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
 安裝方式 不同於在安裝 iOS 第三方套件的流程，Vapor 需要透過 terminal 來安裝相關內容： 首先，得先安裝 Vapor 的 CLI
 curl -sL toolbox.qutheory.io | sh 安裝完之後，便可以在 terminal 底下使用 vapor 的指令。
 建立新專案 我們可以透過下方的指令，來建立一個新專案：
 vapor new ProjectName 其中第三方套件的管理方式，是使用 Swift Package Manager， 所以我們會在目錄下看到一個 Package.swift 和 Package.pins， 這方面倒是有些像 CocoaPods 所使用的 Podfile 的概念。
-使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 .</description>
-    </item>
-    
-  </channel>
-</rss>
+使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 .</description></item></channel></rss>

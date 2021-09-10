@@ -1,489 +1,232 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
+<!doctype html><html lang=en-us>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
 Coding Style 的問題 剛進入到這家公司時，最痛苦的事情莫過於毫無章法的 Coding Style，這部分就不一一細數了，詳情可以看前陣子我的 Twitter 動態。
 專案裡頭每個人寫的格式不同，會造成其他人在閱讀專案時，大幅增加理解彼此想法的成本
  簡單來說就是浪費一堆時間在猜你在寫什麼
  為了讓專案裡頭的大家有差不多的 Coding Style，可以選擇使用 SwiftLint 來處理這個情況。
 實際嘗試 首先先以 SwiftLint 的官方教學來安裝和建構環境，並利用 Ethan 的 SwiftLint rules 當作基底來調整，先以別人的規範來看看差異性。
-一跑下去便是直接噴了 3000&#43; issues⋯⋯
+一跑下去便是直接噴了 3000+ issues⋯⋯
 可以透過 Rules.md 來逐條看看定義並透過 example 來看怎麼算是 Non Trggering 和 Triggering；再來一條一條調整改進。
-一些心得 目前公司的專案從 3000&#43; ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。
-private_outlet 和 private_action 而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯'><title>SwiftLint</title>
-
-<link rel='canonical' href='https://www.archie.tw/p/swiftlint/'>
-
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='SwiftLint'>
-<meta property='og:description' content='SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
+一些心得 目前公司的專案從 3000+ ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。
+private_outlet 和 private_action 而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯"><title>SwiftLint</title>
+<link rel=canonical href=https://www.archie.tw/p/swiftlint/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="SwiftLint">
+<meta property="og:description" content="SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
 Coding Style 的問題 剛進入到這家公司時，最痛苦的事情莫過於毫無章法的 Coding Style，這部分就不一一細數了，詳情可以看前陣子我的 Twitter 動態。
 專案裡頭每個人寫的格式不同，會造成其他人在閱讀專案時，大幅增加理解彼此想法的成本
  簡單來說就是浪費一堆時間在猜你在寫什麼
  為了讓專案裡頭的大家有差不多的 Coding Style，可以選擇使用 SwiftLint 來處理這個情況。
 實際嘗試 首先先以 SwiftLint 的官方教學來安裝和建構環境，並利用 Ethan 的 SwiftLint rules 當作基底來調整，先以別人的規範來看看差異性。
-一跑下去便是直接噴了 3000&#43; issues⋯⋯
+一跑下去便是直接噴了 3000+ issues⋯⋯
 可以透過 Rules.md 來逐條看看定義並透過 example 來看怎麼算是 Non Trggering 和 Triggering；再來一條一條調整改進。
-一些心得 目前公司的專案從 3000&#43; ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。
-private_outlet 和 private_action 而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯'>
-<meta property='og:url' content='https://www.archie.tw/p/swiftlint/'>
-<meta property='og:site_name' content='Archie'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='iOS' /><meta property='article:tag' content='Swift' /><meta property='article:published_time' content='2019-01-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-01-07T00:00:00&#43;00:00'/>
-<meta name="twitter:site" content="@ChangArchie">
-    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="SwiftLint">
-<meta name="twitter:description" content="SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
-Coding Style 的問題 剛進入到這家公司時，最痛苦的事情莫過於毫無章法的 Coding Style，這部分就不一一細數了，詳情可以看前陣子我的 Twitter 動態。
-專案裡頭每個人寫的格式不同，會造成其他人在閱讀專案時，大幅增加理解彼此想法的成本
- 簡單來說就是浪費一堆時間在猜你在寫什麼
- 為了讓專案裡頭的大家有差不多的 Coding Style，可以選擇使用 SwiftLint 來處理這個情況。
-實際嘗試 首先先以 SwiftLint 的官方教學來安裝和建構環境，並利用 Ethan 的 SwiftLint rules 當作基底來調整，先以別人的規範來看看差異性。
-一跑下去便是直接噴了 3000&#43; issues⋯⋯
-可以透過 Rules.md 來逐條看看定義並透過 example 來看怎麼算是 Non Trggering 和 Triggering；再來一條一條調整改進。
-一些心得 目前公司的專案從 3000&#43; ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。
+一些心得 目前公司的專案從 3000+ ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。
 private_outlet 和 private_action 而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯">
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-149460095-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
-     crossorigin="anonymous"></script>
-
-    </head>
-    <body class="
-    article-page has-toc
-">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex 
-    
-        extended
-    
-">
-    
-        <div id="article-toolbar">
-            <a href="https://www.archie.tw" class="back-home">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="15 6 9 12 15 18" />
-</svg>
-
-
-
-                <span></span>
-            </a>
-        </div>
-    
+<meta property="og:url" content="https://www.archie.tw/p/swiftlint/">
+<meta property="og:site_name" content="Archie">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2019-01-07T00:00:00+00:00"><meta property="article:modified_time" content="2019-01-07T00:00:00+00:00">
+<meta name=twitter:site content="@ChangArchie">
+<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="SwiftLint">
+<meta name=twitter:description content="SwiftLint 去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。
+Coding Style 的問題 剛進入到這家公司時，最痛苦的事情莫過於毫無章法的 Coding Style，這部分就不一一細數了，詳情可以看前陣子我的 Twitter 動態。
+專案裡頭每個人寫的格式不同，會造成其他人在閱讀專案時，大幅增加理解彼此想法的成本
+ 簡單來說就是浪費一堆時間在猜你在寫什麼
+ 為了讓專案裡頭的大家有差不多的 Coding Style，可以選擇使用 SwiftLint 來處理這個情況。
+實際嘗試 首先先以 SwiftLint 的官方教學來安裝和建構環境，並利用 Ethan 的 SwiftLint rules 當作基底來調整，先以別人的規範來看看差異性。
+一跑下去便是直接噴了 3000+ issues⋯⋯
+可以透過 Rules.md 來逐條看看定義並透過 example 來看怎麼算是 Non Trggering 和 Triggering；再來一條一條調整改進。
+一些心得 目前公司的專案從 3000+ ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。
+private_outlet 和 private_action 而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span></span>
+</a>
+</div>
 <main class="main full-width">
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/" >
-                🍎 開發心得
-            </a>
-        
-    </header>
-    
-
-    <h2 class="article-title">
-        <a href="/p/swiftlint/">SwiftLint</a>
-    </h2>
-
-    
-
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Jan 07, 2019</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    
-                </time>
-            </div>
-        
-    </footer>
-    
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
+🍎 開發心得
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/swiftlint/>SwiftLint</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Jan 07, 2019</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+</time>
+</div>
+</footer>
 </div>
 </header>
-
-    <section class="article-content">
-    <h1 id="swiftlint">SwiftLint</h1>
+<section class=article-content>
+<h1 id=swiftlint>SwiftLint</h1>
 <p>去年（2018）年末的時候，在 Twitter 上看到一些朋友們在討論著 SwiftLint 的使用，於是便也嘗試在目前公司的專案中導入，來解決 Coding Style 的問題。</p>
-<h2 id="coding-style-的問題">Coding Style 的問題</h2>
+<h2 id=coding-style-的問題>Coding Style 的問題</h2>
 <p>剛進入到這家公司時，最痛苦的事情莫過於毫無章法的 Coding Style，這部分就不一一細數了，詳情可以看前陣子我的 Twitter 動態。</p>
 <p>專案裡頭每個人寫的格式不同，會造成其他人在閱讀專案時，大幅增加理解彼此想法的成本</p>
 <blockquote>
 <p>簡單來說就是浪費一堆時間在猜你在寫什麼</p>
 </blockquote>
 <p>為了讓專案裡頭的大家有差不多的 Coding Style，可以選擇使用 SwiftLint 來處理這個情況。</p>
-<h2 id="實際嘗試">實際嘗試</h2>
-<p>首先先以 SwiftLint 的官方教學來安裝和建構環境，並利用 <a class="link" href="https://twitter.com/ethanhuang13"  target="_blank" rel="noopener"
-    >Ethan</a> 的 <a class="link" href="https://gist.github.com/ethanhuang13/a5d54300a74aef1168b5c2ea2e03d02e"  target="_blank" rel="noopener"
-    >SwiftLint rules</a> 當作基底來調整，先以別人的規範來看看差異性。</p>
+<h2 id=實際嘗試>實際嘗試</h2>
+<p>首先先以 SwiftLint 的官方教學來安裝和建構環境，並利用 <a class=link href=https://twitter.com/ethanhuang13 target=_blank rel=noopener>Ethan</a> 的 <a class=link href=https://gist.github.com/ethanhuang13/a5d54300a74aef1168b5c2ea2e03d02e target=_blank rel=noopener>SwiftLint rules</a> 當作基底來調整，先以別人的規範來看看差異性。</p>
 <p>一跑下去便是直接噴了 3000+ issues⋯⋯</p>
-<p>可以透過 <a class="link" href="https://github.com/realm/SwiftLint/blob/master/Rules.md"  target="_blank" rel="noopener"
-    >Rules.md</a> 來逐條看看定義並透過 example 來看怎麼算是 Non Trggering 和 Triggering；再來一條一條調整改進。</p>
-<h3 id="一些心得">一些心得</h3>
+<p>可以透過 <a class=link href=https://github.com/realm/SwiftLint/blob/master/Rules.md target=_blank rel=noopener>Rules.md</a> 來逐條看看定義並透過 example 來看怎麼算是 Non Trggering 和 Triggering；再來一條一條調整改進。</p>
+<h3 id=一些心得>一些心得</h3>
 <p>目前公司的專案從 3000+ ➡️ 17 warings，而這 17 條是我還沒 refactor 到的 features，所以就還沒那麼急著去調整。</p>
-<h3 id="private_outlet-和-private_action">private_outlet 和 private_action</h3>
+<h3 id=private_outlet-和-private_action>private_outlet 和 private_action</h3>
 <p>而其中一條規則 private_outlet 給我的感觸挺深刻的，由於我大多數的工作經歷是獨立開發居多，而每個 IBOutlet 都必須為 private 是第一份工作時所踩到的坑；當時公司共有兩位 iOS 工程師，彼此皆為 Junior 的程度，故沒什麼規範和概念，於是便會出現一些神秘的情境⋯⋯</p>
 <p>像是不知道為什麼你負責的 UIViewController 刻出來的畫面就是和你想的不太一樣，才發現另一個地方（別人寫的 code）在直接修改畫面的 Layout / value⋯⋯</p>
 <p>後來就體會到物件的每個變數和 functions 的 access 問題，而這條規則便是解釋著 IBOutlet 不應該可以直接從其他地方呼叫、修改，像是被這麼做：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="n">fooViewController</span><span class="p">.</span><span class="n">fooLabel</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s">&#34;Test&#34;</span>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=n>fooViewController</span><span class=p>.</span><span class=n>fooLabel</span><span class=p>.</span><span class=n>text</span> <span class=p>=</span> <span class=s>&#34;Test&#34;</span>
 </code></pre></div><p>從那時候開始養成的習慣到現在，當發覺其實有其他人也是這麼做，並將它視為一條 rule 的時候真的覺得有點小感動！</p>
-<h3 id="整體來說">整體來說</h3>
+<h3 id=整體來說>整體來說</h3>
 <p>你可以透過這個 SwiftLint 來反覆思考一些寫程式上的問題，像是 function 的長度、class 的長度以及 Swift 檔案的長度等；如何切割每個物件和 function 等，都是相當值得去思索的習慣問題。</p>
 <p>不過也不需要逐條都導入到專案之中，建議是花一些時間找到你最認同的那幾條 rules 來遵循即可！</p>
-
 </section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/ios/">iOS</a>
-        
-            <a href="/tags/swift/">Swift</a>
-        
-    </section>
-
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
-    </footer>
-
-
-    
-</article>
-
-    <aside class="related-contents--wrapper">
-    
-    
-        <h2 class="section-title"></h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">發票收集雞 - 自己的發票自己收</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Apple Watch App 開發除錯心得</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">RxSwift 6 上線啦！</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">【iOS 逆向】下載 Instagram 動態照片</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">iOS App launch time 心得</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
-</aside>
-
-     
-     
-        
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2017 - 
-        
-        2021 Archie
-    </section>
-    
-    <section class="powerby">
-         <br />
-        
-    </section>
+<footer class=article-footer>
+<section class=article-tags>
+<a href=/tags/ios/>iOS</a>
+<a href=/tags/swift/>Swift</a>
+</section>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
 </footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
-            >
-
-            </main>
-    
-        <aside class="sidebar right-sidebar sticky">
-            <section class="widget archives">
-                <div class="widget-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-                </div>
-                <h2 class="widget-title section-title"></h2>
-                
-                <div class="widget--toc">
-                    <nav id="TableOfContents">
-  <ol>
-    <li><a href="#coding-style-的問題">Coding Style 的問題</a></li>
-    <li><a href="#實際嘗試">實際嘗試</a>
-      <ol>
-        <li><a href="#一些心得">一些心得</a></li>
-        <li><a href="#private_outlet-和-private_action">private_outlet 和 private_action</a></li>
-        <li><a href="#整體來說">整體來說</a></li>
-      </ol>
-    </li>
-  </ol>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title></h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
+<div class=article-details>
+<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
+<div class=article-details>
+<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/>
+<div class=article-details>
+<h2 class=article-title>RxSwift 6 上線啦！</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/>
+<div class=article-details>
+<h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/>
+<div class=article-details>
+<h2 class=article-title>iOS App launch time 心得</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div class=disqus-container>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
+<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2017 -
+2021 Archie
+</section>
+<section class=powerby>
+<br>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
+</div>
+<h2 class="widget-title section-title"></h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#coding-style-的問題>Coding Style 的問題</a></li>
+<li><a href=#實際嘗試>實際嘗試</a>
+<ol>
+<li><a href=#一些心得>一些心得</a></li>
+<li><a href=#private_outlet-和-private_action>private_outlet 和 private_action</a></li>
+<li><a href=#整體來說>整體來說</a></li>
+</ol>
+</li>
+</ol>
 </nav>
-                </div>
-            </section>
-        </aside>
-    
-
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
 </html>

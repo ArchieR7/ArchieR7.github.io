@@ -1,503 +1,217 @@
-<!DOCTYPE html>
-<html lang="en-us">
-    <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。
+<!doctype html><html lang=en-us>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。
 至於為什麼會將 Pods 的檔案全推到 GitHub 上呢？
 而在 git push 的時候，有顯示解決的方法，便是今天的主題：
 Git LFS 首先我們透過 brew 來安裝 git lfs
 brew install git-lfs 接著繼續在 git 裡頭安裝
 git lfs install 再來我們就來定義哪些檔案需要被 lfs track，像我這邊是這樣：
-git lfs track &#39;Pods/Realm/core/librealmcore-ios.a&#39; 然後可以透過指令來確認是否有被加入到 track 的名單
+git lfs track 'Pods/Realm/core/librealmcore-ios.a' 然後可以透過指令來確認是否有被加入到 track 的名單
 git lfs track git status 現在就可以從 git status 之中再次看到剛剛沒推成功的檔案被 track 了！
-git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併推上 GitHub 即可完成！ git push 這樣便可以在 GitHub 上處理單個檔案超過 50.'><title>Git LFS ( Large File Storage )</title>
-
-<link rel='canonical' href='https://www.archie.tw/p/git-lfs-large-file-storage/'>
-
-<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='Git LFS ( Large File Storage )'>
-<meta property='og:description' content='今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。
+git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併推上 GitHub 即可完成！ git push 這樣便可以在 GitHub 上處理單個檔案超過 50."><title>Git LFS ( Large File Storage )</title>
+<link rel=canonical href=https://www.archie.tw/p/git-lfs-large-file-storage/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Git LFS ( Large File Storage )">
+<meta property="og:description" content="今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。
 至於為什麼會將 Pods 的檔案全推到 GitHub 上呢？
 而在 git push 的時候，有顯示解決的方法，便是今天的主題：
 Git LFS 首先我們透過 brew 來安裝 git lfs
 brew install git-lfs 接著繼續在 git 裡頭安裝
 git lfs install 再來我們就來定義哪些檔案需要被 lfs track，像我這邊是這樣：
-git lfs track &#39;Pods/Realm/core/librealmcore-ios.a&#39; 然後可以透過指令來確認是否有被加入到 track 的名單
-git lfs track git status 現在就可以從 git status 之中再次看到剛剛沒推成功的檔案被 track 了！
-git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併推上 GitHub 即可完成！ git push 這樣便可以在 GitHub 上處理單個檔案超過 50.'>
-<meta property='og:url' content='https://www.archie.tw/p/git-lfs-large-file-storage/'>
-<meta property='og:site_name' content='Archie'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2018-08-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2018-08-14T00:00:00&#43;00:00'/>
-<meta name="twitter:site" content="@ChangArchie">
-    <meta name="twitter:creator" content="@ChangArchie"><meta name="twitter:title" content="Git LFS ( Large File Storage )">
-<meta name="twitter:description" content="今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。
-至於為什麼會將 Pods 的檔案全推到 GitHub 上呢？
-而在 git push 的時候，有顯示解決的方法，便是今天的主題：
-Git LFS 首先我們透過 brew 來安裝 git lfs
-brew install git-lfs 接著繼續在 git 裡頭安裝
-git lfs install 再來我們就來定義哪些檔案需要被 lfs track，像我這邊是這樣：
-git lfs track &#39;Pods/Realm/core/librealmcore-ios.a&#39; 然後可以透過指令來確認是否有被加入到 track 的名單
+git lfs track 'Pods/Realm/core/librealmcore-ios.a' 然後可以透過指令來確認是否有被加入到 track 的名單
 git lfs track git status 現在就可以從 git status 之中再次看到剛剛沒推成功的檔案被 track 了！
 git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併推上 GitHub 即可完成！ git push 這樣便可以在 GitHub 上處理單個檔案超過 50.">
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-149460095-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569"
-     crossorigin="anonymous"></script>
-
-    </head>
-    <body class="
-    article-page 
-">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex 
-    
-        on-phone--column extended
-    
-">
-    
-        <aside class="sidebar left-sidebar sticky">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header class="site-info">
-        
-            
-            <figure class="site-avatar">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/Archie_hu1fc091553094f1283eaa3eeeb8ec0c46_37374_300x0_resize_q75_box.jpg" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-
-                
-                    <span class="emoji">🍎</span>
-                
-            </figure>
-            
-        
-        <h1 class="site-name"><a href="https://www.archie.tw">Archie</a></h1>
-        <h2 class="site-description">獨立開發者的心路歷程</h2>
-    </header>
-
-    <ol class="menu" id="main-menu">
-        
-        
-        
-
-        <li >
-            <a href='/' target="_blank">
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>首頁</span>
-            </a>
-        </li>
-        
-
-        
-            <li id="dark-mode-toggle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                <span></span>
-            </li>
-        
-    </ol>
+<meta property="og:url" content="https://www.archie.tw/p/git-lfs-large-file-storage/">
+<meta property="og:site_name" content="Archie">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2018-08-14T00:00:00+00:00"><meta property="article:modified_time" content="2018-08-14T00:00:00+00:00">
+<meta name=twitter:site content="@ChangArchie">
+<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Git LFS ( Large File Storage )">
+<meta name=twitter:description content="今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。
+至於為什麼會將 Pods 的檔案全推到 GitHub 上呢？
+而在 git push 的時候，有顯示解決的方法，便是今天的主題：
+Git LFS 首先我們透過 brew 來安裝 git lfs
+brew install git-lfs 接著繼續在 git 裡頭安裝
+git lfs install 再來我們就來定義哪些檔案需要被 lfs track，像我這邊是這樣：
+git lfs track 'Pods/Realm/core/librealmcore-ios.a' 然後可以透過指令來確認是否有被加入到 track 的名單
+git lfs track git status 現在就可以從 git status 之中再次看到剛剛沒推成功的檔案被 track 了！
+git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併推上 GitHub 即可完成！ git push 這樣便可以在 GitHub 上處理單個檔案超過 50.">
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
+</head>
+<body class=article-page>
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+on-phone--column extended">
+<aside class="sidebar left-sidebar sticky">
+<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label>
+<span class=hamburger-box>
+<span class=hamburger-inner></span>
+</span>
+</button>
+<header class=site-info>
+<figure class=site-avatar>
+<img src=/img/Archie_hu1fc091553094f1283eaa3eeeb8ec0c46_37374_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>🍎</span>
+</figure>
+<h1 class=site-name><a href=https://www.archie.tw>Archie</a></h1>
+<h2 class=site-description>獨立開發者的心路歷程</h2>
+</header>
+<ol class=menu id=main-menu>
+<li>
+<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>首頁</span>
+</a>
+</li>
+<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span></span>
+</li>
+</ol>
 </aside>
-
-    
 <main class="main full-width">
-    <article class="main-article">
-    <header class="article-header">
-
-    <div class="article-details">
-    
-    <header class="article-category">
-        
-            <a href="/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/" >
-                📒 程式筆記
-            </a>
-        
-    </header>
-    
-
-    <h2 class="article-title">
-        <a href="/p/git-lfs-large-file-storage/">Git LFS ( Large File Storage )</a>
-    </h2>
-
-    
-
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">Aug 14, 2018</time>
-            </div>
-        
-
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-time--reading">
-                    
-                </time>
-            </div>
-        
-    </footer>
-    
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-category>
+<a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>
+📒 程式筆記
+</a>
+</header>
+<h2 class=article-title>
+<a href=/p/git-lfs-large-file-storage/>Git LFS ( Large File Storage )</a>
+</h2>
+<footer class=article-time>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Aug 14, 2018</time>
+</div>
+<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>
+</time>
+</div>
+</footer>
 </div>
 </header>
-
-    <section class="article-content">
-    <p>今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。</p>
-<p>至於<a class="link" href="../pods-%e5%88%b0%e5%ba%95%e9%9c%80%e4%b8%8d%e9%9c%80%e8%a6%81%e6%94%be%e5%9c%a8-.gitignore" >為什麼會將 Pods 的檔案全推到 GitHub 上</a>呢？</p>
+<section class=article-content>
+<p>今天在更新 Blay 的 Pods 時，發現 Realm 的某個檔案（60.04 MB）超出了 GitHub 的上限（50.00 MB），所以無法順利地將檔案推上去 GitHub，而 Git 也自行 untracked 那個檔案，所以在 git status 上便失去了蹤影。</p>
+<p>至於<a class=link href=../pods-%e5%88%b0%e5%ba%95%e9%9c%80%e4%b8%8d%e9%9c%80%e8%a6%81%e6%94%be%e5%9c%a8-.gitignore>為什麼會將 Pods 的檔案全推到 GitHub 上</a>呢？</p>
 <p>而在 git push 的時候，有顯示解決的方法，便是今天的主題：</p>
-<h1 id="git-lfshttpsgit-lfsgithubcom"><a class="link" href="https://git-lfs.github.com/"  target="_blank" rel="noopener"
-    >Git LFS</a></h1>
+<h1 id=git-lfshttpsgit-lfsgithubcom><a class=link href=https://git-lfs.github.com/ target=_blank rel=noopener>Git LFS</a></h1>
 <p>首先我們透過 brew 來安裝 git lfs</p>
-<pre tabindex="0"><code>brew install git-lfs
+<pre tabindex=0><code>brew install git-lfs
 </code></pre><p>接著繼續在 git 裡頭安裝</p>
-<pre tabindex="0"><code>git lfs install
+<pre tabindex=0><code>git lfs install
 </code></pre><p>再來我們就來定義哪些檔案需要被 lfs track，像我這邊是這樣：</p>
-<pre tabindex="0"><code>git lfs track 'Pods/Realm/core/librealmcore-ios.a'
+<pre tabindex=0><code>git lfs track 'Pods/Realm/core/librealmcore-ios.a'
 </code></pre><p>然後可以透過指令來確認是否有被加入到 track 的名單</p>
-<pre tabindex="0"><code>git lfs track
+<pre tabindex=0><code>git lfs track
 git status
 </code></pre><p>現在就可以從 git status 之中再次看到剛剛沒推成功的檔案被 track 了！</p>
-<pre tabindex="0"><code>git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併推上 GitHub 即可完成！
+<pre tabindex=0><code>git lfs track 的內容會被記錄到 .gitattributes 裡頭，所以也一併推上 GitHub 即可完成！
 git push
-</code></pre><p>這樣便可以在 GitHub 上處理單個檔案超過 50.00 MB 的問題，不過<a class="link" href="https://help.github.com/articles/about-storage-and-bandwidth-usage/#bandwidth-quota"  target="_blank" rel="noopener"
-    >免費流量為 1GB / month</a>。</p>
-
+</code></pre><p>這樣便可以在 GitHub 上處理單個檔案超過 50.00 MB 的問題，不過<a class=link href=https://help.github.com/articles/about-storage-and-bandwidth-usage/#bandwidth-quota target=_blank rel=noopener>免費流量為 1GB / month</a>。</p>
 </section>
-
-
-    <footer class="article-footer">
-    
-
-    
-    <section class="article-copyright">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
-</svg>
-
-
-
-        <span>Licensed under CC BY-NC-SA 4.0</span>
-    </section>
-    </footer>
-
-
-    
-</article>
-
-    <aside class="related-contents--wrapper">
-    
-    
-        <h2 class="section-title"></h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/p/markdown-%E5%B5%8C%E5%85%A5-youtube/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Markdown 嵌入 YouTube</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">iOS 開發環境設置</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/fastlane-503-service-temporarily-unavailable/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Fastlane 503 Service Temporarily Unavailable</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/change-login-shells-without-chsh/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Change login shells without chsh</h2>
-        </div>
-    </a>
-</article>
-                
-                    
-<article class="">
-    <a href="/p/postman-pre-request-script/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">POSTMAN – Pre-request script</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
-    
-</aside>
-
-     
-     
-        
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "archie-1" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (DISQUS) {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 
-        
-            2017 - 
-        
-        2021 Archie
-    </section>
-    
-    <section class="powerby">
-         <br />
-        
-    </section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
 </footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer="true"
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
-            >
-
-            </main>
-    
-
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
-                defer="false"
-                >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
+</article>
+<aside class=related-contents--wrapper>
+<h2 class=section-title></h2>
+<div class=related-contents>
+<div class="flex article-list--tile">
+<article>
+<a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/>
+<div class=article-details>
+<h2 class=article-title>Markdown 嵌入 YouTube</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>
+<div class=article-details>
+<h2 class=article-title>iOS 開發環境設置</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/fastlane-503-service-temporarily-unavailable/>
+<div class=article-details>
+<h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/change-login-shells-without-chsh/>
+<div class=article-details>
+<h2 class=article-title>Change login shells without chsh</h2>
+</div>
+</a>
+</article>
+<article>
+<a href=/p/postman-pre-request-script/>
+<div class=article-details>
+<h2 class=article-title>POSTMAN – Pre-request script</h2>
+</div>
+</a>
+</article>
+</div>
+</div>
+</aside>
+<div class=disqus-container>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
+<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2017 -
+2021 Archie
+</section>
+<section class=powerby>
+<br>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
 </html>

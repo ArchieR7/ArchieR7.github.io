@@ -1,22 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>iOS. Xcode on Archie</title>
-    <link>https://www.archie.tw/tags/ios.-xcode/</link>
-    <description>Recent content in iOS. Xcode on Archie</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/ios.-xcode/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>從 Terminal 讓模擬器開啟連結</title>
-      <link>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</link>
-      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</guid>
-      <description>一般在開發的時候，如果需要在模擬器測試 Deep link 的話，則需要做一個開啟連結的動作；比較手動的就會開啟一個 Safari，輸入特定的連結後前往，而這邊分享一個指令。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iOS. Xcode on Archie</title><link>https://www.archie.tw/tags/ios.-xcode/</link><description>Recent content in iOS. Xcode on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 17 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/ios.-xcode/index.xml" rel="self" type="application/rss+xml"/><item><title>從 Terminal 讓模擬器開啟連結</title><link>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</link><pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E5%BE%9E-terminal-%E8%AE%93%E6%A8%A1%E6%93%AC%E5%99%A8%E9%96%8B%E5%95%9F%E9%80%A3%E7%B5%90/</guid><description>一般在開發的時候，如果需要在模擬器測試 Deep link 的話，則需要做一個開啟連結的動作；比較手動的就會開啟一個 Safari，輸入特定的連結後前往，而這邊分享一個指令。
 xcrun simctl openurl booted &amp;lt;url&amp;gt; xcrun 主要就是執行 Xcode 的一個工具，而 simctl 則是和模擬器的管理工具，而 booted 是指目前開啟著的模擬器。
-步驟  打開模擬器 打開任何 Terminal 的 app 輸入上述的指令  這樣模擬器便會開啟連結了！</description>
-    </item>
-    
-  </channel>
-</rss>
+步驟 打開模擬器 打開任何 Terminal 的 app 輸入上述的指令 這樣模擬器便會開啟連結了！</description></item></channel></rss>
