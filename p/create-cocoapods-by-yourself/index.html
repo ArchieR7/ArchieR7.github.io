@@ -1,6 +1,4 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
 首先，先建立一個新的 Pod
 pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會生成一個新的專案出來。
 再來將 Code.Swift 丟到 Pods/Development Pods/YourPodName，也就是它預設 ReplaceMe.Swift 的那個地方。
@@ -10,11 +8,8 @@ pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會
 都準備好之後，在 GitHub 上開一個 repository 來放置，記得要放上 tag 標記目前的版本。
 pod spec lint YourPodName.podspec 最後就送出去就好了！
 pod trunk push YourPodName.podspec 如果你沒有註冊過的話，得先註冊一下：
-pod trunk register email@domain.com 'Your Name' 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
-如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！"><title>Create CocoaPods by yourself</title>
-<link rel=canonical href=https://www.archie.tw/p/create-cocoapods-by-yourself/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Create CocoaPods by yourself">
-<meta property="og:description" content="這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
+pod trunk register email@domain.com &amp;#39;Your Name&amp;#39; 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
+如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！"><title>Create CocoaPods by yourself</title><link rel=canonical href=https://www.archie.tw/p/create-cocoapods-by-yourself/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Create CocoaPods by yourself"><meta property="og:description" content="這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
 首先，先建立一個新的 Pod
 pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會生成一個新的專案出來。
 再來將 Code.Swift 丟到 Pods/Development Pods/YourPodName，也就是它預設 ReplaceMe.Swift 的那個地方。
@@ -24,14 +19,8 @@ pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會
 都準備好之後，在 GitHub 上開一個 repository 來放置，記得要放上 tag 標記目前的版本。
 pod spec lint YourPodName.podspec 最後就送出去就好了！
 pod trunk push YourPodName.podspec 如果你沒有註冊過的話，得先註冊一下：
-pod trunk register email@domain.com 'Your Name' 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
-如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！">
-<meta property="og:url" content="https://www.archie.tw/p/create-cocoapods-by-yourself/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2018-09-15T00:00:00+00:00"><meta property="article:modified_time" content="2018-09-15T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Create CocoaPods by yourself">
-<meta name=twitter:description content="這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
+pod trunk register email@domain.com &amp;#39;Your Name&amp;#39; 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
+如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！"><meta property="og:url" content="https://www.archie.tw/p/create-cocoapods-by-yourself/"><meta property="og:site_name" content="Archie"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2018-09-15T00:00:00+00:00"><meta property="article:modified_time" content="2018-09-15T00:00:00+00:00"><meta name=twitter:site content="@ChangArchie"><meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Create CocoaPods by yourself"><meta name=twitter:description content="這篇文章會介紹建立自己的 CocoaPods 流程，而我當初是看了 David 的教學文所跑的流程。
 首先，先建立一個新的 Pod
 pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會生成一個新的專案出來。
 再來將 Code.Swift 丟到 Pods/Development Pods/YourPodName，也就是它預設 ReplaceMe.Swift 的那個地方。
@@ -41,191 +30,21 @@ pod lib create YourPodName 接著依照自己的 Pod 內容回答問題，便會
 都準備好之後，在 GitHub 上開一個 repository 來放置，記得要放上 tag 標記目前的版本。
 pod spec lint YourPodName.podspec 最後就送出去就好了！
 pod trunk push YourPodName.podspec 如果你沒有註冊過的話，得先註冊一下：
-pod trunk register email@domain.com 'Your Name' 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
-如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class=article-page>
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-on-phone--column extended">
-<aside class="sidebar left-sidebar sticky">
-<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label>
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-<header class=site-info>
-<figure class=site-avatar>
-<img src=/img/Archie_hu1fc091553094f1283eaa3eeeb8ec0c46_37374_300x0_resize_q75_box.jpg width=300 height=300 class=site-logo loading=lazy alt=Avatar>
-<span class=emoji>💻</span>
-</figure>
-<h1 class=site-name><a href=https://www.archie.tw>Archie</a></h1>
-<h2 class=site-description>獨立開發者的心路歷程</h2>
-</header>
-<ol class=menu id=main-menu>
-<li>
-<a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
-<span>首頁</span>
-</a>
-</li>
-<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span></span>
-</li>
-</ol>
-</aside>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
-🍎 開發心得
-</a>
-</header>
-<h2 class=article-title>
-<a href=/p/create-cocoapods-by-yourself/>Create CocoaPods by yourself</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Sep 15, 2018</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<p>這篇文章會介紹建立自己的 <a class=link href=../cocoapods>CocoaPods</a> 流程，而我當初是看了 <a class=link href=https://github.com/yoxisem544 target=_blank rel=noopener>David</a> 的<a class=link href=https://medium.com/@davidlin_98861/%e5%a6%82%e4%bd%95%e5%bb%ba%e7%ab%8b%e4%b8%80%e5%80%8b%e5%b1%ac%e6%96%bc%e8%87%aa%e5%b7%b1%e7%9a%84-cocoapods-ab0613a1d2e9 target=_blank rel=noopener>教學文</a>所跑的流程。</p>
-<p>首先，先建立一個新的 Pod</p>
-<pre tabindex=0><code>pod lib create YourPodName
-</code></pre><p>接著依照自己的 Pod 內容回答問題，便會生成一個新的專案出來。</p>
-<p>再來將 Code.Swift 丟到 Pods/Development Pods/YourPodName，也就是它預設 ReplaceMe.Swift 的那個地方。</p>
-<p>最後 README.md 和 YourPodName.podspec 寫一寫就完成了 Pod 的準備。</p>
-<p>而預設的 REAMME.md 裡頭，有一個 CI Status，你可以移除或者到 Travis.CI 建構；</p>
-<p>從 Travis.CI 那邊可以得知如何建構一個 .travis.yml。</p>
-<p>都準備好之後，在 GitHub 上開一個 repository 來放置，記得要放上 tag 標記目前的版本。</p>
-<pre tabindex=0><code>pod spec lint YourPodName.podspec
-</code></pre><p>最後就送出去就好了！</p>
-<pre tabindex=0><code>pod trunk push YourPodName.podspec
-</code></pre><p>如果你沒有註冊過的話，得先註冊一下：</p>
-<pre tabindex=0><code>pod trunk register email@domain.com 'Your Name'
-</code></pre><p>而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！</p>
-<p>如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！</p>
-<pre tabindex=0><code>rm -rf ~/Library/Caches/CocoaPods
-</code></pre>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/>
-<div class=article-details>
-<h2 class=article-title>RxSwift 6 上線啦！</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/>
-<div class=article-details>
-<h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>iOS App launch time 心得</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+pod trunk register email@domain.com &amp;#39;Your Name&amp;#39; 而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！
+如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-149460095-2","auto"),ga("send","pageview"))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header class=site-info><figure class=site-avatar><img src=/img/Archie_hu05e3cf7aa03cd2b17dbb35d8c191d641_7192189_300x0_resize_box_3.png width=300 height=300 class=site-logo loading=lazy alt=Avatar>
+<span class=emoji>💻</span></figure><h1 class=site-name><a href=https://www.archie.tw>Archie</a></h1><h2 class=site-description>iOS developer / Head of Product@RE:DREAMER Lab</h2></header><ol class=menu id=main-menu><li><a href=/ target=_blank><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg><span>首頁</span></a></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span></span></li></ol></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>🍎 開發心得</a></header><h2 class=article-title><a href=/p/create-cocoapods-by-yourself/>Create CocoaPods by yourself</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Sep 15, 2018</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading></time></div></footer></div></header><section class=article-content><p>這篇文章會介紹建立自己的 <a class=link href=../cocoapods>CocoaPods</a> 流程，而我當初是看了 <a class=link href=https://github.com/yoxisem544 target=_blank rel=noopener>David</a> 的<a class=link href=https://medium.com/@davidlin_98861/%e5%a6%82%e4%bd%95%e5%bb%ba%e7%ab%8b%e4%b8%80%e5%80%8b%e5%b1%ac%e6%96%bc%e8%87%aa%e5%b7%b1%e7%9a%84-cocoapods-ab0613a1d2e9 target=_blank rel=noopener>教學文</a>所跑的流程。</p><p>首先，先建立一個新的 Pod</p><pre tabindex=0><code>pod lib create YourPodName
+</code></pre><p>接著依照自己的 Pod 內容回答問題，便會生成一個新的專案出來。</p><p>再來將 Code.Swift 丟到 Pods/Development Pods/YourPodName，也就是它預設 ReplaceMe.Swift 的那個地方。</p><p>最後 README.md 和 YourPodName.podspec 寫一寫就完成了 Pod 的準備。</p><p>而預設的 REAMME.md 裡頭，有一個 CI Status，你可以移除或者到 Travis.CI 建構；</p><p>從 Travis.CI 那邊可以得知如何建構一個 .travis.yml。</p><p>都準備好之後，在 GitHub 上開一個 repository 來放置，記得要放上 tag 標記目前的版本。</p><pre tabindex=0><code>pod spec lint YourPodName.podspec
+</code></pre><p>最後就送出去就好了！</p><pre tabindex=0><code>pod trunk push YourPodName.podspec
+</code></pre><p>如果你沒有註冊過的話，得先註冊一下：</p><pre tabindex=0><code>pod trunk register email@domain.com &#39;Your Name&#39;
+</code></pre><p>而如果你有在 .podspec 裡頭填寫你的 Twitter 的話，就會收到 CocoaPods 貼的文！</p><p>如果你搜尋不到你的 Pod 的話，可以清除目前的 cache 就可以順利找到了！</p><pre tabindex=0><code>rm -rf ~/Library/Caches/CocoaPods
+</code></pre></section><footer class=article-footer><section class=article-tags><a href=/tags/ios/>iOS</a>
+<a href=/tags/swift/>Swift</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title></h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/><div class=article-details><h2 class=article-title>發票收集雞 - 自己的發票自己收</h2></div></a></article><article><a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>Apple Watch App 開發除錯心得</h2></div></a></article><article><a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/><div class=article-details><h2 class=article-title>RxSwift 6 上線啦！</h2></div></a></article><article><a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/><div class=article-details><h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2></div></a></article><article><a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>iOS App launch time 心得</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//archie-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Archie</section><section class=powerby><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

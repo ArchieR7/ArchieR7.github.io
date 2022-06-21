@@ -1,238 +1,42 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
 CALayer 陰影相關的實作方式，是以 CALayer 底下的這五個變數來控制
- shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float  shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
+shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
 shadowPath 預設值為 null，並支援 animated，可以在這邊調整陰影的路徑， 所以當 UIView 在透過 animated 調整大小時，我們可以一併調整 shadowPath 來跟著做變化。
 shadowOffset 預設值為 [0, -3]，來調整陰影的位移。
 shadowRadius 預設值為 3，系統本身會進行發散的動作。
 shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰影，並沒有需要客製化的話， 只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
- layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！"><title>iOS UIView shadow</title>
-<link rel=canonical href=https://www.archie.tw/p/ios-uiview-shadow/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="iOS UIView shadow">
-<meta property="og:description" content="最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
+layer.masksToBounds clipsToBounds 因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！"><title>iOS UIView shadow</title><link rel=canonical href=https://www.archie.tw/p/ios-uiview-shadow/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="iOS UIView shadow"><meta property="og:description" content="最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
 CALayer 陰影相關的實作方式，是以 CALayer 底下的這五個變數來控制
- shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float  shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
+shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
 shadowPath 預設值為 null，並支援 animated，可以在這邊調整陰影的路徑， 所以當 UIView 在透過 animated 調整大小時，我們可以一併調整 shadowPath 來跟著做變化。
 shadowOffset 預設值為 [0, -3]，來調整陰影的位移。
 shadowRadius 預設值為 3，系統本身會進行發散的動作。
 shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰影，並沒有需要客製化的話， 只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
- layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！">
-<meta property="og:url" content="https://www.archie.tw/p/ios-uiview-shadow/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2017-08-10T00:00:00+00:00"><meta property="article:modified_time" content="2017-08-10T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="iOS UIView shadow">
-<meta name=twitter:description content="最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
+layer.masksToBounds clipsToBounds 因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！"><meta property="og:url" content="https://www.archie.tw/p/ios-uiview-shadow/"><meta property="og:site_name" content="Archie"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2017-08-10T00:00:00+00:00"><meta property="article:modified_time" content="2017-08-10T00:00:00+00:00"><meta name=twitter:site content="@ChangArchie"><meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="iOS UIView shadow"><meta name=twitter:description content="最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。
 CALayer 陰影相關的實作方式，是以 CALayer 底下的這五個變數來控制
- shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float  shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
+shadowColor: CGColor? shadowPath: CGPath? shadowOffset: CGSize shadowRadius: CGFloat shadowOpacity: Float shadowColor 預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。
 shadowPath 預設值為 null，並支援 animated，可以在這邊調整陰影的路徑， 所以當 UIView 在透過 animated 調整大小時，我們可以一併調整 shadowPath 來跟著做變化。
 shadowOffset 預設值為 [0, -3]，來調整陰影的位移。
 shadowRadius 預設值為 3，系統本身會進行發散的動作。
 shadowOpacity 預設值為 0，也就是完全透明； 所以如果只是要陰影，並沒有需要客製化的話， 只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。
 cornerRadius 這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false
- layer.masksToBounds clipsToBounds  因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
-🍎 開發心得
-</a>
-</header>
-<h2 class=article-title>
-<a href=/p/ios-uiview-shadow/>iOS UIView shadow</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Aug 10, 2017</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<p>最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。</p>
-<h1 id=calayer>CALayer</h1>
-<p>陰影相關的實作方式，是以 CALayer 底下的這五個變數來控制</p>
-<ul>
-<li>shadowColor: CGColor?</li>
-<li>shadowPath: CGPath?</li>
-<li>shadowOffset: CGSize</li>
-<li>shadowRadius: CGFloat</li>
-<li>shadowOpacity: Float</li>
-</ul>
-<h2 id=shadowcolor>shadowColor</h2>
-<p>預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。</p>
-<h2 id=shadowpath>shadowPath</h2>
-<p>預設值為 null，並支援 animated，可以在這邊調整陰影的路徑，
-所以當 UIView 在透過 animated 調整大小時，我們可以一併調整 shadowPath 來跟著做變化。</p>
-<h2 id=shadowoffset>shadowOffset</h2>
-<p>預設值為 [0, -3]，來調整陰影的位移。</p>
-<h2 id=shadowradius>shadowRadius</h2>
-<p>預設值為 3，系統本身會進行發散的動作。</p>
-<h2 id=shadowopacity>shadowOpacity</h2>
-<p>預設值為 0，也就是完全透明；
+layer.masksToBounds clipsToBounds 因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果； 但偏偏若需要圓角效果的話，則必須更改為 true。 而這邊，我的做法是， 先建立一個透明色的 UIView，來做陰影的效果， 再疊加一層 subview 來做圓角的效果， 這樣便可以做出有陰影效果的圓角 UIView 了！"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-149460095-2","auto"),ga("send","pageview"))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span></span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>🍎 開發心得</a></header><h2 class=article-title><a href=/p/ios-uiview-shadow/>iOS UIView shadow</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Aug 10, 2017</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading></time></div></footer></div></header><section class=article-content><p>最近在寫的專案，使用到比較多的陰影效果，就來列列有關陰影效果的一些內容。</p><h1 id=calayer>CALayer</h1><p>陰影相關的實作方式，是以 CALayer 底下的這五個變數來控制</p><ul><li>shadowColor: CGColor?</li><li>shadowPath: CGPath?</li><li>shadowOffset: CGSize</li><li>shadowRadius: CGFloat</li><li>shadowOpacity: Float</li></ul><h2 id=shadowcolor>shadowColor</h2><p>預設值為不透明的黑色，我們可以透過這個參數來調整陰影的顏色。</p><h2 id=shadowpath>shadowPath</h2><p>預設值為 null，並支援 animated，可以在這邊調整陰影的路徑，
+所以當 UIView 在透過 animated 調整大小時，我們可以一併調整 shadowPath 來跟著做變化。</p><h2 id=shadowoffset>shadowOffset</h2><p>預設值為 [0, -3]，來調整陰影的位移。</p><h2 id=shadowradius>shadowRadius</h2><p>預設值為 3，系統本身會進行發散的動作。</p><h2 id=shadowopacity>shadowOpacity</h2><p>預設值為 0，也就是完全透明；
 所以如果只是要陰影，並沒有需要客製化的話，
-只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。</p>
-<h2 id=cornerradius>cornerRadius</h2>
-<p>這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false</p>
-<ul>
-<li>layer.masksToBounds</li>
-<li>clipsToBounds</li>
-</ul>
-<p>因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果；
+只需要修改 shadowOpacity，畫面上就會有 offset = [0, -3], radius = 3 的不透明黑色陰影出現。</p><h2 id=cornerradius>cornerRadius</h2><p>這邊有點需要注意到的是，若要有 shadow 效果的話，下面兩者必須為 false</p><ul><li>layer.masksToBounds</li><li>clipsToBounds</li></ul><p>因為若將 layer 只關閉在 bounds 的話，則無法呈現陰影的效果；
 但偏偏若需要圓角效果的話，則必須更改為 true。
 而這邊，我的做法是，
 先建立一個透明色的 UIView，來做陰影的效果，
 再疊加一層 subview 來做圓角的效果，
-這樣便可以做出有陰影效果的圓角 UIView 了！</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/>
-<div class=article-details>
-<h2 class=article-title>RxSwift 6 上線啦！</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/>
-<div class=article-details>
-<h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>iOS App launch time 心得</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+這樣便可以做出有陰影效果的圓角 UIView 了！</p></section><footer class=article-footer><section class=article-tags><a href=/tags/ios/>iOS</a>
+<a href=/tags/swift/>Swift</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title></h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/><div class=article-details><h2 class=article-title>發票收集雞 - 自己的發票自己收</h2></div></a></article><article><a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>Apple Watch App 開發除錯心得</h2></div></a></article><article><a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/><div class=article-details><h2 class=article-title>RxSwift 6 上線啦！</h2></div></a></article><article><a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/><div class=article-details><h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2></div></a></article><article><a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>iOS App launch time 心得</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//archie-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Archie</section><section class=powerby><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#shadowcolor>shadowColor</a></li>
-<li><a href=#shadowpath>shadowPath</a></li>
-<li><a href=#shadowoffset>shadowOffset</a></li>
-<li><a href=#shadowradius>shadowRadius</a></li>
-<li><a href=#shadowopacity>shadowOpacity</a></li>
-<li><a href=#cornerradius>cornerRadius</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#shadowcolor>shadowColor</a></li><li><a href=#shadowpath>shadowPath</a></li><li><a href=#shadowoffset>shadowOffset</a></li><li><a href=#shadowradius>shadowRadius</a></li><li><a href=#shadowopacity>shadowOpacity</a></li><li><a href=#cornerradius>cornerRadius</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

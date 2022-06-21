@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>💻 Backend on Archie</title><link>https://www.archie.tw/categories/backend/</link><description>Recent content in 💻 Backend on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 27 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/categories/backend/index.xml" rel="self" type="application/rss+xml"/><item><title>Go 的環境變數使用</title><link>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</link><pubDate>Wed, 27 May 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/</guid><description>在 Go 裡頭，使用環境變數的方式為
-import ( &amp;quot;os&amp;quot; ) os.Setenv(&amp;quot;變數名稱&amp;quot;, &amp;quot;變數值&amp;quot;) os.Getenv(&amp;quot;變數名稱&amp;quot;) 而這邊要順帶介紹的是 GoDotEnv
+import ( &amp;#34;os&amp;#34; ) os.Setenv(&amp;#34;變數名稱&amp;#34;, &amp;#34;變數值&amp;#34;) os.Getenv(&amp;#34;變數名稱&amp;#34;) 而這邊要順帶介紹的是 GoDotEnv
 具體使用的方式為
-import ( &amp;quot;github.com/joho/godotenv&amp;quot; ) err := godotenv.Load() if err != nil { //something wrong } 這樣就可以去讀專案底下的 .env 檔案，也可以將這份檔案加入到 .gitignore 來忽略上傳，讓我們的程式碼可以開源也不會將自己的私鑰上傳上去。
+import ( &amp;#34;github.com/joho/godotenv&amp;#34; ) err := godotenv.Load() if err != nil { //something wrong } 這樣就可以去讀專案底下的 .env 檔案，也可以將這份檔案加入到 .gitignore 來忽略上傳，讓我們的程式碼可以開源也不會將自己的私鑰上傳上去。
 若不打算處理錯誤的話，可以更改為
-import ( _ &amp;quot;github.com/joho/godotenv/autoload&amp;quot; ) 便會在 package init() 的時候就自動 Load()</description></item><item><title>麥當勞報報 API 分析</title><link>https://www.archie.tw/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</link><pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</guid><description>2020.12.25 目前麥當勞的 API 已經從 Restful 轉成 WebSocket 的形式，所以該篇文章的方式目前是無法實作的。
+import ( _ &amp;#34;github.com/joho/godotenv/autoload&amp;#34; ) 便會在 package init() 的時候就自動 Load()</description></item><item><title>麥當勞報報 API 分析</title><link>https://www.archie.tw/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</link><pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/</guid><description>2020.12.25 目前麥當勞的 API 已經從 Restful 轉成 WebSocket 的形式，所以該篇文章的方式目前是無法實作的。
 麥當勞報報簡單來說就是麥當勞的會員 app，你可以每日在上頭得到一些優惠券，不過是採取簽到的方式領取；也就是說如果今天你忘了登入領取的話，隔天也不會變成有兩種優惠可以領取。
 麥當勞報報 API 分析 透過一些工具，我們可以得到麥當勞報報的 API 路徑和內容，其中分成三種 base url
 https://api.mcddaily.com.tw 從列表來看，我目前有使用到的是這五個 API
@@ -12,27 +12,22 @@ https://api.mcddaily.com.tw 從列表來看，我目前有使用到的是這五�
 /update_attributes 從內容看不太出來是幹嘛用的，不過我想對於我們而言也沒什麼特別的用途
 /get_info 從 Response body 來看的話，算是麥當勞報報登入成功後第一支得呼叫的 API； 裡頭含有 member_info 的資訊為主
 /logout 使用 access_token 就可以登出了，不過這邊有個問題是登出後 access_token 並不會過期⋯ 也就是就算我已經呼叫過了登出這支 API，但仍然可以使用原先的 access_token 來打其他 API⋯ 也就是可以做別的事，不用怕 token 登出就無效了
-/login_by_fb 就是基本的從 Facebook 取得 token 去換麥當勞報報的 access_token 和使用者資料，基本上看起來 response body 和 /get_info 的一模一樣。</description></item><item><title>使用 API 來讀取 GitHub repository</title><link>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</link><pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</guid><description>這篇文章將來介紹一下如何使用 API 來讀取 GitHub repository 上的檔案，而為什麼需要這樣做呢？
+/login_by_fb 就是基本的從 Facebook 取得 token 去換麥當勞報報的 access_token 和使用者資料，基本上看起來 response body 和 /get_info 的一模一樣。
+https://api1.mcddaily.com.tw 基本上商業邏輯都在這個 base url 上執行，而我的重點只有一支 API，也是我分析的目的</description></item><item><title>使用 API 來讀取 GitHub repository</title><link>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</link><pubDate>Fri, 14 Feb 2020 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/</guid><description>這篇文章將來介紹一下如何使用 API 來讀取 GitHub repository 上的檔案，而為什麼需要這樣做呢？
 因為我專精的是 iOS 啊 以一個 iOS 工程師而言，我們若需要自己維護一個 side project（如 找健身），那我們就得想一些簡單一點的 server 方案；其中一個就是可以將一個 JSON 檔案放到 GitHub 的某個私人 repository 上，並透過 GitHub API 的方式去讀取它，達到 GET 的效果。
 這樣便可以有效率地開發 iOS 的部分，而不必花太多心思在維護後端，至少不必煩惱伺服器的費用和穩定😂
 流程 取得 API Token 首先我們得先到 GitHub 的設定頁之中，去建立一組 API token
-file
-選取 Developer settings
-file
-選擇 Personal access tokens 並建立一組
-file
-再來依據你的需求選擇 scopes，像是 repo 存取全開
-file
-接著就會拿到一組 Token！
-API 的使用方式 首先我們得在 Headers 加上兩個 KEY-Value</description></item><item><title>AWS Certificate Manager 申請流程</title><link>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid><description>AWS Certificate Manager 申請流程 我的這個網站架設在 AWS 的 EC2 上，搭配 Route 53 和 Load Balancer 以及這篇的主角 AWS Certificate Manager，這邊要迅速的記錄操作流程！
+file 選取 Developer settings
+file 選擇 Personal access tokens 並建立一組
+file 再來依據你的需求選擇 scopes，像是 repo 存取全開
+file 接著就會拿到一組 Token！
+API 的使用方式 首先我們得在 Headers 加上兩個 KEY-Value
+Authorization: token YourAccessToken Accept: application/vnd.github.v3.raw
+而 URL 則是</description></item><item><title>AWS Certificate Manager 申請流程</title><link>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid><description>AWS Certificate Manager 申請流程 我的這個網站架設在 AWS 的 EC2 上，搭配 Route 53 和 Load Balancer 以及這篇的主角 AWS Certificate Manager，這邊要迅速的記錄操作流程！
 環境架設的文章寫在這
-流程 申請憑證
-新增網域名稱
-這邊要注意的是，像我之前是申請 *.Archie.tw，這會導致一個問題就是 https://Archie.tw 就不會符合申請的格式，而我一直到昨天才修正這件事⋯⋯ 這邊建議是填寫 www.Archie.tw 和 Archie.tw，這樣不管使用者有沒有補上 www 都可以取得信任的大鎖🔒。
-選取驗證方式
-如果你是和我一樣，使用 Route 53，就選擇 DNS 驗證
-新增標籤
-這邊看個人，算是一個 tag 提醒自己用而已，我是沒有填寫。
+流程 申請憑證 新增網域名稱 這邊要注意的是，像我之前是申請 *.Archie.tw，這會導致一個問題就是 https://Archie.tw 就不會符合申請的格式，而我一直到昨天才修正這件事⋯⋯ 這邊建議是填寫 www.Archie.tw 和 Archie.tw，這樣不管使用者有沒有補上 www 都可以取得信任的大鎖🔒。
+選取驗證方式 如果你是和我一樣，使用 Route 53，就選擇 DNS 驗證
+新增標籤 這邊看個人，算是一個 tag 提醒自己用而已，我是沒有填寫。
 最後 AWS Certificate Manager 就會要求你
 就直接按下去就好了👌
 以上便是透過 AWS Certificate Manager 申請憑證的流程，搞清楚的話不用幾分鐘就可以處理好了👍</description></item><item><title>AWS EC2 with WordPress</title><link>https://www.archie.tw/p/aws-ec2-with-wordpress/</link><pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/aws-ec2-with-wordpress/</guid><description>前言 Vultr 這個網站原本是在 Vultr 上開一台機器，每個月大概的費用為 USD $6 – 7 元之間，並利用 Certbot 自動更新 SSL 憑證。但後來發現不太會維護那台機器，時常因為記憶體造成資料庫錯誤，每隔兩三天就得去手動重新啟動來解決問題，乾脆就搬家到 WordPress.com 的服務。
@@ -51,14 +46,13 @@ var app = require(&amp;#39;express&amp;#39;)(); var http = require(&amp;#39;http
 npm install --save socket.io 並在 index.js 裏頭加上 Socket.</description></item><item><title>HEROKU</title><link>https://www.archie.tw/p/heroku/</link><pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/heroku/</guid><description>前言 這幾個月透過家裡頭的桌機來定時跑爬蟲以及更新 Firebase 資料庫，不過電費也是一筆固定支出，所以趁今天想到這件事，便來搬移到免費的 HEROKU 來做這些事。
 HEROKU 是一個有提供免費伺服器方案的平台，支援的語言算多，而我的爬蟲是以 Python 3.6 作為開發語言的，故選擇它來玩玩。 在免費的方案之中有一些限制，如 24 小時內得休息 6 小時之類的； 不過在這邊，我需要的只是一個可以執行 Cron Job 的地方，所以不需要升級主機的部分。 目前我的 HEROKU 裡頭包含著三個動作：
 每天台灣時間 00:00 時，到星座網爬蟲並記錄當日運勢到 Firebase 每天台灣時間 09:00 時，到 PTT CodeJob 以及 Soft_Job 版搜尋 iOS 相關的文章，並 mail 到我的信箱 每天台灣時間 12:00 時，爬 PTT 一些熱門看板的文章並發佈到機器人部落格以及機器人推特之中 我分成三個 .py 檔案，下方會說明我的作法。 簡單的建構步驟 首先，先到 HEROKU 的 dashboard 建立一個新的 App，接著照著它的敘述完成 Git 的建置。 我在資料夾當中，放入了下列的檔案：
-PTT.py – 12:00 該做的事 iOS.py – 09:00 該做的事 Astro.py – 00:00 該做的事 requirements.</description></item><item><title>Python – SMTP</title><link>https://www.archie.tw/p/python-smtp/</link><pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/python-smtp/</guid><description>前情提要 痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話， 感覺像是他們自己本身內部的錯誤導致 Time out 之類的。 礙於目前還無法在短時間內處理好一台伺服器建構多個 WordPress， 所以只好先將內容發佈到 Blogger 來解決當前的問題。 而我們只需要使用到發文的功能，所以就可以簡單利用電子郵件來發文；
+PTT.py – 12:00 該做的事 iOS.py – 09:00 該做的事 Astro.py – 00:00 該做的事 requirements.txt – 提供給 HEROKU 知道要在這台機器上安裝哪些 Python 的套件 serviceAccountCredentials.</description></item><item><title>Python – SMTP</title><link>https://www.archie.tw/p/python-smtp/</link><pubDate>Tue, 23 Jan 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/python-smtp/</guid><description>前情提要 痞客邦最近「新增文章」API，不斷地出現未知的伺服器錯誤，而且從回應的時間來猜測的話， 感覺像是他們自己本身內部的錯誤導致 Time out 之類的。 礙於目前還無法在短時間內處理好一台伺服器建構多個 WordPress， 所以只好先將內容發佈到 Blogger 來解決當前的問題。 而我們只需要使用到發文的功能，所以就可以簡單利用電子郵件來發文；
 Blogger 設定的「以電子郵件傳送」 使用電子郵件張貼填入電子信箱，並開啟「立即發佈電子郵件」 儲存設定 這樣只要寄信給設定的地址的話，Blogger 便會自動發文。
 SMTP 首先在 Python 當中，我們可以使用 smtplib 來發送信件， 下列使用 gmail 為例：
-import smtplib smtpserver = smtplib.SMTP_SSL(&amp;quot;smtp.gmail.com&amp;quot;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定： 登入與安全性 啟用 這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
+import smtplib smtpserver = smtplib.SMTP_SSL(&amp;#34;smtp.gmail.com&amp;#34;,465) smtpserver.ehlo() smtpserver.login(username, password) 若你直接執行的話，可能會收到登入失敗的訊息； 由於 Google 在安全性設定上，會阻擋安全性較低的應用程式， 所以若要使用的話，則需要開啟相關設定： 登入與安全性 啟用 這樣的話，就可以順利地登入 gmail。 再來準備信件的內容並寄出：
 from email.mime.text import MIMEText from email.header import Header from_address = &amp;#39;Archie.Chang.iOS@gmail.com&amp;#39; to_address = [&amp;#39;Archie.Chang.iOS@gmail.com&amp;#39;] message = MIMEText(html_body, &amp;#39;html&amp;#39;, &amp;#39;utf-8&amp;#39;) message[&amp;#39;From&amp;#39;] = from_address message[&amp;#39;To&amp;#39;] = to_address[0] message[&amp;#39;Subject&amp;#39;] = subject smtpserver.</description></item><item><title>Selenium</title><link>https://www.archie.tw/p/selenium/</link><pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/selenium/</guid><description>Selenium 需要在 Python 上操作瀏覽器的話，我會選擇使用 Selenium； 以爬蟲來說，和 requests 不同的地方在於， 像是在讀取網頁時，使用 Selenium 開啟瀏覽器的話可以幫我們處理掉渲染的問題。 這篇主要會以 Selenium 的方式來取得痞客邦的 Access Token。
-先搞懂痞客邦的流程 首先，我們先到痞客邦的開發者網頁 PIXNET 或是可以直接到 API Explorer 的畫面 API Explorer 接下來會需要進行登入的動作 Login 登入成功後，便是授權給 API Explorer 權限來取得 Access token Granted 最後可以在 API Explorer 的畫面上看到 Access Token。 AccessToken
-程式方面 我們會使用到 Selenium 的這些元件
-from selenium import webdriver from selenium.webdriver.common.by import By from selenium.webdriver.support.ui import Select from selenium.common.exceptions import NoSuchElementException from selenium.</description></item><item><title>Twitter Follow all users script</title><link>https://www.archie.tw/p/twitter-follow-all-users-script/</link><pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/twitter-follow-all-users-script/</guid><description>追隨所有 Twitter 用戶 之前在弄一個自動發文的機器人，便想要在 Twitter 上同步發送； 而苦無沒有人追隨的情況下，決定先來追隨別人， 看看對方是否會反追隨回來（？ 以結果來看，有一些些功用，互相追隨的機率大概 5 % 左右。 PTT 爆報機器人 儘管多數可能也是機器人加機器人好友，不過至少稍稍提升了痞客邦的流量。
+先搞懂痞客邦的流程 首先，我們先到痞客邦的開發者網頁 PIXNET 或是可以直接到 API Explorer 的畫面 API Explorer 接下來會需要進行登入的動作 Login 登入成功後，便是授權給 API Explorer 權限來取得 Access token Granted 最後可以在 API Explorer 的畫面上看到 Access Token。 AccessToken 程式方面 我們會使用到 Selenium 的這些元件
+from selenium import webdriver from selenium.webdriver.common.by import By from selenium.webdriver.support.ui import Select from selenium.common.exceptions import NoSuchElementException from selenium.common.exceptions import TimeoutException from selenium.webdriver.support.ui import WebDriverWait from selenium.</description></item><item><title>Twitter Follow all users script</title><link>https://www.archie.tw/p/twitter-follow-all-users-script/</link><pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/twitter-follow-all-users-script/</guid><description>追隨所有 Twitter 用戶 之前在弄一個自動發文的機器人，便想要在 Twitter 上同步發送； 而苦無沒有人追隨的情況下，決定先來追隨別人， 看看對方是否會反追隨回來（？ 以結果來看，有一些些功用，互相追隨的機率大概 5 % 左右。 PTT 爆報機器人 儘管多數可能也是機器人加機器人好友，不過至少稍稍提升了痞客邦的流量。
 Javascript var FOLLOW_PAUSE = 1250; var FOLLOW_RAND = 250; var PAGE_WAIT = 2000; __cnt__ = 0; var f; f = function() { var eles; var __lcnt__ = 0; eles = jQuery(&amp;#39;.Grid-cell .not-following .follow-text&amp;#39;).each(function(i, ele) { ele = jQuery(ele); if (ele.css(&amp;#39;display&amp;#39;) != &amp;#39;block&amp;#39;) { console.trace(&amp;#39;Already following: &amp;#39; + i); return; } setTimeout(function() { console.trace(&amp;#34;Following &amp;#34; + i + &amp;#34; of &amp;#34; + eles.</description></item><item><title>Crontab</title><link>https://www.archie.tw/p/crontab/</link><pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/crontab/</guid><description>Crontab Crontab 在 Ubuntu 裏頭是預載的，其功能是可以根據時間參數來執行工作排程； 它的格式如下：
 * * * * * command to be executed 依序分別是 分鐘[0-59]、小時[0-23]、日期[1-31]、月份[1-12]、星期[0-6]、command 其中 星期 0 = 天的意思。
 符號 「*」：不設限 「,」：分隔時段。例如：30 10,20 * * * command，代表早上十點半和下午八點半執行。 「-」：一段時間範圍。例如：15 9-12 * * * command，代表從九點到十二點的每個 15 分都執行一次。 「/n」：表示每個 n 單位間隔。例如：*/5 * * * * command，代表每隔 5 分鐘執行一次。 * * * * *：每隔一分鐘執行一次。 你也可以使用 @ 來取代五個參數：

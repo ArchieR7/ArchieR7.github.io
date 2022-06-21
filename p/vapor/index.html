@@ -1,255 +1,58 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
 安裝方式 不同於在安裝 iOS 第三方套件的流程，Vapor 需要透過 terminal 來安裝相關內容： 首先，得先安裝 Vapor 的 CLI
 curl -sL toolbox.qutheory.io | sh 安裝完之後，便可以在 terminal 底下使用 vapor 的指令。
 建立新專案 我們可以透過下方的指令，來建立一個新專案：
 vapor new ProjectName 其中第三方套件的管理方式，是使用 Swift Package Manager， 所以我們會在目錄下看到一個 Package.swift 和 Package.pins， 這方面倒是有些像 CocoaPods 所使用的 Podfile 的概念。
-使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 ."><title>Vapor</title>
-<link rel=canonical href=https://www.archie.tw/p/vapor/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Vapor">
-<meta property="og:description" content="Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
+使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 ."><title>Vapor</title><link rel=canonical href=https://www.archie.tw/p/vapor/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Vapor"><meta property="og:description" content="Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
 安裝方式 不同於在安裝 iOS 第三方套件的流程，Vapor 需要透過 terminal 來安裝相關內容： 首先，得先安裝 Vapor 的 CLI
 curl -sL toolbox.qutheory.io | sh 安裝完之後，便可以在 terminal 底下使用 vapor 的指令。
 建立新專案 我們可以透過下方的指令，來建立一個新專案：
 vapor new ProjectName 其中第三方套件的管理方式，是使用 Swift Package Manager， 所以我們會在目錄下看到一個 Package.swift 和 Package.pins， 這方面倒是有些像 CocoaPods 所使用的 Podfile 的概念。
-使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 .">
-<meta property="og:url" content="https://www.archie.tw/p/vapor/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Swift"><meta property="article:tag" content="Server"><meta property="article:published_time" content="2017-08-03T00:00:00+00:00"><meta property="article:modified_time" content="2017-08-03T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Vapor">
-<meta name=twitter:description content="Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
+使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 ."><meta property="og:url" content="https://www.archie.tw/p/vapor/"><meta property="og:site_name" content="Archie"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Swift"><meta property="article:tag" content="Server"><meta property="article:published_time" content="2017-08-03T00:00:00+00:00"><meta property="article:modified_time" content="2017-08-03T00:00:00+00:00"><meta name=twitter:site content="@ChangArchie"><meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Vapor"><meta name=twitter:description content="Vapor 在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用； 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情， 其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。
 安裝方式 不同於在安裝 iOS 第三方套件的流程，Vapor 需要透過 terminal 來安裝相關內容： 首先，得先安裝 Vapor 的 CLI
 curl -sL toolbox.qutheory.io | sh 安裝完之後，便可以在 terminal 底下使用 vapor 的指令。
 建立新專案 我們可以透過下方的指令，來建立一個新專案：
 vapor new ProjectName 其中第三方套件的管理方式，是使用 Swift Package Manager， 所以我們會在目錄下看到一個 Package.swift 和 Package.pins， 這方面倒是有些像 CocoaPods 所使用的 Podfile 的概念。
-使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 .">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/backend/>
-💻 Backend
-</a>
-</header>
-<h2 class=article-title>
-<a href=/p/vapor/>Vapor</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Aug 03, 2017</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=vapor>Vapor</h1>
-<p>在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。
+使用 Xcode 開發 有了專案後，你可以選擇直接打開 main.swift 來進行開發， 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案， 則可以透過下方指令才建立 ."><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-149460095-2","auto"),ga("send","pageview"))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span></span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/backend/>💻 Backend</a></header><h2 class=article-title><a href=/p/vapor/>Vapor</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Aug 03, 2017</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading></time></div></footer></div></header><section class=article-content><h1 id=vapor>Vapor</h1><p>在 Swift 開源之後，開發者們便開始將這語言往更多層面去發展，而 web app 便是其中一項。
 Vapor 是一款以 Swift 作為主要語言的 Server 建構服務，讓我們可以透過它來開發 Web 相關的應用；
 對於 iOS 開發人員而言，Swift 可以用來開發 web app 是一件有趣的事情，
-其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。</p>
-<h2 id=安裝方式>安裝方式</h2>
-<p>不同於在安裝 iOS 第三方套件的流程，Vapor 需要透過 terminal 來安裝相關內容：
-首先，得先安裝 Vapor 的 CLI</p>
-<pre tabindex=0><code>curl -sL toolbox.qutheory.io | sh
-</code></pre><p>安裝完之後，便可以在 terminal 底下使用 vapor 的指令。</p>
-<h2 id=建立新專案>建立新專案</h2>
-<p>我們可以透過下方的指令，來建立一個新專案：</p>
-<pre tabindex=0><code>vapor new ProjectName
+其代表著我們可以使用同一個語言來開發一個產品，從 server 到 client。</p><h2 id=安裝方式>安裝方式</h2><p>不同於在安裝 iOS 第三方套件的流程，Vapor 需要透過 terminal 來安裝相關內容：
+首先，得先安裝 Vapor 的 CLI</p><pre tabindex=0><code>curl -sL toolbox.qutheory.io | sh
+</code></pre><p>安裝完之後，便可以在 terminal 底下使用 vapor 的指令。</p><h2 id=建立新專案>建立新專案</h2><p>我們可以透過下方的指令，來建立一個新專案：</p><pre tabindex=0><code>vapor new ProjectName
 </code></pre><p>其中第三方套件的管理方式，是使用 Swift Package Manager，
 所以我們會在目錄下看到一個 Package.swift 和 Package.pins，
-這方面倒是有些像 CocoaPods 所使用的 Podfile 的概念。</p>
-<h2 id=使用-xcode-開發>使用 Xcode 開發</h2>
-<p>有了專案後，你可以選擇直接打開 main.swift 來進行開發，
+這方面倒是有些像 CocoaPods 所使用的 Podfile 的概念。</p><h2 id=使用-xcode-開發>使用 Xcode 開發</h2><p>有了專案後，你可以選擇直接打開 main.swift 來進行開發，
 但如果比較喜歡使用 Xcode 開啟一個專案，而非單一檔案，
-則可以透過下方指令才建立 .project。</p>
-<pre tabindex=0><code>vapor xcode
-</code></pre><p>這樣系統就會幫我們產生 .project 檔，開發起來就和原本寫 iOS 差不多了。</p>
-<h2 id=server-的相關設定>Server 的相關設定</h2>
-<p>Vapor 的 server 相關設定會放置在 Config 的資料夾底下，
-其中包含五個 .json 檔案：</p>
-<ul>
-<li>app.json</li>
-<li>crypto.json</li>
-<li>droplet.json</li>
-<li>fluent.json</li>
-<li>server.json
-像是我們可以在 server.json 裡頭看到 host、port 的相關內容。</li>
-</ul>
-<h2 id=build--run>Build & Run</h2>
-<p>若你是開啟 Xcode 專案的方式，那麼 build 和 run 的方式就和以往開發 iOS 的方式一樣；
-但若是沒有建立 .project 的話，也可以透過 vapor build 以及 run 的方式，就是在目錄下執行：</p>
-<pre tabindex=0><code>vapor build &amp;&amp; vapor run
-</code></pre><h2 id=droplet>Droplet</h2>
-<p>在看到 Vapor 的 icon 之後，不難想像為何其主要的核心物件名稱為 droplet。
+則可以透過下方指令才建立 .project。</p><pre tabindex=0><code>vapor xcode
+</code></pre><p>這樣系統就會幫我們產生 .project 檔，開發起來就和原本寫 iOS 差不多了。</p><h2 id=server-的相關設定>Server 的相關設定</h2><p>Vapor 的 server 相關設定會放置在 Config 的資料夾底下，
+其中包含五個 .json 檔案：</p><ul><li>app.json</li><li>crypto.json</li><li>droplet.json</li><li>fluent.json</li><li>server.json
+像是我們可以在 server.json 裡頭看到 host、port 的相關內容。</li></ul><h2 id=build--run>Build & Run</h2><p>若你是開啟 Xcode 專案的方式，那麼 build 和 run 的方式就和以往開發 iOS 的方式一樣；
+但若是沒有建立 .project 的話，也可以透過 vapor build 以及 run 的方式，就是在目錄下執行：</p><pre tabindex=0><code>vapor build &amp;&amp; vapor run
+</code></pre><h2 id=droplet>Droplet</h2><p>在看到 Vapor 的 icon 之後，不難想像為何其主要的核心物件名稱為 droplet。
 在初始時，main.swift 會有基本的 demo code，
-我們可以直接在 try drop.setup() 下方加入一些內容。</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=n>drop</span><span class=p>.</span><span class=kr>get</span><span class=p>(</span><span class=s>&#34;/&#34;</span><span class=p>)</span> <span class=p>{</span>
-    <span class=n>request</span> <span class=k>in</span>
-    <span class=k>return</span> <span class=s>&#34;Hello World!&#34;</span>
-<span class=p>}</span>
-</code></pre></div><p>這樣便會在 0.0.0.0:8080/ 時，得到 Hello World!，
-而也可以透過路徑來帶入參數，像是 0.0.0.0:8080/name/Archie 的寫法：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=n>drop</span><span class=p>.</span><span class=kr>get</span><span class=p>(</span><span class=s>&#34;/name&#34;</span><span class=p>,</span> <span class=s>&#34;:name&#34;</span><span class=p>,</span> <span class=n>handler</span><span class=p>:</span> <span class=p>{</span>
-    <span class=n>request</span> <span class=k>in</span>
-    <span class=k>if</span> <span class=kd>let</span> <span class=nv>name</span> <span class=p>=</span> <span class=n>request</span><span class=p>.</span><span class=n>parameters</span><span class=p>[</span><span class=s>&#34;name&#34;</span><span class=p>]?.</span><span class=n>string</span> <span class=p>{</span>
-        <span class=k>return</span> <span class=s>&#34;Hello </span><span class=si>\(</span><span class=n>name</span><span class=si>)</span><span class=s>!&#34;</span>
-    <span class=p>}</span>
-    <span class=k>return</span> <span class=s>&#34;Error retrieving parameters.&#34;</span>
-<span class=p>})</span>
-</code></pre></div><p>當連過去時，便會顯示 Hello Archie!。</p>
-<p>Views
-Vapor 將 Views 放置在 /Resources/Views 裡頭，並可以使用 drop.view(“檔案名稱”) 的方式回傳畫面：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=n>drop</span><span class=p>.</span><span class=kr>get</span><span class=p>(</span><span class=s>&#34;/view&#34;</span><span class=p>)</span> <span class=p>{</span> <span class=n>request</span> <span class=k>in</span>
-    <span class=k>return</span> <span class=k>try</span> <span class=n>drop</span><span class=p>.</span><span class=n>view</span><span class=p>(</span><span class=s>&#34;demoView.html&#34;</span><span class=p>)</span>
-<span class=p>}</span>
-</code></pre></div><p>以上便是 Vapor 的一些基本的簡單介紹，有興趣的人可以一起研究研究！</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/swift/>Swift</a>
-<a href=/tags/server/>Server</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/aws-ec2-with-wordpress/>
-<div class=article-details>
-<h2 class=article-title>AWS EC2 with WordPress</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/heroku/>
-<div class=article-details>
-<h2 class=article-title>HEROKU</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/>
-<div class=article-details>
-<h2 class=article-title>Go 的環境變數使用</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/>
-<div class=article-details>
-<h2 class=article-title>麥當勞報報 API 分析</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/>
-<div class=article-details>
-<h2 class=article-title>使用 API 來讀取 GitHub repository</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+我們可以直接在 try drop.setup() 下方加入一些內容。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=line><span class=cl><span class=n>drop</span><span class=p>.</span><span class=kr>get</span><span class=p>(</span><span class=s>&#34;/&#34;</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>request</span> <span class=k>in</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=s>&#34;Hello World!&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>這樣便會在 0.0.0.0:8080/ 時，得到 Hello World!，
+而也可以透過路徑來帶入參數，像是 0.0.0.0:8080/name/Archie 的寫法：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=line><span class=cl><span class=n>drop</span><span class=p>.</span><span class=kr>get</span><span class=p>(</span><span class=s>&#34;/name&#34;</span><span class=p>,</span> <span class=s>&#34;:name&#34;</span><span class=p>,</span> <span class=n>handler</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>request</span> <span class=k>in</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=kd>let</span> <span class=nv>name</span> <span class=p>=</span> <span class=n>request</span><span class=p>.</span><span class=n>parameters</span><span class=p>[</span><span class=s>&#34;name&#34;</span><span class=p>]?.</span><span class=n>string</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s>&#34;Hello </span><span class=si>\(</span><span class=n>name</span><span class=si>)</span><span class=s>!&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=s>&#34;Error retrieving parameters.&#34;</span>
+</span></span><span class=line><span class=cl><span class=p>})</span>
+</span></span></code></pre></div><p>當連過去時，便會顯示 Hello Archie!。</p><p>Views
+Vapor 將 Views 放置在 /Resources/Views 裡頭，並可以使用 drop.view(“檔案名稱”) 的方式回傳畫面：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=line><span class=cl><span class=n>drop</span><span class=p>.</span><span class=kr>get</span><span class=p>(</span><span class=s>&#34;/view&#34;</span><span class=p>)</span> <span class=p>{</span> <span class=n>request</span> <span class=k>in</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=k>try</span> <span class=n>drop</span><span class=p>.</span><span class=n>view</span><span class=p>(</span><span class=s>&#34;demoView.html&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>以上便是 Vapor 的一些基本的簡單介紹，有興趣的人可以一起研究研究！</p></section><footer class=article-footer><section class=article-tags><a href=/tags/swift/>Swift</a>
+<a href=/tags/server/>Server</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title></h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/aws-ec2-with-wordpress/><div class=article-details><h2 class=article-title>AWS EC2 with WordPress</h2></div></a></article><article><a href=/p/heroku/><div class=article-details><h2 class=article-title>HEROKU</h2></div></a></article><article><a href=/p/go-%E7%9A%84%E7%92%B0%E5%A2%83%E8%AE%8A%E6%95%B8%E4%BD%BF%E7%94%A8/><div class=article-details><h2 class=article-title>Go 的環境變數使用</h2></div></a></article><article><a href=/p/%E9%BA%A5%E7%95%B6%E5%8B%9E%E5%A0%B1%E5%A0%B1-api-%E5%88%86%E6%9E%90/><div class=article-details><h2 class=article-title>麥當勞報報 API 分析</h2></div></a></article><article><a href=/p/%E4%BD%BF%E7%94%A8-api-%E4%BE%86%E8%AE%80%E5%8F%96-github-repository/><div class=article-details><h2 class=article-title>使用 API 來讀取 GitHub repository</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//archie-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Archie</section><section class=powerby><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#安裝方式>安裝方式</a></li>
-<li><a href=#建立新專案>建立新專案</a></li>
-<li><a href=#使用-xcode-開發>使用 Xcode 開發</a></li>
-<li><a href=#server-的相關設定>Server 的相關設定</a></li>
-<li><a href=#build--run>Build & Run</a></li>
-<li><a href=#droplet>Droplet</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#安裝方式>安裝方式</a></li><li><a href=#建立新專案>建立新專案</a></li><li><a href=#使用-xcode-開發>使用 Xcode 開發</a></li><li><a href=#server-的相關設定>Server 的相關設定</a></li><li><a href=#build--run>Build & Run</a></li><li><a href=#droplet>Droplet</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

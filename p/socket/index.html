@@ -1,373 +1,178 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
- Datagram sockets(connectionless) Stream sockets(connection-oriented)  Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
+Datagram sockets(connectionless) Stream sockets(connection-oriented) Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
 Stream sockets(connection-oriented) 而 Stream sockets 則是使用 TCP 封包來傳遞， 其因為會先需要確認 Server 和 Client 兩者連接狀態後再傳遞， 故速度較慢一些，但至少能確認資料的有序性以及完整度。
 簡單的總結 以中華郵政的觀點來看，以結果來區分的話， 我們可以簡略地將 UDP 視為平信、TCP 視為掛號信。 而即時通訊的部分，依照上述的特色來看，就得選擇使用 TCP 的方式來進行溝通。
-Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。"><title>Socket</title>
-<link rel=canonical href=https://www.archie.tw/p/socket/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Socket">
-<meta property="og:description" content="最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
- Datagram sockets(connectionless) Stream sockets(connection-oriented)  Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
+Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。"><title>Socket</title><link rel=canonical href=https://www.archie.tw/p/socket/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Socket"><meta property="og:description" content="最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
+Datagram sockets(connectionless) Stream sockets(connection-oriented) Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
 Stream sockets(connection-oriented) 而 Stream sockets 則是使用 TCP 封包來傳遞， 其因為會先需要確認 Server 和 Client 兩者連接狀態後再傳遞， 故速度較慢一些，但至少能確認資料的有序性以及完整度。
 簡單的總結 以中華郵政的觀點來看，以結果來區分的話， 我們可以簡略地將 UDP 視為平信、TCP 視為掛號信。 而即時通訊的部分，依照上述的特色來看，就得選擇使用 TCP 的方式來進行溝通。
-Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。">
-<meta property="og:url" content="https://www.archie.tw/p/socket/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Socket"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2017-07-15T00:00:00+00:00"><meta property="article:modified_time" content="2017-07-15T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Socket">
-<meta name=twitter:description content="最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
- Datagram sockets(connectionless) Stream sockets(connection-oriented)  Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
+Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。"><meta property="og:url" content="https://www.archie.tw/p/socket/"><meta property="og:site_name" content="Archie"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="Socket"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2017-07-15T00:00:00+00:00"><meta property="article:modified_time" content="2017-07-15T00:00:00+00:00"><meta name=twitter:site content="@ChangArchie"><meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="Socket"><meta name=twitter:description content="最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接， 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。 而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種
+Datagram sockets(connectionless) Stream sockets(connection-oriented) Datagram sockets(connectionless) Datagram sockets 是使用 UDP 封包來進行傳送， 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤； 所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。
 Stream sockets(connection-oriented) 而 Stream sockets 則是使用 TCP 封包來傳遞， 其因為會先需要確認 Server 和 Client 兩者連接狀態後再傳遞， 故速度較慢一些，但至少能確認資料的有序性以及完整度。
 簡單的總結 以中華郵政的觀點來看，以結果來區分的話， 我們可以簡略地將 UDP 視為平信、TCP 視為掛號信。 而即時通訊的部分，依照上述的特色來看，就得選擇使用 TCP 的方式來進行溝通。
-Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>
-📒 程式筆記
-</a>
-</header>
-<h2 class=article-title>
-<a href=/p/socket/>Socket</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Jul 15, 2017</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<p>最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接，
+Server 和 Client 的溝通流程 首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊， 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。 而 Socket name 會需要包含 IP、Port、以及使用哪種協定； 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時， 這兩者便形成一組 association。"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-149460095-2","auto"),ga("send","pageview"))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span></span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>📒 程式筆記</a></header><h2 class=article-title><a href=/p/socket/>Socket</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Jul 15, 2017</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading></time></div></footer></div></header><section class=article-content><p>最近在接觸即時通訊相關的開發內容，撇除使用第三方服務的串接，
 大多數都是建議使用 Socket 來和伺服器端進行連接和溝通。
-而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種</p>
-<ul>
-<li>Datagram sockets(connectionless)</li>
-<li>Stream sockets(connection-oriented)</li>
-</ul>
-<h3 id=datagram-socketsconnectionless>Datagram sockets(connectionless)</h3>
-<p>Datagram sockets 是使用 UDP 封包來進行傳送，
+而研究了一下，在 TCP / IP 架構下，sockets 可以分為兩種</p><ul><li>Datagram sockets(connectionless)</li><li>Stream sockets(connection-oriented)</li></ul><h3 id=datagram-socketsconnectionless>Datagram sockets(connectionless)</h3><p>Datagram sockets 是使用 UDP 封包來進行傳送，
 其主要的特色是速度快但不能保證資料的完整性以及次序有可能會有誤；
-所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。</p>
-<h3 id=stream-socketsconnection-oriented>Stream sockets(connection-oriented)</h3>
-<p>而 Stream sockets 則是使用 TCP 封包來傳遞，
+所以大多是使用在廣播資訊或是傳送一些較不是那麼重要的內容。</p><h3 id=stream-socketsconnection-oriented>Stream sockets(connection-oriented)</h3><p>而 Stream sockets 則是使用 TCP 封包來傳遞，
 其因為會先需要確認 Server 和 Client 兩者連接狀態後再傳遞，
-故速度較慢一些，但至少能確認資料的有序性以及完整度。</p>
-<h3 id=簡單的總結>簡單的總結</h3>
-<p>以中華郵政的觀點來看，以結果來區分的話，
+故速度較慢一些，但至少能確認資料的有序性以及完整度。</p><h3 id=簡單的總結>簡單的總結</h3><p>以中華郵政的觀點來看，以結果來區分的話，
 我們可以簡略地將 UDP 視為平信、TCP 視為掛號信。
-而即時通訊的部分，依照上述的特色來看，就得選擇使用 TCP 的方式來進行溝通。</p>
-<h3 id=server-和-client-的溝通流程>Server 和 Client 的溝通流程</h3>
-<p>首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊，
+而即時通訊的部分，依照上述的特色來看，就得選擇使用 TCP 的方式來進行溝通。</p><h3 id=server-和-client-的溝通流程>Server 和 Client 的溝通流程</h3><p>首先，伺服器端和用戶端兩者必須使用同一類的封包才能互相通訊，
 意思便是指 Server 建立了一個 UDP Socket，Client 也必須使用 UDP Socket 才能兩者打通。
 而 Socket name 會需要包含 IP、Port、以及使用哪種協定；
 當 Client 端的 Socket 成功聯繫上 Server 端的 Socket 時，
-這兩者便形成一組 association。</p>
-<h3 id=ios-上的-socket-實作方式>iOS 上的 Socket 實作方式</h3>
-<p>我這邊是使用第三方套件的方式來協助實作，Github 上有不少相關的開源碼可以使用。</p>
-<ul>
-<li>socket.io</li>
-<li>CocoaAsyncSocket</li>
-</ul>
-<p>這篇就先以 CocoaAsyncSocket 作為內容主軸來當後面的說明。
+這兩者便形成一組 association。</p><h3 id=ios-上的-socket-實作方式>iOS 上的 Socket 實作方式</h3><p>我這邊是使用第三方套件的方式來協助實作，Github 上有不少相關的開源碼可以使用。</p><ul><li>socket.io</li><li>CocoaAsyncSocket</li></ul><p>這篇就先以 CocoaAsyncSocket 作為內容主軸來當後面的說明。
 比照上方的流程圖，首先我們要先建立一個 socket，再來進行 connect 的動作，
-之後相關的 callback，會以 delegate 的方式來做處理。</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=kd>import</span> <span class=nc>CocoaAsyncSocket</span>
-
-<span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>GCDAsyncSocket</span><span class=p>(</span><span class=n>delegate</span><span class=p>:</span> <span class=o>&lt;</span><span class=p>#</span><span class=n>T</span><span class=p>##</span><span class=n>GCDAsyncSocketDelegate</span><span class=p>?#</span><span class=o>&gt;</span><span class=p>,</span> <span class=n>delegateQueue</span><span class=p>:</span> <span class=o>&lt;</span><span class=p>#</span><span class=n>T</span><span class=p>##</span><span class=n>DispatchQueue</span><span class=p>?#</span><span class=o>&gt;</span><span class=p>)</span>
-<span class=k>do</span> <span class=p>{</span>
-    <span class=k>try</span> <span class=n>socket</span><span class=p>.</span><span class=n>connect</span><span class=p>(</span><span class=n>toHost</span><span class=p>:</span> <span class=n>Host</span><span class=p>,</span> <span class=n>onPort</span><span class=p>:</span> <span class=n>Port</span><span class=p>)</span>
-<span class=p>}</span> <span class=k>catch</span> <span class=p>{</span>
-    <span class=bp>print</span><span class=p>(</span><span class=n>error</span><span class=p>)</span>
-<span class=p>}</span>
-
-<span class=c1>// GCDAsyncSocketDelegate</span>
-<span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didConnectToHost</span> <span class=n>host</span><span class=p>:</span> <span class=nb>String</span><span class=p>,</span> <span class=n>port</span><span class=p>:</span> <span class=nb>UInt16</span><span class=p>)</span> <span class=p>{</span>
-    <span class=c1>// 連接上後，需要執行 readData 等候 Server 執行 writeData 的動作</span>
-    <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
-<span class=p>}</span>
-
-<span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didRead</span> <span class=n>data</span><span class=p>:</span> <span class=n>Data</span><span class=p>,</span> <span class=n>withTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
-    <span class=c1>// 讀完資料後，還是需要再執行一次 readData，來等候下一次的資料傳輸過來</span>
-    <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
-<span class=p>}</span>
-
-<span class=kd>func</span> <span class=nf>socketDidDisconnect</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>withError</span> <span class=n>err</span><span class=p>:</span> <span class=n>Error</span><span class=p>?)</span> <span class=p>{</span>
-    
-<span class=p>}</span>
-
-<span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didWriteDataWithTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
-    
-<span class=p>}</span>
-</code></pre></div><p>不過這邊要比較注意到的是，會需要主動的執行 readData 的動作，
-來告知底層，目前可以讀取傳輸進來的資料。</p>
-<p>在 RxSwift 內的實作方式
+之後相關的 callback，會以 delegate 的方式來做處理。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=line><span class=cl><span class=kd>import</span> <span class=nc>CocoaAsyncSocket</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>GCDAsyncSocket</span><span class=p>(</span><span class=n>delegate</span><span class=p>:</span> <span class=o>&lt;</span><span class=p>#</span><span class=n>T</span><span class=p>##</span><span class=n>GCDAsyncSocketDelegate</span><span class=p>?#</span><span class=o>&gt;</span><span class=p>,</span> <span class=n>delegateQueue</span><span class=p>:</span> <span class=o>&lt;</span><span class=p>#</span><span class=n>T</span><span class=p>##</span><span class=n>DispatchQueue</span><span class=p>?#</span><span class=o>&gt;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>do</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>try</span> <span class=n>socket</span><span class=p>.</span><span class=n>connect</span><span class=p>(</span><span class=n>toHost</span><span class=p>:</span> <span class=n>Host</span><span class=p>,</span> <span class=n>onPort</span><span class=p>:</span> <span class=n>Port</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span> <span class=k>catch</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=bp>print</span><span class=p>(</span><span class=n>error</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// GCDAsyncSocketDelegate</span>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didConnectToHost</span> <span class=n>host</span><span class=p>:</span> <span class=nb>String</span><span class=p>,</span> <span class=n>port</span><span class=p>:</span> <span class=nb>UInt16</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 連接上後，需要執行 readData 等候 Server 執行 writeData 的動作</span>
+</span></span><span class=line><span class=cl>    <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didRead</span> <span class=n>data</span><span class=p>:</span> <span class=n>Data</span><span class=p>,</span> <span class=n>withTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 讀完資料後，還是需要再執行一次 readData，來等候下一次的資料傳輸過來</span>
+</span></span><span class=line><span class=cl>    <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>socketDidDisconnect</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>withError</span> <span class=n>err</span><span class=p>:</span> <span class=n>Error</span><span class=p>?)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didWriteDataWithTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>不過這邊要比較注意到的是，會需要主動的執行 readData 的動作，
+來告知底層，目前可以讀取傳輸進來的資料。</p><p>在 RxSwift 內的實作方式
 讓 socket 的動作和事件是可被訂閱的，參考了一些實作的方式，
-讓 CocoaAsyncSocket 和 RxSwift 結合在一塊：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=c1>//</span>
-<span class=c1>//  RxCocoaAsyncSocket.swift</span>
-<span class=c1>//</span>
-<span class=c1>//  Created by 家齊 on 2017/7/14.</span>
-<span class=c1>//  Copyright © 2017年 張家齊. All rights reserved.</span>
-<span class=c1>//</span>
-<span class=kd>import</span> <span class=nc>Foundation</span>
-<span class=kd>import</span> <span class=nc>RxSwift</span>
-<span class=kd>import</span> <span class=nc>RxCocoa</span>
-<span class=kd>import</span> <span class=nc>CocoaAsyncSocket</span>
-
-<span class=kd>enum</span> <span class=nc>SocketEvent</span> <span class=p>{</span>
-    <span class=k>case</span> <span class=n>connected</span>
-    <span class=k>case</span> <span class=n>disconnected</span><span class=p>(</span><span class=n>Error</span><span class=p>?)</span>
-    <span class=k>case</span> <span class=n>data</span><span class=p>(</span><span class=n>Data</span><span class=p>)</span>
-<span class=p>}</span>
-
-<span class=kd>class</span> <span class=nc>RxCocoaAsyncSocketDelegateProxy</span><span class=p>:</span> <span class=n>DelegateProxy</span> <span class=p>{</span>
-    <span class=n>fileprivate</span> <span class=kd>let</span> <span class=nv>subject</span> <span class=p>=</span> <span class=n>PublishSubject</span><span class=p>&lt;</span><span class=n>SocketEvent</span><span class=p>&gt;()</span>
-    <span class=n>fileprivate</span> <span class=kr>weak</span> <span class=kd>var</span> <span class=nv>delegate</span><span class=p>:</span> <span class=n>GCDAsyncSocketDelegate</span><span class=p>?</span>
-    
-    <span class=kr>required</span> <span class=kd>init</span><span class=p>(</span><span class=n>parentObject</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>)</span> <span class=p>{</span>
-        <span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>parentObject</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocket</span>
-        <span class=n>delegate</span> <span class=p>=</span> <span class=n>socket</span><span class=p>?.</span><span class=n>delegate</span>
-        <span class=kc>super</span><span class=p>.</span><span class=kd>init</span><span class=p>(</span><span class=n>parentObject</span><span class=p>:</span> <span class=n>parentObject</span><span class=p>)</span>
-    <span class=p>}</span>
-    
-    <span class=kd>deinit</span> <span class=p>{</span>
-        <span class=n>subject</span><span class=p>.</span><span class=n>onCompleted</span><span class=p>()</span>
-    <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=kd>extension</span> <span class=nc>RxCocoaAsyncSocketDelegateProxy</span><span class=p>:</span> <span class=n>GCDAsyncSocketDelegate</span> <span class=p>{</span>
-    <span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didConnectToHost</span> <span class=n>host</span><span class=p>:</span> <span class=nb>String</span><span class=p>,</span> <span class=n>port</span><span class=p>:</span> <span class=nb>UInt16</span><span class=p>)</span> <span class=p>{</span>
-        <span class=n>subject</span><span class=p>.</span><span class=n>onNext</span><span class=p>(.</span><span class=n>connected</span><span class=p>)</span>
-        <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
-    <span class=p>}</span>
-    
-    <span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didRead</span> <span class=n>data</span><span class=p>:</span> <span class=n>Data</span><span class=p>,</span> <span class=n>withTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
-        <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
-        <span class=n>subject</span><span class=p>.</span><span class=n>onNext</span><span class=p>(.</span><span class=n>data</span><span class=p>(</span><span class=n>data</span><span class=p>))</span>
-    <span class=p>}</span>
-    
-    <span class=kd>func</span> <span class=nf>socketDidDisconnect</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>withError</span> <span class=n>err</span><span class=p>:</span> <span class=n>Error</span><span class=p>?)</span> <span class=p>{</span>
-        <span class=n>subject</span><span class=p>.</span><span class=n>onNext</span><span class=p>(.</span><span class=n>disconnected</span><span class=p>(</span><span class=n>err</span><span class=p>))</span>
-    <span class=p>}</span>
-    
-    <span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didWriteDataWithTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
-        
-    <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=kd>extension</span> <span class=nc>RxCocoaAsyncSocketDelegateProxy</span><span class=p>:</span> <span class=n>DelegateProxyType</span> <span class=p>{</span>
-    <span class=kd>static</span> <span class=kd>func</span> <span class=nf>setCurrentDelegate</span><span class=p>(</span><span class=kc>_</span> <span class=n>delegate</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>?,</span> <span class=n>toObject</span> <span class=n>object</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>)</span> <span class=p>{</span>
-        <span class=k>guard</span> <span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>object</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocket</span> <span class=k>else</span> <span class=p>{</span>
-            <span class=k>return</span>
-        <span class=p>}</span>
-        <span class=n>socket</span><span class=p>.</span><span class=n>delegate</span> <span class=p>=</span> <span class=n>delegate</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocketDelegate</span>
-    <span class=p>}</span>
-    
-    <span class=kd>static</span> <span class=kd>func</span> <span class=nf>currentDelegateFor</span><span class=p>(</span><span class=kc>_</span> <span class=n>object</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>)</span> <span class=p>-&gt;</span> <span class=nb>AnyObject</span><span class=p>?</span> <span class=p>{</span>
-        <span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>object</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocket</span>
-        <span class=k>return</span> <span class=n>socket</span><span class=p>?.</span><span class=n>delegate</span>
-    <span class=p>}</span>
-<span class=p>}</span>
-
-<span class=kd>extension</span> <span class=nc>Reactive</span> <span class=k>where</span> <span class=n>Base</span> <span class=p>:</span> <span class=n>GCDAsyncSocket</span> <span class=p>{</span>
-    <span class=kd>var</span> <span class=nv>response</span><span class=p>:</span> <span class=n>Observable</span><span class=p>&lt;</span><span class=n>SocketEvent</span><span class=p>&gt;</span> <span class=p>{</span>
-        <span class=k>return</span> <span class=n>RxCocoaAsyncSocketDelegateProxy</span><span class=p>.</span><span class=n>proxyForObject</span><span class=p>(</span><span class=n>base</span><span class=p>).</span><span class=n>subject</span>
-    <span class=p>}</span>
-    
-    <span class=kd>var</span> <span class=nv>connected</span><span class=p>:</span> <span class=n>Observable</span><span class=p>&lt;</span><span class=nb>Bool</span><span class=p>&gt;</span> <span class=p>{</span>
-        <span class=k>return</span> <span class=n>response</span><span class=p>.</span><span class=bp>filter</span><span class=p>({</span>
-            <span class=n>event</span> <span class=p>-&gt;</span> <span class=nb>Bool</span> <span class=k>in</span>
-            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
-            <span class=k>case</span> <span class=p>.</span><span class=n>connected</span><span class=p>,</span> <span class=p>.</span><span class=n>disconnected</span><span class=p>:</span>
-                <span class=k>return</span> <span class=kc>true</span>
-            <span class=k>default</span><span class=p>:</span>
-                <span class=k>return</span> <span class=kc>false</span>
-            <span class=p>}</span>
-        <span class=p>}).</span><span class=bp>map</span><span class=p>({</span>
-            <span class=n>event</span> <span class=k>in</span>
-            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
-            <span class=k>case</span> <span class=p>.</span><span class=n>connected</span><span class=p>:</span>
-                <span class=k>return</span> <span class=kc>true</span>
-            <span class=k>default</span><span class=p>:</span>
-                <span class=k>return</span> <span class=kc>false</span>
-            <span class=p>}</span>
-        <span class=p>})</span>
-    <span class=p>}</span>
-    
-    <span class=kd>var</span> <span class=nv>json</span><span class=p>:</span> <span class=n>Observable</span><span class=o>&lt;</span><span class=p>[</span><span class=nb>String</span><span class=p>:</span> <span class=nb>Any</span><span class=p>]?</span><span class=o>&gt;</span> <span class=p>{</span>
-        <span class=k>return</span> <span class=n>response</span><span class=p>.</span><span class=bp>filter</span><span class=p>({</span>
-            <span class=n>event</span> <span class=p>-&gt;</span> <span class=nb>Bool</span> <span class=k>in</span>
-            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
-            <span class=k>case</span> <span class=p>.</span><span class=n>data</span><span class=p>:</span>
-                <span class=k>return</span> <span class=kc>true</span>
-            <span class=k>default</span><span class=p>:</span>
-                <span class=k>return</span> <span class=kc>false</span>
-            <span class=p>}</span>
-        <span class=p>}).</span><span class=bp>map</span><span class=p>({</span>
-            <span class=n>event</span> <span class=k>in</span>
-            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
-            <span class=k>case</span> <span class=p>.</span><span class=n>data</span><span class=p>(</span><span class=kd>let</span> <span class=nv>data</span><span class=p>):</span>
-                <span class=k>return</span> <span class=p>(</span><span class=k>try</span><span class=p>?</span> <span class=n>JSONSerialization</span><span class=p>.</span><span class=n>jsonObject</span><span class=p>(</span><span class=n>with</span><span class=p>:</span> <span class=n>data</span><span class=p>,</span> <span class=n>options</span><span class=p>:</span> <span class=p>[]))</span> <span class=k>as</span><span class=p>?</span> <span class=p>[</span><span class=nb>String</span><span class=p>:</span> <span class=nb>Any</span><span class=p>]</span>
-            <span class=k>default</span><span class=p>:</span>
-                <span class=k>return</span> <span class=kc>nil</span>
-            <span class=p>}</span>
-        <span class=p>})</span>
-    <span class=p>}</span>
-<span class=p>}</span>
-</code></pre></div><p>有興趣的人可以參考參考！</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/socket/>Socket</a>
+讓 CocoaAsyncSocket 和 RxSwift 結合在一塊：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-swift data-lang=swift><span class=line><span class=cl><span class=c1>//</span>
+</span></span><span class=line><span class=cl><span class=c1>//  RxCocoaAsyncSocket.swift</span>
+</span></span><span class=line><span class=cl><span class=c1>//</span>
+</span></span><span class=line><span class=cl><span class=c1>//  Created by 家齊 on 2017/7/14.</span>
+</span></span><span class=line><span class=cl><span class=c1>//  Copyright © 2017年 張家齊. All rights reserved.</span>
+</span></span><span class=line><span class=cl><span class=c1>//</span>
+</span></span><span class=line><span class=cl><span class=kd>import</span> <span class=nc>Foundation</span>
+</span></span><span class=line><span class=cl><span class=kd>import</span> <span class=nc>RxSwift</span>
+</span></span><span class=line><span class=cl><span class=kd>import</span> <span class=nc>RxCocoa</span>
+</span></span><span class=line><span class=cl><span class=kd>import</span> <span class=nc>CocoaAsyncSocket</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>enum</span> <span class=nc>SocketEvent</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=n>connected</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=n>disconnected</span><span class=p>(</span><span class=n>Error</span><span class=p>?)</span>
+</span></span><span class=line><span class=cl>    <span class=k>case</span> <span class=n>data</span><span class=p>(</span><span class=n>Data</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>class</span> <span class=nc>RxCocoaAsyncSocketDelegateProxy</span><span class=p>:</span> <span class=n>DelegateProxy</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>fileprivate</span> <span class=kd>let</span> <span class=nv>subject</span> <span class=p>=</span> <span class=n>PublishSubject</span><span class=p>&lt;</span><span class=n>SocketEvent</span><span class=p>&gt;()</span>
+</span></span><span class=line><span class=cl>    <span class=n>fileprivate</span> <span class=kr>weak</span> <span class=kd>var</span> <span class=nv>delegate</span><span class=p>:</span> <span class=n>GCDAsyncSocketDelegate</span><span class=p>?</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kr>required</span> <span class=kd>init</span><span class=p>(</span><span class=n>parentObject</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>parentObject</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocket</span>
+</span></span><span class=line><span class=cl>        <span class=n>delegate</span> <span class=p>=</span> <span class=n>socket</span><span class=p>?.</span><span class=n>delegate</span>
+</span></span><span class=line><span class=cl>        <span class=kc>super</span><span class=p>.</span><span class=kd>init</span><span class=p>(</span><span class=n>parentObject</span><span class=p>:</span> <span class=n>parentObject</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kd>deinit</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>subject</span><span class=p>.</span><span class=n>onCompleted</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>extension</span> <span class=nc>RxCocoaAsyncSocketDelegateProxy</span><span class=p>:</span> <span class=n>GCDAsyncSocketDelegate</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didConnectToHost</span> <span class=n>host</span><span class=p>:</span> <span class=nb>String</span><span class=p>,</span> <span class=n>port</span><span class=p>:</span> <span class=nb>UInt16</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>subject</span><span class=p>.</span><span class=n>onNext</span><span class=p>(.</span><span class=n>connected</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didRead</span> <span class=n>data</span><span class=p>:</span> <span class=n>Data</span><span class=p>,</span> <span class=n>withTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>sock</span><span class=p>.</span><span class=n>readData</span><span class=p>(</span><span class=n>withTimeout</span><span class=p>:</span> <span class=o>-</span><span class=mi>1</span><span class=p>,</span> <span class=n>tag</span><span class=p>:</span> <span class=mi>0</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>subject</span><span class=p>.</span><span class=n>onNext</span><span class=p>(.</span><span class=n>data</span><span class=p>(</span><span class=n>data</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kd>func</span> <span class=nf>socketDidDisconnect</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>withError</span> <span class=n>err</span><span class=p>:</span> <span class=n>Error</span><span class=p>?)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>subject</span><span class=p>.</span><span class=n>onNext</span><span class=p>(.</span><span class=n>disconnected</span><span class=p>(</span><span class=n>err</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kd>func</span> <span class=nf>socket</span><span class=p>(</span><span class=kc>_</span> <span class=n>sock</span><span class=p>:</span> <span class=n>GCDAsyncSocket</span><span class=p>,</span> <span class=n>didWriteDataWithTag</span> <span class=n>tag</span><span class=p>:</span> <span class=nb>Int</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>extension</span> <span class=nc>RxCocoaAsyncSocketDelegateProxy</span><span class=p>:</span> <span class=n>DelegateProxyType</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>static</span> <span class=kd>func</span> <span class=nf>setCurrentDelegate</span><span class=p>(</span><span class=kc>_</span> <span class=n>delegate</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>?,</span> <span class=n>toObject</span> <span class=n>object</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>guard</span> <span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>object</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocket</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=n>socket</span><span class=p>.</span><span class=n>delegate</span> <span class=p>=</span> <span class=n>delegate</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocketDelegate</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kd>static</span> <span class=kd>func</span> <span class=nf>currentDelegateFor</span><span class=p>(</span><span class=kc>_</span> <span class=n>object</span><span class=p>:</span> <span class=nb>AnyObject</span><span class=p>)</span> <span class=p>-&gt;</span> <span class=nb>AnyObject</span><span class=p>?</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=kd>let</span> <span class=nv>socket</span> <span class=p>=</span> <span class=n>object</span> <span class=k>as</span><span class=p>?</span> <span class=n>GCDAsyncSocket</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>socket</span><span class=p>?.</span><span class=n>delegate</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=kd>extension</span> <span class=nc>Reactive</span> <span class=k>where</span> <span class=n>Base</span> <span class=p>:</span> <span class=n>GCDAsyncSocket</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nv>response</span><span class=p>:</span> <span class=n>Observable</span><span class=p>&lt;</span><span class=n>SocketEvent</span><span class=p>&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>RxCocoaAsyncSocketDelegateProxy</span><span class=p>.</span><span class=n>proxyForObject</span><span class=p>(</span><span class=n>base</span><span class=p>).</span><span class=n>subject</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nv>connected</span><span class=p>:</span> <span class=n>Observable</span><span class=p>&lt;</span><span class=nb>Bool</span><span class=p>&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>response</span><span class=p>.</span><span class=bp>filter</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>            <span class=n>event</span> <span class=p>-&gt;</span> <span class=nb>Bool</span> <span class=k>in</span>
+</span></span><span class=line><span class=cl>            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>case</span> <span class=p>.</span><span class=n>connected</span><span class=p>,</span> <span class=p>.</span><span class=n>disconnected</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>            <span class=k>default</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}).</span><span class=bp>map</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>            <span class=n>event</span> <span class=k>in</span>
+</span></span><span class=line><span class=cl>            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>case</span> <span class=p>.</span><span class=n>connected</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>            <span class=k>default</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kd>var</span> <span class=nv>json</span><span class=p>:</span> <span class=n>Observable</span><span class=o>&lt;</span><span class=p>[</span><span class=nb>String</span><span class=p>:</span> <span class=nb>Any</span><span class=p>]?</span><span class=o>&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>response</span><span class=p>.</span><span class=bp>filter</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>            <span class=n>event</span> <span class=p>-&gt;</span> <span class=nb>Bool</span> <span class=k>in</span>
+</span></span><span class=line><span class=cl>            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>case</span> <span class=p>.</span><span class=n>data</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>true</span>
+</span></span><span class=line><span class=cl>            <span class=k>default</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>}).</span><span class=bp>map</span><span class=p>({</span>
+</span></span><span class=line><span class=cl>            <span class=n>event</span> <span class=k>in</span>
+</span></span><span class=line><span class=cl>            <span class=k>switch</span> <span class=n>event</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>case</span> <span class=p>.</span><span class=n>data</span><span class=p>(</span><span class=kd>let</span> <span class=nv>data</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=p>(</span><span class=k>try</span><span class=p>?</span> <span class=n>JSONSerialization</span><span class=p>.</span><span class=n>jsonObject</span><span class=p>(</span><span class=n>with</span><span class=p>:</span> <span class=n>data</span><span class=p>,</span> <span class=n>options</span><span class=p>:</span> <span class=p>[]))</span> <span class=k>as</span><span class=p>?</span> <span class=p>[</span><span class=nb>String</span><span class=p>:</span> <span class=nb>Any</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>            <span class=k>default</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>nil</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=p>})</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>有興趣的人可以參考參考！</p></section><footer class=article-footer><section class=article-tags><a href=/tags/socket/>Socket</a>
 <a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>
-<div class=article-details>
-<h2 class=article-title>iOS 開發環境設置</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/compactmap-vs-flatmap/>
-<div class=article-details>
-<h2 class=article-title>CompactMap vs flatMap</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/>
-<div class=article-details>
-<h2 class=article-title>Markdown 嵌入 YouTube</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/fastlane-503-service-temporarily-unavailable/>
-<div class=article-details>
-<h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<a href=/tags/swift/>Swift</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title></h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/><div class=article-details><h2 class=article-title>iOS 開發環境設置</h2></div></a></article><article><a href=/p/compactmap-vs-flatmap/><div class=article-details><h2 class=article-title>CompactMap vs flatMap</h2></div></a></article><article><a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/><div class=article-details><h2 class=article-title>Markdown 嵌入 YouTube</h2></div></a></article><article><a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/><div class=article-details><h2 class=article-title>發票收集雞 - 自己的發票自己收</h2></div></a></article><article><a href=/p/fastlane-503-service-temporarily-unavailable/><div class=article-details><h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//archie-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Archie</section><section class=powerby><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li>
-<ol>
-<li><a href=#datagram-socketsconnectionless>Datagram sockets(connectionless)</a></li>
-<li><a href=#stream-socketsconnection-oriented>Stream sockets(connection-oriented)</a></li>
-<li><a href=#簡單的總結>簡單的總結</a></li>
-<li><a href=#server-和-client-的溝通流程>Server 和 Client 的溝通流程</a></li>
-<li><a href=#ios-上的-socket-實作方式>iOS 上的 Socket 實作方式</a></li>
-</ol>
-</li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#datagram-socketsconnectionless>Datagram sockets(connectionless)</a></li><li><a href=#stream-socketsconnection-oriented>Stream sockets(connection-oriented)</a></li><li><a href=#簡單的總結>簡單的總結</a></li><li><a href=#server-和-client-的溝通流程>Server 和 Client 的溝通流程</a></li><li><a href=#ios-上的-socket-實作方式>iOS 上的 Socket 實作方式</a></li></ol></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

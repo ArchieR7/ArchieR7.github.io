@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AWS on Archie</title><link>https://www.archie.tw/tags/aws/</link><description>Recent content in AWS on Archie</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 28 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.archie.tw/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS Certificate Manager 申請流程</title><link>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 28 Nov 2019 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/aws-certificate-manager-%E7%94%B3%E8%AB%8B%E6%B5%81%E7%A8%8B/</guid><description>AWS Certificate Manager 申請流程 我的這個網站架設在 AWS 的 EC2 上，搭配 Route 53 和 Load Balancer 以及這篇的主角 AWS Certificate Manager，這邊要迅速的記錄操作流程！
 環境架設的文章寫在這
-流程 申請憑證
-新增網域名稱
-這邊要注意的是，像我之前是申請 *.Archie.tw，這會導致一個問題就是 https://Archie.tw 就不會符合申請的格式，而我一直到昨天才修正這件事⋯⋯ 這邊建議是填寫 www.Archie.tw 和 Archie.tw，這樣不管使用者有沒有補上 www 都可以取得信任的大鎖🔒。
-選取驗證方式
-如果你是和我一樣，使用 Route 53，就選擇 DNS 驗證
-新增標籤
-這邊看個人，算是一個 tag 提醒自己用而已，我是沒有填寫。
+流程 申請憑證 新增網域名稱 這邊要注意的是，像我之前是申請 *.Archie.tw，這會導致一個問題就是 https://Archie.tw 就不會符合申請的格式，而我一直到昨天才修正這件事⋯⋯ 這邊建議是填寫 www.Archie.tw 和 Archie.tw，這樣不管使用者有沒有補上 www 都可以取得信任的大鎖🔒。
+選取驗證方式 如果你是和我一樣，使用 Route 53，就選擇 DNS 驗證
+新增標籤 這邊看個人，算是一個 tag 提醒自己用而已，我是沒有填寫。
 最後 AWS Certificate Manager 就會要求你
 就直接按下去就好了👌
 以上便是透過 AWS Certificate Manager 申請憑證的流程，搞清楚的話不用幾分鐘就可以處理好了👍</description></item></channel></rss>

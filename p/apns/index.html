@@ -1,266 +1,57 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
- Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。  Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
+Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。 Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
 Remote notification 遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！）， 在 AppDelegate.swift 註冊那些的就不寫在這了～ 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作， 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD 但總會有需要自己打推播測試、或是開發自己 app 的時候， 這邊就來談談 iOS 開發者該怎麼做！
-APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 ."><title>APNs</title>
-<link rel=canonical href=https://www.archie.tw/p/apns/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="APNs">
-<meta property="og:description" content="APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
- Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。  Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
+APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 ."><title>APNs</title><link rel=canonical href=https://www.archie.tw/p/apns/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="APNs"><meta property="og:description" content="APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
+Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。 Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
 Remote notification 遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！）， 在 AppDelegate.swift 註冊那些的就不寫在這了～ 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作， 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD 但總會有需要自己打推播測試、或是開發自己 app 的時候， 這邊就來談談 iOS 開發者該怎麼做！
-APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 .">
-<meta property="og:url" content="https://www.archie.tw/p/apns/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2017-06-27T00:00:00+00:00"><meta property="article:modified_time" content="2017-06-27T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="APNs">
-<meta name=twitter:description content="APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
- Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。  Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
+APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 ."><meta property="og:url" content="https://www.archie.tw/p/apns/"><meta property="og:site_name" content="Archie"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2017-06-27T00:00:00+00:00"><meta property="article:modified_time" content="2017-06-27T00:00:00+00:00"><meta name=twitter:site content="@ChangArchie"><meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="APNs"><meta name=twitter:description content="APNs（ Apple Push Notification service） 相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生； 簡單來說，它就是推播的功能。 而推播其實有分成兩種：
+Local notification Remote notification 這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。 Local notification 本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。 這邊附上以區域範圍為觸發條件的推播寫法： https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！）， 這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。
 Remote notification 遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！）， 在 AppDelegate.swift 註冊那些的就不寫在這了～ 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作， 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD 但總會有需要自己打推播測試、或是開發自己 app 的時候， 這邊就來談談 iOS 開發者該怎麼做！
-APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 .">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
-🍎 開發心得
-</a>
-</header>
-<h2 class=article-title>
-<a href=/p/apns/>APNs</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Jun 27, 2017</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h3 id=apns-apple-push-notification-service>APNs（ Apple Push Notification service）</h3>
-<p>相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生；
+APNs key 以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案， 其中不同的 bundle identifier 會配對到不同的 .p12 檔案； 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key， 上架 20 個有推播功能的 app，就需要維護 20 組 ."><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-149460095-2","auto"),ga("send","pageview"))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span></span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>🍎 開發心得</a></header><h2 class=article-title><a href=/p/apns/>APNs</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Jun 27, 2017</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading></time></div></footer></div></header><section class=article-content><h3 id=apns-apple-push-notification-service>APNs（ Apple Push Notification service）</h3><p>相信有在開發 iOS app 的開發者，對於這個詞應該都不會太陌生；
 簡單來說，它就是推播的功能。
-而推播其實有分成兩種：</p>
-<ul>
-<li>Local notification</li>
-<li>Remote notification
-這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。</li>
-</ul>
-<h3 id=local-notification>Local notification</h3>
-<p>本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。
+而推播其實有分成兩種：</p><ul><li>Local notification</li><li>Remote notification
+這兩者的差異就如同名字的一般，前者是本地的通知，後者為遠端的通知。</li></ul><h3 id=local-notification>Local notification</h3><p>本地推播在 iOS 10 以後，可以參考 UserNotifications 這個 framework。
 這邊附上以區域範圍為觸發條件的推播寫法：
 <a class=link href=https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae target=_blank rel=noopener>https://gist.github.com/ArchieR7/85ee0a2d8cdd652d78d6c08eebfd0fae</a>
 而鬧鐘那種概念的，或是遊戲提醒（例如遊戲的愛心已經回滿了，趕快回來玩哦！），
-這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。</p>
-<h3 id=remote-notification>Remote notification</h3>
-<p>遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！），
+這種以時間作為觸發條件的，則是設定 notification.fireDate，給它一個 Date 便會在那時候觸發。</p><h3 id=remote-notification>Remote notification</h3><p>遠端的推播則是如同聊天軟體常常收到的那種推播（ＯＯＯ傳送貼圖給您！），
 在 AppDelegate.swift 註冊那些的就不寫在這了～
 如果是在公司上班或者和後端合作，寫完註冊推播及回傳 deviceToken 和收到之後要幹嘛的動作，
 通常就不會碰到「該如何打推播給 App」的問題，因為 iOS 只需要知道收到該怎辦XD
 但總會有需要自己打推播測試、或是開發自己 app 的時候，
-這邊就來談談 iOS 開發者該怎麼做！</p>
-<h3 id=apns-key>APNs key</h3>
-<p>以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案，
+這邊就來談談 iOS 開發者該怎麼做！</p><h3 id=apns-key>APNs key</h3><p>以往我們在產生 APNs key 的時候，是會得到一組有期限的 .p12 檔案，
 其中不同的 bundle identifier 會配對到不同的 .p12 檔案；
 這是一件蠻麻煩的事情，我們需要管理不同 App 的 APNs key，
-上架 20 個有推播功能的 app，就需要維護 20 組 .p12 檔案。</p>
-<h3 id=有沒有比較方便的做法>有沒有比較方便的做法？</h3>
-<p>答案是，有！
+上架 20 個有推播功能的 app，就需要維護 20 組 .p12 檔案。</p><h3 id=有沒有比較方便的做法>有沒有比較方便的做法？</h3><p>答案是，有！
 如果你是看完這篇文章，才開始接觸推播的話，
 那你應該已經找不太到 .p12 要去哪裡產生了！
 前陣子是 .p12 和新的 .p8 同時共存在 Apple Developer 的頁面，
-而目前畫面則長這個樣子：</p>
-<p>在產生 keys 的頁面，我們可以看到只剩下「One key is used for all of your apps.」這種的（.p8），
+而目前畫面則長這個樣子：</p><p>在產生 keys 的頁面，我們可以看到只剩下「One key is used for all of your apps.」這種的（.p8），
 也就是說，只需要一把 key 便可以打給你所有開發的 app，且它並不會過期！
 產生完 key 之後，只有在當下可以下載 .p8 的檔案；
 若你當下沒下載，就按完成的話，之後點開則會發現 Download 的按鈕是灰色不可按的，
-所以需要好好保存，別把它搞丟了，否則只能夠重新產生一把新的來替換。</p>
-<h3 id=接下來>接下來？</h3>
-<p>有了 .p8 檔案之後，我是用 Python 來實作打推播的動作，附上我的檔案</p>
-<p>apns_key_id = xxxxxxxxxx（你剛剛下載下來的 .p8 檔名）
+所以需要好好保存，別把它搞丟了，否則只能夠重新產生一把新的來替換。</p><h3 id=接下來>接下來？</h3><p>有了 .p8 檔案之後，我是用 Python 來實作打推播的動作，附上我的檔案</p><p>apns_key_id = xxxxxxxxxx（你剛剛下載下來的 .p8 檔名）
 apns_key_name = ‘AuthKey_xxxxxxxxxx.p8’
 team_id = 你的 developer team id
-bundle_id = 推播要送到哪個 bundle id</p>
-<h3 id=建置-python-環境>建置 Python 環境</h3>
-<p>這邊會需要安裝一些 python 的套件：</p>
-<ul>
-<li>cryptography</li>
-<li>pyjwt</li>
-<li>hyper
+bundle_id = 推播要送到哪個 bundle id</p><h3 id=建置-python-環境>建置 Python 環境</h3><p>這邊會需要安裝一些 python 的套件：</p><ul><li>cryptography</li><li>pyjwt</li><li>hyper
 可以下載 requirements.txt 放到和 .p8 及剛剛 .py 的同個資料夾，並執行
 pip install -r requirements.txt
 便會將所需要的套件下載安裝；
-如果沒有安裝 pip⋯⋯建議可以自行先去 Google 一下XDD</li>
-</ul>
-<h3 id=萬事俱備後>萬事俱備後</h3>
-<p>把上述的檔案更改好後，和 .p8 放到同一個資料夾，接著開啟 terminal 執行 python。</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=kn>from</span> <span class=nn>apns</span> <span class=kn>import</span> <span class=n>ApnsPusher</span>
-<span class=n>ApnsPusher</span><span class=p>()</span><span class=o>.</span><span class=n>push</span><span class=p>(</span><span class=s2>&#34;Test Title&#34;</span><span class=p>,</span> <span class=s2>&#34;Test Body&#34;</span><span class=p>,</span> <span class=s2>&#34;device token&#34;</span><span class=p>,</span> <span class=kc>False</span><span class=p>)</span>
-</code></pre></div><p>Test Title：推播的標題
+如果沒有安裝 pip⋯⋯建議可以自行先去 Google 一下XDD</li></ul><h3 id=萬事俱備後>萬事俱備後</h3><p>把上述的檔案更改好後，和 .p8 放到同一個資料夾，接著開啟 terminal 執行 python。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>apns</span> <span class=kn>import</span> <span class=n>ApnsPusher</span>
+</span></span><span class=line><span class=cl><span class=n>ApnsPusher</span><span class=p>()</span><span class=o>.</span><span class=n>push</span><span class=p>(</span><span class=s2>&#34;Test Title&#34;</span><span class=p>,</span> <span class=s2>&#34;Test Body&#34;</span><span class=p>,</span> <span class=s2>&#34;device token&#34;</span><span class=p>,</span> <span class=kc>False</span><span class=p>)</span>
+</span></span></code></pre></div><p>Test Title：推播的標題
 Test Body：推播的內容
 device token：要收到推播的裝置 token
 False：我最後一個參數是來控制要打給 production server 還是 development server
 Python 和 Swift 看起來有點類似，所以應該不難看懂 APNs.py 是在幹嘛～
-有問題可以留言給我，或是留在 gist 上！</p>
-<h3 id=更新>更新：</h3>
-<p>我將文中內的內容整理至 <a class=link href=https://github.com/ArchieR7/APNsPusher target=_blank rel=noopener>Github</a> 上，有興趣的人也可以直接去那 clone 下來研究。</p>
-<h3 id=最後>最後</h3>
-<p>如果這篇文章對你有一點點幫助的話，可以幫我點個廣告來維持這網站的伺服器月費，
-或是在相關的 gist 上給個 Star 鼓勵鼓勵！</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/>
-<div class=article-details>
-<h2 class=article-title>RxSwift 6 上線啦！</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/>
-<div class=article-details>
-<h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>iOS App launch time 心得</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+有問題可以留言給我，或是留在 gist 上！</p><h3 id=更新>更新：</h3><p>我將文中內的內容整理至 <a class=link href=https://github.com/ArchieR7/APNsPusher target=_blank rel=noopener>Github</a> 上，有興趣的人也可以直接去那 clone 下來研究。</p><h3 id=最後>最後</h3><p>如果這篇文章對你有一點點幫助的話，可以幫我點個廣告來維持這網站的伺服器月費，
+或是在相關的 gist 上給個 Star 鼓勵鼓勵！</p></section><footer class=article-footer><section class=article-tags><a href=/tags/ios/>iOS</a>
+<a href=/tags/swift/>Swift</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title></h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/><div class=article-details><h2 class=article-title>發票收集雞 - 自己的發票自己收</h2></div></a></article><article><a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>Apple Watch App 開發除錯心得</h2></div></a></article><article><a href=/p/rxswift-6-%E4%B8%8A%E7%B7%9A%E5%95%A6/><div class=article-details><h2 class=article-title>RxSwift 6 上線啦！</h2></div></a></article><article><a href=/p/ios-%E9%80%86%E5%90%91%E4%B8%8B%E8%BC%89-instagram-%E5%8B%95%E6%85%8B%E7%85%A7%E7%89%87/><div class=article-details><h2 class=article-title>【iOS 逆向】下載 Instagram 動態照片</h2></div></a></article><article><a href=/p/ios-app-launch-time-%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>iOS App launch time 心得</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//archie-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Archie</section><section class=powerby><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li>
-<ol>
-<li><a href=#apns-apple-push-notification-service>APNs（ Apple Push Notification service）</a></li>
-<li><a href=#local-notification>Local notification</a></li>
-<li><a href=#remote-notification>Remote notification</a></li>
-<li><a href=#apns-key>APNs key</a></li>
-<li><a href=#有沒有比較方便的做法>有沒有比較方便的做法？</a></li>
-<li><a href=#接下來>接下來？</a></li>
-<li><a href=#建置-python-環境>建置 Python 環境</a></li>
-<li><a href=#萬事俱備後>萬事俱備後</a></li>
-<li><a href=#更新>更新：</a></li>
-<li><a href=#最後>最後</a></li>
-</ol>
-</li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#apns-apple-push-notification-service>APNs（ Apple Push Notification service）</a></li><li><a href=#local-notification>Local notification</a></li><li><a href=#remote-notification>Remote notification</a></li><li><a href=#apns-key>APNs key</a></li><li><a href=#有沒有比較方便的做法>有沒有比較方便的做法？</a></li><li><a href=#接下來>接下來？</a></li><li><a href=#建置-python-環境>建置 Python 環境</a></li><li><a href=#萬事俱備後>萬事俱備後</a></li><li><a href=#更新>更新：</a></li><li><a href=#最後>最後</a></li></ol></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

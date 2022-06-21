@@ -1,284 +1,30 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
 紙本發票的減少 在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。
 雲端發票專屬獎 而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！
 基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。
- 
 為什麼寫這個 App 主要是以自己的需求出發，來練一些技術，在 SwiftUI 推出後一直都還沒有機會拿來作為一個產品的開發架構，於是便起心動念開工！
-使用到了什麼服務和技術  🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷  發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。"><title>發票收集雞 - 自己的發票自己收</title>
-<link rel=canonical href=https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="發票收集雞 - 自己的發票自己收">
-<meta property="og:description" content="發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
+使用到了什麼服務和技術 🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷 發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。
+訂閱制 這邊來聊一下為什麼這次會推出訂閱制的付費方式，主要為 Firebase 的部分功能，如 Cloud Functions 的使用，已經從免費方案中被排除，需要開啟 Blaze 方案（用多少付多少）才能夠開啟。 以及之後打算做的功能需要使用到 Storage，這個東西基本上也是照流量來計費的，於是在算了一下之後決定，部分功能可以透過廣告收益來支付，而其他比較現實的部分就得要使用者付費才能開啟了。"><title>發票收集雞 - 自己的發票自己收</title><link rel=canonical href=https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="發票收集雞 - 自己的發票自己收"><meta property="og:description" content="發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
 紙本發票的減少 在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。
 雲端發票專屬獎 而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！
 基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。
- 
 為什麼寫這個 App 主要是以自己的需求出發，來練一些技術，在 SwiftUI 推出後一直都還沒有機會拿來作為一個產品的開發架構，於是便起心動念開工！
-使用到了什麼服務和技術  🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷  發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。">
-<meta property="og:url" content="https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:tag" content="SwiftUI"><meta property="article:published_time" content="2021-08-27T00:00:00+00:00"><meta property="article:modified_time" content="2021-08-27T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="發票收集雞 - 自己的發票自己收">
-<meta name=twitter:description content="發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
+使用到了什麼服務和技術 🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷 發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。
+訂閱制 這邊來聊一下為什麼這次會推出訂閱制的付費方式，主要為 Firebase 的部分功能，如 Cloud Functions 的使用，已經從免費方案中被排除，需要開啟 Blaze 方案（用多少付多少）才能夠開啟。 以及之後打算做的功能需要使用到 Storage，這個東西基本上也是照流量來計費的，於是在算了一下之後決定，部分功能可以透過廣告收益來支付，而其他比較現實的部分就得要使用者付費才能開啟了。"><meta property="og:url" content="https://www.archie.tw/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/"><meta property="og:site_name" content="Archie"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:tag" content="SwiftUI"><meta property="article:published_time" content="2021-08-27T00:00:00+00:00"><meta property="article:modified_time" content="2021-08-27T00:00:00+00:00"><meta name=twitter:site content="@ChangArchie"><meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="發票收集雞 - 自己的發票自己收"><meta name=twitter:description content="發票收集雞 八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二
 紙本發票的減少 在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。
 雲端發票專屬獎 而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！
 基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。
- 
 為什麼寫這個 App 主要是以自己的需求出發，來練一些技術，在 SwiftUI 推出後一直都還沒有機會拿來作為一個產品的開發架構，於是便起心動念開工！
-使用到了什麼服務和技術  🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷  發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>
-🍎 開發心得
-</a>
-</header>
-<h2 class=article-title>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>發票收集雞 - 自己的發票自己收</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Aug 27, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<h1 id=發票收集雞httpsappsapplecomtwapp發票收集雞id1575857521><a class=link href=https://apps.apple.com/tw/app/%e7%99%bc%e7%a5%a8%e6%94%b6%e9%9b%86%e9%9b%9e/id1575857521 target=_blank rel=noopener>發票收集雞</a></h1>
-<p>八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二</p>
-<h3 id=紙本發票的減少>紙本發票的減少</h3>
-<p>在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。</p>
-<h3 id=雲端發票專屬獎httpswwweinvoicenatgovtwein_uploadhtmlesqesq801whtml><a class=link href=https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ801W.html target=_blank rel=noopener>雲端發票專屬獎</a></h3>
-<p>而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！</p>
-<p>基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。</p>
-<p><figure>
-<a href=/../img/image-1630032452058.png>
-<img src=/../img/image-1630032452058.png loading=lazy>
-</a>
-</figure></p>
-<h2 id=為什麼寫這個-app>為什麼寫這個 App</h2>
-<p>主要是以自己的需求出發，來練一些技術，在 SwiftUI 推出後一直都還沒有機會拿來作為一個產品的開發架構，於是便起心動念開工！</p>
-<h3 id=使用到了什麼服務和技術>使用到了什麼服務和技術</h3>
-<ul>
-<li>🆕 SwiftUI：嘗試以 <a class=link href=https://github.com/nalexn/clean-architecture-swiftui target=_blank rel=noopener>Clean architechture</a> 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM</li>
-<li>Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore</li>
-<li>CoreData：搭配 CloudKit 作為使用者資料備份的地方</li>
-<li>🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database</li>
-<li>🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動</li>
-<li>RevenueCat：作為 In App Purchase 的管理機制</li>
-<li>🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷</li>
-</ul>
-<h2 id=發票收集雞的營利方式>發票收集雞的營利方式</h2>
-<h3 id=廣告>廣告</h3>
-<p>透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。</p>
-<h3 id=訂閱制>訂閱制</h3>
-<p>這邊來聊一下為什麼這次會推出訂閱制的付費方式，主要為 Firebase 的部分功能，如 Cloud Functions 的使用，已經從免費方案中被排除，需要開啟 Blaze 方案（用多少付多少）才能夠開啟。
-以及之後打算做的功能需要使用到 Storage，這個東西基本上也是照流量來計費的，於是在算了一下之後決定，部分功能可以透過廣告收益來支付，而其他比較現實的部分就得要使用者付費才能開啟了。</p>
-<p>當然，如果你不喜歡看下面一條廣告擺在那的話，可以選擇直接選擇訂閱制的方式！</p>
-<h3 id=只有上述這兩種營利模式>只有上述這兩種營利模式</h3>
-<blockquote>
-<p>沒有任何一家公司是慈善機構</p>
-</blockquote>
-<p>這個專案對於我而言，能夠得到利益的地方就是這些少少的來源；而若當一個 App 沒有任何付費制度或是廣告等，那大家可以想想看他們是要怎麼賺錢？</p>
-<p>基本上其餘的發票應用都是拿你的資料去變現的，像是不同的網購平台就會想取得其他家平台的消費資料來做一些分析和廣告的評估等。</p>
-<p>這部分點到為止，而我也是不想要把自己的資料被拿去販售和利用所以選擇自己寫一個。</p>
-<h2 id=目前支援的功能>目前支援的功能</h2>
-<p>大家可以在<a class=link href=https://archiechang.notion.site/aa73fb60d50f4013992f682a1760325b target=_blank rel=noopener>發票收集雞的許願板</a>查看我目前的開發進度和預計上線的功能。</p>
-<p><figure>
-<a href=/../img/image-1630032426248.png>
-<img src=/../img/image-1630032426248.png loading=lazy>
-</a>
-</figure></p>
-<h2 id=臉書社團httpswwwfacebookcomgroupsinvoicechickenpubliclocaletw_tw><a class=link href="https://www.facebook.com/groups/invoice.chicken.public?locale=tw_TW" target=_blank rel=noopener>臉書社團</a></h2>
-<p>如果有什麼關於這個 App 想討論、想新增的功能（或是覺得 UX/UI 太醜）都可以直接來這邊討論！</p>
-<h3 id=開發歷程>開發歷程</h3>
-<p>在經過幾次的 rejected 之後，終於在 2021/8/26 23:20 上線啦！</p>
-<p><figure>
-<a href=/../img/image-1630029996827.png>
-<img src=/../img/image-1630029996827.png loading=lazy>
-</a>
-</figure></p>
-<p>其主要的 rejected 原因為幾點</p>
-<ul>
-<li>沒有放上 EULA：這次新學到的是原來可以使用 <a class=link href=https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ target=_blank rel=noopener>Apple 提供的公版</a></li>
-<li>已經有其他發票應用：這部分就要直接回覆這個 App 和其他發票應用有什麼不同</li>
-</ul>
-<h3 id=最後寫給使用情境和我類似的你>最後，寫給使用情境和我類似的你</h3>
-<ul>
-<li>如果你平常也都是存載具，只是想有個查看發票明細的地方</li>
-<li>如果你記帳都是自己用自己習慣的表格紀錄，只需要有個工具幫你匯出發票資料</li>
-<li>如果你習慣用 Apple Pay 付款，想直接在同一個畫面選擇載具出來刷</li>
-<li>如果你不想要發票資料和載具驗證碼存在別人的伺服器之中（記得改驗證碼讓其他 App 無法代登入取得你的資料）</li>
-</ul>
-<p>或者是有其他使用情境我沒想到的，都歡迎提出來，我每週都會撥時間來維護這個 App 😂</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
+使用到了什麼服務和技術 🆕 SwiftUI：嘗試以 Clean architechture 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore CoreData：搭配 CloudKit 作為使用者資料備份的地方 🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database 🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動 RevenueCat：作為 In App Purchase 的管理機制 🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷 發票收集雞的營利方式 廣告 透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。
+訂閱制 這邊來聊一下為什麼這次會推出訂閱制的付費方式，主要為 Firebase 的部分功能，如 Cloud Functions 的使用，已經從免費方案中被排除，需要開啟 Blaze 方案（用多少付多少）才能夠開啟。 以及之後打算做的功能需要使用到 Storage，這個東西基本上也是照流量來計費的，於是在算了一下之後決定，部分功能可以透過廣告收益來支付，而其他比較現實的部分就得要使用者付費才能開啟了。"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-149460095-2","auto"),ga("send","pageview"))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span></span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E9%96%8B%E7%99%BC%E5%BF%83%E5%BE%97/>🍎 開發心得</a></header><h2 class=article-title><a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>發票收集雞 - 自己的發票自己收</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Aug 27, 2021</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading></time></div></footer></div></header><section class=article-content><h1 id=發票收集雞httpsappsapplecomtwapp發票收集雞id1575857521><a class=link href=https://apps.apple.com/tw/app/%e7%99%bc%e7%a5%a8%e6%94%b6%e9%9b%86%e9%9b%9e/id1575857521 target=_blank rel=noopener>發票收集雞</a></h1><p>八月份開始，我拿著去年年初申請的財政部發票應用 API 來做這個個人專案，其主要的功能都圍繞著雲端發票為主，原因為二</p><h3 id=紙本發票的減少>紙本發票的減少</h3><p>在財政部的推動下，傳統發票的開立已經比以往少去甚多，取而代之的是電子發票和雲端發票。</p><h3 id=雲端發票專屬獎httpswwweinvoicenatgovtwein_uploadhtmlesqesq801whtml><a class=link href=https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ801W.html target=_blank rel=noopener>雲端發票專屬獎</a></h3><p>而在推動無紙化的過程中，政府加碼開立雲端發票專屬獎，像是最近一期的總獎金為 5.62 億元（100 萬 30 組、2,000 元 16,000 組、500 元 100 萬組）。所以基本上我自己的話，能存載具就會存載具；而這部分另一個優勢是，可以自動對獎並匯入至指定的帳戶！</p><p>基於上述兩個原因，我每兩個月會需要對獎的發票數量銳減至十幾張，而這樣的話，對於我而言也就少了需要人工對獎的功能。</p><p><figure><a href=/../img/image-1630032452058.png><img src=/../img/image-1630032452058.png loading=lazy></a></figure></p><h2 id=為什麼寫這個-app>為什麼寫這個 App</h2><p>主要是以自己的需求出發，來練一些技術，在 SwiftUI 推出後一直都還沒有機會拿來作為一個產品的開發架構，於是便起心動念開工！</p><h3 id=使用到了什麼服務和技術>使用到了什麼服務和技術</h3><ul><li>🆕 SwiftUI：嘗試以 <a class=link href=https://github.com/nalexn/clean-architecture-swiftui target=_blank rel=noopener>Clean architechture</a> 作為架構，而非過往在 UIKit 自己所熟悉的 MVVM</li><li>Firebase：目前使用到 Auth、Crashlytics、Cloud functions、Storage 和 Firestore</li><li>CoreData：搭配 CloudKit 作為使用者資料備份的地方</li><li>🆕 CloudKit：嘗試使用 CloudKit 來取代其他的 remote database</li><li>🆕 Apple Wallet：在 Cloud functions 上寫了一個動態產生 PKPass 的功能並和 app 互動</li><li>RevenueCat：作為 In App Purchase 的管理機制</li><li>🆕 訂閱制：第一次推出訂閱制的服務，其主要的費用會用來支付上述的一些開銷</li></ul><h2 id=發票收集雞的營利方式>發票收集雞的營利方式</h2><h3 id=廣告>廣告</h3><p>透過一些橫幅和一些功能類型啟動時的插頁廣告作為營利方式。</p><h3 id=訂閱制>訂閱制</h3><p>這邊來聊一下為什麼這次會推出訂閱制的付費方式，主要為 Firebase 的部分功能，如 Cloud Functions 的使用，已經從免費方案中被排除，需要開啟 Blaze 方案（用多少付多少）才能夠開啟。
+以及之後打算做的功能需要使用到 Storage，這個東西基本上也是照流量來計費的，於是在算了一下之後決定，部分功能可以透過廣告收益來支付，而其他比較現實的部分就得要使用者付費才能開啟了。</p><p>當然，如果你不喜歡看下面一條廣告擺在那的話，可以選擇直接選擇訂閱制的方式！</p><h3 id=只有上述這兩種營利模式>只有上述這兩種營利模式</h3><blockquote><p>沒有任何一家公司是慈善機構</p></blockquote><p>這個專案對於我而言，能夠得到利益的地方就是這些少少的來源；而若當一個 App 沒有任何付費制度或是廣告等，那大家可以想想看他們是要怎麼賺錢？</p><p>基本上其餘的發票應用都是拿你的資料去變現的，像是不同的網購平台就會想取得其他家平台的消費資料來做一些分析和廣告的評估等。</p><p>這部分點到為止，而我也是不想要把自己的資料被拿去販售和利用所以選擇自己寫一個。</p><h2 id=目前支援的功能>目前支援的功能</h2><p>大家可以在<a class=link href=https://archiechang.notion.site/aa73fb60d50f4013992f682a1760325b target=_blank rel=noopener>發票收集雞的許願板</a>查看我目前的開發進度和預計上線的功能。</p><p><figure><a href=/../img/image-1630032426248.png><img src=/../img/image-1630032426248.png loading=lazy></a></figure></p><h2 id=臉書社團httpswwwfacebookcomgroupsinvoicechickenpubliclocaletw_tw><a class=link href="https://www.facebook.com/groups/invoice.chicken.public?locale=tw_TW" target=_blank rel=noopener>臉書社團</a></h2><p>如果有什麼關於這個 App 想討論、想新增的功能（或是覺得 UX/UI 太醜）都可以直接來這邊討論！</p><h3 id=開發歷程>開發歷程</h3><p>在經過幾次的 rejected 之後，終於在 2021/8/26 23:20 上線啦！</p><p><figure><a href=/../img/image-1630029996827.png><img src=/../img/image-1630029996827.png loading=lazy></a></figure></p><p>其主要的 rejected 原因為幾點</p><ul><li>沒有放上 EULA：這次新學到的是原來可以使用 <a class=link href=https://www.apple.com/legal/internet-services/itunes/dev/stdeula/ target=_blank rel=noopener>Apple 提供的公版</a></li><li>已經有其他發票應用：這部分就要直接回覆這個 App 和其他發票應用有什麼不同</li></ul><h3 id=最後寫給使用情境和我類似的你>最後，寫給使用情境和我類似的你</h3><ul><li>如果你平常也都是存載具，只是想有個查看發票明細的地方</li><li>如果你記帳都是自己用自己習慣的表格紀錄，只需要有個工具幫你匯出發票資料</li><li>如果你習慣用 Apple Pay 付款，想直接在同一個畫面選擇載具出來刷</li><li>如果你不想要發票資料和載具驗證碼存在別人的伺服器之中（記得改驗證碼讓其他 App 無法代登入取得你的資料）</li></ul><p>或者是有其他使用情境我沒想到的，都歡迎提出來，我每週都會撥時間來維護這個 App 😂</p></section><footer class=article-footer><section class=article-tags><a href=/tags/ios/>iOS</a>
 <a href=/tags/swift/>Swift</a>
-<a href=/tags/swiftui/>SwiftUI</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/swiftui-google-admob/>
-<div class=article-details>
-<h2 class=article-title>SwiftUI + Google AdMob</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/>
-<div class=article-details>
-<h2 class=article-title>對於 SwiftUI onDisappear 的誤解？</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/swiftui-coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>📒 SwiftUI + CoreData 的實戰心得🔥</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/>
-<div class=article-details>
-<h2 class=article-title>在 SwiftUI 處理中文輸入法所會遇上的問題</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/>
-<div class=article-details>
-<h2 class=article-title>Apple Watch App 開發除錯心得</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+<a href=/tags/swiftui/>SwiftUI</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title></h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/swiftui--google-admob/><div class=article-details><h2 class=article-title>SwiftUI + Google AdMob</h2></div></a></article><article><a href=/p/%E5%B0%8D%E6%96%BC-swiftui-ondisappear-%E7%9A%84%E8%AA%A4%E8%A7%A3/><div class=article-details><h2 class=article-title>對於 SwiftUI onDisappear 的誤解？</h2></div></a></article><article><a href=/p/swiftui--coredata-%E7%9A%84%E5%AF%A6%E6%88%B0%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>📒 SwiftUI + CoreData 的實戰心得🔥</h2></div></a></article><article><a href=/p/%E5%9C%A8-swiftui-%E8%99%95%E7%90%86%E4%B8%AD%E6%96%87%E8%BC%B8%E5%85%A5%E6%B3%95%E6%89%80%E6%9C%83%E9%81%87%E4%B8%8A%E7%9A%84%E5%95%8F%E9%A1%8C/><div class=article-details><h2 class=article-title>在 SwiftUI 處理中文輸入法所會遇上的問題</h2></div></a></article><article><a href=/p/apple-watch-app-%E9%96%8B%E7%99%BC%E9%99%A4%E9%8C%AF%E5%BF%83%E5%BE%97/><div class=article-details><h2 class=article-title>Apple Watch App 開發除錯心得</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//archie-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Archie</section><section class=powerby><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li>
-<ol>
-<li><a href=#紙本發票的減少>紙本發票的減少</a></li>
-<li><a href=#雲端發票專屬獎httpswwweinvoicenatgovtwein_uploadhtmlesqesq801whtml><a href=https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ801W.html>雲端發票專屬獎</a></a></li>
-</ol>
-</li>
-<li><a href=#為什麼寫這個-app>為什麼寫這個 App</a>
-<ol>
-<li><a href=#使用到了什麼服務和技術>使用到了什麼服務和技術</a></li>
-</ol>
-</li>
-<li><a href=#發票收集雞的營利方式>發票收集雞的營利方式</a>
-<ol>
-<li><a href=#廣告>廣告</a></li>
-<li><a href=#訂閱制>訂閱制</a></li>
-<li><a href=#只有上述這兩種營利模式>只有上述這兩種營利模式</a></li>
-</ol>
-</li>
-<li><a href=#目前支援的功能>目前支援的功能</a></li>
-<li><a href=#臉書社團httpswwwfacebookcomgroupsinvoicechickenpubliclocaletw_tw><a href="https://www.facebook.com/groups/invoice.chicken.public?locale=tw_TW">臉書社團</a></a>
-<ol>
-<li><a href=#開發歷程>開發歷程</a></li>
-<li><a href=#最後寫給使用情境和我類似的你>最後，寫給使用情境和我類似的你</a></li>
-</ol>
-</li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#紙本發票的減少>紙本發票的減少</a></li><li><a href=#雲端發票專屬獎httpswwweinvoicenatgovtwein_uploadhtmlesqesq801whtml><a href=https://www.einvoice.nat.gov.tw/ein_upload/html/ESQ/ESQ801W.html>雲端發票專屬獎</a></a></li></ol></li><li><a href=#為什麼寫這個-app>為什麼寫這個 App</a><ol><li><a href=#使用到了什麼服務和技術>使用到了什麼服務和技術</a></li></ol></li><li><a href=#發票收集雞的營利方式>發票收集雞的營利方式</a><ol><li><a href=#廣告>廣告</a></li><li><a href=#訂閱制>訂閱制</a></li><li><a href=#只有上述這兩種營利模式>只有上述這兩種營利模式</a></li></ol></li><li><a href=#目前支援的功能>目前支援的功能</a></li><li><a href=#臉書社團httpswwwfacebookcomgroupsinvoicechickenpubliclocaletw_tw><a href="https://www.facebook.com/groups/invoice.chicken.public?locale=tw_TW">臉書社團</a></a><ol><li><a href=#開發歷程>開發歷程</a></li><li><a href=#最後寫給使用情境和我類似的你>最後，寫給使用情境和我類似的你</a></li></ol></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

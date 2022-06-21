@@ -5,4 +5,4 @@
 使用到的工具
 Apk tool dex2jar jd-gui Apk tool apk tool 主要負責將 .apk 拆開來，在反編譯之後，可以看到一堆 .smali 及 resource 的相關檔案， 也是負責將修改完的檔案重新包回 apk 的工具。 而由於我沒有修改任何 Code，所以只有解出 .smali 和 resource，看看裡頭有什麼東西和圖片影音檔而已。
 dex2jar 和 jd-gui dex2jar 的功用在於將 .apk 轉成 .jar，配合 jd-gui 打開 .jar 來探究其 source code 內容是什麼。
-流程總結 配合上述的三個工具，大概的流程應該是先以 dex2jar 和 jd.</description></item></channel></rss>
+流程總結 配合上述的三個工具，大概的流程應該是先以 dex2jar 和 jd.gui 來研究程式碼， 並使用 apk tool 拆開 .</description></item></channel></rss>

@@ -1,291 +1,42 @@
-<!doctype html><html lang=en-us>
-<head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="來算一算這是我第幾次來設置開發環境了⋯
- 2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）  前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="來算一算這是我第幾次來設置開發環境了⋯
+2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄） 前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
 brew 首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！
 git 自從上次 git 發生了資安問題後，我都習慣用 brew 所安裝的 git 為主。
 iTerm2 接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這部分。
-刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個"><title>iOS 開發環境設置</title>
-<link rel=canonical href=https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="iOS 開發環境設置">
-<meta property="og:description" content="來算一算這是我第幾次來設置開發環境了⋯
- 2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）  前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
+刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個"><title>iOS 開發環境設置</title><link rel=canonical href=https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/><link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="iOS 開發環境設置"><meta property="og:description" content="來算一算這是我第幾次來設置開發環境了⋯
+2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄） 前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
 brew 首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！
 git 自從上次 git 發生了資安問題後，我都習慣用 brew 所安裝的 git 為主。
 iTerm2 接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這部分。
-刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個">
-<meta property="og:url" content="https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/">
-<meta property="og:site_name" content="Archie">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2021-07-13T00:00:00+00:00"><meta property="article:modified_time" content="2021-07-13T00:00:00+00:00">
-<meta name=twitter:site content="@ChangArchie">
-<meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="iOS 開發環境設置">
-<meta name=twitter:description content="來算一算這是我第幾次來設置開發環境了⋯
- 2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）  前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
+刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個"><meta property="og:url" content="https://www.archie.tw/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/"><meta property="og:site_name" content="Archie"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:tag" content="iOS"><meta property="article:tag" content="Swift"><meta property="article:published_time" content="2021-07-13T00:00:00+00:00"><meta property="article:modified_time" content="2021-07-13T00:00:00+00:00"><meta name=twitter:site content="@ChangArchie"><meta name=twitter:creator content="@ChangArchie"><meta name=twitter:title content="iOS 開發環境設置"><meta name=twitter:description content="來算一算這是我第幾次來設置開發環境了⋯
+2014 - 買了自己的第一台 MacBook Pro 2015 - 第一份工作所配發的 MacBook Pro 2018 - 換工作所配發的 iMac 2018 - 換工作所配發的 iMac 2020 - 換工作所配發的 iMac 2020 - 向 Apple 所申請的 DTK 2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄） 前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 bash -&amp;gt; zsh、oh-my-zsh -&amp;gt; zim，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？
 brew 首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！
 git 自從上次 git 發生了資安問題後，我都習慣用 brew 所安裝的 git 為主。
 iTerm2 接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這部分。
-刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個">
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-149460095-2','auto'),ga('send','pageview'))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
-<div class="container main-container flex
-extended">
-<div id=article-toolbar>
-<a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
-<span></span>
-</a>
-</div>
-<main class="main full-width">
-<article class=main-article>
-<header class=article-header>
-<div class=article-details>
-<header class=article-category>
-<a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>
-📒 程式筆記
-</a>
-</header>
-<h2 class=article-title>
-<a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>iOS 開發環境設置</a>
-</h2>
-<footer class=article-time>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
-<time class=article-time--published>Jul 13, 2021</time>
-</div>
-<div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>
-</time>
-</div>
-</footer>
-</div>
-</header>
-<section class=article-content>
-<p>來算一算這是我第幾次來設置開發環境了⋯</p>
-<ol>
-<li>2014 - 買了自己的第一台 MacBook Pro</li>
-<li>2015 - 第一份工作所配發的 MacBook Pro</li>
-<li>2018 - 換工作所配發的 iMac</li>
-<li>2018 - 換工作所配發的 iMac</li>
-<li>2020 - 換工作所配發的 iMac</li>
-<li>2020 - 向 Apple 所申請的 DTK</li>
-<li>2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）</li>
-</ol>
-<p>前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 <code>bash</code> -> <code>zsh</code>、<code>oh-my-zsh</code> -> <code>zim</code>，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？</p>
-<h2 id=brewhttpsbrewsh><a class=link href=https://brew.sh target=_blank rel=noopener>brew</a></h2>
-<p>首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！</p>
-<h3 id=git>git</h3>
-<p>自從上次 git 發生了資安問題後，我都習慣用 brew 所安裝的 git 為主。</p>
-<h2 id=iterm2httpsiterm2com><a class=link href=https://iterm2.com target=_blank rel=noopener>iTerm2</a></h2>
-<p>接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這部分。</p>
-<h3 id=刪除的快捷鍵>刪除的快捷鍵</h3>
-<p>在 Profiles -> Keys -> Key Mappings 這邊新增兩個</p>
-<ul>
-<li>Send Hex Codes: 0x15（command + delete）</li>
-<li>Send Hex Codes: 0x17（option + delete）</li>
-</ul>
-<p>這樣就可以在 iTerm2 上使用和 Xcode 一樣的刪除快捷鍵了。</p>
-<h3 id=color-theme>Color theme</h3>
-<p>我個人都習慣使用 <a class=link href=https://draculatheme.com target=_blank rel=noopener>Dracula</a> 來套用到所有的工具配色上，安裝方法可以直接參照。</p>
-<h2 id=sublime-texthttpswwwsublimetextcomdownload><a class=link href=https://www.sublimetext.com/download target=_blank rel=noopener>Sublime Text</a></h2>
-<p>這是一套很讚的文字編輯器，我這邊會做幾個客製化的功能</p>
-<h3 id=install-package-control>Install Package control</h3>
-<p>command + shift + P 可以叫出操作列，並輸入 Install Package control 便可以安裝套件管理工具。</p>
-<p>這邊順道提供一個我常拿來處理 JSON 格式的套件：Pretty JSON。</p>
-<h3 id=command-line-interfacehttpswwwsublimetextcomdocscommand_linehtml><a class=link href=https://www.sublimetext.com/docs/command_line.html target=_blank rel=noopener>Command Line Interface</a></h3>
-<p>在 zsh 的環境下，可以直接透過下列的程式碼來達到效果</p>
-<pre tabindex=0><code>echo 'export PATH=&quot;/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH&quot;' &gt;&gt; ~/.zprofile
-</code></pre><p>這麼一來，我們就可以使用 <code>subl</code> 的指令了。</p>
-<h3 id=color-theme-1>Color theme</h3>
-<p>一樣透過 Dracula 的安裝方式來更換成一致的配色。</p>
-<h2 id=zim>[zim]</h2>
-<p>輸入下列程式碼即可開始安裝</p>
-<pre tabindex=0><code>curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-</code></pre><h3 id=powerlevel10khttpsgithubcomromkatvpowerlevel10k><a class=link href=https://github.com/romkatv/powerlevel10k target=_blank rel=noopener>powerlevel10k</a></h3>
-<p><a class=link href=https://github.com/romkatv/powerlevel10k#zim target=_blank rel=noopener>Zim 的安裝方式</a></p>
-<h2 id=xcodesapphttpsgithubcomrobotsandpencilsxcodesapp><a class=link href=https://github.com/RobotsAndPencils/XcodesApp target=_blank rel=noopener>Xcodes.app</a></h2>
-<p>透過 brew 來安裝 Xcodes.app，作為 Xcode 管理套件。</p>
-<pre tabindex=0><code>brew install --cask xcodes
-</code></pre><h2 id=npmhttpswwwnpmjscom><a class=link href=https://www.npmjs.com target=_blank rel=noopener>npm</a></h2>
-<p>也是透過 brew 來安裝 npm</p>
-<pre tabindex=0><code>brew install npm
-</code></pre><h2 id=commitizenhttpswwwarchietw20180508commitizen><a class=link href=https://www.archie.tw/2018/05/08/commitizen/ target=_blank rel=noopener>Commitizen</a></h2>
-<p>接著就透過 npm 來安裝 Commitizen。</p>
-<pre tabindex=0><code>npm install -g commitizen
-</code></pre><h2 id=rbenvhttpsgithubcomrbenvrbenvinstallation><a class=link href=https://github.com/rbenv/rbenv#installation target=_blank rel=noopener>rbenv</a></h2>
-<p>透過 brew 安裝 rbenv 來做 Ruby 的版本管理</p>
-<pre tabindex=0><code>brew install rbenv
-</code></pre><p>接著來查看目前可安裝的版本列表</p>
-<pre tabindex=0><code>rbenv install -l
-</code></pre><p>再來安裝特定的版本，如我這邊安裝 3.0.2</p>
-<pre tabindex=0><code>rbenv install 3.0.2
-</code></pre><p>安裝完想用的版本後，就可以在特定的資料夾指定 Ruby 所使用的版本</p>
-<pre tabindex=0><code>rbenv local 3.0.2
-</code></pre><p>再來要去 <code>.zshrc</code> 裡頭註明一下 rbenv 的路徑</p>
-<pre tabindex=0><code># rbenv
-export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;
-eval &quot;$(rbenv init -)&quot;
-</code></pre><h2 id=bundler>bundler</h2>
-<p>可以先確認一下目前使用的 Ruby 是不是剛剛所制定的版本</p>
-<pre tabindex=0><code>which ruby
-</code></pre><p>安裝 bundler 來管理專案裡頭的 gem 套件們</p>
-<pre tabindex=0><code>sudo gem install bundler
-</code></pre><p>最後執行更新 bundler 列表的套件即可</p>
-<pre tabindex=0><code>bundle update --bundler
-</code></pre><p>如我目前專案裡頭的 Gemfile 內容包含了</p>
-<pre tabindex=0><code>gem 'fastlane'
-gem 'cocoapods'
-</code></pre><p>就可以順利地透過 bundle 和 rbenv 來安裝相關的套件了</p>
-</section>
-<footer class=article-footer>
-<section class=article-tags>
-<a href=/tags/ios/>iOS</a>
-<a href=/tags/swift/>Swift</a>
-</section>
-<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
-<span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-</footer>
-</article>
-<aside class=related-contents--wrapper>
-<h2 class=section-title></h2>
-<div class=related-contents>
-<div class="flex article-list--tile">
-<article>
-<a href=/p/compactmap-vs-flatmap/>
-<div class=article-details>
-<h2 class=article-title>CompactMap vs flatMap</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/socket/>
-<div class=article-details>
-<h2 class=article-title>Socket</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/>
-<div class=article-details>
-<h2 class=article-title>Markdown 嵌入 YouTube</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/>
-<div class=article-details>
-<h2 class=article-title>發票收集雞 - 自己的發票自己收</h2>
-</div>
-</a>
-</article>
-<article>
-<a href=/p/fastlane-503-service-temporarily-unavailable/>
-<div class=article-details>
-<h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2>
-</div>
-</a>
-</article>
-</div>
-</div>
-</aside>
-<div class=disqus-container>
-<div id=disqus_thread></div>
-<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//archie-1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
-<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
-<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
-</div>
-<style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style>
-<script>window.addEventListener('onColorSchemeChange',a=>{DISQUS&&DISQUS.reset({reload:!0})})</script>
-<footer class=site-footer>
-<section class=copyright>
-&copy;
+刪除的快捷鍵 在 Profiles -&amp;gt; Keys -&amp;gt; Key Mappings 這邊新增兩個"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-149460095-2","auto"),ga("send","pageview"))</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4467778867013569" crossorigin=anonymous></script></head><body class="article-page has-toc"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex
+extended"><div id=article-toolbar><a href=https://www.archie.tw class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg><span></span></a></div><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/%E7%A8%8B%E5%BC%8F%E7%AD%86%E8%A8%98/>📒 程式筆記</a></header><h2 class=article-title><a href=/p/ios-%E9%96%8B%E7%99%BC%E7%92%B0%E5%A2%83%E8%A8%AD%E7%BD%AE/>iOS 開發環境設置</a></h2><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>Jul 13, 2021</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><time class=article-time--reading></time></div></footer></div></header><section class=article-content><p>來算一算這是我第幾次來設置開發環境了⋯</p><ol><li>2014 - 買了自己的第一台 MacBook Pro</li><li>2015 - 第一份工作所配發的 MacBook Pro</li><li>2018 - 換工作所配發的 iMac</li><li>2018 - 換工作所配發的 iMac</li><li>2020 - 換工作所配發的 iMac</li><li>2020 - 向 Apple 所申請的 DTK</li><li>2021 - 為了加速開發 side project，買了 MacBook Air M1（正在弄）</li></ol><p>前面六次的開發環境設置，都隨著物換星移地不斷迭代；從 <code>bash</code> -> <code>zsh</code>、<code>oh-my-zsh</code> -> <code>zim</code>，加上還因為 DTK 的先行使用，踩了一些當時尚未支援的坑⋯這次再來紀錄一下這過程，讓之後的第八次能夠更順利一些（？</p><h2 id=brewhttpsbrewsh><a class=link href=https://brew.sh target=_blank rel=noopener>brew</a></h2><p>首先，勢必是得從 brew 開始安裝起，也可以簡化後續很多的安裝流程。而這邊主要已經避開了當時還不支援 Apple silicon CPU 的坑，所以十分地順利！</p><h3 id=git>git</h3><p>自從上次 git 發生了資安問題後，我都習慣用 brew 所安裝的 git 為主。</p><h2 id=iterm2httpsiterm2com><a class=link href=https://iterm2.com target=_blank rel=noopener>iTerm2</a></h2><p>接著下載 iTerm2 來取代原先的 Terminal，並客製化一下這部分。</p><h3 id=刪除的快捷鍵>刪除的快捷鍵</h3><p>在 Profiles -> Keys -> Key Mappings 這邊新增兩個</p><ul><li>Send Hex Codes: 0x15（command + delete）</li><li>Send Hex Codes: 0x17（option + delete）</li></ul><p>這樣就可以在 iTerm2 上使用和 Xcode 一樣的刪除快捷鍵了。</p><h3 id=color-theme>Color theme</h3><p>我個人都習慣使用 <a class=link href=https://draculatheme.com target=_blank rel=noopener>Dracula</a> 來套用到所有的工具配色上，安裝方法可以直接參照。</p><h2 id=sublime-texthttpswwwsublimetextcomdownload><a class=link href=https://www.sublimetext.com/download target=_blank rel=noopener>Sublime Text</a></h2><p>這是一套很讚的文字編輯器，我這邊會做幾個客製化的功能</p><h3 id=install-package-control>Install Package control</h3><p>command + shift + P 可以叫出操作列，並輸入 Install Package control 便可以安裝套件管理工具。</p><p>這邊順道提供一個我常拿來處理 JSON 格式的套件：Pretty JSON。</p><h3 id=command-line-interfacehttpswwwsublimetextcomdocscommand_linehtml><a class=link href=https://www.sublimetext.com/docs/command_line.html target=_blank rel=noopener>Command Line Interface</a></h3><p>在 zsh 的環境下，可以直接透過下列的程式碼來達到效果</p><pre tabindex=0><code>echo &#39;export PATH=&#34;/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH&#34;&#39; &gt;&gt; ~/.zprofile
+</code></pre><p>這麼一來，我們就可以使用 <code>subl</code> 的指令了。</p><h3 id=color-theme-1>Color theme</h3><p>一樣透過 Dracula 的安裝方式來更換成一致的配色。</p><h2 id=zim>[zim]</h2><p>輸入下列程式碼即可開始安裝</p><pre tabindex=0><code>curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+</code></pre><h3 id=powerlevel10khttpsgithubcomromkatvpowerlevel10k><a class=link href=https://github.com/romkatv/powerlevel10k target=_blank rel=noopener>powerlevel10k</a></h3><p><a class=link href=https://github.com/romkatv/powerlevel10k#zim target=_blank rel=noopener>Zim 的安裝方式</a></p><h2 id=xcodesapphttpsgithubcomrobotsandpencilsxcodesapp><a class=link href=https://github.com/RobotsAndPencils/XcodesApp target=_blank rel=noopener>Xcodes.app</a></h2><p>透過 brew 來安裝 Xcodes.app，作為 Xcode 管理套件。</p><pre tabindex=0><code>brew install --cask xcodes
+</code></pre><h2 id=npmhttpswwwnpmjscom><a class=link href=https://www.npmjs.com target=_blank rel=noopener>npm</a></h2><p>也是透過 brew 來安裝 npm</p><pre tabindex=0><code>brew install npm
+</code></pre><h2 id=commitizenhttpswwwarchietw20180508commitizen><a class=link href=https://www.archie.tw/2018/05/08/commitizen/ target=_blank rel=noopener>Commitizen</a></h2><p>接著就透過 npm 來安裝 Commitizen。</p><pre tabindex=0><code>npm install -g commitizen
+</code></pre><h2 id=rbenvhttpsgithubcomrbenvrbenvinstallation><a class=link href=https://github.com/rbenv/rbenv#installation target=_blank rel=noopener>rbenv</a></h2><p>透過 brew 安裝 rbenv 來做 Ruby 的版本管理</p><pre tabindex=0><code>brew install rbenv
+</code></pre><p>接著來查看目前可安裝的版本列表</p><pre tabindex=0><code>rbenv install -l
+</code></pre><p>再來安裝特定的版本，如我這邊安裝 3.0.2</p><pre tabindex=0><code>rbenv install 3.0.2
+</code></pre><p>安裝完想用的版本後，就可以在特定的資料夾指定 Ruby 所使用的版本</p><pre tabindex=0><code>rbenv local 3.0.2
+</code></pre><p>再來要去 <code>.zshrc</code> 裡頭註明一下 rbenv 的路徑</p><pre tabindex=0><code># rbenv
+export PATH=&#34;$HOME/.rbenv/bin:$PATH&#34;
+eval &#34;$(rbenv init -)&#34;
+</code></pre><h2 id=bundler>bundler</h2><p>可以先確認一下目前使用的 Ruby 是不是剛剛所制定的版本</p><pre tabindex=0><code>which ruby
+</code></pre><p>安裝 bundler 來管理專案裡頭的 gem 套件們</p><pre tabindex=0><code>sudo gem install bundler
+</code></pre><p>最後執行更新 bundler 列表的套件即可</p><pre tabindex=0><code>bundle update --bundler
+</code></pre><p>如我目前專案裡頭的 Gemfile 內容包含了</p><pre tabindex=0><code>gem &#39;fastlane&#39;
+gem &#39;cocoapods&#39;
+</code></pre><p>就可以順利地透過 bundle 和 rbenv 來安裝相關的套件了</p></section><footer class=article-footer><section class=article-tags><a href=/tags/ios/>iOS</a>
+<a href=/tags/swift/>Swift</a></section><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section></footer></article><aside class=related-contents--wrapper><h2 class=section-title></h2><div class=related-contents><div class="flex article-list--tile"><article><a href=/p/compactmap-vs-flatmap/><div class=article-details><h2 class=article-title>CompactMap vs flatMap</h2></div></a></article><article><a href=/p/socket/><div class=article-details><h2 class=article-title>Socket</h2></div></a></article><article><a href=/p/markdown-%E5%B5%8C%E5%85%A5-youtube/><div class=article-details><h2 class=article-title>Markdown 嵌入 YouTube</h2></div></a></article><article><a href=/p/%E7%99%BC%E7%A5%A8%E6%94%B6%E9%9B%86%E9%9B%9E-%E8%87%AA%E5%B7%B1%E7%9A%84%E7%99%BC%E7%A5%A8%E8%87%AA%E5%B7%B1%E6%94%B6/><div class=article-details><h2 class=article-title>發票收集雞 - 自己的發票自己收</h2></div></a></article><article><a href=/p/fastlane-503-service-temporarily-unavailable/><div class=article-details><h2 class=article-title>Fastlane 503 Service Temporarily Unavailable</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script type=application/javascript>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//archie-1.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{DISQUS&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
 2017 -
-2021 Archie
-</section>
-<section class=powerby>
-<br>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
-<div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
-<div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+2022 Archie</section><section class=powerby><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-<div class=pswp__preloader>
-<div class=pswp__preloader__icn>
-<div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-</button>
-<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-</button>
-<div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
-<section class="widget archives">
-<div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg>
-</div>
-<h2 class="widget-title section-title"></h2>
-<div class=widget--toc>
-<nav id=TableOfContents>
-<ol>
-<li><a href=#brewhttpsbrewsh><a href=https://brew.sh>brew</a></a>
-<ol>
-<li><a href=#git>git</a></li>
-</ol>
-</li>
-<li><a href=#iterm2httpsiterm2com><a href=https://iterm2.com>iTerm2</a></a>
-<ol>
-<li><a href=#刪除的快捷鍵>刪除的快捷鍵</a></li>
-<li><a href=#color-theme>Color theme</a></li>
-</ol>
-</li>
-<li><a href=#sublime-texthttpswwwsublimetextcomdownload><a href=https://www.sublimetext.com/download>Sublime Text</a></a>
-<ol>
-<li><a href=#install-package-control>Install Package control</a></li>
-<li><a href=#command-line-interfacehttpswwwsublimetextcomdocscommand_linehtml><a href=https://www.sublimetext.com/docs/command_line.html>Command Line Interface</a></a></li>
-<li><a href=#color-theme-1>Color theme</a></li>
-</ol>
-</li>
-<li><a href=#zim>[zim]</a>
-<ol>
-<li><a href=#powerlevel10khttpsgithubcomromkatvpowerlevel10k><a href=https://github.com/romkatv/powerlevel10k>powerlevel10k</a></a></li>
-</ol>
-</li>
-<li><a href=#xcodesapphttpsgithubcomrobotsandpencilsxcodesapp><a href=https://github.com/RobotsAndPencils/XcodesApp>Xcodes.app</a></a></li>
-<li><a href=#npmhttpswwwnpmjscom><a href=https://www.npmjs.com>npm</a></a></li>
-<li><a href=#commitizenhttpswwwarchietw20180508commitizen><a href=https://www.archie.tw/2018/05/08/commitizen/>Commitizen</a></a></li>
-<li><a href=#rbenvhttpsgithubcomrbenvrbenvinstallation><a href=https://github.com/rbenv/rbenv#installation>rbenv</a></a></li>
-<li><a href=#bundler>bundler</a></li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous></main><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#brewhttpsbrewsh><a href=https://brew.sh>brew</a></a><ol><li><a href=#git>git</a></li></ol></li><li><a href=#iterm2httpsiterm2com><a href=https://iterm2.com>iTerm2</a></a><ol><li><a href=#刪除的快捷鍵>刪除的快捷鍵</a></li><li><a href=#color-theme>Color theme</a></li></ol></li><li><a href=#sublime-texthttpswwwsublimetextcomdownload><a href=https://www.sublimetext.com/download>Sublime Text</a></a><ol><li><a href=#install-package-control>Install Package control</a></li><li><a href=#command-line-interfacehttpswwwsublimetextcomdocscommand_linehtml><a href=https://www.sublimetext.com/docs/command_line.html>Command Line Interface</a></a></li><li><a href=#color-theme-1>Color theme</a></li></ol></li><li><a href=#zim>[zim]</a><ol><li><a href=#powerlevel10khttpsgithubcomromkatvpowerlevel10k><a href=https://github.com/romkatv/powerlevel10k>powerlevel10k</a></a></li></ol></li><li><a href=#xcodesapphttpsgithubcomrobotsandpencilsxcodesapp><a href=https://github.com/RobotsAndPencils/XcodesApp>Xcodes.app</a></a></li><li><a href=#npmhttpswwwnpmjscom><a href=https://www.npmjs.com>npm</a></a></li><li><a href=#commitizenhttpswwwarchietw20180508commitizen><a href=https://www.archie.tw/2018/05/08/commitizen/>Commitizen</a></a></li><li><a href=#rbenvhttpsgithubcomrbenvrbenvinstallation><a href=https://github.com/rbenv/rbenv#installation>rbenv</a></a></li><li><a href=#bundler>bundler</a></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
