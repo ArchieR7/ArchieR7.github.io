@@ -45,7 +45,7 @@
 &lt;h3 id="中心化錢包">中心化錢包&lt;/h3>
 &lt;p>而中心化錢包其實就和銀行有點像，業者會提供一組帳號密碼登入並透過 KYC（Know your customer）的方式來驗證你是否為該用戶。&lt;/p>
 &lt;h4 id="優點-1">優點&lt;/h4>
-&lt;p>由中心化的保存註記詞，就不會發生忘記註記詞而無法使用虛擬資產的問題，甚至 (CYBAVO)[]有提供一定程度的理賠機制，並強調他們的資安是經得起考驗的。&lt;/p>
+&lt;p>由中心化的保存註記詞，就不會發生忘記註記詞而無法使用虛擬資產的問題，甚至 (CYBAVO)[https://www.cybavo.com]有提供一定程度的理賠機制，並強調他們的資安是經得起考驗的。&lt;/p>
 &lt;h4 id="缺點-1">缺點&lt;/h4>
 &lt;p>無法自由地使用你的地址去做其他合約互動，多數的中心化錢包會防範這件事的發生；不過這個就是一體兩面，方便和安全之間，自己要有所拿捏。而都是中心化掌控你的註記詞，也就是說對方掌有你整個帳戶的權限，跑路的交易所即是類似的概念。&lt;/p></description></item><item><title>Markdown 嵌入 YouTube</title><link>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</link><pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.archie.tw/p/markdown-%E5%B5%8C%E5%85%A5-youtube/</guid><description>&lt;h3 id="前言">前言&lt;/h3>
 &lt;p>一般來說，我們都可以直接使用 YouTube 的嵌入程式碼來直接加入影片，而今天如果要在 Markdown 裡頭製作這段這程式碼的話，我們可以怎麼做？&lt;/p>
